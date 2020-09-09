@@ -1,0 +1,10 @@
+{
+    "suggest.noselct": false,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "typescript",
+        "json",
+        "python",
+        "rls",
+        "go"
+    ]
+}

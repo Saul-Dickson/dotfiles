@@ -1,0 +1,410 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/Users/dickssau000/
+	..
+1599392675
+'b
+	/Users/dickssau000/bin/
+	..
+1599392675
+'h
+	/Users/dickssau000/
+	..
+1599392675
+'z
+	/Users/dickssau000/.config/vifm
+	..
+1599392675
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v1
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+6
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	tmux
+12
+d/Users/dickssau000/.config/tmux
+	example_tmux.conf
+1
+d/Users/dickssau000/.config
+	tmux
+12
+d/Users/dickssau000/.config/tmux
+	tmux.conf
+1
+d/Users/dickssau000
+	Public
+20
+d/Users/dickssau000/.config/tmux
+	tmux.conf
+2
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	tmux
+12
+d/Users/dickssau000/.config/tmux
+	plugins.conf
+2
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+8
+d/Users/dickssau000/.config/nvim
+	options.vim
+7
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+8
+d/Users/dickssau000/.config/nvim
+	plug.vim
+8
+d/Users/dickssau000
+	Projects
+19
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	pytae
+1
+d/Users/dickssau000
+	Projects
+19
+d/Users/dickssau000/Projects
+	bin
+2
+d/Users/dickssau000/Projects/bin
+	..
+0
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	..
+0
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	..
+0
+d/Users/dickssau000
+	Projects
+19
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	python-text-adventure-engine
+1
+d/Users/dickssau000/Projects/src/github.com/python-text-adventure-engine
+	..
+0
+d/Users/dickssau000/.config/powerlevel10k
+	powerlevel10k.zsh-theme
+15
+d/Users/dickssau000
+	Library
+15
+d/Users/dickssau000/Library
+	ApplicationSupport
+5
+d/Users/dickssau000/Library/ApplicationSupport
+	com.apple.spotlight
+21
+d/Users/dickssau000/Library/ApplicationSupport/com.apple.spotlight
+	appList.dat
+4
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+9
+d/Users/dickssau000/.config/nvim
+	plug.vim
+8
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	zsh
+15
+d/Users/dickssau000/.config/zsh
+	alias.zsh
+5
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	zsh
+15
+d/Users/dickssau000/.config/zsh
+	alias.zsh
+5
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+9
+d/Users/dickssau000/.config/nvim
+	options.vim
+7
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+9
+d/Users/dickssau000/.config/nvim
+	coc.vim
+4
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	configstore
+3
+d/Users/dickssau000
+	Library
+16
+d/Users/dickssau000/Library
+	ApplicationSupport
+5
+d/Users/dickssau000/Library/ApplicationSupport
+	Blizzard
+15
+d/Users/dickssau000/Library
+	Assistant
+6
+d/Users/dickssau000
+	.local
+6
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.local
+6
+d/Users/dickssau000/.local
+	..
+0
+d/Users/dickssau000
+	.local
+6
+d/Users/dickssau000/.local
+	share
+1
+d/Users/dickssau000/.local/share
+	..
+0
+d/Users/dickssau000/.local
+	share
+1
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	configstore
+3
+d/Users/dickssau000
+	.cordless
+4
+d/Users/dickssau000/.cordless
+	..
+0
+d/Users/dickssau000
+	.cordless
+4
+d/Users/dickssau000/.cordless
+	config.json
+1
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	python-text-adventure-engine
+1
+d/Users/dickssau000/Projects/src/github.com/python-text-adventure-engine
+	README.md
+2
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	local
+2
+d/Users/dickssau000/Projects/src/local
+	school
+3
+d/Users/dickssau000/Projects/src/local/school
+	..
+0
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	python-text-adventure-engine
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
+	.git
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/.git
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
+	word
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
+	noun.py
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
+	word
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
+	verb.py
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
+	input.py
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
+	.git
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	python-text-adventure-engine
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
+	README.md
+2
+d
+
+# Right window history (oldest to newest):
+D/Users/dickssau000
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:wincmd l
+:wincmd h
+:cd ~
+:only
+:echo
+:rename ~/.config/tmux/example_tmux.conf tmux.conf
+:rename ~/.config/tmux/tmux.conf
+:wq
+:rename tmux.conf
+:w
+:touch theme.conf
+:touch plugins.conf
+:mkdir pytae
+:rm -r
+:mkdir school
+:mkdir Chemistry A
+:mkdir Chemistry 1
+:rm
+:remove
+:mkdir Chemistry\ 1
+:delete
+:qq
+:mkdir word
+:touch noun.py
+:touch verb.py
+:touch input
+:rename input.py
+:q
+
+# Search history (oldest to newest):
+/../
+/Safaari
+/cordless
+
+# Prompt history (oldest to newest):
+pMovies
+pPublic
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/Users/dickssau000/.local/share/vifm/Trash/000_input.py
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/Users/dickssau000/.local/share/vifm/Trash/000_.tmux.conf
+	/Users/dickssau000/.tmux.conf
+t/Users/dickssau000/.local/share/vifm/Trash/000_1
+	/Users/dickssau000/Projects/src/local/school/1
+t/Users/dickssau000/.local/share/vifm/Trash/000_Chemistry
+	/Users/dickssau000/Projects/src/local/school/Chemistry
+t/Users/dickssau000/.local/share/vifm/Trash/000_Chemistry 1
+	/Users/dickssau000/Projects/src/local/school/Chemistry 1
+t/Users/dickssau000/.local/share/vifm/Trash/000_word
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
+t/Users/dickssau000/.local/share/vifm/Trash/000_input.py
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/input.py
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].1
+]F
+s0
