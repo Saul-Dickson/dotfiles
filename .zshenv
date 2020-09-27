@@ -1,5 +1,5 @@
 # go environment variables
-export GOROOT="/usr/local/Cellar/go/1.15/libexec"
+export GOROOT="/usr/local/Cellar/go/1.15.2"
 export GOPATH="/Users/dickssau000/Projects"
 export GOPATH="/Users/dickssau000/Library/golib:$GOPATH"
 
@@ -10,3 +10,4 @@ export PATH="/Users/dickssau000/Projects/bin:$PATH"
 
 # clean home
 export ZDOTDIR="/Users/dickssau000/.config/zsh"
+export fpath=( "/Users/dickssau000/.config/zsh/.zfunctions" $fpath )

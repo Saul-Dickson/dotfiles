@@ -15,25 +15,29 @@ bindkey -v '^?' backward-delete-char
 bindkey -v
 export KEYTIMEOUT=1
 
-# resize the iTerm2 window if iTerm2 is open
-/usr/bin/osascript -e '
-tell application "Finder"
-    set resolution to bounds of window of desktop
-end tell
-
-tell application "System Events"
-    tell process "iTerm2"
-        tell window 1
-            set position to {10, 10}
-            set size to {item 3 of resolution - 20, ¬
-                         item 4 of resolution - 20}
-        end tell
-    end tell
-end tell
-'
+# define functions
+# for file in $(exa -1 --color=never $HOME/.config/zsh/functions); do
+#     alias $file="zsh $file"
+# done
 
 # run and cache neofetch at login
-/bin/rm ~/.cache/neofetch
-/usr/local/bin/neofetch >> ~/.cache/neofetch
-/usr/local/bin/python3.8 -c "print(\"\n\")"
-cat ~/.cache/neofetch
+# /bin/rm ~/.cache/neofetch
+# /usr/local/bin/neofetch >> ~/.cache/neofetch &
+# /usr/local/bin/python3.8 -c "print(\"\n\")" &
+# /usr/bin/clear
+
+# fullscreen iTerm2 window on it's opening.
+# [[ $TERM_PROGRAM == "iTerm.app" ]] && \
+# osascript -e '
+# tell application "System Events"
+#     tell process "iTerm2"
+#         key code 126 using (command down, ¬
+#                             option down)
+#     end tell
+# end tell
+# '
+
+# open tmux if not already open
+# [[ $(tmux ls) == *"(attached)"* ]] || \
+#     [[ $(tmux ls) == *"window"* ]] && \
+#     tmux attach || tmux

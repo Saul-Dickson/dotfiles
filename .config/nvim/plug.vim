@@ -17,6 +17,7 @@ Plug 'itchyny/lightline.vim' "lighweight, simple status bar
 Plug 'vifm/vifm.vim' "vifm ((neo)Vi(m) file manager) extention for vim
 Plug 'edkolev/tmuxline.vim'
 Plug 'vimwiki/vimwiki' "personal information wiki extention for vim
+Plug 'godlygeek/tabular' "text alignment
 
 "python
 Plug 'jeetsukumaran/vim-pythonsense' "python specifiic motions and text objects

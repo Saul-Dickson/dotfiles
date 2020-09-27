@@ -30,6 +30,51 @@ l2
 r2
 
 # Left window history (oldest to newest):
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/completion
+	..
+0
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	module
+5
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/module
+	.autocomplete.key-binding
+5
+d/Users/dickssau000/.config/zsh
+	.zshrc
+8
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	zsh
+16
+d/Users/dickssau000/.config/nvim/site/plugged/vimwiki/plugin
+	..
+0
+d/Users/dickssau000/.config/nvim/site/plugged/vimwiki
+	..
+0
+d/Users/dickssau000/.config/nvim/site/plugged
+	vimwiki
+18
+d/Users/dickssau000/.config/nvim/site
+	plugged
+2
+d/Users/dickssau000/.config/nvim
+	init.vim
+5
+d/Users/dickssau000/.config/nvim/site/plugged/vimwiki/plugin
+	..
+0
+d/Users/dickssau000/.config/nvim/site/plugged/vimwiki
+	plugin
+6
+d/Users/dickssau000/.config/nvim/site/plugged
+	vimwiki
+18
+d/Users/dickssau000/.config/nvim/site
+	plugged
+2
 d/Users/dickssau000/.config/nvim
 	keymaps.vim
 6
@@ -37,251 +82,104 @@ d/Users/dickssau000
 	.config
 3
 d/Users/dickssau000/.config
-	tmux
-12
-d/Users/dickssau000/.config/tmux
-	example_tmux.conf
-1
-d/Users/dickssau000/.config
-	tmux
-12
-d/Users/dickssau000/.config/tmux
-	tmux.conf
-1
+	nvim
+9
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+6
 d/Users/dickssau000
-	Public
+	.playx
+8
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/widget
+	..
+0
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	completion
+4
+d/Users/dickssau000/.config/zsh/plugins
+	fast-syntax-highlighting
+1
+d/Users/dickssau000/Projects/src/local/test
+	..
+0
+d/Users/dickssau000/Projects/src/local
+	test
+2
+d/Users/dickssau000/Projects/src
+	local
+2
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000
+	Projects
 20
-d/Users/dickssau000/.config/tmux
-	tmux.conf
-2
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	tmux
-12
-d/Users/dickssau000/.config/tmux
-	plugins.conf
-2
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-8
-d/Users/dickssau000/.config/nvim
-	options.vim
-7
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-8
-d/Users/dickssau000/.config/nvim
-	plug.vim
-8
-d/Users/dickssau000
-	Projects
-19
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	pytae
-1
-d/Users/dickssau000
-	Projects
-19
-d/Users/dickssau000/Projects
-	bin
-2
-d/Users/dickssau000/Projects/bin
-	..
-0
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	..
-0
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	..
-0
-d/Users/dickssau000
-	Projects
-19
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	python-text-adventure-engine
-1
-d/Users/dickssau000/Projects/src/github.com/python-text-adventure-engine
-	..
-0
-d/Users/dickssau000/.config/powerlevel10k
-	powerlevel10k.zsh-theme
-15
-d/Users/dickssau000
-	Library
-15
-d/Users/dickssau000/Library
-	ApplicationSupport
-5
-d/Users/dickssau000/Library/ApplicationSupport
-	com.apple.spotlight
-21
-d/Users/dickssau000/Library/ApplicationSupport/com.apple.spotlight
-	appList.dat
-4
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-9
-d/Users/dickssau000/.config/nvim
-	plug.vim
-8
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-15
-d/Users/dickssau000/.config/zsh
-	alias.zsh
-5
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-15
-d/Users/dickssau000/.config/zsh
-	alias.zsh
-5
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-9
-d/Users/dickssau000/.config/nvim
-	options.vim
-7
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-9
-d/Users/dickssau000/.config/nvim
-	coc.vim
-4
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	configstore
-3
-d/Users/dickssau000
-	Library
-16
-d/Users/dickssau000/Library
-	ApplicationSupport
-5
-d/Users/dickssau000/Library/ApplicationSupport
-	Blizzard
-15
-d/Users/dickssau000/Library
-	Assistant
-6
-d/Users/dickssau000
-	.local
-6
 d/Users
 	dickssau000
 3
 d/Users/dickssau000
-	.local
-6
-d/Users/dickssau000/.local
-	..
-0
-d/Users/dickssau000
-	.local
-6
-d/Users/dickssau000/.local
-	share
-1
-d/Users/dickssau000/.local/share
-	..
-0
-d/Users/dickssau000/.local
-	share
-1
+	.config
+3
+d/Users/dickssau000/.config
+	zsh
+17
+d/Users/dickssau000/.config/zsh
+	launch.zsh
+11
+d/Users/dickssau000/.config
+	zsh
+17
 d/Users/dickssau000
 	.config
 3
 d/Users/dickssau000/.config
-	configstore
+	zsh
+17
+d/Users/dickssau000/.config/zsh
+	plugins
 3
-d/Users/dickssau000
-	.cordless
-4
-d/Users/dickssau000/.cordless
+d/Users/dickssau000/.config/zsh/plugins
+	fast-syntax-highlighting
+1
+d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting
+	themes
+8
+d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting/themes
 	..
 0
-d/Users/dickssau000
-	.cordless
-4
-d/Users/dickssau000/.cordless
-	config.json
-1
-d/Users/dickssau000
-	Projects
-20
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	python-text-adventure-engine
-1
-d/Users/dickssau000/Projects/src/github.com/python-text-adventure-engine
-	README.md
+d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting
+	themes
+8
+d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting/themes
+	default.ini
 2
+d/Users/dickssau000/.config/zsh
+	plugins.zsh
+12
 d/Users/dickssau000
-	Projects
-20
-d/Users/dickssau000/Projects
-	src
+	.config
 3
-d/Users/dickssau000/Projects/src
-	local
-2
-d/Users/dickssau000/Projects/src/local
-	school
-3
-d/Users/dickssau000/Projects/src/local/school
-	..
-0
+d/Users/dickssau000/.config
+	zsh
+17
+d/Users/dickssau000/.config/zsh
+	.zshrc
+8
+d/Users/dickssau000/.config
+	fsh
+5
+d/Users/dickssau000/.config/fsh
+	overlay.ini
+1
+d/Users/dickssau000/.config/nvim/after
+	syntax
+1
+d/Users/dickssau000/.config/nvim
+	after
+1
+d/Users/dickssau000/.config
+	nvim
+10
 d/Users/dickssau000
 	Projects
 20
@@ -295,41 +193,143 @@ d/Users/dickssau000/Projects/src/github.com
 	Saul-Dickson
 1
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	python-text-adventure-engine
+	bento
 1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
-	.git
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/.git
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	index.html
+11
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/css
 	..
 0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
-	word
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
-	noun.py
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	sass
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/sass
+	main.scss
 1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
-	word
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	js
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/js
+	theme.js
 2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
-	verb.py
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
-	input.py
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	img
+5
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/img
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	icons
 4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/icons
 	..
 0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
-	.git
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	assets
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/assets
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	assets
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/assets
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	css
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/css
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	.DS_Store
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
+	theme.conf
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	alias.zsh
+10
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	fsh
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
+	overlay.ini
+1
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
 1
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	python-text-adventure-engine
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine
-	README.md
+	dotfiles
 2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	site
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	tmux
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
+	plugins
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
+	tmux-sidebar
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
+	plugins
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
+	tmux-sidebar
+1
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	zsh
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	.p10k.zsh
+6
 d
 
 # Right window history (oldest to newest):
@@ -346,7 +346,6 @@ D
 :echo
 :rename ~/.config/tmux/example_tmux.conf tmux.conf
 :rename ~/.config/tmux/tmux.conf
-:wq
 :rename tmux.conf
 :w
 :touch theme.conf
@@ -356,22 +355,37 @@ D
 :mkdir school
 :mkdir Chemistry A
 :mkdir Chemistry 1
-:rm
 :remove
 :mkdir Chemistry\ 1
-:delete
 :qq
 :mkdir word
 :touch noun.py
 :touch verb.py
 :touch input
 :rename input.py
+:mkdir Chemistry
+:touch Class\ Notes.txt
+:touch spotifyd.conf
+:touch interviews.txt
+:mkdir Geometry
+:touch 20-09-09\ Notes.txt
+:mkdir functions
+:touch prompt.zsh
+:touch keybind.zsh
+:cd
+:cd .config/zsh/plugins/zsh-autocomplete/
+:histprev
+:rm zsh-autocomplete
+:rm
 :q
+:delete
+:wq
 
 # Search history (oldest to newest):
 /../
 /Safaari
 /cordless
+/nvim
 
 # Prompt history (oldest to newest):
 pMovies
@@ -380,7 +394,10 @@ pPublic
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_input.py
+""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.1264
+""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41462
+""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41468
+""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.45361
 
 # Directory stack (oldest to newest):
 
@@ -397,6 +414,20 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_word
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/word
 t/Users/dickssau000/.local/share/vifm/Trash/000_input.py
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/python-text-adventure-engine/input.py
+t/Users/dickssau000/.local/share/vifm/Trash/000_keybind.zsh
+	/Users/dickssau000/.config/zsh/keybind.zsh
+t/Users/dickssau000/.local/share/vifm/Trash/000_zsh-autocomplete
+	/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+t/Users/dickssau000/.local/share/vifm/Trash/000_launch.zsh
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/launch.zsh
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.1264
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zcompdump.MacAir382.1264
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41462
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zcompdump.MacAir382.41462
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41468
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zcompdump.MacAir382.41468
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.45361
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zcompdump.MacAir382.45361
 
 # State:
 f
