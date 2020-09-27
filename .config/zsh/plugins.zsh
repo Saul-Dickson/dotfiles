@@ -76,6 +76,8 @@ HSMW_HIGHLIGHT_STYLES[case-input]="fg:green"
 HSMW_HIGHLIGHT_STYLES[case-parentheses]="fg:yellow"
 HSMW_HIGHLIGHT_STYLES[case-condition]="bg:66"
 
+### gitstatus is sourced in prompt.zsh ###
+
 ### Powerlevel10k Prompt ###
 # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"

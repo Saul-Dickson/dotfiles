@@ -30,33 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/module
-	.autocomplete.key-binding
-5
-d/Users/dickssau000/.config/zsh
-	.zshrc
-8
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-16
-d/Users/dickssau000/.config/nvim/site/plugged/vimwiki/plugin
-	..
-0
-d/Users/dickssau000/.config/nvim/site/plugged/vimwiki
-	..
-0
-d/Users/dickssau000/.config/nvim/site/plugged
-	vimwiki
-18
-d/Users/dickssau000/.config/nvim/site
-	plugged
-2
-d/Users/dickssau000/.config/nvim
-	init.vim
-5
 d/Users/dickssau000/.config/nvim/site/plugged/vimwiki/plugin
 	..
 0
@@ -328,8 +301,35 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 	tmux
 7
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	theme.conf
-4
+	gitmux.conf
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	tmux
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+2
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000
+	Downloads
+15
+d/Users/dickssau000/Downloads
+	github.com
+2
+d/Users/dickssau000/Downloads/github.com
+	dvtm-0.15.tar
+8
 d
 
 # Right window history (oldest to newest):
@@ -377,9 +377,9 @@ D
 :histprev
 :rm zsh-autocomplete
 :rm
-:q
 :delete
 :wq
+:q
 
 # Search history (oldest to newest):
 /../
