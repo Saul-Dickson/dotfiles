@@ -30,12 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/completion
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	module
-5
 d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/module
 	.autocomplete.key-binding
 5
@@ -328,8 +322,14 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 	zsh
 9
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	.p10k.zsh
-6
+	.DS_Store
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	tmux
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
+	theme.conf
+4
 d
 
 # Right window history (oldest to newest):

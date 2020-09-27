@@ -17,4 +17,4 @@ zstyle ':vcs_info:git*' formats "%F{245}%r(%b)%f"
 directory_display='%F{66}%2~%f' # Setup working directory display
 prompt_symbols='%(?.%F{green}%(!.#.=>).%F{red}%(!.#.=>))%f'
 PROMPT='$directory_display $prompt_symbols '
-RPROMPT='$vcs_info_msg_0_'
+RPROMPT='${vcs_info_msg_0_}'
