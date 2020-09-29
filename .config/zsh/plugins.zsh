@@ -7,8 +7,6 @@ source /usr/local/Cellar/zsh-autosuggestions/0.6.4/share/zsh-autosuggestions/zsh
 ### Zsh Completions ###
 source $PLUGINDIR/zsh-completions/zsh-completions.plugin.zsh
 
-### Zsh Autocomplete ###
-source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 ### Fast Syntax Highlighting ###
 source $PLUGINDIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -75,6 +73,9 @@ HSMW_HIGHLIGHT_STYLES[forsep]="fg:yellow,bold"
 HSMW_HIGHLIGHT_STYLES[case-input]="fg:green"
 HSMW_HIGHLIGHT_STYLES[case-parentheses]="fg:yellow"
 HSMW_HIGHLIGHT_STYLES[case-condition]="bg:66"
+
+### Zsh Autocomplete ###
+source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 ### gitstatus is sourced in prompt.zsh ###
 

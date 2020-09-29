@@ -19,5 +19,16 @@ prompt_symbols='%(?.%F{green}%(!.#.=>).%F{red}%(!.#.=>))%f'
 # with an error, the symbol is colored red, otherwise the
 # symbol is green.
 
+## define the left prompt ##
 PROMPT='$directory_display $prompt_symbols '
-RPROMPT='$GITSTATUS_PROMPT'
+# print the current working directory display and the
+# prompt symbols on the left side of the terminal
+
+## define the right prompt ##
+[ -z $MODE_INDICATOR ] && MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
+function vi_mode_prompt_info() {
+    echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
+}
+
+# print the gitstatus of the current directory
+RPROMPT='$(vi_mode_prompt_info) $GITSTATUS_PROMPT'

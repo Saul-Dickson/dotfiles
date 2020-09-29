@@ -30,177 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.config/nvim/site/plugged/vimwiki/plugin
-	..
-0
-d/Users/dickssau000/.config/nvim/site/plugged/vimwiki
-	plugin
-6
-d/Users/dickssau000/.config/nvim/site/plugged
-	vimwiki
-18
-d/Users/dickssau000/.config/nvim/site
-	plugged
-2
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-6
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-9
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-6
-d/Users/dickssau000
-	.playx
-8
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/widget
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	completion
-4
-d/Users/dickssau000/.config/zsh/plugins
-	fast-syntax-highlighting
-1
-d/Users/dickssau000/Projects/src/local/test
-	..
-0
-d/Users/dickssau000/Projects/src/local
-	test
-2
-d/Users/dickssau000/Projects/src
-	local
-2
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000
-	Projects
-20
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-17
-d/Users/dickssau000/.config/zsh
-	launch.zsh
-11
-d/Users/dickssau000/.config
-	zsh
-17
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-17
-d/Users/dickssau000/.config/zsh
-	plugins
-3
-d/Users/dickssau000/.config/zsh/plugins
-	fast-syntax-highlighting
-1
-d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting
-	themes
-8
-d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting/themes
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting
-	themes
-8
-d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting/themes
-	default.ini
-2
-d/Users/dickssau000/.config/zsh
-	plugins.zsh
-12
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-17
-d/Users/dickssau000/.config/zsh
-	.zshrc
-8
-d/Users/dickssau000/.config
-	fsh
-5
-d/Users/dickssau000/.config/fsh
-	overlay.ini
-1
-d/Users/dickssau000/.config/nvim/after
-	syntax
-1
-d/Users/dickssau000/.config/nvim
-	after
-1
-d/Users/dickssau000/.config
-	nvim
-10
-d/Users/dickssau000
-	Projects
-20
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	bento
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	index.html
-11
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/css
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	sass
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/sass
-	main.scss
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	js
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/js
-	theme.js
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	img
-5
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/img
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	icons
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/icons
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	assets
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/assets
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	assets
-2
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/assets
 	..
 0
@@ -330,6 +159,177 @@ d/Users/dickssau000/Downloads
 d/Users/dickssau000/Downloads/github.com
 	dvtm-0.15.tar
 8
+d/Users/dickssau000
+	Projects
+13
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	options.vim
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/async-complete
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete
+	.git
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git
+	refs
+5
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git/refs
+	heads
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git/refs/heads
+	dev
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git/refs
+	heads
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git
+	refs
+5
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete
+	.git
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
+	zsh-autocomplete
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	plugins
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	zsh
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+2
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000
+	.sheldon
+10
+d/Users/dickssau000/.sheldon
+	repos
+1
+d/Users/dickssau000/.sheldon/repos
+	github.com
+1
+d/Users/dickssau000/.sheldon/repos/github.com
+	chriskempson
+1
+d/Users/dickssau000/.sheldon/repos/github.com/chriskempson
+	base16-shell
+1
+d/Users/dickssau000/.sheldon/repos/github.com
+	chrissicool
+2
+d/Users/dickssau000/.sheldon/repos/github.com/chrissicool
+	zsh-256color
+1
+d/Users/dickssau000/.sheldon/repos/github.com/chrissicool/zsh-256color
+	zsh-256color.plugin.zsh
+4
+d/Users/dickssau000/.sheldon/repos/github.com/chrissicool
+	zsh-256color
+1
+d/Users/dickssau000/.sheldon/repos/github.com
+	chrissicool
+2
+d/Users/dickssau000/.sheldon/repos
+	github.com
+1
+d/Users/dickssau000/.sheldon
+	repos
+1
+d/Users/dickssau000
+	.cache
+2
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	compsys
+8
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/compsys
+	_autocomplete.unambiguous
+14
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	recent-dirs
+9
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/recent-dirs
+	..
+0
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	widget
+10
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/widget
+	.autocomplete.menu-complete
+6
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	recent-dirs
+9
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/recent-dirs
+	..
+0
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	compsys
+8
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/compsys
+	_autocomplete.unambiguous
+14
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	autoconf
+7
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/autoconf
+	..
+0
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	async-highlight
+6
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/async-highlight
+	..
+0
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	__main__
+4
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/__main__
+	.autocomplete.__main__
+1
+d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
+	zsh-autocomplete.plugin.zsh
+14
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	zsh
+13
+d/Users/dickssau000/.config/zsh
+	plugins.zsh
+12
 d
 
 # Right window history (oldest to newest):
