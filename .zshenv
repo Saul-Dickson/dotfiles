@@ -7,6 +7,7 @@ export GOPATH="/Users/dickssau000/Library/golib:$GOPATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 export PATH="/Users/dickssau000/Library/golib/bin:$PATH"
 export PATH="/Users/dickssau000/Projects/bin:$PATH"
+export PATH="/Users/dickssau000/.cargo/bin:$PATH"
 
 # clean home
 export ZDOTDIR="/Users/dickssau000/.config/zsh"

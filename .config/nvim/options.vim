@@ -19,7 +19,7 @@ set autochdir " change directory to the file in the current window
 set autoread " automatically read file when changed outside of vim
 set clipboard " use the clipboard as the unnamed register
 set spell " enable spell checking
-set spelllang=english " language(s) to de spell checking for
+set spelllang=en_us " language(s) to de spell checking for
 
 filetype plugin on
 

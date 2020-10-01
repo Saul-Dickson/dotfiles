@@ -18,6 +18,7 @@ Plug 'vifm/vifm.vim' "vifm ((neo)Vi(m) file manager) extention for vim
 Plug 'edkolev/tmuxline.vim'
 Plug 'vimwiki/vimwiki' "personal information wiki extention for vim
 Plug 'godlygeek/tabular' "text alignment
+Plug 'dhruvasagar/vim-table-mode' "create tables
 
 "python
 Plug 'jeetsukumaran/vim-pythonsense' "python specifiic motions and text objects

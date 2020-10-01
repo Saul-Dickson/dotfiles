@@ -30,42 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/assets
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	css
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/css
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	.DS_Store
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	theme.conf
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	alias.zsh
-10
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	fsh
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
-	overlay.ini
-1
-d/Users/dickssau000
-	Projects
-20
 d/Users/dickssau000/Projects
 	src
 3
@@ -330,6 +294,42 @@ d/Users/dickssau000/.config
 d/Users/dickssau000/.config/zsh
 	plugins.zsh
 12
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	css
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/css
+	style.css
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	index.html
+11
+d/Users/dickssau000
+	Projects
+18
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	bento
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
+	index.html
+11
+d/Users/dickssau000
+	Documents
+12
+d/Users/dickssau000/Documents
+	Chemistry
+1
+d/Users/dickssau000/Documents/Chemistry
+	notes.txt
+8
 d
 
 # Right window history (oldest to newest):
@@ -380,12 +380,14 @@ D
 :delete
 :wq
 :q
+:touch notes.txt
 
 # Search history (oldest to newest):
 /../
 /Safaari
 /cordless
 /nvim
+/Proje
 
 # Prompt history (oldest to newest):
 pMovies
