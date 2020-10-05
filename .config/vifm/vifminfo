@@ -30,96 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	site
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	tmux
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	plugins
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
-	tmux-sidebar
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	plugins
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
-	tmux-sidebar
-1
-d/Users/dickssau000
-	Projects
-20
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	zsh
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	.DS_Store
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	tmux
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	gitmux.conf
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	tmux
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-2
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000
-	Downloads
-15
-d/Users/dickssau000/Downloads
-	github.com
-2
 d/Users/dickssau000/Downloads/github.com
 	dvtm-0.15.tar
 8
@@ -330,6 +240,96 @@ d/Users/dickssau000/Documents
 d/Users/dickssau000/Documents/Chemistry
 	notes.txt
 8
+d/Users/dickssau000
+	.config
+4
+d/Users/dickssau000/.config
+	nvim
+10
+d/Users/dickssau000/.config/nvim
+	plug.vim
+9
+d/Users/dickssau000
+	.config
+4
+d/Users/dickssau000/.config
+	nvim
+10
+d/Users/dickssau000/.config/nvim
+	plug.vim
+9
+d/Users/dickssau000
+	.config
+4
+d/Users/dickssau000/.config
+	nvim
+10
+d/Users/dickssau000/.config/nvim
+	init.vim
+6
+d/Users/dickssau000/.config
+	zsh
+13
+d/Users/dickssau000/.config/zsh
+	.zprofile
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	plugins
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
+	zsh-abbr
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
+	.git
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
+	hooks
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git/hooks
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
+	info
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git/info
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
+	logs
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git/logs
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
+	config
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
+	man
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/man
+	abbr.txt
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
+	tests
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/tests
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
+	zsh-abbr.plugin.zsh
+10
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
+	history-search-multi-word
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/history-search-multi-word
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
+	fast-syntax-highlighting
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	init.vim
+6
 d
 
 # Right window history (oldest to newest):
@@ -378,9 +378,10 @@ D
 :rm zsh-autocomplete
 :rm
 :delete
+:touch notes.txt
+:tou
 :wq
 :q
-:touch notes.txt
 
 # Search history (oldest to newest):
 /../
@@ -396,10 +397,7 @@ pPublic
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.1264
-""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41462
-""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41468
-""/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.45361
+""/Users/dickssau000/.local/share/vifm/Trash/000_history-search-multi-word
 
 # Directory stack (oldest to newest):
 
@@ -430,6 +428,12 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.41468
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zcompdump.MacAir382.41468
 t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.45361
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zcompdump.MacAir382.45361
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zprofile
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/.zprofile
+t/Users/dickssau000/.local/share/vifm/Trash/000_abbreviations
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/abbreviations
+t/Users/dickssau000/.local/share/vifm/Trash/000_history-search-multi-word
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/history-search-multi-word
 
 # State:
 f
