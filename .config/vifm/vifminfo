@@ -30,126 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Downloads/github.com
-	dvtm-0.15.tar
-8
-d/Users/dickssau000
-	Projects
-13
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	options.vim
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/async-complete
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete
-	.git
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git
-	refs
-5
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git/refs
-	heads
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git/refs/heads
-	dev
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git/refs
-	heads
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete/.git
-	refs
-5
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-autocomplete
-	.git
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
-	zsh-autocomplete
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	plugins
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	zsh
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-2
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000
-	.sheldon
-10
-d/Users/dickssau000/.sheldon
-	repos
-1
-d/Users/dickssau000/.sheldon/repos
-	github.com
-1
-d/Users/dickssau000/.sheldon/repos/github.com
-	chriskempson
-1
-d/Users/dickssau000/.sheldon/repos/github.com/chriskempson
-	base16-shell
-1
-d/Users/dickssau000/.sheldon/repos/github.com
-	chrissicool
-2
-d/Users/dickssau000/.sheldon/repos/github.com/chrissicool
-	zsh-256color
-1
-d/Users/dickssau000/.sheldon/repos/github.com/chrissicool/zsh-256color
-	zsh-256color.plugin.zsh
-4
-d/Users/dickssau000/.sheldon/repos/github.com/chrissicool
-	zsh-256color
-1
-d/Users/dickssau000/.sheldon/repos/github.com
-	chrissicool
-2
-d/Users/dickssau000/.sheldon/repos
-	github.com
-1
-d/Users/dickssau000/.sheldon
-	repos
-1
-d/Users/dickssau000
-	.cache
-2
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	compsys
-8
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/compsys
-	_autocomplete.unambiguous
-14
 d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
 	recent-dirs
 9
@@ -330,6 +210,126 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/pl
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	init.vim
 6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	site
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	autoload
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	doc
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug.vim
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	fsh
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
+	overlay.ini
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	Pipfile
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.git
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.git
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	fsh
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
+	overlay.ini
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/sample
+	main.py
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	sample
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	fsh
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
+	overlay.ini
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
+	..
+0
 d
 
 # Right window history (oldest to newest):
@@ -381,6 +381,8 @@ D
 :touch notes.txt
 :tou
 :wq
+:colorscheme gruvbox
+:open
 :q
 
 # Search history (oldest to newest):
@@ -397,7 +399,7 @@ pPublic
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_history-search-multi-word
+""/Users/dickssau000/.local/share/vifm/Trash/000_buftabline.vim
 
 # Directory stack (oldest to newest):
 
@@ -434,6 +436,8 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_abbreviations
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/abbreviations
 t/Users/dickssau000/.local/share/vifm/Trash/000_history-search-multi-word
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/history-search-multi-word
+t/Users/dickssau000/.local/share/vifm/Trash/000_buftabline.vim
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload/buftabline.vim
 
 # State:
 f
