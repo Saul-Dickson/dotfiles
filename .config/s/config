@@ -2,5 +2,5 @@ provider: duckduckgo
 
 customProviders [
     name: pornhub
-    url: "https://www.pornhub.com/video/search?search=%s"
+    url: 'https://www.pornhub.com/video/search?search=%s'
 ]

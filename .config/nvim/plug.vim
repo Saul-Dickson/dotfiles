@@ -19,9 +19,10 @@ Plug 'vimwiki/vimwiki' " personal information wiki extention for vim
 Plug 'godlygeek/tabular' " text alignment
 Plug 'dhruvasagar/vim-table-mode' " create tables
 Plug 'jeetsukumaran/vim-pythonsense' " python specifiic motions and text objects
-Plug 'numirias/semshi' {'do': ':UpdateRemotePlugins'} " python syntax highlighting
+Plug 'numirias/semshi' " python syntax highlighting
 Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behaviar
 Plug 'google/yapf' " python code formatter
 " Plug 'ap/vim-buftabline' " buffer tabs
+Plug 'justinmk/vim-sneak' "
 
 call plug#end()

@@ -30,213 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	recent-dirs
-9
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/recent-dirs
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	widget
-10
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/widget
-	.autocomplete.menu-complete
-6
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	recent-dirs
-9
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/recent-dirs
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	compsys
-8
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/compsys
-	_autocomplete.unambiguous
-14
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	autoconf
-7
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/autoconf
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	async-highlight
-6
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/async-highlight
-	..
-0
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	__main__
-4
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete/__main__
-	.autocomplete.__main__
-1
-d/Users/dickssau000/.config/zsh/plugins/zsh-autocomplete
-	zsh-autocomplete.plugin.zsh
-14
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	zsh
-13
-d/Users/dickssau000/.config/zsh
-	plugins.zsh
-12
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	css
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento/css
-	style.css
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	index.html
-11
-d/Users/dickssau000
-	Projects
-18
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	bento
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/bento
-	index.html
-11
-d/Users/dickssau000
-	Documents
-12
-d/Users/dickssau000/Documents
-	Chemistry
-1
-d/Users/dickssau000/Documents/Chemistry
-	notes.txt
-8
-d/Users/dickssau000
-	.config
-4
-d/Users/dickssau000/.config
-	nvim
-10
-d/Users/dickssau000/.config/nvim
-	plug.vim
-9
-d/Users/dickssau000
-	.config
-4
-d/Users/dickssau000/.config
-	nvim
-10
-d/Users/dickssau000/.config/nvim
-	plug.vim
-9
-d/Users/dickssau000
-	.config
-4
-d/Users/dickssau000/.config
-	nvim
-10
-d/Users/dickssau000/.config/nvim
-	init.vim
-6
-d/Users/dickssau000/.config
-	zsh
-13
-d/Users/dickssau000/.config/zsh
-	.zprofile
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	plugins
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
-	zsh-abbr
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
-	.git
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
-	hooks
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git/hooks
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
-	info
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git/info
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
-	logs
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git/logs
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/.git
-	config
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
-	man
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/man
-	abbr.txt
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
-	tests
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr/tests
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/zsh-abbr
-	zsh-abbr.plugin.zsh
-10
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
-	history-search-multi-word
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/history-search-multi-word
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
-	fast-syntax-highlighting
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	init.vim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	site
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	autoload
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	doc
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug.vim
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
 d/Users/dickssau000/Projects/src/github.com
 	Saul-Dickson
 1
@@ -328,8 +121,215 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
 	overlay.ini
 1
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
+	__pycache__
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/vifm
+	scripts
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	vifm
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000
+	Projects
+20
+d/Users
+	dickssau000
+3
+d/
+	opt
+13
+d/opt
 	..
 0
+d/
+	opt
+13
+d/opt
+	..
+0
+d/
+	opt
+13
+d/opt
+	..
+0
+d/
+	home
+12
+d/home
+	..
+0
+d/
+	home
+12
+d/home
+	..
+0
+d/
+	Users
+6
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
+	__main__.py
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug.vim
+10
+d/Users/dickssau000/Documents/other
+	10-13-20 Notes.md
+1
+d/Users/dickssau000/Documents
+	other
+4
+d/Users/dickssau000
+	Documents
+14
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	Projects
+20
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	site
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	autoload
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload
+	plug.vim
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	plugged
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	semshi
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/semshi
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
+	__main__.py
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src
+	github.com
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	site
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	plugged
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	options.vim
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	options.vim
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+6
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.zshenv
+5
 d
 
 # Right window history (oldest to newest):
@@ -383,6 +383,13 @@ D
 :wq
 :colorscheme gruvbox
 :open
+:cds 
+:h
+:tree
+:notree
+::q
+:rename 10-13-20\ Notes.md
+:shell
 :q
 
 # Search history (oldest to newest):
@@ -391,6 +398,7 @@ D
 /cordless
 /nvim
 /Proje
+/Use
 
 # Prompt history (oldest to newest):
 pMovies
