@@ -23,6 +23,10 @@ Plug 'numirias/semshi' " python syntax highlighting
 Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behaviar
 Plug 'google/yapf' " python code formatter
 " Plug 'ap/vim-buftabline' " buffer tabs
-Plug 'justinmk/vim-sneak' "
+Plug 'justinmk/vim-sneak' " the missing motion of vim
+Plug 'tpope/vim-surround' " change the surrounding text of a text block
+Plug 'tpope/vim-repeat' " map the '.' register in a way that allows registers to tap into it
+Plug 'tpope/vim-unimpaired' " next & previous, enable and disable with [<alphanumeric> and ]<alphanumeric>
+Plug 'tpope/vim-tbone' " basic tmux support in vim
 
 call plug#end()

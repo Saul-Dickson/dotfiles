@@ -30,42 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	fsh
-2
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
 	overlay.ini
 1
@@ -330,6 +294,42 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
 	.zshenv
 5
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
+	config.py
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	outline.md
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.git
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.git
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.local
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.local
+	..
+0
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug.vim
+10
 d
 
 # Right window history (oldest to newest):
