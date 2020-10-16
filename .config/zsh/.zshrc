@@ -4,7 +4,7 @@
 source ~/.config/zsh/alias.zsh
 
 # run commands for settings and precommands
-source ~/.config/zsh/init.zsh
+source ~/.config/zsh/settings.zsh
 
 # change the cursor depending on vi-mode
 source ~/.config/zsh/vicursor.zsh

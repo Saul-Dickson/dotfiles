@@ -10,18 +10,22 @@
 	..
 1599392675
 'h
-	/Users/dickssau000/
-	..
-1599392675
-'z
-	/Users/dickssau000/.config/vifm
-	..
-1599392675
+	/Users/dickssau000/.config/zsh
+	keybind.zsh
+1602875495
+'m
+	/Users/dickssau000/.config/zsh
+	keybind.zsh
+1602875501
+'v
+	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	settings
+1602875134
 
 # Bookmarks:
 
 # TUI:
-al
+ar
 q1
 v1
 ov
@@ -30,30 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
-	overlay.ini
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	Pipfile
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.git
-2
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.git
 	..
 0
@@ -328,14 +308,47 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 	nvim
 7
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug.vim
-10
+	options.vim
+9
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
+	__main__.py
+4
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	settings
+4
 d
 
 # Right window history (oldest to newest):
 D/Users/dickssau000
-	..
-0
+	Pictures
+8
+D/Users/dickssau000/.config/zsh
+	keybind.zsh
+6
+D/Users/dickssau000/.config
+	zsh
+15
+D/Users/dickssau000/.config/zsh
+	alias.zsh
+5
 D
 
 # Command line history (oldest to newest):
@@ -390,6 +403,14 @@ D
 ::q
 :rename 10-13-20\ Notes.md
 :shell
+:cd .config/zsh
+:hidden
+:help hidden
+:mkdir settings
+:move settings.zsh settings
+:mv 
+:move settings
+:normal
 :q
 
 # Search history (oldest to newest):
@@ -403,6 +424,7 @@ D
 # Prompt history (oldest to newest):
 pMovies
 pPublic
+pDownloads
 
 # Local filter history (oldest to newest):
 

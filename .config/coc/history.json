@@ -2,7 +2,18 @@
   "diagnostics": {
     "%2FUsers%2Fdickssau000": [
       "set-optionq",
-      "kjk"
+      "kjk",
+      "a"
+    ]
+  },
+  "extensions": {
+    "%2FUsers%2Fdickssau000": [
+      "coc-explo"
+    ]
+  },
+  "explorerActions": {
+    "%2FUsers%2Fdickssau000": [
+      "cd:"
     ]
   }
 }
