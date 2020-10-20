@@ -10,9 +10,9 @@
 	..
 1599392675
 'h
-	/Users/dickssau000/.config/zsh
-	keybind.zsh
-1602875495
+	/Users/dickssau000/
+	..
+1602897656
 'm
 	/Users/dickssau000/.config/zsh
 	keybind.zsh
@@ -25,7 +25,7 @@
 # Bookmarks:
 
 # TUI:
-ar
+al
 q1
 v1
 ov
@@ -34,66 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.git
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	fsh
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
-	overlay.ini
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/sample
-	main.py
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	sample
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	fsh
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/fsh
-	overlay.ini
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
-	__pycache__
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/vifm
-	scripts
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	vifm
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
 d/Users/dickssau000/Projects
 	src
 3
@@ -334,6 +274,66 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
 	settings
 4
+d/Users/dickssau000
+	.local
+4
+d/Users/dickssau000/.local
+	.DS_Store
+3
+d/Users/dickssau000
+	.cache
+2
+d/Users/dickssau000/.cache
+	..
+0
+d/Users/dickssau000
+	.local
+4
+d/Users/dickssau000/.local
+	.DS_Store
+3
+d/usr/local/Cellar/neovim/0.4.4/share/nvim/runtime/doc
+	autocmd.txt
+3
+d/usr/local/Cellar/neovim/0.4.4/share/nvim/runtime
+	doc
+4
+d/usr/local/Cellar/neovim/0.4.4/share/nvim
+	runtime
+1
+d/usr/local/Cellar/neovim/0.4.4/share
+	nvim
+3
+d/usr/local/Cellar/neovim/0.4.4
+	share
+3
+d/usr/local/Cellar/neovim
+	0.4.4
+1
+d/usr/local/Cellar
+	neovim
+21
+d/usr/local
+	Cellar
+2
+d/usr
+	local
+6
+d/Users/dickssau000
+	Projects
+13
+d/Users/dickssau000/Projects
+	src
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
 d
 
 # Right window history (oldest to newest):
@@ -354,7 +354,6 @@ D
 # Command line history (oldest to newest):
 :wincmd l
 :wincmd h
-:cd ~
 :only
 :echo
 :rename ~/.config/tmux/example_tmux.conf tmux.conf
@@ -412,6 +411,8 @@ D
 :move settings
 :normal
 :q
+:cd ~
+:cd ~/Projects/src/github.com/Saul-Dickson/dotfiles
 
 # Search history (oldest to newest):
 /../
@@ -429,7 +430,7 @@ pDownloads
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_buftabline.vim
+""/Users/dickssau000/.local/share/vifm/Trash/000_MEGA
 
 # Directory stack (oldest to newest):
 
@@ -468,6 +469,8 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_history-search-multi-word
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/history-search-multi-word
 t/Users/dickssau000/.local/share/vifm/Trash/000_buftabline.vim
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload/buftabline.vim
+t/Users/dickssau000/.local/share/vifm/Trash/000_MEGA
+	/Users/dickssau000/MEGA
 
 # State:
 f

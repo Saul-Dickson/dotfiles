@@ -10,8 +10,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 " File Explorer/Manager Keymaps
 nnoremap <leader>vv :Vifm<CR>
 nnoremap <leader>vs :VsplitVifm<CR>
-nnoremap <leader>nn :NERDTreeToggle %/.<CR>
-nnoremap <leader>np :NERDTreeToggle<CR>
+nnoremap <leader>nn :CocCommand explorer<CR>
+nnoremap <leader>np :CocCommand explorer ~<CR>
 nnoremap <leader>ps :Rg<SPACE>
 
 " Resize panes vertically, by in/decriments of 5 

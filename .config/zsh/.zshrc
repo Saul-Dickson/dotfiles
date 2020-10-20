@@ -13,4 +13,4 @@ source ~/.config/zsh/settings/vicursor.zsh
 source ~/.config/zsh/settings/prompt.zsh
 
 # source install plugins
-source ~/.config/zsh/plugins.zsh
+source ~/.config/zsh/plugins/plugins.zsh
