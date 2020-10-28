@@ -28,6 +28,6 @@ Plug 'tpope/vim-surround' " change the surrounding text of a text block
 Plug 'tpope/vim-repeat' " map the '.' register in a way that allows registers to tap into it
 Plug 'tpope/vim-unimpaired' " next & previous, enable and disable with [<alphanumeric> and ]<alphanumeric>
 Plug 'tpope/vim-tbone' " basic tmux support in vim
-Plug 'metakirby5/codi.vim'
+Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
 
 call plug#end()

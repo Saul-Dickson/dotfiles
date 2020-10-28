@@ -1,5 +1,5 @@
 # go environment variables
-export GOROOT="/usr/local/Cellar/go/1.15.2"
+export GOROOT="/usr/local/Cellar/go/1.15.3"
 export GOPATH="$HOME/Projects"
 [[ $OSTYPE == *"darwin"* ]] && export GOPATH="$HOME/Library/golib:$GOPATH" || \
     export GOPATH="$HOME/.local/lib/golib:$GOPATH"

@@ -34,72 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000
-	Projects
-20
-d/Users
-	dickssau000
-3
-d/
-	opt
-13
-d/opt
-	..
-0
-d/
-	opt
-13
-d/opt
-	..
-0
-d/
-	opt
-13
-d/opt
-	..
-0
-d/
-	home
-12
-d/home
-	..
-0
-d/
-	home
-12
-d/home
-	..
-0
-d/
-	Users
-6
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	Projects
-20
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
-	__main__.py
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
 	.config
 1
@@ -332,8 +266,74 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 	nvim
 7
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	coc.vim
+6
+d/Users/dickssau000
+	.local
+4
+d/Users/dickssau000/.local
+	share
+3
+d/Users/dickssau000/.local/share
+	z.lua
+10
+d/Users/dickssau000/.local
+	share
+3
+d/Users/dickssau000
+	.local
+4
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	Movies
+11
+d/Users/dickssau000/.config/nvim
+	options.vim
+9
+d/Users/dickssau000/.config
+	nvim
+13
+d/Users/dickssau000
+	.config
+3
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.local
+5
+d/Users/dickssau000/.local
+	lib
+2
+d/Users/dickssau000/.local/lib
+	..
+0
+d/Users/dickssau000/.local
+	share
+3
+d/Users/dickssau000/.local/share
+	z.lua
+10
+d/Users/dickssau000/.local
+	share
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+13
+d/Users/dickssau000/.config/nvim
 	keymaps.vim
 8
+d/Users/dickssau000
+	.dart
+4
+d/Users/dickssau000/.dart
+	README.txt
+1
 d
 
 # Right window history (oldest to newest):
@@ -392,7 +392,6 @@ D
 :delete
 :touch notes.txt
 :tou
-:wq
 :colorscheme gruvbox
 :open
 :cds 
@@ -410,9 +409,14 @@ D
 :mv 
 :move settings
 :normal
-:q
-:cd ~
 :cd ~/Projects/src/github.com/Saul-Dickson/dotfiles
+:mkdir ~/.local/share/z.lua
+:mkdir z.lua
+:copy ~/.local/share/z.lua/
+:wq
+:cd ~/.config/nvim
+:cd ~
+:q
 
 # Search history (oldest to newest):
 /../
@@ -430,7 +434,7 @@ pDownloads
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_MEGA
+""/Users/dickssau000/.local/share/vifm/Trash/000_.zlua
 
 # Directory stack (oldest to newest):
 
@@ -471,6 +475,8 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_buftabline.vim
 	/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload/buftabline.vim
 t/Users/dickssau000/.local/share/vifm/Trash/000_MEGA
 	/Users/dickssau000/MEGA
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zlua
+	/Users/dickssau000/.zlua
 
 # State:
 f

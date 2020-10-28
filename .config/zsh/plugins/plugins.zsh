@@ -18,7 +18,7 @@ source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $PLUGINDIR/zsh-abbr/zsh-abbr.zsh
 
 ### z.lua chdir plugin ###
-source $PLUGINDIR/z.lua.plugin.zsh
+source /usr/local/Cellar/z.lua/1.8.7/share/z.lua/z.lua.plugin.zsh
 
 ### gitstatus is sourced in prompt.zsh ###
 

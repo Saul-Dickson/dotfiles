@@ -9,7 +9,9 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-rls',
   \ 'coc-go',
-  \ 'coc-sh'
+  \ 'coc-sh',
+  \ 'coc-css',
+  \ 'coc-html'
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.

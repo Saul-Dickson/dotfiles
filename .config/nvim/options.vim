@@ -38,8 +38,13 @@ function! LinterStatus() abort
         \)
 endfunction
 
+"#######################"
+"# Statusline settings #"
+"#######################"
 set statusline=
 set statusline+=%m
 set statusline+=\ %f
 set statusline+=%=
 set statusline+=\ %{LinterStatus()}
+
+let g:lightline = {'colorscheme': 'gruvbox'}
