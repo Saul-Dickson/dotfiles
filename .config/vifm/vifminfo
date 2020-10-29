@@ -34,27 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug.vim
-10
-d/Users/dickssau000/Documents/other
-	10-13-20 Notes.md
-1
-d/Users/dickssau000/Documents
-	other
-4
-d/Users/dickssau000
-	Documents
-14
-d/Users
-	dickssau000
-3
 d/Users/dickssau000
 	Projects
 20
@@ -332,7 +311,28 @@ d/Users/dickssau000
 	.dart
 4
 d/Users/dickssau000/.dart
-	README.txt
+	dartdev.json
+2
+d/Users/dickssau000
+	.dart
+4
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+14
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000/.config
+	python
+15
+d/Users/dickssau000/.config/python
+	config.py
 1
 d
 
@@ -413,10 +413,11 @@ D
 :mkdir ~/.local/share/z.lua
 :mkdir z.lua
 :copy ~/.local/share/z.lua/
-:wq
 :cd ~/.config/nvim
 :cd ~
 :q
+:rename config.py
+:wq
 
 # Search history (oldest to newest):
 /../

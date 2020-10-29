@@ -45,6 +45,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export ZDOTDIR="$HOME/.config/zsh" # Set the dir of zsh's configuration files
 export PYLINTHOME="$HOME/.local/share/pylint.d" # Set the dir for pylint's data storage
 export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc" # Set the dir for npm configuration files
+export PYTHONSTARTUP="$HOME/.config/python/config.py"
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
