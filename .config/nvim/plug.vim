@@ -29,5 +29,6 @@ Plug 'tpope/vim-repeat' " map the '.' register in a way that allows registers to
 Plug 'tpope/vim-unimpaired' " next & previous, enable and disable with [<alphanumeric> and ]<alphanumeric>
 Plug 'tpope/vim-tbone' " basic tmux support in vim
 Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
+Plug 'Lenovsky/nuake'
 
 call plug#end()

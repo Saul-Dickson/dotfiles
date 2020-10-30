@@ -34,33 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	site
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	autoload
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload
-	plug.vim
-1
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
 	plugged
 3
@@ -334,6 +307,33 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.local/bin
 d/Users/dickssau000
 	.DS_Store
 16
+d/Users/dickssau000/.local/bin
+	..
+0
+d/Users/dickssau000/.local
+	..
+0
+d/Users/dickssau000
+	.local
+5
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.local
+5
+d/Users/dickssau000/.local
+	bin
+1
+d/Users/dickssau000/.local/bin
+	..
+0
+d/Users/dickssau000/.local
+	lib
+2
+d/Users/dickssau000
+	.local
+5
 d
 
 # Right window history (oldest to newest):
@@ -416,9 +416,9 @@ D
 :cd ~/.config/nvim
 :cd ~
 :rename config.py
-:wq
 :rename vi.sh
 :q
+:wq
 
 # Search history (oldest to newest):
 /../

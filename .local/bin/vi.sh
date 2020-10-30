@@ -1,2 +1,2 @@
-[ -z $1 ] && nvim -c "Vifm ~" || \
+[ -z $1 ] && nvim -c "Vifm ." || \
     nvim $@
