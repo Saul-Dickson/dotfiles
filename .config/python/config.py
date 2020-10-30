@@ -1,12 +1,18 @@
-from pathlib import Path
-from atexit import register
-from readline import read_history_file, set_history_length, write_history_file
+import sys
 
-readline_history_file = Path("~", ".cache", "python", "python_history")
-try:
-    read_history_file(readline_history_file)
-except IOError:
-    pass
 
-set_history_length(1000)
-register(write_history_file, readline_history_file)
+def register_readline_completion():
+    # rlcompleter must be loaded for Python-specific completion
+    try:
+        import readline, rlcompleter
+    except ImportError:
+        return
+    # Enable tab-completion
+    readline_doc = getattr(readline, '__doc__', '')
+    if readline_doc is not None and 'libedit' in readline_doc:
+        readline.parse_and_bind('bind ^I rl_complete')
+    else:
+        readline.parse_and_bind('tab: complete')
+
+
+sys.__interactivehook__ = register_readline_completion

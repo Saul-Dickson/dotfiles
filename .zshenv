@@ -5,6 +5,9 @@
 ## The path to your "projects" directory ##
 PROJECTSDIR=$HOME/Projects
 
+## The path to your local library directory ##
+LIBRARYDIR=$HOME/Libary
+
 ################################
 # Golang Environment Variables #
 ################################
@@ -22,6 +25,7 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 export PATH="/usr/local/Cellar/python@3.8/3.8.6/bin:${PATH}"
 export PATH="/usr/local/Cellar/python@3.8/3.8.5/bin:${PATH}"
 export PATH="/usr/local/Cellar/python@3.9/3.9.0/bin:${PATH}"
+export PATH="$LIBRARYDIR/Python/3.8/bin:${PATH}"
 
 ## Add the Dedicated bin dir of your Projects folder to PATH ##
 export PATH="$PROJECTSDIR/bin:$PATH" 
@@ -45,14 +49,14 @@ export PATH="$HOME/.local/bin:$PATH"
 export ZDOTDIR="$HOME/.config/zsh" # Set the dir of zsh's configuration files
 export PYLINTHOME="$HOME/.local/share/pylint.d" # Set the dir for pylint's data storage
 export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc" # Set the dir for npm configuration files
-export PYTHONSTARTUP="$HOME/.config/python/config.py"
+export PYTHONSTARTUP="$HOME/.config/python/config.py" # Tell python where the init file for it's REPL is located
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
 [[ $OSTYPE == *"darwin"* ]] && export CARGO_HOME="$HOME/Library/cargo" || \
     export CARGO_HOME="$HOME/.local/lib/cargo"
 
-# Set the directory for rustup's local libraries to $HOME/Library/rustup if   ##
-# the system is a mac. Otherwise set the directory to $HOME/.local/lib/rustup ##
+## Set the directory for rustup's local libraries to $HOME/Library/rustup if   ##
+## the system is a mac. Otherwise set the directory to $HOME/.local/lib/rustup ##
 [[ $OSTYPE == *"darwin"* ]] && export RUSTUP_HOME="$HOME/Library/rustup" || \
     export RUSTUP_HOME="$HOME/.local/lib/rustup"

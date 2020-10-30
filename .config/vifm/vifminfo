@@ -34,15 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000
-	Projects
-20
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src
-	github.com
-1
 d/Users/dickssau000/Projects/src/github.com
 	Saul-Dickson
 1
@@ -334,6 +325,15 @@ d/Users/dickssau000/.config
 d/Users/dickssau000/.config/python
 	config.py
 1
+d/Users/dickssau000
+	Public
+15
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.local/bin
+	vi.sh
+1
+d/Users/dickssau000
+	.DS_Store
+16
 d
 
 # Right window history (oldest to newest):
@@ -415,9 +415,10 @@ D
 :copy ~/.local/share/z.lua/
 :cd ~/.config/nvim
 :cd ~
-:q
 :rename config.py
 :wq
+:rename vi.sh
+:q
 
 # Search history (oldest to newest):
 /../
