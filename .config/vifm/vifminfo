@@ -34,9 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	options.vim
-9
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 	nvim
 6
@@ -334,6 +331,9 @@ d/Users/dickssau000/.local/bin
 d/Users/dickssau000
 	Desktop
 8
+d/Users/dickssau000/.local/share
+	pylint.d
+7
 d
 
 # Right window history (oldest to newest):

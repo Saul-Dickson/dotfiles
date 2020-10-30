@@ -1,7 +1,14 @@
-[ -z $1 ] &&
-    [ -d $1 ] && vifm $@ ; exit || 
-    [ -L $1 ] && vifm $@ ; exit || 
-        nvim $@ ; exit || 
-    \
-    [ -z $1 ] && vifm . ; exit || 
-    nvim $@
+[ -f $1 ] && type="file" ||
+[ -d $1 ] && type="directory" ||
+[ -L $1 ] && cudir=$(pwd) && \
+    cd $1 && type="directory" ||
+    type="file"; cd $curdir
+
+case $type in
+    "file")
+        nvim $1
+        ;;
+    "directory")
+        vifm $1
+        ;;
+esac
