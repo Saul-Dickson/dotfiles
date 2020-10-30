@@ -34,48 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	plugged
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
-	semshi
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/semshi
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
-	__main__.py
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src
-	github.com
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	site
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	plugged
-3
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	options.vim
 9
@@ -334,6 +292,48 @@ d/Users/dickssau000/.local
 d/Users/dickssau000
 	.local
 5
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	coc-settings.json
+5
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	README.md
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	README.md
+7
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	spell
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	README.md
+7
+d/Users/dickssau000
+	Desktop
+8
+d/Users/dickssau000/.local/bin
+	..
+0
+d/Users/dickssau000
+	Documents
+9
 d
 
 # Right window history (oldest to newest):
@@ -417,8 +417,8 @@ D
 :cd ~
 :rename config.py
 :rename vi.sh
-:q
 :wq
+:q
 
 # Search history (oldest to newest):
 /../

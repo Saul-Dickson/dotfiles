@@ -9,3 +9,6 @@ alias neofetch="cat ~/.cache/neofetch"
 
 # alias clear to python -c "print('\n')" && (alias) neofetch
 alias clear="/usr/bin/clear"
+
+# alias vi to ~/.local/bin/vi.sh*
+alias vi="~/.local/bin/vi.sh"
