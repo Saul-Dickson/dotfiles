@@ -1,0 +1,44 @@
+{
+	"name": "xdg-trashdir",
+	"version": "2.1.1",
+	"description": "Get the correct trash path on Linux",
+	"license": "MIT",
+	"repository": "kevva/xdg-trashdir",
+	"author": {
+		"name": "Kevin Mårtensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "https://github.com/kevva"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"dir",
+		"file",
+		"linux",
+		"recycle",
+		"trash",
+		"xdg"
+	],
+	"dependencies": {
+		"@sindresorhus/df": "^2.1.0",
+		"mount-point": "^3.0.0",
+		"pify": "^2.2.0",
+		"user-home": "^2.0.0",
+		"xdg-basedir": "^2.0.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"execa": "^0.4.0",
+		"xo": "*"
+	},
+	"xo": {
+		"esnext": true
+	}
+}
