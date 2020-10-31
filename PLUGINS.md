@@ -1,7 +1,7 @@
 # Plugins
 
-[neovim](#neovim)
-[zsh](#zsh)
+[neovim](#neovim)  
+[zsh](#zsh)  
 
 ## Neovim
 * [coc.vim](https:github.com/neoclide/coc.vim)  
