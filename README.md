@@ -1,7 +1,8 @@
 # Saul Dickson's Dotfiles
 
 ### Editor: [nvim](https://github.com/neovim/neovim)
-<details><summary>#### Plugins:<\summary>
+<details>
+<summary>#### Plugins:<\summary>
 <p>
 #### Plugins:
 ##### Intellisense engine for Vim8 & Neovim 
@@ -69,6 +70,7 @@
 * [nuake](https://github.com/Lenovsky/nuake)
 ##### Markdown preview plugin for (Neo)Vim
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
+<\p>
 <\details>
 
 #### Shell: [zsh](http://zsh.sourceforge.net)
