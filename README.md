@@ -69,8 +69,8 @@
 * [nuake](https://github.com/Lenovsky/nuake)
 ##### Markdown preview plugin for (Neo)Vim
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
-    <\p>
-<\details>
+    </p>
+</details>
 
 #### Shell: [zsh](http://zsh.sourceforge.net)
 ##### (p) Plugins:
