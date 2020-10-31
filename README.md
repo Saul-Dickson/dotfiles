@@ -2,9 +2,8 @@
 
 ### Editor: [nvim](https://github.com/neovim/neovim)
 <details>
-<summary>#### Plugins:<\summary>
-<p>
-#### Plugins:
+    <summary>#### Plugins:</summary>
+    <p>
 ##### Intellisense engine for Vim8 & Neovim 
 * [coc.vim](https:github.com/neoclide/coc.vim)  
 ##### Retro groove color scheme for (Neo)Vim
@@ -70,7 +69,7 @@
 * [nuake](https://github.com/Lenovsky/nuake)
 ##### Markdown preview plugin for (Neo)Vim
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
-<\p>
+    <\p>
 <\details>
 
 #### Shell: [zsh](http://zsh.sourceforge.net)
