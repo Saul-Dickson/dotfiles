@@ -34,9 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 	nvim
 7
@@ -334,6 +331,9 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	plug.vim
 10
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.gitignore
+5
 d
 
 # Right window history (oldest to newest):
@@ -352,6 +352,7 @@ D/Users/dickssau000/.config/zsh
 D
 
 # Command line history (oldest to newest):
+:touch PLUGINS.md
 :wincmd l
 :wincmd h
 :only
@@ -417,10 +418,10 @@ D
 :cd ~
 :rename config.py
 :rename vi.sh
-:wq
 :q:q
 :cd Proj*/src/git*/S*/dot*
 :q
+:wq
 
 # Search history (oldest to newest):
 /../
