@@ -34,57 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	options.vim
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-6
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.zshenv
-5
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
-	config.py
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	outline.md
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.git
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.git
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.local
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.local
-	..
-0
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	options.vim
-9
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-7
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
 	.config
 1
@@ -332,8 +281,59 @@ d/Users/dickssau000
 	Desktop
 8
 d/Users/dickssau000/.local/share
-	pylint.d
-7
+	virtualenvs
+9
+d/Users/dickssau000/.local
+	share
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	python
+16
+d/Users/dickssau000/.config/python
+	config.py
+1
+d/Users/dickssau000/.config
+	python
+16
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	python
+16
+d/Users/dickssau000/.config/python
+	config.py
+1
+d/Users/dickssau000/.config
+	python
+16
+d/Users/dickssau000
+	.config
+3
+d/Users
+	temp
+5
+d/Users/temp
+	Applications
+2
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	Projects
+15
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+8
+d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug.vim
+10
 d
 
 # Right window history (oldest to newest):
@@ -419,6 +419,7 @@ D
 :rename vi.sh
 :wq
 :q:q
+:cd Proj*/src/git*/S*/dot*
 :q
 
 # Search history (oldest to newest):

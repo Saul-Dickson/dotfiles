@@ -15,5 +15,12 @@
     "%2FUsers%2Fdickssau000": [
       "cd:"
     ]
+  },
+  "commands": {
+    "%2FUsers%2Fdickssau000%2FProjects%2Fsrc%2Fgithub": {
+      "com%2FSaul-Dickson%2Fdotfiles": [
+        "c"
+      ]
+    }
   }
 }
