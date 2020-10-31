@@ -332,8 +332,8 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	plug.vim
 10
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.gitignore
-5
+	PLUGINS.md
+7
 d
 
 # Right window history (oldest to newest):
@@ -420,8 +420,8 @@ D
 :rename vi.sh
 :q:q
 :cd Proj*/src/git*/S*/dot*
-:q
 :wq
+:q
 
 # Search history (oldest to newest):
 /../

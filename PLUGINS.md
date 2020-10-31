@@ -1,5 +1,8 @@
 # Plugins
 
+### [neovim](#neovim)
+### [zsh](#zsh)
+
 ## Neovim
 * [coc.vim](https:github.com/neoclide/coc.vim)  
 * [gruvbox](https://github.com/morhetz/gruvbox)
