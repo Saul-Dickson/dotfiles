@@ -1,12 +1,13 @@
 .DS_Store
 
+/.local/bin/activate_pyzshcomplete
 /.config/nvim/undodir
 /.config/nvim/site/doc
 /.config/nvim/site/plugged
-./.config/zsh/plugins/gitstatus/*
-./.config/zsh/plugins/zshabbr/*
-./.config/zsh/plugins/powerlevel10k/*
-./.config/zsh/plugins/zsh-completions/*
-./.config/zsh/plugins/zsh-autocomplete/*
-./.config/zsh/plugins/spaceship-prompt/*
-./.config/zsh/plugins/fast-syntax-highlighting/*
+/.config/zsh/plugins/gitstatus/*
+/.config/zsh/plugins/zshabbr/*
+/.config/zsh/plugins/powerlevel10k/*
+/.config/zsh/plugins/zsh-completions/*
+/.config/zsh/plugins/zsh-autocomplete/*
+/.config/zsh/plugins/spaceship-prompt/*
+/.config/zsh/plugins/fast-syntax-highlighting/*
