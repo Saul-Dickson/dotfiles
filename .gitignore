@@ -1,5 +1,6 @@
 .DS_Store
 
+./.config/coc/extensions
 /.local/bin/activate_pyzshcomplete
 /.config/nvim/undodir
 /.config/nvim/site/doc
