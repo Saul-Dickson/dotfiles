@@ -1,3 +1,5 @@
 [user]
 	name = Saul-Dickson
 	email = acepebisboy@icloud.com
+[core]
+	editor = nvim

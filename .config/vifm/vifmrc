@@ -290,8 +290,8 @@ fileviewer *.docx docx2txt.pl %f -
 " Explicitly set highlight type for some extensions
 "
 " 256-color terminal
-" fileviewer *.[ch],*.[ch]pp highlight -O xterm256 -s dante --syntax c %c
-" fileviewer Makefile,Makefile.* highlight -O xterm256 -s dante --syntax make %c
+fileviewer *.[ch],*.[ch]pp highlight -O xterm256 -s dante --syntax c %c
+fileviewer Makefile,Makefile.* highlight -O xterm256 -s dante --syntax make %c
 "
 " 16-color terminal
 " fileviewer *.c,*.h highlight -O ansi -s dante %c
@@ -302,7 +302,7 @@ fileviewer *.docx docx2txt.pl %f -
 
 " Displaying pictures in terminal
 "
-" fileviewer *.jpg,*.png shellpic %c
+fileviewer *.jpg,*.png shellpic %c
 
 " Open all other files with default system programs (you can also remove all
 " :file[x]type commands above to ensure they don't interfere with system-wide

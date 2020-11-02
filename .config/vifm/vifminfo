@@ -27,145 +27,13 @@
 # TUI:
 al
 q1
-v1
+v2
 ov
 m-1
 l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000
-	Projects
-13
-d/Users/dickssau000/Projects
-	src
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	coc.vim
-6
-d/Users/dickssau000
-	.local
-4
-d/Users/dickssau000/.local
-	share
-3
-d/Users/dickssau000/.local/share
-	z.lua
-10
-d/Users/dickssau000/.local
-	share
-3
-d/Users/dickssau000
-	.local
-4
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	Movies
-11
-d/Users/dickssau000/.config/nvim
-	options.vim
-9
-d/Users/dickssau000/.config
-	nvim
-13
-d/Users/dickssau000
-	.config
-3
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	.local
-5
-d/Users/dickssau000/.local
-	lib
-2
-d/Users/dickssau000/.local/lib
-	..
-0
-d/Users/dickssau000/.local
-	share
-3
-d/Users/dickssau000/.local/share
-	z.lua
-10
-d/Users/dickssau000/.local
-	share
-3
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-13
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000
-	.dart
-4
-d/Users/dickssau000/.dart
-	dartdev.json
-2
-d/Users/dickssau000
-	.dart
-4
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-14
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000/.config
-	python
-15
-d/Users/dickssau000/.config/python
-	config.py
-1
-d/Users/dickssau000
-	Public
-15
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.local/bin
-	vi.sh
-1
-d/Users/dickssau000
-	.DS_Store
-16
-d/Users/dickssau000/.local/bin
-	..
-0
-d/Users/dickssau000/.local
-	..
-0
-d/Users/dickssau000
-	.local
-5
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	.local
-5
-d/Users/dickssau000/.local
-	bin
-1
-d/Users/dickssau000/.local/bin
-	..
-0
 d/Users/dickssau000/.local
 	lib
 2
@@ -334,6 +202,138 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	keymaps.vim
 8
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/vifm
+	..
+0
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	.DS_Store
+14
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/.local/dev/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/.local/dev/src
+	github.com
+1
+d/Users/dickssau000/.local/dev
+	src
+3
+d/Users/dickssau000/.local
+	dev
+2
+d/Users/dickssau000
+	.local
+5
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	vifm
+19
+d/Users/dickssau000/.config/vifm
+	colors
+1
+d/Users/dickssau000/.config/vifm/colors
+	gruvbox.vifm
+10
+d/Users/dickssau000/.config/vifm
+	vifmrc
+5
+d/Users/dickssau000/.config
+	vifm
+19
+d/Users/dickssau000
+	Pictures
+14
+d/Users/dickssau000/Pictures
+	wallpapers
+5
+d/Users/dickssau000/Pictures/wallpapers
+	wp1933952.jpg
+4
+d/Users/dickssau000/Pictures
+	wallpapers
+5
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	gh
+8
+d/Users/dickssau000/.config/gh
+	hosts.yml
+2
+d/Users/dickssau000/.config
+	vifm
+19
+d/Users/dickssau000/.config/vifm
+	vifminfo
+4
+d/Users/dickssau000/.config
+	youtube-dlg
+20
+d/Users/dickssau000/.config/youtube-dlg
+	..
+0
+d/Users/dickssau000/.config
+	mpv
+12
+d/Users/dickssau000/.config/mpv
+	..
+0
+d/Users/dickssau000/.config
+	htop
+11
+d/Users/dickssau000/.config/htop
+	..
+0
+d/Users/dickssau000/.config
+	bpytop
+2
+d/Users/dickssau000/.config/bpytop
+	themes
+1
+d/Users/dickssau000/.config/bpytop/themes
+	..
+0
+d/Users/dickssau000/.config/bpytop
+	bpytop.conf
+2
+d/Users/dickssau000/.config
+	configstore
+4
+d/Users/dickssau000
+	.Trash
+1
+d/Users/dickssau000/.Trash
+	..
+0
+d/Users/dickssau000
+	.Trash
+1
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	bpytop
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	dart
+3
 d
 
 # Right window history (oldest to newest):
@@ -349,11 +349,13 @@ D/Users/dickssau000/.config
 D/Users/dickssau000/.config/zsh
 	alias.zsh
 5
+D/Users/dickssau000/.config
+	zsh
+21
 D
 
 # Command line history (oldest to newest):
 :touch PLUGINS.md
-:wincmd l
 :wincmd h
 :only
 :echo
@@ -420,9 +422,18 @@ D
 :rename vi.sh
 :q:q
 :cd Proj*/src/git*/S*/dot*
-:wq
 :touch OUTLINE.md
+:vs
+:source ~/.config/vifm/vifmrc
+:wincmd l
+:colorscheme:q
 :q
+:copy ~/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/bpytop
+:copy bpytop ~/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/bpytop
+:copy
+:cd ~/.local/dev/src/git*/Saul*/dot*/.config/
+:cd ~/.local/dev/src/github.com/Saul-Dickson/dotfiles
+:wq
 
 # Search history (oldest to newest):
 /../
@@ -440,7 +451,7 @@ pDownloads
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_.zlua
+""/Users/dickssau000/.config/bpytop
 
 # Directory stack (oldest to newest):
 
@@ -483,6 +494,12 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_MEGA
 	/Users/dickssau000/MEGA
 t/Users/dickssau000/.local/share/vifm/Trash/000_.zlua
 	/Users/dickssau000/.zlua
+t/Users/dickssau000/.local/share/vifm/Trash/000_.dart
+	/Users/dickssau000/.dart
+t/Users/dickssau000/.local/share/vifm/Trash/000_.playx
+	/Users/dickssau000/.playx
+t/Users/dickssau000/.local/share/vifm/Trash/000_.DS_Store
+	/Users/dickssau000/.DS_Store
 
 # State:
 f
