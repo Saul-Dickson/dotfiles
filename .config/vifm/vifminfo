@@ -34,69 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/als/als
-	__main__.py
-4
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	settings
-4
-d/Users/dickssau000
-	.local
-4
-d/Users/dickssau000/.local
-	.DS_Store
-3
-d/Users/dickssau000
-	.cache
-2
-d/Users/dickssau000/.cache
-	..
-0
-d/Users/dickssau000
-	.local
-4
-d/Users/dickssau000/.local
-	.DS_Store
-3
-d/usr/local/Cellar/neovim/0.4.4/share/nvim/runtime/doc
-	autocmd.txt
-3
-d/usr/local/Cellar/neovim/0.4.4/share/nvim/runtime
-	doc
-4
-d/usr/local/Cellar/neovim/0.4.4/share/nvim
-	runtime
-1
-d/usr/local/Cellar/neovim/0.4.4/share
-	nvim
-3
-d/usr/local/Cellar/neovim/0.4.4
-	share
-3
-d/usr/local/Cellar/neovim
-	0.4.4
-1
-d/usr/local/Cellar
-	neovim
-21
-d/usr/local
-	Cellar
-2
-d/usr
-	local
-6
 d/Users/dickssau000
 	Projects
 13
@@ -334,6 +271,69 @@ d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
 	PLUGINS.md
 7
+d/Users/dickssau000
+	Pictures
+14
+d/Users/dickssau000/Pictures
+	wallpapers
+5
+d/Users/dickssau000
+	Pictures
+14
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	zsh
+13
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	settings
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/settings
+	prompt.zsh
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	alias.zsh
+12
+d/Users/dickssau000
+	Documents
+9
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
+	cache.py
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
+	OUTLINE.md
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
+	logger.py
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
+	OUTLINE.md
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
+	main.py
+6
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
+	OUTLINE.md
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
+	player.py
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
+	playx
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+8
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
 d
 
 # Right window history (oldest to newest):
@@ -421,6 +421,7 @@ D
 :q:q
 :cd Proj*/src/git*/S*/dot*
 :wq
+:touch OUTLINE.md
 :q
 
 # Search history (oldest to newest):

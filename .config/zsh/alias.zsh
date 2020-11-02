@@ -11,4 +11,4 @@ alias neofetch="cat ~/.cache/neofetch"
 alias clear="/usr/bin/clear"
 
 # alias vi to ~/.local/bin/vi.sh*
-alias vi="~/.local/bin/vi.sh"
+alias vi="vifm"
