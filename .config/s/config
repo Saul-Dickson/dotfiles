@@ -4,5 +4,13 @@ customProviders [
     {
         name: pornhub
         url: 'https://www.pornhub.com/video/search?search=%s'
+    },
+    {
+        name: multporn
+        url:https://multporn.net/search?search_api_views_fulltext=%s&type=All&sort_by=search_api_relevance
+    },
+    {
+        name: nhentai
+        url:https://nhentai.net/search/?q=%s
     }
 ]

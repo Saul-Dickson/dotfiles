@@ -34,144 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local
-	lib
-2
-d/Users/dickssau000
-	.local
-5
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	coc-settings.json
-5
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	README.md
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	README.md
-7
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	spell
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	README.md
-7
-d/Users/dickssau000
-	Desktop
-8
-d/Users/dickssau000/.local/bin
-	..
-0
-d/Users/dickssau000
-	Desktop
-8
-d/Users/dickssau000/.local/share
-	virtualenvs
-9
-d/Users/dickssau000/.local
-	share
-3
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	python
-16
-d/Users/dickssau000/.config/python
-	config.py
-1
-d/Users/dickssau000/.config
-	python
-16
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	python
-16
-d/Users/dickssau000/.config/python
-	config.py
-1
-d/Users/dickssau000/.config
-	python
-16
-d/Users/dickssau000
-	.config
-3
-d/Users
-	temp
-5
-d/Users/temp
-	Applications
-2
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	Projects
-15
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-8
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug.vim
-10
-d/Users/dickssau000/Projects/src/github.com/Saul-Dickson/dotfiles
-	PLUGINS.md
-7
-d/Users/dickssau000
-	Pictures
-14
-d/Users/dickssau000/Pictures
-	wallpapers
-5
-d/Users/dickssau000
-	Pictures
-14
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	zsh
-13
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	settings
-4
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/settings
-	prompt.zsh
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	alias.zsh
-12
-d/Users/dickssau000
-	Documents
-9
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
-	cache.py
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
-	OUTLINE.md
-7
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
 	logger.py
 4
@@ -334,6 +196,144 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
 	dart
 3
+d/Users/dickssau000
+	Library
+9
+d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting
+	DONATIONS.md
+13
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/vifm
+	vifmrc
+5
+d/Users/dickssau000/.dart
+	README.txt
+1
+d/Users/dickssau000/Downloads/github.com/sdk
+	sdk
+12
+d/Users/dickssau000/Downloads/github.com/sdk/sdk
+	lib
+2
+d/Users/dickssau000/Downloads/github.com/sdk/sdk/lib
+	indexed_db
+11
+d/Users/dickssau000/Downloads/github.com/sdk/sdk
+	lib
+2
+d/Users/dickssau000/Downloads/github.com/sdk
+	build
+5
+d/Users/dickssau000/Downloads/github.com/sdk/build
+	..
+0
+d/Users/dickssau000/Downloads/github.com/sdk
+	client
+6
+d/Users/dickssau000/Downloads/github.com/sdk/client
+	..
+0
+d/Users/dickssau000/Downloads/github.com/sdk
+	docs
+7
+d/Users/dickssau000/Downloads/github.com/sdk/docs
+	..
+0
+d/Users/dickssau000/Downloads/github.com/sdk
+	pkg
+8
+d/Users/dickssau000/Downloads/github.com/sdk/pkg
+	..
+0
+d/Users/dickssau000/Downloads/github.com/sdk
+	pkg
+8
+d/Users/dickssau000/Downloads/github.com/sdk/pkg
+	telemetry
+23
+d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry
+	test
+2
+d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry/test
+	utils_test.dart
+3
+d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry
+	lib
+1
+d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry/lib
+	telemetry.dart
+3
+d/Users/dickssau000/Downloads/github.com
+	Duvbox-1.5.0
+1
+d/Users/dickssau000/Downloads
+	github.com
+4
+d/Users/dickssau000
+	Downloads
+9
+d/Users/dickssau000/.config/nvim
+	coc-settings.json
+5
+d/Users/dickssau000/.config
+	nvim
+15
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.local/dev
+	src
+3
+d/Users/dickssau000/.local/dev/src
+	github.com
+1
+d/Users/dickssau000/.local/dev/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	python
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
+	config.py
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+9
+d/Users/dickssau000
+	.zshenv
+17
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	lightline.vim
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000
+	Pictures
+13
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000/Downloads/github.com
+	The_Wandering_Inn_Book_6.html
+18
 d
 
 # Right window history (oldest to newest):
@@ -350,14 +350,11 @@ D/Users/dickssau000/.config/zsh
 	alias.zsh
 5
 D/Users/dickssau000/.config
-	zsh
-21
+	configstore
+4
 D
 
 # Command line history (oldest to newest):
-:touch PLUGINS.md
-:wincmd h
-:only
 :echo
 :rename ~/.config/tmux/example_tmux.conf tmux.conf
 :rename ~/.config/tmux/tmux.conf
@@ -395,7 +392,6 @@ D
 :delete
 :touch notes.txt
 :tou
-:colorscheme gruvbox
 :open
 :cds 
 :h
@@ -416,24 +412,49 @@ D
 :mkdir ~/.local/share/z.lua
 :mkdir z.lua
 :copy ~/.local/share/z.lua/
-:cd ~/.config/nvim
 :cd ~
 :rename config.py
 :rename vi.sh
 :q:q
 :cd Proj*/src/git*/S*/dot*
 :touch OUTLINE.md
-:vs
 :source ~/.config/vifm/vifmrc
-:wincmd l
 :colorscheme:q
-:q
 :copy ~/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/bpytop
 :copy bpytop ~/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/bpytop
 :copy
 :cd ~/.local/dev/src/git*/Saul*/dot*/.config/
 :cd ~/.local/dev/src/github.com/Saul-Dickson/dotfiles
+:wincmd l
+:vs
+:split
+:media
+:tabnew
+:tabnext
+:wincmd k
+:wincmd j
 :wq
+:windo q
+:wincmd j<CR> :windo q
+:wincmd J
+:wincmd K
+:shell s close a window in vifm
+:shell "s close a window in vifm"
+:run s close a window in vifm
+:colorscheme gruvbox
+:cd ~/.local/dev
+:q
+:touch lightline.vim
+:move plug-config
+:move ~/.config/nvim/plug-config
+:cd ~/.config/nvim
+:touch The_Wandering_Inn_Book_1.html
+:The_Wandering_Inn_Book_2.html
+:touch The_Wandering_Inn_Book_2.html
+:touch The_Wandering_Inn_Book_3.html
+:touch The_Wandering_Inn_Book_4.html
+:touch The_Wandering_Inn_Book_5.html
+:touch The_Wandering_Inn_Book_6.html
 
 # Search history (oldest to newest):
 /../
@@ -442,6 +463,7 @@ D
 /nvim
 /Proje
 /Use
+/tele
 
 # Prompt history (oldest to newest):
 pMovies

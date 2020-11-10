@@ -29,7 +29,12 @@ Plug 'tpope/vim-repeat' " map the '.' register in a way that allows registers to
 Plug 'tpope/vim-unimpaired' " next & previous, enable and disable with [<alphanumeric> and ]<alphanumeric>
 Plug 'tpope/vim-tbone' " basic tmux support in vim
 Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
-Plug 'Lenovsky/nuake' " Quake style terminal
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
+Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
+Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
 
 call plug#end()
+
+" Source plugin configs
+source ~/.config/nvim/plug-config/coc.vim " Conquer of Completion Config
+source ~/.config/nvim/plug-config/lightline.vim " lightline config 

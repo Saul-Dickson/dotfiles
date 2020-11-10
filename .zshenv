@@ -3,7 +3,7 @@
 ################################
 
 ## The path to your "projects" directory ##
-PROJECTSDIR=$HOME/Projects
+PROJECTSDIR=$HOME/.local/dev
 
 ## The path to your local library directory ##
 LIBRARYDIR=$HOME/Libary
@@ -13,8 +13,7 @@ LIBRARYDIR=$HOME/Libary
 ################################
 export GOROOT="/usr/local/Cellar/go/1.15.3"
 export GOPATH="$PROJECTSDIR"
-[[ $OSTYPE == *"darwin"* ]] && export GOPATH="$HOME/Library/golib:$GOPATH" || \
-    export GOPATH="$HOME/.local/lib/golib:$GOPATH"
+export GOPATH="$LIBRARYDIR/golib"
 
 #####################
 # Add Paths to PATH #
@@ -35,12 +34,10 @@ export PATH="$PROJECTSDIR/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Add the directory for rustup's bin dir to PATH ##
-[[ $OSTYPE == *"darwin"* ]] && export PATH="$HOME/Library/golib/bin:$PATH" || \
-    export PATH="$HOME/.local/lib/golib/bin:$PATH"
+export PATH="$LIBRARYDIR/rustup/bin:$PATH"
 
 # Add the directory for rustup's bin dir to PATH ##
-[[ $OSTYPE == *"darwin"* ]] && export PATH="$HOME/Library/cargo/bin:$PATH" || \
-    export PATH="$HOME/.local/lib/cargo/bin:$PATH"
+export PATH="$LIBRARYDIR/cargo/bin:$PATH"
 
 ############################
 # Clean the Home Directory #
@@ -53,10 +50,8 @@ export PYTHONSTARTUP="$HOME/.config/python/config.py" # Tell python where the in
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
-[[ $OSTYPE == *"darwin"* ]] && export CARGO_HOME="$HOME/Library/cargo" || \
-    export CARGO_HOME="$HOME/.local/lib/cargo"
+export CARGO_HOME="$LIBRARYDIR/cargo"
 
 ## Set the directory for rustup's local libraries to $HOME/Library/rustup if   ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/rustup ##
-[[ $OSTYPE == *"darwin"* ]] && export RUSTUP_HOME="$HOME/Library/rustup" || \
-    export RUSTUP_HOME="$HOME/.local/lib/rustup"
+export RUSTUP_HOME="$LIBRARYDIR/rustup"

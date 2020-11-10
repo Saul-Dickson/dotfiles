@@ -1,3 +1,5 @@
+yank.clean
+split-term.Toggle
 explorer
 extensions.toggleAutoUpdate
 python.execInTerminal

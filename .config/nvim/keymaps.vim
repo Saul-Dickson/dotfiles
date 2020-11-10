@@ -1,4 +1,4 @@
-" Pane navigation
+" Window navigation
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -12,12 +12,19 @@ nnoremap <leader>K <C-W>K
 nnoremap <leader>T <C-W>T
 
 " Tab navigation
+nnoremap <leader><Tab> :tabnew<CR>
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
 " Undo/Redo keymappings
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <S-u> :redo<CR>
+
+" Floaterm keymappings
+nnoremap <leader>tt :FloatermToggle<CR>
+nnoremap <leader>ta :FloatermNew<CR>
+nnoremap <leader>td :FloatermKill<CR>
+tnoremap <silent> <C-Esc> <C-\><C-n>
 
 " File Explorer/Manager Keymaps
 nnoremap <leader>vv :Vifm<CR>
@@ -33,5 +40,5 @@ vnoremap <Tab> >
 vnoremap <S-Tab> <
 
 " Resize panes vertically, by in/decriments of 5 
-nnoremap <silent> <leader>+ :vertical resize +5<CR>
-nnoremap <silent> <leader>- :vertical resize -5<CR>
+nnoremap <leader>+ :vertical resize +
+nnoremap <leader>- :vertical resize -

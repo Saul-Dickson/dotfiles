@@ -12,9 +12,6 @@ source $HOME/.config/nvim/vars.vim
 "source keymaps.vim
 source $HOME/.config/nvim/keymaps.vim
 
-"source coc.vim
-source $HOME/.config/nvim/coc.vim
-
 "set theme, colorcolumn, and background
 colorscheme gruvbox "theme
 set colorcolumn=80 "colorcolumn
