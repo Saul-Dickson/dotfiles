@@ -11,3 +11,4 @@
 /.config/zsh/plugins/zsh-autocomplete/*
 /.config/zsh/plugins/spaceship-prompt/*
 /.config/zsh/plugins/fast-syntax-highlighting/*
+/.config/gh/hosts.yml
