@@ -34,9 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
-	logger.py
-4
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
 	OUTLINE.md
 7
@@ -334,6 +331,9 @@ d/Users/dickssau000/.config/nvim
 d/Users/dickssau000/Downloads/github.com
 	The_Wandering_Inn_Book_6.html
 18
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	install.sh
+9
 d
 
 # Right window history (oldest to newest):

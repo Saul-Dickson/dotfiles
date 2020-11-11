@@ -10,11 +10,14 @@ sudo /bin/bash -c \
 
 ## Install the various packages ##
 brew install bat bit cmake ctags exa fd fzf gh git go@1.14 imagemagick \
-    lua make mpv ncurses onefetch ripgrep rust trash vifm tmux \
-    youtube-dl wget wren zsh
+    lua make mpv ncurses onefetch ripgrep rust vifm tmux youtube-dl \
+    wget wren zsh
 
-## Install another, less important package using go ##
+## Install other, less important packages using go ##
 go get github.com/zquestz/s
+
+## Install other, less important packages using npm ##
+npm install --global trash-cli
 
 ## Change the default shell to zsh ##
 sudo chsh /usr/local/bin/zsh

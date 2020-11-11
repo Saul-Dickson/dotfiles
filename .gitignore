@@ -4,6 +4,7 @@
 /.config/coc/extensions
 /.local/bin/activate_pyzshcomplete
 /.config/nvim/undodir
+/.config/nvim/site/plugged
 /.config/zsh/plugins/gitstatus/*
 /.config/zsh/plugins/zshabbr/*
 /.config/zsh/plugins/powerlevel10k/*
