@@ -34,18 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
-	main.py
-6
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
-	OUTLINE.md
-7
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
-	player.py
-7
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
-	playx
-3
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
 	dotfiles
 3
@@ -332,8 +320,20 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
 	install.sh
 9
 d/Users/dickssau000/.config/zsh/plugins
-	plugins.zsh
-10
+	z.lua
+5
+d/Users/dickssau000/.config/zsh/plugins/z.lua
+	LICENSE
+4
+d/Users/dickssau000/.config/zsh/plugins
+	zsh-completions
+9
+d/Users/dickssau000/.config/zsh
+	alias.zsh
+11
+d/Users/dickssau000
+	Public
+13
 d
 
 # Right window history (oldest to newest):
