@@ -2,7 +2,7 @@
 PLUGINDIR=~/.config/zsh/plugins
 
 ### Zsh Autosuggestions ###
-source /usr/local/Cellar/zsh-autosuggestions/0.6.4/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PLUGINDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 ### Zsh Completions ###
 source $PLUGINDIR/zsh-completions/zsh-completions.plugin.zsh
@@ -18,7 +18,7 @@ source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $PLUGINDIR/zsh-abbr/zsh-abbr.zsh
 
 ### z.lua chdir plugin ###
-source /usr/local/Cellar/z.lua/1.8.7/share/z.lua/z.lua.plugin.zsh
+source $PLUGINDIR/z.lua/z.lua.plugin.zsh
 
 ### gitstatus is sourced in prompt.zsh ###
 

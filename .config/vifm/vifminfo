@@ -34,9 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx
-	OUTLINE.md
-7
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/playx/playx
 	main.py
 6
@@ -334,6 +331,9 @@ d/Users/dickssau000/Downloads/github.com
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
 	install.sh
 9
+d/Users/dickssau000/.config/zsh/plugins
+	plugins.zsh
+10
 d
 
 # Right window history (oldest to newest):
@@ -443,7 +443,6 @@ D
 :run s close a window in vifm
 :colorscheme gruvbox
 :cd ~/.local/dev
-:q
 :touch lightline.vim
 :move plug-config
 :move ~/.config/nvim/plug-config
@@ -455,6 +454,7 @@ D
 :touch The_Wandering_Inn_Book_4.html
 :touch The_Wandering_Inn_Book_5.html
 :touch The_Wandering_Inn_Book_6.html
+:q
 
 # Search history (oldest to newest):
 /../
