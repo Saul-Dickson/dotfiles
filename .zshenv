@@ -39,6 +39,9 @@ export PATH="$LIBRARYDIR/rustup/bin:$PATH"
 # Add the directory for rustup's bin dir to PATH ##
 export PATH="$LIBRARYDIR/cargo/bin:$PATH"
 
+# Add the directory for golang's bin dir to PATH ##
+export  PATH="$LIBRARYDIR/golib/bin:$PATH"
+
 ############################
 # Clean the Home Directory #
 ############################
@@ -48,6 +51,7 @@ export PYLINTHOME="$HOME/.local/share/pylint.d" # Set the dir for pylint's data 
 export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc" # Set the dir for npm configuration files
 export PYTHONSTARTUP="$HOME/.config/python/config.py" # Tell python where the init file for it's REPL is located
 export VIMSPECTOR_HOME="$HOME/.local/share/vimspector"
+export _ZL_DATA="$HOME/.local/share/z.lua/zlua"
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##

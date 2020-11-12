@@ -34,48 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-8
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/vifm
-	..
-0
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	.DS_Store
-14
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/.local/dev/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/.local/dev/src
-	github.com
-1
-d/Users/dickssau000/.local/dev
-	src
-3
-d/Users/dickssau000/.local
-	dev
-2
-d/Users/dickssau000
-	.local
-5
-d/Users
-	dickssau000
-3
 d/Users/dickssau000
 	.config
 3
@@ -334,6 +292,48 @@ d/Users/dickssau000/.config/zsh
 d/Users/dickssau000
 	Public
 13
+d/Users/dickssau000/.config/zsh
+	settings
+3
+d/Users/dickssau000/.config/zsh/settings
+	vicursor.zsh
+3
+d/Users/dickssau000/.config/zsh
+	settings
+3
+d/Users/dickssau000/.config/zsh/settings
+	settings.zsh
+2
+d/Users/dickssau000/.config/zsh
+	.zcompcache
+1
+d/Users/dickssau000/.config/zsh/.zcompcache
+	python2_modules
+5
+d/Users/dickssau000/.config/zsh
+	.zcompcache
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.local
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.local
+	bin
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	zsh
+15
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh
+	plugins
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
+	z.lua
+5
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/z.lua
+	z.lua
+11
 d
 
 # Right window history (oldest to newest):
@@ -355,7 +355,6 @@ D/Users/dickssau000/.config
 D
 
 # Command line history (oldest to newest):
-:echo
 :rename ~/.config/tmux/example_tmux.conf tmux.conf
 :rename ~/.config/tmux/tmux.conf
 :rename tmux.conf
@@ -454,6 +453,7 @@ D
 :touch The_Wandering_Inn_Book_4.html
 :touch The_Wandering_Inn_Book_5.html
 :touch The_Wandering_Inn_Book_6.html
+:diff .zcompdump.MacAir382.719
 :q
 
 # Search history (oldest to newest):
@@ -473,7 +473,7 @@ pDownloads
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.config/bpytop
+""/Users/dickssau000/.local/share/vifm/Trash/000_.chpwd-recent-dirs
 
 # Directory stack (oldest to newest):
 
@@ -522,6 +522,12 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_.playx
 	/Users/dickssau000/.playx
 t/Users/dickssau000/.local/share/vifm/Trash/000_.DS_Store
 	/Users/dickssau000/.DS_Store
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zcompdump.MacAir382.719
+	/Users/dickssau000/.config/zsh/.zcompdump.MacAir382.719
+t/Users/dickssau000/.local/share/vifm/Trash/000_.zsh_history
+	/Users/dickssau000/.config/zsh/.zsh_history
+t/Users/dickssau000/.local/share/vifm/Trash/000_.chpwd-recent-dirs
+	/Users/dickssau000/.config/zsh/.chpwd-recent-dirs
 
 # State:
 f
