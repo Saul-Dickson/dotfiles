@@ -32,6 +32,7 @@ Plug 'dart-lang/dart-vim-plugin' " dart support in vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
 Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(23) } }
 
 call plug#end()
 

@@ -34,15 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	vifm
-19
-d/Users/dickssau000/.config/vifm
-	colors
-1
 d/Users/dickssau000/.config/vifm/colors
 	gruvbox.vifm
 10
@@ -334,6 +325,15 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/z.lua
 	z.lua
 11
+d/Users/dickssau000/.config/epy
+	state.json
+2
+d/Users/dickssau000/.config
+	fsh
+9
+d/Users/dickssau000/.config/fsh
+	overlay.ini
+1
 d
 
 # Right window history (oldest to newest):
