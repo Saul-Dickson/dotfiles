@@ -1,0 +1,15 @@
+[submodule ".config/zsh/plugins/zsh-completions"]
+	path = .config/zsh/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule ".config/zsh/plugins/zsh-abbr"]
+	path = .config/zsh/plugins/zsh-abbr
+	url = https://github.com/olets/zsh-abbr
+[submodule ".config/zsh/plugins/zsh-autosuggestions"]
+	path = .config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/zsh/plugins/fast-syntax-highlighting"]
+	path = .config/zsh/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting
+[submodule ".config/zsh/plugins/gitstatus"]
+	path = .config/zsh/plugins/gitstatus
+	url = https://github.com/romkatv/gitstatus
