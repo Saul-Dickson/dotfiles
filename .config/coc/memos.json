@@ -307,25 +307,25 @@
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1/bin/python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.8.6-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 6,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.8.6-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "31755f43ddb0ecf2ef503daa5b4b99fba88092d8e9635ce548ea72fc8ca26b8f1ad30363d9bf60d4c50e3a3c00d62e765c27e59c794b68ddc5c9b53d6848034e",
+        "sysPrefix": "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1",
+        "fileHash": "ef027b7830ef8ced380ccba9265e995140da4601579533152b552b38a7d9d80bde56a4f2ca43d7292425f1cdd51b6cc9e92a9e72f670a2df2bfbfd646cf481ca",
         "type": "Unknown"
       }
     ],
@@ -1716,10 +1716,10 @@
     },
     "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1/bin/python.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.8.6 64-bit ('als': venv)",
-        "hash": "ef027b7830ef8ced380ccba9265e995140da4601579533152b552b38a7d9d80bde56a4f2ca43d7292425f1cdd51b6cc9e92a9e72f670a2df2bfbfd646cf481ca-c236c44766f8d7fe6eab1d0d44e16f2e"
+        "displayName": "Python 3.8.6 64-bit ('als': pipenv)",
+        "hash": "ef027b7830ef8ced380ccba9265e995140da4601579533152b552b38a7d9d80bde56a4f2ca43d7292425f1cdd51b6cc9e92a9e72f670a2df2bfbfd646cf481ca-314f21c838df6c8d63df9dc8ff8fa8cc"
       },
-      "expiry": 1605496240907
+      "expiry": 1605496416889
     },
     "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1/bin/python.interpreter.Details.v7": {
       "data": {
@@ -1747,13 +1747,11 @@
           "fileHash": "ef027b7830ef8ced380ccba9265e995140da4601579533152b552b38a7d9d80bde56a4f2ca43d7292425f1cdd51b6cc9e92a9e72f670a2df2bfbfd646cf481ca",
           "type": "PipEnv",
           "pipEnvWorkspaceFolder": "/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als",
-          "cachedEntry": true,
           "envName": "als",
-          "displayName": "Python 3.8.6 64-bit ('als': pipenv)",
-          "__store": true
+          "displayName": "Python 3.8.6 64-bit ('als': pipenv)"
         }
       },
-      "expiry": 1605496238026
+      "expiry": 1605496416953
     }
   },
   "coc-python|/Users/dickssau000/Projects": {
@@ -2184,33 +2182,10 @@
       "pipEnvWorkspaceFolder": "/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als"
     },
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
-    "INTERPRETERS_CACHE_v3_PipEnvService": [
-      {
-        "architecture": 3,
-        "path": "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.6-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 6,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.6-final"
-        },
-        "sysPrefix": "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1",
-        "fileHash": "ef027b7830ef8ced380ccba9265e995140da4601579533152b552b38a7d9d80bde56a4f2ca43d7292425f1cdd51b6cc9e92a9e72f670a2df2bfbfd646cf481ca",
-        "type": "PipEnv",
-        "pipEnvWorkspaceFolder": "/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als"
-      }
-    ],
-    "SelectedPythonPath": "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1/bin/python"
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "SelectedPythonPath": "/Users/dickssau000/.local/share/virtualenvs/als-E2jCeSl1/bin/python",
+    "INTERPRETERS_CACHE_v3_PipEnvService:18c0fca8a027ddb8ef4498394b92a120": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:18c0fca8a027ddb8ef4498394b92a120": []
   },
   "coc-python|/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vimspector": {
     "INTERPRETERS_CACHE_v3_PipEnvService:ad566b2094fafe7cd2a006e98216836e": [],
@@ -2266,6 +2241,36 @@
       },
       "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0/Frameworks/Python.framework/Versions/3.9",
       "fileHash": "0bdc9934d83ad334198ffac6ec8bcffd76618fa44151c2f2057377662d02e88235807b64bd7523e5e712e70b5573ceb6cccad4b4bd924e799f5572b72d3430c8",
+      "type": "Unknown",
+      "displayName": "Python 3.9.0 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:18c0fca8a027ddb8ef4498394b92a120": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:18c0fca8a027ddb8ef4498394b92a120": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles": {
+      "architecture": 3,
+      "path": "/usr/local/opt/python@3.9/bin/python3.9",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.9.0-final",
+        "major": 3,
+        "minor": 9,
+        "patch": 0,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.9.0-final"
+      },
+      "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_1/Frameworks/Python.framework/Versions/3.9",
+      "fileHash": "6da8c57913b03eb9726d186fb361cec46f94b15acb4bb8e1d77bf8dcc4cbc886f121f0423331754dd124eb8710e8aa482ca4b6d6007ad6f8da0d63a6c4c3e40b",
       "type": "Unknown",
       "displayName": "Python 3.9.0 64-bit"
     },

@@ -34,129 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.Trash
-	..
-0
-d/Users/dickssau000
-	.Trash
-1
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	bpytop
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	dart
-3
-d/Users/dickssau000
-	Library
-9
-d/Users/dickssau000/.config/zsh/plugins/fast-syntax-highlighting
-	DONATIONS.md
-13
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/vifm
-	vifmrc
-5
-d/Users/dickssau000/.dart
-	README.txt
-1
-d/Users/dickssau000/Downloads/github.com/sdk
-	sdk
-12
-d/Users/dickssau000/Downloads/github.com/sdk/sdk
-	lib
-2
-d/Users/dickssau000/Downloads/github.com/sdk/sdk/lib
-	indexed_db
-11
-d/Users/dickssau000/Downloads/github.com/sdk/sdk
-	lib
-2
-d/Users/dickssau000/Downloads/github.com/sdk
-	build
-5
-d/Users/dickssau000/Downloads/github.com/sdk/build
-	..
-0
-d/Users/dickssau000/Downloads/github.com/sdk
-	client
-6
-d/Users/dickssau000/Downloads/github.com/sdk/client
-	..
-0
-d/Users/dickssau000/Downloads/github.com/sdk
-	docs
-7
-d/Users/dickssau000/Downloads/github.com/sdk/docs
-	..
-0
-d/Users/dickssau000/Downloads/github.com/sdk
-	pkg
-8
-d/Users/dickssau000/Downloads/github.com/sdk/pkg
-	..
-0
-d/Users/dickssau000/Downloads/github.com/sdk
-	pkg
-8
-d/Users/dickssau000/Downloads/github.com/sdk/pkg
-	telemetry
-23
-d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry
-	test
-2
-d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry/test
-	utils_test.dart
-3
-d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry
-	lib
-1
-d/Users/dickssau000/Downloads/github.com/sdk/pkg/telemetry/lib
-	telemetry.dart
-3
-d/Users/dickssau000/Downloads/github.com
-	Duvbox-1.5.0
-1
-d/Users/dickssau000/Downloads
-	github.com
-4
-d/Users/dickssau000
-	Downloads
-9
-d/Users/dickssau000/.config/nvim
-	coc-settings.json
-5
-d/Users/dickssau000/.config
-	nvim
-15
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.local/dev
-	src
-3
-d/Users/dickssau000/.local/dev/src
-	github.com
-1
-d/Users/dickssau000/.local/dev/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	python
-10
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
 	.config
 1
@@ -334,6 +211,129 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
 	__main__.py
 3
+d/Users/dickssau000
+	Pictures
+12
+d/Users/dickssau000/Pictures
+	..
+0
+d/Users/dickssau000
+	Pictures
+12
+d/Users/dickssau000/Pictures
+	..
+0
+d/Users/dickssau000
+	Pictures
+12
+d/Users/dickssau000/Pictures
+	..
+0
+d/Users/dickssau000
+	Pictures
+12
+d/Users/dickssau000/Pictures
+	..
+0
+d/Users/dickssau000
+	Pictures
+12
+d/Users/dickssau000/Pictures
+	..
+0
+d/Users/dickssau000
+	Library
+9
+d/Users
+	dickssau000
+3
+d/
+	Network
+4
+d/Volumes/The-Powder-Toy
+	README.md
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+18
+d/Users/dickssau000/.config/nvim
+	site
+3
+d/Users/dickssau000/.config/nvim/site
+	autoload
+1
+d/Users/dickssau000/.config/nvim/site/autoload
+	plug.vim
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload
+	..
+0
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	plugged
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	semshi
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/semshi
+	semshi
+5
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/semshi/semshi
+	plugin.py
+5
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+18
+d/Users/dickssau000/.config/nvim
+	site
+3
+d/Users/dickssau000/.config
+	tmux
+21
+d/Users/dickssau000/.config/tmux
+	options.conf
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/wheel/doc
+	..
+0
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/wheel
+	doc
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	wheel
+31
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	plugged
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	wheel.vim
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
+	__main__.py
+3
 d
 
 # Right window history (oldest to newest):
@@ -355,7 +355,6 @@ D/Users/dickssau000/.config
 D
 
 # Command line history (oldest to newest):
-:rename tmux.conf
 :w
 :touch theme.conf
 :touch plugins.conf
@@ -452,9 +451,10 @@ D
 :touch The_Wandering_Inn_Book_5.html
 :touch The_Wandering_Inn_Book_6.html
 :diff .zcompdump.MacAir382.719
-:q
 :cd ~/.local/dev/src
 :touch wheel.vim
+:q
+:cd /Volumes/The-Powder-Toy/
 
 # Search history (oldest to newest):
 /../
@@ -464,6 +464,7 @@ D
 /Proje
 /Use
 /tele
+/semsh
 
 # Prompt history (oldest to newest):
 pMovies

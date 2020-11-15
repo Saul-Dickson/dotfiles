@@ -19,7 +19,6 @@ Plug 'vimwiki/vimwiki' " personal information wiki extention for vim
 Plug 'godlygeek/tabular' " text alignment
 Plug 'dhruvasagar/vim-table-mode' " create tables
 Plug 'jeetsukumaran/vim-pythonsense' " python specifiic motions and text objects
-Plug 'numirias/semshi' " python syntax highlighting
 Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behaviar
 Plug 'google/yapf' " python code formatter
 " Plug 'ap/vim-buftabline' " buffer tabs
@@ -32,7 +31,8 @@ Plug 'dart-lang/dart-vim-plugin' " dart support in vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
 Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
-Plug 'chimay/wheel' " Quick navigation framework for Vim and Neovim : buffer groups, mru, locate, find, grep, outline, yank, etc.
+Plug 'numirias/semshi' " Semantic Highlighting for Python in Neovim
+Plug 'airblade/vim-gitgutter' " A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
 
 call plug#end()
 
