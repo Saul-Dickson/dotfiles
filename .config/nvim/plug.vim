@@ -32,10 +32,11 @@ Plug 'dart-lang/dart-vim-plugin' " dart support in vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
 Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(23) } }
+Plug 'chimay/wheel' " Quick navigation framework for Vim and Neovim : buffer groups, mru, locate, find, grep, outline, yank, etc.
 
 call plug#end()
 
 " Source plugin configs
 source ~/.config/nvim/plug-config/coc.vim " Conquer of Completion Config
 source ~/.config/nvim/plug-config/lightline.vim " lightline config 
+source ~/.config/nvim/plug-config/wheel.vim " wheel config
