@@ -26,137 +26,14 @@
 
 # TUI:
 al
-q1
+q0
 v2
 ov
-m-1
+m76
 l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
-	config.py
-4
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-9
-d/Users/dickssau000
-	.zshenv
-17
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	lightline.vim
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000
-	Pictures
-13
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000/Downloads/github.com
-	The_Wandering_Inn_Book_6.html
-18
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	install.sh
-9
-d/Users/dickssau000/.config/zsh/plugins
-	z.lua
-5
-d/Users/dickssau000/.config/zsh/plugins/z.lua
-	LICENSE
-4
-d/Users/dickssau000/.config/zsh/plugins
-	zsh-completions
-9
-d/Users/dickssau000/.config/zsh
-	alias.zsh
-11
-d/Users/dickssau000
-	Public
-13
-d/Users/dickssau000/.config/zsh
-	settings
-3
-d/Users/dickssau000/.config/zsh/settings
-	vicursor.zsh
-3
-d/Users/dickssau000/.config/zsh
-	settings
-3
-d/Users/dickssau000/.config/zsh/settings
-	settings.zsh
-2
-d/Users/dickssau000/.config/zsh
-	.zcompcache
-1
-d/Users/dickssau000/.config/zsh/.zcompcache
-	python2_modules
-5
-d/Users/dickssau000/.config/zsh
-	.zcompcache
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.local
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.local
-	bin
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	zsh
-15
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh
-	plugins
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins
-	z.lua
-5
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/zsh/plugins/z.lua
-	z.lua
-11
-d/Users/dickssau000/.config/epy
-	state.json
-2
-d/Users/dickssau000/.config
-	fsh
-9
-d/Users/dickssau000/.config/fsh
-	overlay.ini
-1
-d/Users/dickssau000
-	Downloads
-8
-d/Users/dickssau000/Downloads
-	github.com
-4
-d/Users/dickssau000/Downloads/github.com
-	playx
-9
-d/Users/dickssau000/Downloads/github.com/playx
-	playx
-3
-d/Users/dickssau000/Downloads/github.com/playx/playx
-	playlist
-2
-d/Users/dickssau000/Downloads/github.com/playx/playx/playlist
-	ytrelated.py
-15
 d/Users/dickssau000
 	Music
 11
@@ -334,6 +211,129 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
 	__main__.py
 3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-orgmode/doc
+	orgguide.txt
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-orgmode
+	doc
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	vim-orgmode
+20
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	plugged
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	site
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/.local/dev/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/.local/dev/src
+	github.com
+1
+d/Users/dickssau000/.local/dev
+	src
+3
+d/Users/dickssau000/.local
+	dev
+2
+d/Users/dickssau000/.local/dev
+	src
+3
+d/Users/dickssau000/.local/dev/src
+	local
+2
+d/Users/dickssau000/.local/dev/src/local
+	test
+3
+d/Users/dickssau000/.local/dev/src/local/test
+	README.org
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000/Documents/Calibre Library/pirateaba/The Wandering Inn _ Book 3 (5)
+	The Wandering Inn _ Book 3 - pirateaba.epub
+1
+d/Users/dickssau000
+	.local
+4
+d/Users/dickssau000/.local
+	bin
+1
+d/Users/dickssau000/.local/bin
+	vi
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux
+	plugins
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
+	tmux-sidebar
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins/tmux-sidebar
+	README.md
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
+	tmux-resurrect
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins/tmux-resurrect
+	README.md
+16
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
+	tmux-resurrect
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux
+	options.conf
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-table-mode/doc
+	..
+0
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-table-mode
+	t
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	vim-table-mode
+26
+d/Users/dickssau000/Documents
+	Chemistry
+2
+d/Users/dickssau000/Documents/Chemistry
+	09-23-20 Notes.pages
+5
+d/Users/dickssau000/Documents
+	Chemistry
+2
+d/Users/dickssau000/Documents/Chemistry
+	Spectrum Analysis.md
+10
+d/Users/dickssau000/Documents
+	fuck
+5
+d/Users/dickssau000
+	Documents
+7
+d/Users
+	dickssau000
+3
+d/
+	Users
+6
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	.cache
+2
 d
 
 # Right window history (oldest to newest):
@@ -350,20 +350,35 @@ D/Users/dickssau000/.config/zsh
 	alias.zsh
 5
 D/Users/dickssau000/.config
-	configstore
+	..
+0
+D/Users/dickssau000
+	Downloads
 4
+D/Users
+	dickssau000
+3
+D/
+	Users
+4
+D/Users
+	dickssau000
+3
+D/Users/dickssau000
+	Public
+9
+D/Users
+	dickssau000
+3
+D/
+	Users
+4
+D/Users
+	dickssau000
+3
 D
 
 # Command line history (oldest to newest):
-:w
-:touch theme.conf
-:touch plugins.conf
-:mkdir pytae
-:rm -r
-:mkdir school
-:mkdir Chemistry A
-:mkdir Chemistry 1
-:remove
 :mkdir Chemistry\ 1
 :qq
 :mkdir word
@@ -453,8 +468,17 @@ D
 :diff .zcompdump.MacAir382.719
 :cd ~/.local/dev/src
 :touch wheel.vim
-:q
 :cd /Volumes/The-Powder-Toy/
+:touch README.org
+:touch vi
+:cd ~/Doc*
+:cd ~/Documents
+:touch 11-18-20\ Notes.md
+:view 
+:view no
+:view
+:wincmd _
+:q
 
 # Search history (oldest to newest):
 /../
@@ -465,6 +489,8 @@ D
 /Use
 /tele
 /semsh
+/local
+/C-[
 
 # Prompt history (oldest to newest):
 pMovies

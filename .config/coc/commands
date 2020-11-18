@@ -1,3 +1,5 @@
+calc.calculate
+editor.action.organizeImport
 explorer
 yank.clean
 split-term.Toggle

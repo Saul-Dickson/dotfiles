@@ -33,10 +33,12 @@ Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/p
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
 Plug 'numirias/semshi' " Semantic Highlighting for Python in Neovim
 Plug 'airblade/vim-gitgutter' " A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
+Plug 'jceb/vim-orgmode' " Text outlining and task management for Vim based on Emacs' Org-Mode
+Plug 'vim-latex/vim-latex' " Enhanced LaTeX support for Vim
+Plug 'paradigm/vim-multicursor' " Allows Vim to use multiple cursors simultaneously
 
 call plug#end()
 
 " Source plugin configs
 source ~/.config/nvim/plug-config/coc.vim " Conquer of Completion Config
 source ~/.config/nvim/plug-config/lightline.vim " lightline config 
-source ~/.config/nvim/plug-config/wheel.vim " wheel config
