@@ -1,5 +1,11 @@
 syntax on
 
+"source plugin configs
+source ~/.config/nvim/plug-config/coc.vim " Conquer of Completion Config
+source ~/.config/nvim/plug-config/lightline.vim " lightline config 
+source ~/.config/nvim/plug-config/which-key.vim
+source ~/.config/nvim/plug-config/startify.vim
+
 "source options.vim
 source $HOME/.config/nvim/options.vim
 

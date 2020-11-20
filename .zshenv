@@ -8,6 +8,12 @@ PROJECTSDIR=$HOME/.local/dev
 ## The path to your local library directory ##
 LIBRARYDIR=$HOME/Library
 
+#############################
+# FZF Environment Variables #
+#############################
+export FZF_DEFAULT_OPTS='--preview "bat --plain --color=always {}" --layout=reverse'
+export FZF_DEFAULT_COMMAND='fd --type f'
+
 ################################
 # Golang Environment Variables #
 ################################

@@ -1,16 +1,17 @@
 {
-  "suggest.noselct": false,
+  "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "typescript",
     "json",
     "python",
     "rls",
-    "go"
+    "go",
+    "vimlsp"
   ],
 
   "explorer.icon.enableNerdfont": true,
   "explorer.file.showHiddenFiles": true,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "i": false, // cancel default mapkey
 
     "gk": "expandablePrev",
@@ -31,7 +32,7 @@
       "open"
     ],
     "o": ["expanded?", "collapse", "expand"],
-    "<cr>": ["expandable?", "expand", "collapse"],
+    "<cr>": ["open"],
     "<shift><cr>": ["expandable?", "cd", "open"],
     "e": "open",
     "s": "open:split",

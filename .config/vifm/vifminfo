@@ -34,234 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000
-	Music
-11
-d/Users/dickssau000/.local/dev/src
-	github.com
-1
-d/Users/dickssau000/.local/dev/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
-	__main__.py
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	lightline.vim
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	coc-settings.json
-6
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	vifm
-14
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
-	__main__.py
-3
-d/Users/dickssau000
-	Pictures
-12
-d/Users/dickssau000/Pictures
-	..
-0
-d/Users/dickssau000
-	Pictures
-12
-d/Users/dickssau000/Pictures
-	..
-0
-d/Users/dickssau000
-	Pictures
-12
-d/Users/dickssau000/Pictures
-	..
-0
-d/Users/dickssau000
-	Pictures
-12
-d/Users/dickssau000/Pictures
-	..
-0
-d/Users/dickssau000
-	Pictures
-12
-d/Users/dickssau000/Pictures
-	..
-0
-d/Users/dickssau000
-	Library
-9
-d/Users
-	dickssau000
-3
-d/
-	Network
-4
-d/Volumes/The-Powder-Toy
-	README.md
-3
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-18
-d/Users/dickssau000/.config/nvim
-	site
-3
-d/Users/dickssau000/.config/nvim/site
-	autoload
-1
-d/Users/dickssau000/.config/nvim/site/autoload
-	plug.vim
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/autoload
-	..
-0
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	plugged
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
-	semshi
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/semshi
-	semshi
-5
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/semshi/semshi
-	plugin.py
-5
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-18
-d/Users/dickssau000/.config/nvim
-	site
-3
-d/Users/dickssau000/.config
-	tmux
-21
-d/Users/dickssau000/.config/tmux
-	options.conf
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/wheel/doc
-	..
-0
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/wheel
-	doc
-4
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
-	wheel
-31
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	plugged
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	wheel.vim
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
-	__main__.py
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-orgmode/doc
-	orgguide.txt
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-orgmode
-	doc
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
-	vim-orgmode
-20
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
-	plugged
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	site
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/.local/dev/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/.local/dev/src
-	github.com
-1
-d/Users/dickssau000/.local/dev
-	src
-3
-d/Users/dickssau000/.local
-	dev
-2
-d/Users/dickssau000/.local/dev
-	src
-3
-d/Users/dickssau000/.local/dev/src
-	local
-2
-d/Users/dickssau000/.local/dev/src/local
-	test
-3
-d/Users/dickssau000/.local/dev/src/local/test
-	README.org
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
 d/Users/dickssau000/Documents/Calibre Library/pirateaba/The Wandering Inn _ Book 3 (5)
 	The Wandering Inn _ Book 3 - pirateaba.epub
 1
@@ -334,6 +106,234 @@ d/Users
 d/Users/dickssau000
 	.cache
 2
+d/Users/dickssau000/.cache
+	.config
+1
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	plug.vim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	lightline.vim
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	options.vim
+9
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	which-key.vim
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.config/nvim/plug-config
+	which-key.vim
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	bpytop
+3
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	bpytop
+3
+d/Users/dickssau000/.config/bpytop
+	..
+0
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	which-key.vim
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug.vim
+10
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.local/dev/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	als
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
+	__main__.py
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
+	als
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	coc-settings.json
+6
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	coc-settings.json
+6
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	coc-settings.json
+6
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	spell
+4
+d/Users/dickssau000/.config/nvim/spell
+	..
+0
+d/Users/dickssau000/.config/nvim
+	site
+3
+d/Users/dickssau000/.config/nvim/site
+	..
+0
+d/Users/dickssau000/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.config/nvim/plug-config
+	coc.vim
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	lightline.vim
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	plug.vim
+10
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	spell
+4
+d/Users/dickssau000/.config/nvim/spell
+	en.utf-8.add
+1
+d/Users/dickssau000/.config/nvim
+	spell
+4
+d/Users/dickssau000/.config
+	nvim
+14
+d/Users/dickssau000/.config/nvim
+	init.vim
+7
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.config/nvim/plug-config
+	coc.vim
+1
+d/Users/dickssau000/.config/nvim
+	plug.vim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	fzf.vim
+2
 d
 
 # Right window history (oldest to newest):
@@ -376,12 +376,21 @@ D/
 D/Users
 	dickssau000
 3
+D/Users/dickssau000
+	Movies
+6
+D/Users
+	dickssau000
+3
+D/Users/dickssau000
+	Movies
+6
+D/Users
+	dickssau000
+3
 D
 
 # Command line history (oldest to newest):
-:mkdir Chemistry\ 1
-:qq
-:mkdir word
 :touch noun.py
 :touch verb.py
 :touch input
@@ -478,7 +487,10 @@ D
 :view no
 :view
 :wincmd _
+:touch which-key.vim
+:cd ~/.local/dev/src/github.com
 :q
+:touch fzf.vim
 
 # Search history (oldest to newest):
 /../
@@ -500,7 +512,7 @@ pDownloads
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_.chpwd-recent-dirs
+""/Users/dickssau000/.local/share/vifm/Trash/000_wheel.vim
 
 # Directory stack (oldest to newest):
 
@@ -555,6 +567,8 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_.zsh_history
 	/Users/dickssau000/.config/zsh/.zsh_history
 t/Users/dickssau000/.local/share/vifm/Trash/000_.chpwd-recent-dirs
 	/Users/dickssau000/.config/zsh/.chpwd-recent-dirs
+t/Users/dickssau000/.local/share/vifm/Trash/000_wheel.vim
+	/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config/wheel.vim
 
 # State:
 f

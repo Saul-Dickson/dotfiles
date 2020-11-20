@@ -14,3 +14,6 @@ source ~/.config/zsh/settings/prompt.zsh
 
 # source install plugins
 source ~/.config/zsh/plugins/plugins.zsh
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+
