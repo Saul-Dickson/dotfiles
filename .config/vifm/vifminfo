@@ -34,33 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Documents/Calibre Library/pirateaba/The Wandering Inn _ Book 3 (5)
-	The Wandering Inn _ Book 3 - pirateaba.epub
-1
-d/Users/dickssau000
-	.local
-4
-d/Users/dickssau000/.local
-	bin
-1
-d/Users/dickssau000/.local/bin
-	vi
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	plugins
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
-	tmux-sidebar
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins/tmux-sidebar
-	README.md
-7
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
-	tmux-resurrect
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins/tmux-resurrect
-	README.md
-16
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
 	tmux-resurrect
 1
@@ -334,6 +307,33 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
 	fzf.vim
 2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-gitgutter/doc
+	gitgutter.txt
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-gitgutter
+	doc
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	vim-gitgutter
+19
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-gitgutter
+	doc
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
+	vim-gitgutter
+19
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site
+	plugged
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	plug-config
+2
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	lightline.vim
+4
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	init.vim
+7
 d
 
 # Right window history (oldest to newest):
@@ -391,7 +391,6 @@ D/Users
 D
 
 # Command line history (oldest to newest):
-:touch noun.py
 :touch verb.py
 :touch input
 :rename input.py
@@ -491,6 +490,7 @@ D
 :cd ~/.local/dev/src/github.com
 :q
 :touch fzf.vim
+:touch gitgutter.vim
 
 # Search history (oldest to newest):
 /../

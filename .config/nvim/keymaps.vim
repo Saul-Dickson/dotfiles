@@ -2,16 +2,15 @@
 let g:which_key_map = {}
 
 " Window navigation
-nnoremap <leader>gh :wincmd h<CR>
-nnoremap <leader>gj :wincmd j<CR>
-nnoremap <leader>gk :wincmd k<CR>
-nnoremap <leader>gl :wincmd l<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
-let g:which_key_map['g'] = {'name': '+goto'}
-let g:which_key_map['g']['h'] = 'window left'
-let g:which_key_map['g']['j'] = 'window down'
-let g:which_key_map['g']['k'] = 'window up'
-let g:which_key_map['g']['l'] = 'window left'
+let g:which_key_map['h'] = 'window left'
+let g:which_key_map['j'] = 'window down'
+let g:which_key_map['k'] = 'window up'
+let g:which_key_map['l'] = 'window left'
 
 " Window Movement
 nnoremap <leader>wh <C-W>H
