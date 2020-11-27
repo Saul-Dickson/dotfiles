@@ -56,8 +56,10 @@ export ZDOTDIR="$HOME/.config/zsh" # Set the dir of zsh's configuration files
 export PYLINTHOME="$HOME/.local/share/pylint.d" # Set the dir for pylint's data storage
 export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc" # Set the dir for npm configuration files
 export PYTHONSTARTUP="$HOME/.config/python/config.py" # Tell python where the init file for it's REPL is located
-export VIMSPECTOR_HOME="$HOME/.local/share/vimspector"
-export _ZL_DATA="$HOME/.local/share/z.lua/zlua"
+export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Set the dir for vimspector's log files
+export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Set the location for z.lua's log file
+export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Set the location of the lesshst file
+export LESSKEY="$HOME/.config/less/lesskey" # Set the location of the lesskey file
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
