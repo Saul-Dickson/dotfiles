@@ -29,26 +29,11 @@ al
 q0
 v2
 ov
-m76
+m74
 l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux/plugins
-	tmux-resurrect
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/tmux
-	options.conf
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-table-mode/doc
-	..
-0
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged/vim-table-mode
-	t
-7
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/site/plugged
-	vim-table-mode
-26
 d/Users/dickssau000/Documents
 	Chemistry
 2
@@ -334,6 +319,21 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	init.vim
 7
+d/Users/dickssau000
+	.config
+3
+d/Users/dickssau000/.config
+	nvim
+19
+d/Users/dickssau000/.config/nvim
+	init.vim
+7
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	gitgutter.vim
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
 d
 
 # Right window history (oldest to newest):
@@ -488,9 +488,9 @@ D
 :wincmd _
 :touch which-key.vim
 :cd ~/.local/dev/src/github.com
-:q
 :touch fzf.vim
 :touch gitgutter.vim
+:q
 
 # Search history (oldest to newest):
 /../

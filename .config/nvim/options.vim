@@ -21,6 +21,7 @@ set clipboard " use the clipboard as the unnamed register
 set spell " enable spell checking
 set spelllang=en_us " language(s) to de spell checking for
 set scrolloff=999 " lock the cursor to the center row
+set cursorline " highlight the line under the cursor
 
 filetype plugin on
 

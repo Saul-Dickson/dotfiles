@@ -8,11 +8,17 @@ PROJECTSDIR=$HOME/.local/dev
 ## The path to your local library directory ##
 LIBRARYDIR=$HOME/Library
 
+##############################
+# Mutt Environment Variables #
+##############################
+export EMAIL="acepebisboy@icloud.com"
+export MAILDIR="$HOME/.local/share/mutt"
+
 #############################
 # FZF Environment Variables #
 #############################
-export FZF_DEFAULT_OPTS='--preview "bat --plain --color=always {}" --layout=reverse'
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS='--preview "bat --plain --color=always {}" --layout=reverse --border=rounded'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 
 ################################
 # Golang Environment Variables #
