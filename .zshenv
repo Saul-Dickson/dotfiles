@@ -1,3 +1,8 @@
+## Launch tmux at login ##
+[[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
+    sleep 0.5 &&
+    $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
+
 ################################
 # User Configuration Variables #
 ################################
@@ -32,11 +37,19 @@ export GOPATH="$LIBRARYDIR/golib"
 #####################
 
 ## Add Various Python bin Folders to Path ##
+
 export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-export PATH="/usr/local/Cellar/python@3.8/3.8.6/bin:${PATH}"
-export PATH="/usr/local/Cellar/python@3.8/3.8.5/bin:${PATH}"
-export PATH="/usr/local/Cellar/python@3.9/3.9.0/bin:${PATH}"
 export PATH="$LIBRARYDIR/Python/3.8/bin:${PATH}"
+
+for i in $(/bin/ls -1 $LIBRARYDIR/Python); do
+    export PATH="$LIBRARYDIR/Python/$i/bin:$PATH"
+done
+
+for i in $(/bin/ls -1 /usr/local/Cellar | /usr/local/bin/rg "python"); do 
+    for d in $(/bin/ls -1 /usr/local/Cellar/$i); do 
+        export PATH="/usr/local/Cellar/$i/$d/bin:$PATH"
+    done
+done
 
 ## Add the Dedicated bin dir of your Projects folder to PATH ##
 export PATH="$PROJECTSDIR/bin:$PATH" 
@@ -66,6 +79,7 @@ export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Set the dir for vimspec
 export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Set the location for z.lua's log file
 export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Set the location of the lesshst file
 export LESSKEY="$HOME/.config/less/lesskey" # Set the location of the lesskey file
+# export PASSWORD_STORE_DIR=""
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##

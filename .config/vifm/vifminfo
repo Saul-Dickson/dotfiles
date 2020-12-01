@@ -34,72 +34,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/Documents
-	Chemistry
-2
-d/Users/dickssau000/Documents/Chemistry
-	09-23-20 Notes.pages
-5
-d/Users/dickssau000/Documents
-	Chemistry
-2
-d/Users/dickssau000/Documents/Chemistry
-	Spectrum Analysis.md
-10
-d/Users/dickssau000/Documents
-	fuck
-5
-d/Users/dickssau000
-	Documents
-7
-d/Users
-	dickssau000
-3
-d/
-	Users
-6
-d/Users
-	dickssau000
-3
-d/Users/dickssau000
-	.cache
-2
-d/Users/dickssau000/.cache
-	.config
-1
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	plug.vim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	lightline.vim
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	options.vim
-9
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	which-key.vim
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	plug-config
-2
 d/Users/dickssau000/.config/nvim/plug-config
 	which-key.vim
 3
@@ -332,8 +266,74 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	gitgutter.vim
 3
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
+	coc-settings.json
+6
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
+	nvim
+10
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.config
+1
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
+	dotfiles
+3
+d/Users/dickssau000/.local/dev/src/github.com
+	Saul-Dickson
+1
+d/Users/dickssau000/.local/dev/src
+	github.com
+1
+d/Users/dickssau000/.local/dev
+	src
+3
+d/Users/dickssau000/.local
+	dev
+2
+d/Users/dickssau000
+	.password-store
+6
+d/Users/dickssau000/.password-store
+	..
+0
+d/Users/dickssau000
+	go
+14
+d/Users/dickssau000/go
+	pkg
+1
+d/Users/dickssau000/go/pkg
+	mod
+1
+d/Users/dickssau000/go/pkg/mod
+	golang.org
+3
+d/Users/dickssau000/go/pkg/mod/golang.org
+	..
+0
+d/Users/dickssau000/go/pkg/mod
+	golang.org
+3
+d/Users/dickssau000/go/pkg
+	mod
+1
+d/Users/dickssau000/go
+	pkg
+1
+d/Users/dickssau000
+	go
+14
+d/Users/dickssau000/go
+	pkg
+1
+d/Users/dickssau000
+	go
+14
+d/Users
+	dickssau000
+3
+d/Users/dickssau000
+	go
+14
 d
 
 # Right window history (oldest to newest):
@@ -386,12 +386,11 @@ D/Users/dickssau000
 	Movies
 6
 D/Users
-	dickssau000
-3
+	Shared
+2
 D
 
 # Command line history (oldest to newest):
-:touch verb.py
 :touch input
 :rename input.py
 :mkdir Chemistry
@@ -490,6 +489,7 @@ D
 :cd ~/.local/dev/src/github.com
 :touch fzf.vim
 :touch gitgutter.vim
+:sudo rm
 :q
 
 # Search history (oldest to newest):
@@ -512,7 +512,6 @@ pDownloads
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/dickssau000/.local/share/vifm/Trash/000_wheel.vim
 
 # Directory stack (oldest to newest):
 
@@ -569,6 +568,10 @@ t/Users/dickssau000/.local/share/vifm/Trash/000_.chpwd-recent-dirs
 	/Users/dickssau000/.config/zsh/.chpwd-recent-dirs
 t/Users/dickssau000/.local/share/vifm/Trash/000_wheel.vim
 	/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config/wheel.vim
+t/Users/dickssau000/.local/share/vifm/Trash/000_.password-store
+	/Users/dickssau000/.password-store
+t/Users/dickssau000/.local/share/vifm/Trash/000_.gnupg
+	/Users/dickssau000/.gnupg
 
 # State:
 f
