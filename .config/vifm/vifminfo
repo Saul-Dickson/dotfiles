@@ -29,17 +29,11 @@ al
 q0
 v2
 ov
-m74
+m76
 l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.config/nvim/plug-config
-	which-key.vim
-3
-d/Users/dickssau000
-	.config
-3
 d/Users/dickssau000/.config
 	bpytop
 3
@@ -334,6 +328,12 @@ d/Users
 d/Users/dickssau000
 	go
 14
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
+	gitgutter.vim
+3
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
+	keymaps.vim
+8
 d
 
 # Right window history (oldest to newest):
@@ -503,6 +503,7 @@ D
 /semsh
 /local
 /C-[
+/key
 
 # Prompt history (oldest to newest):
 pMovies
