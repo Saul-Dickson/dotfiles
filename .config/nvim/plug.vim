@@ -36,5 +36,6 @@ Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
 Plug 'liuchengxu/vim-which-key' " Vim plugin that shows keybindings in popup
 Plug 'mhinz/vim-startify' " The fancy start screen for Vim.
 Plug 'ryanoasis/vim-devicons' " Adds file type icons to Vim plugins
+Plug 'neomutt/neomutt.vim' " vim syntax for neomuttrc
 
 call plug#end()
