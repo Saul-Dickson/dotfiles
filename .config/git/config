@@ -3,3 +3,5 @@
 	email = acepebisboy@icloud.com
 [core]
 	editor = nvim
+[alias]
+	project-summary = !which onefetch && onefetch
