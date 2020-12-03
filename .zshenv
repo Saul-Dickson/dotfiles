@@ -13,12 +13,6 @@ PROJECTSDIR=$HOME/.local/dev
 ## The path to your local library directory ##
 LIBRARYDIR=$HOME/Library
 
-##############################
-# Mutt Environment Variables #
-##############################
-export EMAIL="acepebisboy@icloud.com"
-export MAILDIR="$HOME/.local/share/mutt"
-
 #############################
 # FZF Environment Variables #
 #############################
@@ -29,8 +23,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 # Golang Environment Variables #
 ################################
 export GOROOT="/usr/local/Cellar/go/1.15.3"
-export GOPATH="$PROJECTSDIR"
-export GOPATH="$LIBRARYDIR/golib"
+export GOPATH="$LIBRARYDIR/golib:$PROJECTSDIR"
 
 #####################
 # Add Paths to PATH #
@@ -38,8 +31,8 @@ export GOPATH="$LIBRARYDIR/golib"
 
 ## Add Various Python bin Folders to Path ##
 
-export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-export PATH="$LIBRARYDIR/Python/3.8/bin:${PATH}"
+[[ $OSTYPE == *"darwin"* ]] && 
+    export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 
 for i in $(/bin/ls -1 $LIBRARYDIR/Python); do
     export PATH="$LIBRARYDIR/Python/$i/bin:$PATH"
@@ -79,6 +72,7 @@ export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Set the dir for vimspec
 export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Set the location for z.lua's log file
 export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Set the location of the lesshst file
 export LESSKEY="$HOME/.config/less/lesskey" # Set the location of the lesskey file
+export WD_CONFIG="$HOME/.config/wd/init.warprc"
 # export PASSWORD_STORE_DIR=""
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##

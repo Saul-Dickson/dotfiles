@@ -183,11 +183,11 @@ vnoremap <S-Tab> <
 "# Resize panes vertically #"
 "###########################"
 
-nnoremap <leader>wv+ :vertical resize +
-nnoremap <leader>wv- :vertical resize -
+nnoremap <leader>wv+ :vertical resize +10<CR>
+nnoremap <leader>wv- :vertical resize -10<CR>
 nnoremap <leader>wvs :vertical split<CR>
-nnoremap <leader>wh+ :resize +
-nnoremap <leader>wh- :resize -
+nnoremap <leader>wh+ :resize +10<CR>
+nnoremap <leader>wh- :resize -10<CR>
 nnoremap <leader>whs :split<CR>
 
 let g:which_key_map['w']['v'] = {

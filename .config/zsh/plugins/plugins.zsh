@@ -17,8 +17,11 @@ source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 ### Zsh Abbreviations ###
 source $PLUGINDIR/zsh-abbr/zsh-abbr.zsh
 
-### z.lua chdir plugin ###
-source $PLUGINDIR/z.lua/z.lua.plugin.zsh
+### Warp Directory ###
+source $PLUGINDIR/wd/wd.plugin.zsh
+
+# ### z.lua chdir plugin ###
+# source $PLUGINDIR/z.lua/z.lua.plugin.zsh
 
 ### gitstatus is sourced in prompt.zsh ###
 

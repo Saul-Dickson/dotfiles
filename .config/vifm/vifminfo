@@ -29,14 +29,11 @@ al
 q0
 v2
 ov
-m76
+m77
 l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000/.config
-	bpytop
-3
 d/Users/dickssau000
 	.config
 3
@@ -334,6 +331,9 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 	keymaps.vim
 8
+d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
+	.local
+3
 d
 
 # Right window history (oldest to newest):
