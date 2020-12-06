@@ -13,6 +13,22 @@ PROJECTSDIR=$HOME/.local/dev
 ## The path to your local library directory ##
 LIBRARYDIR=$HOME/Library
 
+## The name of your prefered editor ##
+export EDITOR="nvim"
+
+## The name of your prefered pager ##
+export PAGER="bat"
+
+## The name of your prefered browser ##
+export BROWSER="/Applications/Microsoft Edge Beta.app/Contents/MacOS/Microsoft\ Edge\ Beta"
+
+######################
+# XDG_HOME Variables #
+######################
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 #############################
 # FZF Environment Variables #
 #############################
@@ -22,7 +38,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 ################################
 # Golang Environment Variables #
 ################################
-export GOROOT="/usr/local/Cellar/go/1.15.3"
+export GOROOT="/usr/local/Cellar/go/1.15.3/libexec"
 export GOPATH="$LIBRARYDIR/golib:$PROJECTSDIR"
 
 #####################
