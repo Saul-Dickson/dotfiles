@@ -7,9 +7,6 @@
 # User Configuration Variables #
 ################################
 
-## The path to your "projects" directory ##
-PROJECTSDIR=$HOME/.local/dev
-
 ## The path to your local library directory ##
 LIBRARYDIR=$HOME/Library
 
@@ -39,7 +36,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 # Golang Environment Variables #
 ################################
 export GOROOT="/usr/local/Cellar/go/1.15.3/libexec"
-export GOPATH="$LIBRARYDIR/golib:$PROJECTSDIR"
+export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 
 #####################
 # Add Paths to PATH #
@@ -60,9 +57,6 @@ for i in $(/bin/ls -1 /usr/local/Cellar | /usr/local/bin/rg "python"); do
     done
 done
 
-## Add the Dedicated bin dir of your Projects folder to PATH ##
-export PATH="$PROJECTSDIR/bin:$PATH" 
-
 ## Add ~/.local/bin (location for binaries too small to be packages) ##
 ## to the PATH Environment Variable                                  ##
 export PATH="$HOME/.local/bin:$PATH"
@@ -74,7 +68,7 @@ export PATH="$LIBRARYDIR/rustup/bin:$PATH"
 export PATH="$LIBRARYDIR/cargo/bin:$PATH"
 
 # Add the directory for golang's bin dir to PATH ##
-export  PATH="$LIBRARYDIR/golib/bin:$PATH"
+export PATH="$LIBRARYDIR/golib/bin:$PATH"
 
 ############################
 # Clean the Home Directory #

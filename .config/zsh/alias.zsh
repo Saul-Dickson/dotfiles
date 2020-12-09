@@ -11,7 +11,7 @@ alias cat="bat"
 alias ps="/bin/ps aux -c | fzf --preview=\"\""
 
 # alias neofetch to cat ~/.cache/neofetch
-alias neofetch="cat ~/.cache/neofetch"
+alias neofetch="/bin/cat ~/.cache/neofetch"
 
 # alias vi to ~/.local/bin/vi.sh*
 alias vi="vifm"
