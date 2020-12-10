@@ -11,7 +11,16 @@ let g:coc_global_extensions = [
   \ 'coc-go',
   \ 'coc-sh',
   \ 'coc-css',
-  \ 'coc-html'
+  \ 'coc-html',
+  \ 'coc-actions',
+  \ 'coc-css',
+  \ 'coc-yank',
+  \ 'coc-vimlsp',
+  \ 'coc-sh',
+  \ 'coc-marketplace',
+  \ 'coc-flutter',
+  \ 'coc-highlight',
+  \ 'coc-explorer',
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.
