@@ -29,7 +29,10 @@ sudo /bin/bash -c \
 ## Install the various packages ##
 brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
              ncurses onefetch ripgrep rust vifm tmux youtube-dl wget wren \
-             zsh hexyl pass neomutt
+             zsh hexyl pass neomutt sudo ms-jpq/sad/sad
+
+## Install other, less important packages using pip ##
+sudo pip3.9 install epy
 
 ## Install other, less important packages using go ##
 go get github.com/zquestz/s

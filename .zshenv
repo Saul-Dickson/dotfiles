@@ -74,16 +74,18 @@ export PATH="$LIBRARYDIR/golib/bin:$PATH"
 # Clean the Home Directory #
 ############################
 
-export ZDOTDIR="$HOME/.config/zsh" # Set the dir of zsh's configuration files
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh" # Set the dir of zsh's configuration files
 export PYLINTHOME="$HOME/.local/share/pylint.d" # Set the dir for pylint's data storage
-export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc" # Set the dir for npm configuration files
-export PYTHONSTARTUP="$HOME/.config/python/config.py" # Tell python where the init file for it's REPL is located
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # Set the dir for npm configuration files
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/config.py" # Tell python where the init file for it's REPL is located
 export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Set the dir for vimspector's log files
 export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Set the location for z.lua's log file
 export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Set the location of the lesshst file
-export LESSKEY="$HOME/.config/less/lesskey" # Set the location of the lesskey file
-export WD_CONFIG="$HOME/.config/wd/init.warprc"
-# export PASSWORD_STORE_DIR=""
+export LESSKEY="$XDG_CONFIG_HOME/less/lesskey" # Set the location of the lesskey file
+export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc"
+export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store"
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch"
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
