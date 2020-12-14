@@ -1,8 +1,5 @@
 call plug#begin('~/.config/nvim/site/plugged')
 
-Plug 'jremmen/vim-ripgrep' " ripgrep
-Plug 'vim-utils/vim-man' " manpages
-
 " Fuzzy Finder Integration
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " fuzzy finder for fuzzy searching
@@ -28,6 +25,7 @@ Plug 'leafgarland/typescript-vim' " typescript integration
 Plug 'vim-latex/vim-latex' " Enhanced LaTeX support for Vim
 Plug 'numirias/semshi' " Semantic Highlighting for Python in Neovim
 Plug 'neomutt/neomutt.vim' " vim syntax for neomuttrc
+Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
 
 " Motions
 Plug 'justinmk/vim-sneak' " the missing motion of vim
@@ -40,18 +38,22 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
 Plug 'markonm/traces.vim' " Range, pattern and substitute preview for Vim
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
 Plug 'godlygeek/tabular' " text alignment
+Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
+
+" Code Linting, Fixing, and processing
+Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behaviar
+Plug 'google/yapf' " python code formatter
+Plug 'dense-analysis/ale' " does lots of stuff like linting, fixing, etc.
 
 " File Management & Navigation
 Plug 'ptzz/lf.vim' " Lf integration in vim and neovim
 Plug 'ctrlpvim/ctrlp.vim' " ctrlp
 
+" Other
+Plug 'jremmen/vim-ripgrep' " ripgrep
+Plug 'vim-utils/vim-man' " manpages
 Plug 'liuchengxu/vista.vim' " tags viewer and symbol navigator
-Plug 'dense-analysis/ale' " does lots of stuff like linting, fixing, etc.
 Plug 'vimwiki/vimwiki' " personal information wiki extention for vim
-Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behaviar
-Plug 'google/yapf' " python code formatter
-Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
-Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
 
 call plug#end()
