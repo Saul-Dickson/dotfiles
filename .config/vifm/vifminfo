@@ -29,158 +29,11 @@ al
 q0
 v2
 ov
-m77
+m74
 l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	bpytop
-3
-d/Users/dickssau000/.config/bpytop
-	..
-0
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	which-key.vim
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	plug.vim
-10
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.local/dev/src/github.com
-	Saul-Dickson
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	als
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als/als
-	__main__.py
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/als
-	als
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson
-	dotfiles
-3
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	coc-settings.json
-6
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	coc-settings.json
-6
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
-	.config
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config
-	nvim
-10
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	coc-settings.json
-6
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	spell
-4
-d/Users/dickssau000/.config/nvim/spell
-	..
-0
-d/Users/dickssau000/.config/nvim
-	site
-3
-d/Users/dickssau000/.config/nvim/site
-	..
-0
-d/Users/dickssau000/.config/nvim
-	plug-config
-2
-d/Users/dickssau000/.config/nvim/plug-config
-	coc.vim
-1
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim/plug-config
-	lightline.vim
-2
-d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
-	keymaps.vim
-8
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
-d/Users/dickssau000/.config/nvim
-	plug.vim
-10
-d/Users/dickssau000
-	.config
-3
-d/Users/dickssau000/.config
-	nvim
-19
 d/Users/dickssau000/.config/nvim
 	spell
 4
@@ -334,6 +187,153 @@ d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles/.config/nvim
 d/Users/dickssau000/.local/dev/src/github.com/Saul-Dickson/dotfiles
 	.local
 3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme
+	theme
+5
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome
+	firefox-sweet-theme
+1
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release
+	chrome
+2
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles
+	1uqacq0y.default-release
+1
+d/Users/dickssau000/Library/Application Support/Firefox
+	Profiles
+3
+d/Users/dickssau000/Library/Application Support
+	Microsoft Edge Beta
+28
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta
+	Webstore Downloads
+13
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Webstore Downloads
+	..
+0
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta
+	Default
+5
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default
+	Extensions
+8
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions
+	bbcinlkgjjkejfdpemiealijmmooekmp
+2
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bbcinlkgjjkejfdpemiealijmmooekmp
+	4.61.0.1_0
+1
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bbcinlkgjjkejfdpemiealijmmooekmp/4.61.0.1_0
+	addItemDialog.js
+28
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bbcinlkgjjkejfdpemiealijmmooekmp
+	4.62.0.1_0
+2
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions
+	bnomihfieiccainjcjblhegjgglakjdd
+3
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bnomihfieiccainjcjblhegjgglakjdd
+	3.80_0
+1
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bnomihfieiccainjcjblhegjgglakjdd/3.80_0
+	assets
+3
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bnomihfieiccainjcjblhegjgglakjdd/3.80_0/assets
+	icons
+2
+d/Users/dickssau000/Library/Application Support/Microsoft Edge Beta/Default/Extensions/bnomihfieiccainjcjblhegjgglakjdd/3.80_0/assets/icons
+	16.png
+1
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/colors
+	light.css
+2
+d/Users/dickssau000/.config/nvim
+	plug.vim
+12
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	csd.css
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	colors
+1
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/colors
+	mars.css
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	parts
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	popups-contents.css
+10
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	parts
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	tabsbar.css
+17
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	colors
+1
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/colors
+	dark.css
+1
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	entries.css
+4
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/colors
+	mars.css
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	..
+0
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme
+	theme
+5
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	parts
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	csd.css
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	matching-autocomplete-width.css
+5
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	scrollbars.css
+13
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	parts
+3
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/parts
+	scrollbars.css
+13
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme
+	colors
+1
+d/Users/dickssau000/Library/Application Support/Firefox/Profiles/1uqacq0y.default-release/chrome/firefox-sweet-theme/theme/colors
+	dark.css
+1
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento/css
+	style.css
+1
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento
+	index.html
+10
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento/css
+	style.css
+1
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento
+	sass
+7
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento/sass
+	..
+0
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento
+	css
+3
+d/Users/dickssau000/.local/src/github.com/Saul-Dickson/bento/css
+	style.css
+1
 d
 
 # Right window history (oldest to newest):
@@ -391,11 +391,6 @@ D/Users
 D
 
 # Command line history (oldest to newest):
-:touch input
-:rename input.py
-:mkdir Chemistry
-:touch Class\ Notes.txt
-:touch spotifyd.conf
 :touch interviews.txt
 :mkdir Geometry
 :touch 20-09-09\ Notes.txt
@@ -451,7 +446,6 @@ D
 :tabnext
 :wincmd k
 :wincmd j
-:wq
 :windo q
 :wincmd j<CR> :windo q
 :wincmd J
@@ -491,6 +485,12 @@ D
 :touch gitgutter.vim
 :sudo rm
 :q
+:cd ~/.config/nvim/
+:grep transparent
+:grep trans
+:grep trans .
+:grep opacity
+:wq
 
 # Search history (oldest to newest):
 /../
@@ -504,6 +504,8 @@ D
 /local
 /C-[
 /key
+/micro
+/transparent
 
 # Prompt history (oldest to newest):
 pMovies

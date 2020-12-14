@@ -13,5 +13,5 @@ alias ps="/bin/ps aux -c | fzf --preview=\"\""
 # alias neofetch to cat ~/.cache/neofetch
 alias neofetch="/bin/cat ~/.cache/neofetch"
 
-# alias vi to ~/.local/bin/vi.sh*
-alias vi="vifm"
+# alias mbsync to mbsync -c ~/.config/mbsync/init.mbsync
+alias mbsync="mbsync -c ~/.config/mbsync/init.mbsync"
