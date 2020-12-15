@@ -21,6 +21,7 @@ let g:coc_global_extensions = [
   \ 'coc-flutter',
   \ 'coc-highlight',
   \ 'coc-explorer',
+  \ 'coc-r-lsp',
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.

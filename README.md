@@ -16,11 +16,11 @@
 
 #### Browser: [MSEdge](https://www.microsoft.com/en-us/edge)
 
-#### File Manager: [vifm](https://github.com/vifm/vifm)
+#### File Manager: [lf](https://github.com/gokcehan/lf)
 
 #### Email Client: [neomutt](https://github.com/neomutt/neomutt)
 
-#### Ebook Reader: [epy](https://github.com/wustho/epr)
+#### Ebook Reader: [epy](https://github.com/wustho/epy)
 
 #### `find` Alternative: [fd](https://github.com/sharkdp/fd)
 
