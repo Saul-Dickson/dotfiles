@@ -46,7 +46,7 @@ Plug 'google/yapf' " python code formatter
 Plug 'dense-analysis/ale' " does lots of stuff like linting, fixing, etc.
 
 " File Management & Navigation
-Plug 'ptzz/lf.vim' " Lf integration in vim and neovim
+Plug 'sitiom/lf.vim' " Lf integration in vim and neovim
 Plug 'ctrlpvim/ctrlp.vim' " ctrlp
 
 " Other
@@ -55,5 +55,6 @@ Plug 'vim-utils/vim-man' " manpages
 Plug 'liuchengxu/vista.vim' " tags viewer and symbol navigator
 Plug 'vimwiki/vimwiki' " personal information wiki extention for vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
+Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
 
 call plug#end()

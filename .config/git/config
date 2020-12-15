@@ -5,3 +5,4 @@
 	editor = nvim
 [alias]
 	project-summary = !which onefetch && onefetch
+	root = rev-parse --show-toplevel

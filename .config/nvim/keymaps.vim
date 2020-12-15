@@ -1,6 +1,13 @@
 " Initialize which_key_map
 let g:which_key_map = {}
 
+"######################"
+"# Which-Key mappings #"
+"######################"
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :WhichKeyVisual '<Space>'<CR>
+
 "#####################"
 "# Window navigation #"
 "#####################"
@@ -37,28 +44,21 @@ let g:which_key_map['w']['t'] = 'move new tab'
 "##################"
 
 nnoremap <leader><Tab> :tabnew<CR>
-nnoremap <Tab> :tabnext<CR>
-nnoremap <S-Tab> :tabprevious<CR>
 
 let g:which_key_map['<Tab>'] = {'name': 'new tab'}
-
-"######################"
-"# Which-Key mappings #"
-"######################"
-
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :WhichKeyVisual '<Space>'<CR>
 
 "#########################"
 "# Undo/Redo keymappings #"
 "#########################"
 
-nnoremap <leader>uu :UndotreeShow<CR>
+nnoremap <leader>uu :UndotreeToggle<CR>
+nnoremap <leader>uf :UndotreeFocus<CR>
 nnoremap <S-u> :redo<CR>
 
 let g:which_key_map['u'] = {
             \ 'name': '+undo',
             \ 'u': 'show the Undotree',
+            \ 'f': 'focus the Undotree'
             \}
 
 "########################"
@@ -67,7 +67,7 @@ let g:which_key_map['u'] = {
 
 nmap <leader>tt :FloatermToggle<CR>
 nnoremap <leader>ta :FloatermNew<CR>
-nnoremap <leader>td :FloatermKill<CR>
+nnoremap <leader>tx :FloatermKill<CR>
 tnoremap <silent> <C-Esc> <C-\><C-n>
 
 let g:which_key_map['t'] = {
@@ -148,7 +148,7 @@ nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 "# File Explorer/Manager Keymaps #"
 "#################################"
 
-nnoremap <leader>fv :Vifm<CR>
+nnoremap <leader>ff :FloatermNew lf<CR>
 nnoremap <leader>fs :VsplitVifm<CR>
 nnoremap <leader>ft :CocCommand explorer<CR>
 nnoremap <leader>fh :CocCommand explorer ~<CR>

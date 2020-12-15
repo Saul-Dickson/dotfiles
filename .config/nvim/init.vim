@@ -6,6 +6,7 @@ source ~/.config/nvim/plug-config/lightline.vim
 source ~/.config/nvim/plug-config/which-key.vim 
 source ~/.config/nvim/plug-config/startify.vim
 source ~/.config/nvim/plug-config/gitgutter.vim
+source ~/.config/nvim/plug-config/lf.vim
 
 "source options.vim
 source $HOME/.config/nvim/options.vim
