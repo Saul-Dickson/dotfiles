@@ -14,7 +14,7 @@ LIBRARYDIR=$HOME/Library
 export EDITOR="nvim"
 
 ## The name of your prefered pager ##
-export PAGER="bat"
+# export PAGER="bat"
 
 ## The name of your prefered browser ##
 export BROWSER="firefox"
