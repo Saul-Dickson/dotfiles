@@ -2,9 +2,13 @@
 
 <div align="center">
 <h4>
+<a href="#Install">Install</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#Programs">Programs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </h4>
 </div>
+
+## Install
+`curl https://github.com/Saul-Dickson/dotfiles/blob/master/install.sh | sh`
 
 ## Programs
 
