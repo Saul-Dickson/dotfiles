@@ -8,6 +8,8 @@
 </div>
 
 ## Install
+Copy and paste this into your terminal:
+
 `curl https://github.com/Saul-Dickson/dotfiles/blob/master/install.sh | sh`
 
 ## Programs
