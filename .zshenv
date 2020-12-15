@@ -251,6 +251,7 @@ export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc"
 export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch"
+export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
 
 ## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
