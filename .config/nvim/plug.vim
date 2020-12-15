@@ -35,7 +35,7 @@ Plug 'jeetsukumaran/vim-pythonsense' " python specifiic motions and text objects
 " Text Editing Plugins & Enhancements
 Plug 'mbbill/undotree' " undotree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
-Plug 'markonm/traces.vim' " Range, pattern and substitute preview for Vim
+Plug 'bennyyip/traces.vim' " Range, pattern and substitute preview for Vim
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
 Plug 'godlygeek/tabular' " text alignment
 Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
