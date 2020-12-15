@@ -16,12 +16,13 @@ Copy and paste this into your terminal:
 
 <div align="center">
 <h4>
-<a href="#Editor">Editor</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#Pager">Pager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#Shell">Shell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#Browser">Browser</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#EmailClient">Email Client</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#EbookReader">Ebook Reader</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#editor-neovim">Editor</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#pager-bat">Pager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#shell-zsh">Shell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#file-manager-lf">File Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#browser-firefox">Browser</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#email-client-neomutt">Email Client</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#ebook-reader-epy">Ebook Reader</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </h4>
 </div>
 
