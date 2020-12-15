@@ -23,15 +23,17 @@ done
 ## Create symlink to local shell scripts ##
 ln -sF $(echo $gitPath)/.local/bin ~/.local/bin
 
+## Create symlink to zshenv ##
+ln -sF $(echo $gitPath)/.zshenv ~/.zshenv
 
 ## Install other, less important packages using pip ##
 sudo pip3.9 install epr
 
 ## Install other, less important packages using go ##
-go get github.com/zquestz/s || sudo !!
+go get github.com/zquestz/s
 
 ## Install other, less important packages using npm ##
-npm install --global trash-cli || sudo !!
+npm install --global trash-cli
 
 ## Change the default shell to zsh ##
 sudo chsh /usr/local/bin/zsh
