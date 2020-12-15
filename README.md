@@ -14,13 +14,24 @@ Copy and paste this into your terminal:
 
 ## Programs
 
+<div align="center">
+<h4>
+<a href="#Editor">Editor</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Pager">Pager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Shell">Shell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Browser">Browser</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#EmailClient">Email Client</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#EbookReader">Ebook Reader</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h4>
+</div>
+
 #### Editor: [neovim](https://github.com/neovim/neovim)
 
 #### Pager: [bat](https://github.com/sharkdp/bat)
 
 #### Shell: [zsh](http://zsh.sourceforge.net)
 
-#### Browser: [MSEdge](https://www.microsoft.com/en-us/edge)
+#### Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 #### File Manager: [lf](https://github.com/gokcehan/lf)
 
