@@ -1,0 +1,332 @@
+set hidden true
+set shell zsh
+set shellopts '-eu:--shwordsplit'	# https://github.com/gokcehan/lf/wiki/Tips#split-words-by-default-in-zsh
+set ifs "\n"
+set filesep "\n"  # default already
+set scrolloff 11
+set icons
+set period 1
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml:Soulseek*:lost+found"
+set incsearch
+set promptfmt "\033[33;1m%u\033[0m\033[32;1m@\033[0m\033[34;1m%h\033[0m:\033[35;1m%w\033[0m\033[36;1m%f\033[0m"
+
+# set previewer with env vars
+$lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
+
+##			Commands & Functions
+
+cmd open ${{
+    case "$f" in
+	*.tar.bz|*.tar.bz2|*.tbz|*.tbz2|*.tar.gz|*.tgz|*.tar.xz|*.txz|*.xz|*.zip|*.rar|*.iso|*.7z)
+	    lf -remote "send $id mount $f" ;;
+	*.pdf|*.djvu|*.ps|*.epub) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	*.vixl) vixl44 $f >/dev/null 2>&1 ;;
+	*)
+	    case $(file --mime-type $f -b) in
+	    	inode/symlink) setsid -f $OPENER $(readlink -f $f) >/dev/null 2>&1 ;;
+		text/*|application/json|application/csv|*opendocument.text) $EDITOR $fx;;
+		application/pdf|application/epub*|image/vnd.djvu) setsid -f zathura $fx >/dev/null 2>&1 ;;
+		image/x-xcf|image/svg+xml) setsid -f gimp $f >/dev/null 2>&1 ;;
+		# image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gifv\|gif\|webp\|tif\|bmp\|ico\)\(_large\)*$" | sxiv -aio 2>/dev/null | lf-select ;;
+		image/*) sxiv -ao $f 2>/dev/null | lf-select ;;
+		audio/*) mpv --audio-display=no $f ;;
+		video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+		*) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+	    esac
+    esac
+}}
+
+cmd rm ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf $fx
+}}
+
+cmd mv ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Move to where?"
+	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf | sed 's|~|$HOME|' )" &&
+	for x in $fx; do
+		eval mv -iv \"$x\" \"$dest\"
+	done &&
+	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
+}}
+
+cmd cp ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Copy to where?"
+	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf | sed 's|~|$HOME|' )" &&
+	for x in $fx; do
+		eval cp -ivr \"$x\" \"$dest\"
+	done &&
+	notify-send "📋 File(s) copied." "File(s) copies to $dest."
+}}
+
+cmd fzfJump ${{
+   res="$(find . -maxdepth 3 | fzf --header='Jump to:')"
+   if [ -f "$res" ]; then
+     cmd="select"
+   elif [ -d "$res" ]; then
+     cmd="cd"
+   fi
+lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+
+cmd put &{{
+    load=$(lf -remote 'load')
+    mode=$(echo "$load" | sed -n '1p')
+    list=$(echo "$load" | sed '1d')
+    if [ $mode = 'copy' ]; then
+        rsync -av --ignore-existing --progress $list . \
+        | stdbuf -i0 -o0 -e0 tr '\r' '\n' \
+        | while read line; do
+            lf -remote "send $id echo $line"
+        done
+    elif [ $mode = 'move' ]; then
+        mv -n $list .
+    fi
+    lf -remote 'send load'
+    lf -remote 'send clear'
+}}
+
+cmd ln %{{
+    for file in $(lf -remote 'load'); do
+        if [ ! -n "${mode+1}" ]; then
+            mode="$file"
+            continue
+        fi
+        files+=("$file")
+    done
+    if [ "${#files[@]}" -lt 1 ]; then
+        lf -remote "send $id echo no files to link files: ${files}"
+        exit 0
+    fi
+    # symbolically  copy mode is indicating a soft link
+    if [[ "$mode" == copy ]]; then
+        ln -sr $files -t .
+    # while a move mode is indicating a hard link
+    elif [[ "$mode" == move ]]; then
+        ln $files -t .
+    fi
+}}
+
+cmd mount ${{
+	mntdir="$1-archivemount"
+	[ ! -d "$mntdir" ] && {
+	mkdir "$mntdir"
+	archivemount "$1" "$mntdir"
+	echo "$mntdir" >> "/tmp/__lf_archivemount_$id"
+	}
+	lf -remote "send $id cd \"$mntdir\""
+	lf -remote "send $id reload"
+}}
+
+# (xkcd link: https://xkcd.com/1168/)
+cmd extract &{{
+    # :extract [out_dir]
+    out_dir="$*"
+
+    if [ -n "$out_dir" ]; then
+        mkdir -p "$out_dir"
+        cd "$out_dir" || {
+            lf -remote "send $id echoerr unable to create dir"
+            exit 1
+        }
+    fi
+
+    [ -w . ] || {
+        lf -remote "send $id echoerr unable to extract to \
+            \'${out_dir:-.}\'. No write permissions"
+        exit 1
+    }
+
+    lf -remote "send $id echomsg ${f##*/} extracting ..."
+
+    case "$f" in
+    *.tar)  tar -xf "$f"       ;;
+    *.tar.bz|*.tbz| \
+    *.tar.bz2|*.tbz2)
+            tar -xjf "$f"      ;;
+    *.tar.gz|*.tgz)
+            tar -xzf "$f"      ;;
+    *.tar.xz|*.txz)
+            tar -xJf "$f"      ;;
+    *.tar.[zZ]|*.t[zZ])
+            tar -xZf "$f"      ;;
+    *.tar.lz|*.tlz| \
+    *.tar.lzma|*.tlzma| \
+    *.tar.lzo|*.tzo| \
+    *.tar.zst|*.tzst)
+            tar -xaf "$f"      ;;
+    *.7z)   7za x -- "$f"      ;;
+    *.a|*.ar)
+            ar x -- "$f"       ;;
+    *.ace)  unace e -- "$f"    ;;
+    *.alz)  unalz -- "$f"      ;;
+    *.arc|*.ark|*.ARC|*.ARK)
+            nomarch -- "$f"    ;;
+    *.arj|*.ARJ)
+            arj e -r -- "$f"   ;;
+    *.bz|*.bz2)
+            bunzip2 -k -- "$f" ;;
+    *.cab|*.CAB|*.exe|*.EXE)
+            cabextract "$f"    ;;
+    *.cpio) cpio -id -F "$f"   ;;
+    *.deb)  dpkg -x -- "$f" .  ;;
+    *.gz)   gunzip -k "$f"     ;;
+    *.lha|*.lzh)
+            lha x "$f"         ;;
+    *.lrz|*.lrzip|*.rz)
+            lrunzip -- "$f"    ;;
+    *.lz)   lzip -d -k -- "$f" ;;
+    *.lz4)  unlz4 -- "$f"      ;;
+    *.lzma) xz -d -k "$f"      ;;
+    *.lzo)  lzop -x "$f"       ;;
+    *.rar)  unrar x -- "$f"    ;;
+    *.src.rpm|*.rpm|*.spm)
+            rpm2cpio "$f" | cpio -dium ;;
+    *.xz)   unxz -k -- "$f"    ;;
+    *.[zZ]) uncompress -- "$f" ;;
+    *.zip)  unzip -- "$f"      ;;
+    *.zst)  unzstd -- "$f"     ;;
+    *.AppImage) ./"$f" --appimage-extract ;;
+    *)
+        lf -remote "send $id echoerr ${f##*/} unknown archive format"
+        exit 0
+    esac
+
+    if [ -n "$out_dir" ]; then
+        lf -remote "send $id select '$out_dir'"
+    fi
+
+    lf -remote "send $id reload"
+    lf -remote "send $id echomsg ${f##*/} extracted."
+}}
+
+cmd extract_sub &{{
+    # :extract_sub
+    # -- Extract an archive in subdirectory
+    lf -remote "send $id extract '$(basename -- "${f%.*}" .tar)'"
+}}
+
+# compress current file or selected files with tar and gunzip
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# compress current file or selected files with zip
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+cmd cleanlatexcompile ${{
+	latexcompile $fx &&
+	notify-send "File(s) compiled."
+}}
+
+# Share files up to 256 Mib
+cmd share ${{
+	curl -F"file=@$fx" https://0x0.st | xclip -sel clip
+}}
+
+# Dragon cmds
+cmd dragon %dragon-drag-and-drop -a -x $fx
+cmd dragon-stay %dragon-drag-and-drop -a $fx
+cmd dragon-individual %dragon-drag-and-drop $fx
+cmd cpdrag %cpdrag
+cmd mvdrag %mvdrag
+cmd dldrag %dldrag
+
+# Execute shell command on selection
+cmd embed $$@ $fx
+
+# Pager command
+cmd pager ${{
+	if [[ $f = *.md  ]]; then
+		glow -w 120 -p $fx
+	else
+		less $fx
+	fi
+}}
+
+##			Bindings
+
+#			Unmap some defaults
+map gh
+map d
+map m
+
+#			File Operations
+map x cut
+map A rename # at the very end
+map c push A<c-u> # new rename
+map I push A<c-a> # at the very beginning
+map i push A<a-b><a-b><a-f> # before extention
+map a push A<a-b> # after extention
+map R push A<c-w> # rename completely
+map B $vidir
+map o push :mkdir<space>
+map E extract
+map <a-e> extract_sub
+map C cp
+map M mv
+map D rm
+map p put
+map S ln
+
+#			Navigation
+map ` mark-save
+map ~ cd ~
+map <c-r> reload
+map . set hidden!
+map <enter> shell
+map t :set sortby time; set info time; set reverse!	#set by most recent
+map gg top
+map gm cd /mnt
+map gd cd /dati
+map gu cd /mnt/01D5707D40B081F0/Users/ascol/Documents/UNI/Corsi
+map g/ cd /
+map <c-e> down	#enable mouse scroll
+map <c-y> up
+map <c-s> $lf -remote "send $id select $(printf '%q' $(all_files=(./*(ND)); printf '%s\n' ${all_files[@]} | fzf))"	# better asynchronious search
+map <c-g> set globsearch!
+map <c-f> :fzf_jump
+map <c-space> :toggle; up
+
+#			Personal utils
+map <c-a> embed neomutt -a
+map m embed w3m -s
+map w pager
+map W embed dotbare add
+map <c-w> embed dotbare rm -rf --cached
+map b $ setsid -f sbg -i $f
+map <a-L> cleanlatexcompile
+map U !du -sh      # waiting shell command for Usage
+map X !$f
+map O $ setsid -f $OPENER "$f" >/dev/null 2>&1
+map T push :$touch<space>
+map V push :!nvim<space>
+map <c-z> $ kill -STOP $PPID	# put lf in bg
+
+#			Dragon Mappings
+map dr dragon
+map ds dragon-stay
+map di dragon-individual
+map dm mvdrag
+map dc cpdrag
+map dl dldrag
