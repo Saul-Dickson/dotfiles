@@ -25,6 +25,7 @@ Copy and paste this into your terminal:
 <a href="#ebook-reader-epy">Ebook Reader</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </h4>
 </div>
+ -------
 
 #### Editor: [neovim](https://github.com/neovim/neovim)
 
