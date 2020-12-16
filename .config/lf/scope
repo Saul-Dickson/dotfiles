@@ -50,7 +50,7 @@ case "$1" in
     *.docx) docx2txt "$1" - ;;
     *.csv) cat "$1" | sed s/,/\\n/g ;;
     *pdf) pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - ;;
-    *) highlight --out-format ansi "$1" || bat "$1";;
+    *) highlight --out-format ansi "$1" || cat "$1";;
 esac
 
 exit 1

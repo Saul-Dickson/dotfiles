@@ -5,8 +5,8 @@ let g:which_key_map = {}
 "# Which-Key mappings #"
 "######################"
 
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <leader><space> :WhichKey '<Space>'<CR>
+vnoremap <silent> <leader><space> :WhichKeyVisual '<Space>'<CR>
 
 "#####################"
 "# Window navigation #"
@@ -68,7 +68,6 @@ let g:which_key_map['u'] = {
 nmap <leader>tt :FloatermToggle<CR>
 nnoremap <leader>ta :FloatermNew<CR>
 nnoremap <leader>tx :FloatermKill<CR>
-tnoremap <silent> <C-Esc> <C-\><C-n>
 
 let g:which_key_map['t'] = {
             \ 'name': '+terminal',
@@ -149,7 +148,7 @@ nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 "#################################"
 
 nnoremap <leader>ff :FloatermNew lf<CR>
-nnoremap <leader>fs :VsplitVifm<CR>
+nnoremap <leader>ft :LfNewTab<CR>
 nnoremap <leader>ft :CocCommand explorer<CR>
 nnoremap <leader>fh :CocCommand explorer ~<CR>
 
@@ -166,11 +165,15 @@ let g:which_key_map['f'] = {
 "##############"
 
 nnoremap <leader>sf :Files<CR>
-nnoremap <leader>sr :RG<CR>
+nnoremap <leader>sg :GFiles<CR>
+nnoremap <leader>sb :Buffers<CR>
+nnoremap <leader>sw :Windows<CR>
 
 let g:which_key_map['s'] = {'name': '+search'}
 let g:which_key_map['s']['f'] = 'files'
-let g:which_key_map['s']['r'] = '(rip)grep'
+let g:which_key_map['s']['g'] = 'gitfiles'
+let g:which_key_map['s']['b'] = 'buffers'
+let g:which_key_map['s']['w'] = 'windows'
 
 "####################"
 "# Line indentation #"
