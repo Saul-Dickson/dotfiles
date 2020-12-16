@@ -10,7 +10,7 @@ set nowrap " toggle line wrapping (long lines wrap and continue on the next)
 set smartcase " no ignore case when pattern has uppercase
 set noswapfile " whether to use a swapfile for a buffer
 set nobackup " keep backup file after overwriting file
-set undodir=~/.config/nvim/undodir " where to store undo files
+set undodir=~/.cache/nvim/undodir " where to store undo files
 set undofile " save undo information to a file
 set incsearch " highlight match while typing search pattern
 set relativenumber " show relative line number in front of each line

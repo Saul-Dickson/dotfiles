@@ -8,11 +8,11 @@ source ~/.config/nvim/plug-config/startify.vim
 source ~/.config/nvim/plug-config/gitgutter.vim
 source ~/.config/nvim/plug-config/lf.vim
 
-"source options.vim
-source $HOME/.config/nvim/options.vim
-
 "source plug.vim
 source $HOME/.config/nvim/plug.vim
+
+"source options.vim
+source $HOME/.config/nvim/options.vim
 
 "source vars.vim
 source $HOME/.config/nvim/vars.vim

@@ -1,6 +1,15 @@
 " Initialize which_key_map
 let g:which_key_map = {}
 
+"#########################"
+"# X for delete mappings #"
+"#########################"
+nnoremap xw vwhx
+nnoremap xiw viwx
+nnoremap xb vbx
+nnoremap xl x
+noremap xx Vx
+
 "######################"
 "# Which-Key mappings #"
 "######################"
@@ -23,21 +32,20 @@ let g:which_key_map['k'] = 'window up'
 let g:which_key_map['l'] = 'window left'
 
 "###################"
-"# Window Movement #"
+"# Window windowment #"
 "###################"
 
-nnoremap <leader>wh <C-W>H
-nnoremap <leader>wl <C-W>L
-nnoremap <leader>wj <C-W>J
-nnoremap <leader>wk <C-W>K
-nnoremap <leader>wt <C-W>T
+nnoremap <leader>H <C-W>H
+nnoremap <leader>L <C-W>L
+nnoremap <leader>J <C-W>J
+nnoremap <leader>K <C-W>K
+nnoremap <leader>T <C-W>T
 
-let g:which_key_map.w = {'name': '+window'}
-let g:which_key_map['w']['h'] = 'move right'
-let g:which_key_map['w']['l'] = 'move left'
-let g:which_key_map['w']['j'] = 'move down'
-let g:which_key_map['w']['k'] = 'move up'
-let g:which_key_map['w']['t'] = 'move new tab'
+let g:which_key_map['H'] = 'move window left'
+let g:which_key_map['L'] = 'move window right'
+let g:which_key_map['J'] = 'move window down'
+let g:which_key_map['K'] = 'move window up'
+let g:which_key_map['T'] = 'move window new tab'
 
 "##################"
 "# Tab navigation #"
@@ -82,6 +90,10 @@ let g:which_key_map['t'] = {
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <tab> & <S-tab> to change selection.
+inoremap <Tab> <C-n>
+inoremap <S-Tab> <S-C-n>
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
@@ -148,16 +160,14 @@ nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 "#################################"
 
 nnoremap <leader>ff :FloatermNew lf<CR>
-nnoremap <leader>ft :LfNewTab<CR>
+nnoremap <leader>fh :FloatermNew lf ~<CR>
 nnoremap <leader>ft :CocCommand explorer<CR>
-nnoremap <leader>fh :CocCommand explorer ~<CR>
 
 let g:which_key_map['f'] = {
             \ 'name': '+file',
-            \ 'v': 'open selected file <vifm',
-            \ 's': 'open selected file <vfim in vs',
+            \ 'f': 'open file manager @ $(pwd)',
             \ 't': 'show file tree',
-            \ 'h': 'show file tree @ home directory',
+            \ 'h': 'open file manager @ $HOME',
             \}
 
 "##############"
@@ -193,6 +203,7 @@ nnoremap <leader>wh+ :resize +10<CR>
 nnoremap <leader>wh- :resize -10<CR>
 nnoremap <leader>whs :split<CR>
 
+let g:which_key_map.w = {'name': '+window'}
 let g:which_key_map['w']['v'] = {
             \ 'name': '+virtical',
             \ '+': 'increase size',
