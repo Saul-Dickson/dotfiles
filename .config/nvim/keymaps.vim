@@ -4,20 +4,20 @@ let g:which_key_map = {}
 "#########################"
 "# <LEADER> X for delete mappings #"
 "#########################"
-nnoremap <leader> xw vwhx
-nnoremap <leader> xb hvbx
-nnoremap <leader> x0 v0x
-nnoremap <leader> x$ v$x
+nnoremap <leader>xw vwhx
+nnoremap <leader>xb hvbx
+nnoremap <leader>x0 v0x
+nnoremap <leader>x$ v$x
 
-nnoremap <leader> xiw viwx
-nnoremap <leader> xi" vi"x
-nnoremap <leader> xi' vi'x
-nnoremap <leader> xi) vi)x
-nnoremap <leader> xi] vi]x
-nnoremap <leader> xi} vi}x
-nnoremap <leader> xi> vi>x
+nnoremap <leader>xiw viwx
+nnoremap <leader>xi" vi"x
+nnoremap <leader>xi' vi'x
+nnoremap <leader>xi) vi)x
+nnoremap <leader>xi] vi]x
+nnoremap <leader>xi} vi}x
+nnoremap <leader>xi> vi>x
 
-noremap <leader> xx Vx
+nnoremap <leader>xx Vx
 
 let g:which_key_map['x'] = {'name': '+remove'}
 let g:which_key_map['x']['w'] = 'word'
@@ -114,6 +114,8 @@ let g:which_key_map['t'] = {
 "# Conquer of Completion keymappings #"
 "#####################################"
 
+let g:which_key_map['c'] = {'name': '+coc'}
+
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -138,20 +140,31 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <F2> <Plug>(coc-rename)
+nmap <leader>cr <Plug>(coc-rename)
+
+let g:which_key_map['c']['r'] = 'rename'
 
 " Remap for format selected region
 xmap <leader>cf  <Plug>(coc-format-selected)
 nmap <leader>cf  <Plug>(coc-format-selected)
 
+let g:which_key_map['c']['f'] = 'format'
+
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>ca  <Plug>(coc-codeaction-selected)
 nmap <leader>ca  <Plug>(coc-codeaction-selected)
 
+let g:which_key_map['c']['a'] = {'name': '+codAction'}
+
 " Remap for do codeAction of current line
 nmap <leader>cac  <Plug>(coc-codeaction)
+
+let g:which_key_map['c']['a']['c'] = 'current-line'
+
 " Fix autofix problem of current line
 nmap <leader>cqf  <Plug>(coc-fix-current)
+
+let g:which_key_map['c']['qf'] = 'autofix-line'
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
@@ -180,6 +193,17 @@ nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
 nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR> 
+
+let g:which_key_map['c'] += {
+            \ 'a': 'diagnostics',
+            \ 'e': 'extensions',
+            \ 'c': 'commands',
+            \ 'o': 'outline',
+            \ 's': 'symbols',
+            \ 'j': 'next',
+            \ 'k': 'prev',
+            \ 'p': 'list-resume'
+            \}
 
 "#################################"
 "# File Explorer/Manager Keymaps #"
