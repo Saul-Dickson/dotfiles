@@ -12,9 +12,13 @@ brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
 mkdir $HOME/.local/src/github.com/Saul-Dickson -p
 git clone https://github.com/Saul-Dickson/dotfiles $gitPath
 
+####################
+# Symlink Dotfiles #
+####################
+
 ## Create symlinks to config files ##
 for confName in $(/bin/ls -1 $gitPath/.config); do
-    message="symlinking ~/.config/$confName"
+    message="symlinking ~/.config/$confName       "
     printf "\r$message"
 
     ln -sF $(echo $gitPath)/.config/$(echo $confName) ~/.config/$confName
