@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/dickssau000/.cache'
+let g:netrw_dirhist_3='/Users/dickssau000/.config/wd'
 let g:netrw_dirhist_2='/Users/dickssau000/.config/nvim'
 let g:netrw_dirhist_1='/Users/dickssau000/.local/src/github.com/samhh/bukubrow-host'

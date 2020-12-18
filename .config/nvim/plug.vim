@@ -35,7 +35,7 @@ Plug 'jeetsukumaran/vim-pythonsense' " python specifiic motions and text objects
 " Text Editing Plugins & Enhancements
 Plug 'mbbill/undotree' " undotree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
-Plug 'bennyyip/traces.vim' " Range, pattern and substitute preview for Vim
+Plug 'markonm/traces.vim', {'branch': 'subvert'} " Range, pattern and substitute preview for Vim
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
 Plug 'godlygeek/tabular' " text alignment
 Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
@@ -51,7 +51,6 @@ Plug 'ctrlpvim/ctrlp.vim' " ctrlp
 
 " Other
 Plug 'jremmen/vim-ripgrep' " ripgrep
-Plug 'vim-utils/vim-man' " manpages
 Plug 'liuchengxu/vista.vim' " tags viewer and symbol navigator
 Plug 'vimwiki/vimwiki' " personal information wiki extention for vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser

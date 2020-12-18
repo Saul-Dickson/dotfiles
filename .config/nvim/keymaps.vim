@@ -2,13 +2,39 @@
 let g:which_key_map = {}
 
 "#########################"
-"# X for delete mappings #"
+"# <LEADER> X for delete mappings #"
 "#########################"
-nnoremap xw vwhx
-nnoremap xiw viwx
-nnoremap xb vbx
-nnoremap xl x
-noremap xx Vx
+nnoremap <leader> xw vwhx
+nnoremap <leader> xb hvbx
+nnoremap <leader> x0 v0x
+nnoremap <leader> x$ v$x
+
+nnoremap <leader> xiw viwx
+nnoremap <leader> xi" vi"x
+nnoremap <leader> xi' vi'x
+nnoremap <leader> xi) vi)x
+nnoremap <leader> xi] vi]x
+nnoremap <leader> xi} vi}x
+nnoremap <leader> xi> vi>x
+
+noremap <leader> xx Vx
+
+let g:which_key_map['x'] = {'name': '+remove'}
+let g:which_key_map['x']['w'] = 'word'
+let g:which_key_map['x']['b'] = 'backword'
+let g:which_key_map['x']['0'] = 'till beginning of line'
+let g:which_key_map['x']['$'] = 'till end of line'
+
+let g:which_key_map['x']['i'] = {'name': '+inner'}
+let g:which_key_map['x']['i']['w'] = 'word'
+let g:which_key_map['x']['i']['"'] = 'double-quotes'
+let g:which_key_map['x']['i']["'"] = 'single-quotes'
+let g:which_key_map['x']['i'][')'] = 'parenthases'
+let g:which_key_map['x']['i'][']'] = 'square-bracket'
+let g:which_key_map['x']['i']['}'] = 'curly-bracket'
+let g:which_key_map['x']['i']['>'] = 'wedge'
+
+let g:which_key_map['x']['x'] = 'line'
 
 "######################"
 "# Which-Key mappings #"
