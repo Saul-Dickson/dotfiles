@@ -7,7 +7,7 @@ let g:which_key_map = {}
 nnoremap <leader>xw vwhx
 nnoremap <leader>xb hvbx
 nnoremap <leader>x0 v0x
-nnoremap <leader>x$ v$x
+nnoremap <leader>x$ v$hx
 
 nnoremap <leader>xiw viwx
 nnoremap <leader>xi" vi"x

@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 IMAPStore dickssau000@roseauschool.org-remote
 Host imap.gmail.com
 Port 993
@@ -35,12 +23,6 @@ SyncState *
 MaxMessages 0
 ExpireUnread no
 # End profile
-
-
-
-
-
-
 
 IMAPStore spiralmaster123@gmail.com-remote
 Host imap.gmail.com
