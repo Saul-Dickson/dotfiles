@@ -1,3 +1,5 @@
+# vim: set filetype=sh
+
 set hidden true
 set shell zsh
 set shellopts '-eu:--shwordsplit'	# https://github.com/gokcehan/lf/wiki/Tips#split-words-by-default-in-zsh
@@ -11,7 +13,7 @@ set incsearch
 set promptfmt "\033[33;1m%u\033[0m\033[32;1m@\033[0m\033[34;1m%h\033[0m:\033[35;1m%w\033[0m\033[36;1m%f\033[0m"
 
 # set previewer with env vars
-$lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
+$lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/lfimg/preview"
 
 ##			Commands & Functions
 
@@ -48,8 +50,7 @@ cmd rm ${{
 cmd mv ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
-	clear; echo "Move to where?"
-	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf | sed 's|~|$HOME|' )" &&
+	dest="$(fd -t d ~ --hidden | fzf --header='Move to where? ')" &&
 	for x in $fx; do
 		eval mv -iv \"$x\" \"$dest\"
 	done &&
@@ -58,23 +59,12 @@ cmd mv ${{
 
 cmd cp ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
-	set -f
-	clear; echo "Copy to where?"
-	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf | sed 's|~|$HOME|' )" &&
+	set -f && clear
+	dest="$(fd -t d ~ --hidden | fzf --header='Copy to where? ')" &&
 	for x in $fx; do
 		eval cp -ivr \"$x\" \"$dest\"
 	done &&
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
-}}
-
-cmd fzfJump ${{
-   res="$(find . -maxdepth 3 | fzf --header='Jump to:')"
-   if [ -f "$res" ]; then
-     cmd="select"
-   elif [ -d "$res" ]; then
-     cmd="cd"
-   fi
-lf -remote "send $id $cmd \"$res\""
 }}
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
@@ -210,12 +200,6 @@ cmd extract &{{
     lf -remote "send $id echomsg ${f##*/} extracted."
 }}
 
-cmd extract_sub &{{
-    # :extract_sub
-    # -- Extract an archive in subdirectory
-    lf -remote "send $id extract '$(basename -- "${f%.*}" .tar)'"
-}}
-
 # compress current file or selected files with tar and gunzip
 cmd tar ${{
     set -f
@@ -234,20 +218,10 @@ cmd zip ${{
     rm -rf $1
 }}
 
-cmd cleanlatexcompile ${{
-	latexcompile $fx &&
-	notify-send "File(s) compiled."
-}}
-
-# Share files up to 256 Mib
-cmd share ${{
-	curl -F"file=@$fx" https://0x0.st | xclip -sel clip
-}}
-
 # Dragon cmds
-cmd dragon %dragon-drag-and-drop -a -x $fx
-cmd dragon-stay %dragon-drag-and-drop -a $fx
-cmd dragon-individual %dragon-drag-and-drop $fx
+cmd dragon %dragon -a -x $fx
+cmd dragon-stay %dragon -a $fx
+cmd dragon-individual %dragon $fx
 cmd cpdrag %cpdrag
 cmd mvdrag %mvdrag
 cmd dldrag %dldrag
@@ -260,7 +234,7 @@ cmd pager ${{
 	if [[ $f = *.md  ]]; then
 		glow -w 120 -p $fx
 	else
-		less $fx
+		bat $fx
 	fi
 }}
 
@@ -297,9 +271,6 @@ map . set hidden!
 map <enter> shell
 map t :set sortby time; set info time; set reverse!	#set by most recent
 map gg top
-map gm cd /mnt
-map gd cd /dati
-map gu cd /mnt/01D5707D40B081F0/Users/ascol/Documents/UNI/Corsi
 map g/ cd /
 map <c-e> down	#enable mouse scroll
 map <c-y> up
