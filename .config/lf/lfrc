@@ -262,6 +262,7 @@ map M mv
 map D rm
 map p put
 map S ln
+map - $~/.config/lf/draw_img.sh $f 
 
 #			Navigation
 map ` mark-save
