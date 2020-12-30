@@ -31,7 +31,7 @@ ln -sF $(echo $gitPath)/.local/bin ~/.local/bin
 ln -sF $(echo $gitPath)/.zshenv ~/.zshenv
 
 ## Install other, less important packages using pip ##
-sudo pip3.9 install epr
+sudo pip3.9 install epr ueberzug
 
 ## Install other, less important packages using go ##
 go get github.com/zquestz/s

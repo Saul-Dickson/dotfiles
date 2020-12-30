@@ -1,4 +1,4 @@
-# xdg-trashdir [![Build Status](http://img.shields.io/travis/kevva/xdg-trashdir.svg?style=flat)](https://travis-ci.org/kevva/xdg-trashdir)
+# xdg-trashdir [![Build Status](https://travis-ci.org/kevva/xdg-trashdir.svg?branch=master)](https://travis-ci.org/kevva/xdg-trashdir)
 
 > Get the correct trash path on Linux according to the [spec](http://www.ramendik.ru/docs/trashspec.html)
 
@@ -15,28 +15,24 @@ $ npm install xdg-trashdir
 ```js
 const xdgTrashdir = require('xdg-trashdir');
 
-xdgTrashdir().then(dir => {
-	console.log(dir);
+(async () => {
+	console.log(await xdgTrashdir());
 	//=> '/home/johndoe/.local/share/Trash'
-});
 
-xdgTrashdir('foo.zip').then(dir => {
-	console.log(dir);
+	console.log(await xdgTrashdir('foo.zip'));
 	//=> '/media/johndoe/UUI/.Trash-1000'
-});
 
-xdgTrashdir.all().then(dirs => {
-	console.log(dirs);
-	//=> ['/home/johndoe/.local/share/Trash', '/media/johndoe/UUI/.Trash-1000', ...]
-});
+	console.log(await xdgTrashdir.all());
+	//=> ['/home/johndoe/.local/share/Trash', '/media/johndoe/UUI/.Trash-1000', …]
+})();
 ```
 
 
 ## API
 
-### xdgTrashdir([file])
+### xdgTrashdir(file?)
 
-Returns a `Promise` that resolves the path to the trash.
+Returns a `Promise<string>` with the path to the trash.
 
 #### file
 
@@ -46,9 +42,4 @@ Get the trash path for a specific file.
 
 ### xdgTrashdir.all()
 
-Returns a `Promise` that resolves to an array with all possible trash paths.
-
-
-## License
-
-MIT © [Kevin Mårtensson](https://github.com/kevva)
+Returns a `Promise<string[]>` with all possible trash paths.

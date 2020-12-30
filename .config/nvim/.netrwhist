@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/dickssau000/Documents/Calibre Library'
 let g:netrw_dirhist_6='/Users/dickssau000/.local/src/github.com/Saul-Dickson/dl/dl'
 let g:netrw_dirhist_5='/Users/dickssau000/.local/src/github.com/Saul-Dickson/dl'
 let g:netrw_dirhist_4='/Users/dickssau000/.cache'

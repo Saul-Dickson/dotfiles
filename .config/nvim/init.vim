@@ -14,6 +14,9 @@ source $HOME/.config/nvim/plug.vim
 "source options.vim
 source $HOME/.config/nvim/options.vim
 
+"source autocmd.vim
+source $HOME/.config/nvim/autocmd.vim
+
 "source vars.vim
 source $HOME/.config/nvim/vars.vim
 

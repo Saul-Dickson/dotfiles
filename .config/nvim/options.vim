@@ -22,6 +22,7 @@ set spelllang=en_us " language(s) to de spell checking for
 set scrolloff=999 " lock the cursor to the center row
 set cursorline " highlight the line under the cursor
 set mouse=nvi  " enable the use of mouse clicks
+set foldmethod=manual " The kind of folding used for the current window.
 
 filetype plugin on
 

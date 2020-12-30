@@ -1,9 +1,17 @@
 " Initialize which_key_map
 let g:which_key_map = {}
 
-"#########################"
+"######################"
+"# Which-Key mappings #"
+"######################"
+
+nnoremap <silent> <leader><space> :WhichKey '<Space>'<CR>
+vnoremap <silent> <leader><space> :WhichKeyVisual '<Space>'<CR>
+
+"##################################"
 "# <LEADER> X for delete mappings #"
-"#########################"
+"##################################"
+
 nnoremap <leader>xw vwhx
 nnoremap <leader>xb hvbx
 nnoremap <leader>x0 v0x
@@ -36,12 +44,35 @@ let g:which_key_map['x']['i']['>'] = 'wedge'
 
 let g:which_key_map['x']['x'] = 'line'
 
-"######################"
-"# Which-Key mappings #"
-"######################"
+"#################################"
+"# Visual Aesthetics Keymappings #"
+"#################################"
 
-nnoremap <silent> <leader><space> :WhichKey '<Space>'<CR>
-vnoremap <silent> <leader><space> :WhichKeyVisual '<Space>'<CR>
+let g:which_key_map['v'] = {'name': '+visual'}
+
+"## Open Startify ##"
+nnoremap <leader>vs :Startify<CR>
+
+let g:which_key_map['v']['s'] = 'Startify'
+
+"## Switch Foldmethods ##"
+nnoremap <leader>vfm :set foldmethod=manual<CR>
+nnoremap <leader>vfM :set foldmethod=marker<CR>
+nnoremap <leader>vfi :set foldmethod=indent<CR>
+nnoremap <leader>vfs :set foldmethod=syntax<CR>
+nnoremap <leader>vfd :set foldmethod=diff<CR>
+nnoremap <leader>vfe :set foldmethod=expr<CR>
+
+let g:which_key_map['v']['f'] = {
+            \'name': '+foldmethod',
+            \'m': 'manual',
+            \'M': 'marker',
+            \'i': 'indent',
+            \'s': 'syntax',
+            \'d': 'diff',
+            \'e': 'expr'
+\}
+
 
 "#####################"
 "# Window navigation #"
@@ -72,14 +103,6 @@ let g:which_key_map['L'] = 'move window right'
 let g:which_key_map['J'] = 'move window down'
 let g:which_key_map['K'] = 'move window up'
 let g:which_key_map['T'] = 'move window new tab'
-
-"##################"
-"# Tab navigation #"
-"##################"
-
-nnoremap <leader><Tab> :tabnew<CR>
-
-let g:which_key_map['<Tab>'] = {'name': 'new tab'}
 
 "#########################"
 "# Undo/Redo keymappings #"

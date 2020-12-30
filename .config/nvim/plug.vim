@@ -31,6 +31,7 @@ Plug 'dart-lang/dart-vim-plugin' " dart support in vim
 Plug 'justinmk/vim-sneak' " the missing motion of vim
 Plug 'liuchengxu/vim-which-key' " Vim plugin that shows keybindings in popup
 Plug 'jeetsukumaran/vim-pythonsense' " python specifiic motions and text objects
+Plug 'unblevable/quick-scope' " Lightning fast left-right movement in Vim
 
 " Text Editing Plugins & Enhancements
 Plug 'mbbill/undotree' " undotree
