@@ -73,7 +73,6 @@ let g:which_key_map['v']['f'] = {
             \'e': 'expr'
 \}
 
-
 "#####################"
 "# Window navigation #"
 "#####################"
@@ -256,12 +255,30 @@ let g:which_key_map['s']['g'] = 'gitfiles'
 let g:which_key_map['s']['b'] = 'buffers'
 let g:which_key_map['s']['w'] = 'windows'
 
+"#######################################"
+"# Copy/Paste to/from System clipboard #"
+"#######################################"
+
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+
+let g:which_key_map['y'] = 'yank->sysclip'
+let g:which_key_map['p'] = 'putnext<-sysclip'
+let g:which_key_map['P'] = 'putprev<-sysclip'
+
 "####################"
 "# Line indentation #"
 "####################"
 
 vnoremap <Tab> >)
 vnoremap <S-Tab> <
+
+"##########################"
+"# Terminal-mode mappings #"
+"##########################"
+
+tnoremap <silent> <leader>tt <C-\><C-n>
 
 "###########################"
 "# Resize panes vertically #"

@@ -12,7 +12,7 @@ Plug 'tpope/vim-unimpaired' " next & previous, enable and disable with [<alphanu
 Plug 'tpope/vim-abolish' " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 Plug 'tpope/vim-fugitive' " fugitive.vim: A Git wrapper so awesome, it should be illegal
 
-" Aesthetics for vim
+" Aesthetics for (Neo)VIM
 Plug 'itchyny/lightline.vim' " lighweight, simple status bar
 Plug 'mhinz/vim-startify' " The fancy start screen for Vim.
 Plug 'ryanoasis/vim-devicons' " Adds file type icons to Vim plugins
@@ -23,7 +23,7 @@ Plug 'morhetz/gruvbox' " gruvbox colorscheme
 " Syntax highlighting & Language Support
 Plug 'leafgarland/typescript-vim' " typescript integration
 Plug 'vim-latex/vim-latex' " Enhanced LaTeX support for Vim
-Plug 'numirias/semshi' " Semantic Highlighting for Python in Neovim
+Plug 'numirias/semshi' " Semantic Highlighting for Python in (Neo)VIM
 Plug 'neomutt/neomutt.vim' " vim syntax for neomuttrc
 Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
 
@@ -42,12 +42,12 @@ Plug 'godlygeek/tabular' " text alignment
 Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
 
 " Code Linting, Fixing, and processing
-Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behaviar
+Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behavior
 Plug 'google/yapf' " python code formatter
 Plug 'dense-analysis/ale' " does lots of stuff like linting, fixing, etc.
 
 " File Management & Navigation
-Plug 'sitiom/lf.vim' " Lf integration in vim and neovim
+Plug 'sitiom/lf.vim' " Lf integration in vim and (Neo)VIM
 Plug 'ctrlpvim/ctrlp.vim' " ctrlp
 
 " Other
