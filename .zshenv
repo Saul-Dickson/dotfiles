@@ -200,7 +200,7 @@ ex=:\
 ################################
 # Golang Environment Variables #
 ################################
-export GOROOT="/usr/local/Cellar/go/1.15.5/libexec"
+export GOROOT="/usr/local/Cellar/go/*/libexec/"
 export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 
 #####################

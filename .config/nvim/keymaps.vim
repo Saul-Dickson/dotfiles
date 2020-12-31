@@ -103,6 +103,15 @@ let g:which_key_map['J'] = 'move window down'
 let g:which_key_map['K'] = 'move window up'
 let g:which_key_map['T'] = 'move window new tab'
 
+"####################"
+"# Editing Commands #"
+"####################"
+
+nnoremap <leader>er :%Subvert/
+
+let g:which_key_map['e'] = {'name': '+edit'}
+let g:which_key_map['e']['r'] = 'replace'
+
 "#########################"
 "# Undo/Redo keymappings #"
 "#########################"
