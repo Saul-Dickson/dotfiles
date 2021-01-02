@@ -44,6 +44,14 @@ let g:which_key_map['x']['i']['>'] = 'wedge'
 
 let g:which_key_map['x']['x'] = 'line'
 
+"################"
+"# Git Commands #"
+"################"
+
+nnoremap <leader>gc :Git commit -a<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>ga :call fzf#vim#files()
+
 "#################################"
 "# Visual Aesthetics Keymappings #"
 "#################################"
@@ -53,7 +61,12 @@ let g:which_key_map['v'] = {'name': '+visual'}
 "## Open Startify ##"
 nnoremap <leader>vs :Startify<CR>
 
-let g:which_key_map['v']['s'] = 'Startify'
+let g:which_key_map['v']['s'] = 'startify'
+
+"## Refresh Syntax Highlighting ##"
+nnoremap <leader>vr :syntax sync fromstart<CR>
+
+let g:which_key_map['v']['r'] = 'refresh'
 
 "## Switch Foldmethods ##"
 nnoremap <leader>vfm :set foldmethod=manual<CR>
@@ -149,8 +162,8 @@ let g:which_key_map['t'] = {
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <tab> & <S-tab> to change selection.
-inoremap <Tab> <C-n>
-inoremap <S-Tab> <S-C-n>
+" inoremap <Tab> <C-n>
+" inoremap <S-Tab> <S-C-n>
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.

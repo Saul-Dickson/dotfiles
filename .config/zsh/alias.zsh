@@ -20,8 +20,8 @@ alias ps="/bin/ps aux -c | fzf --preview=\"\""
 ## alias vi to fd -t f --full-path $( git root || pwd ) --hidden | fzf | xargs nvim ##
 alias vi='fd -t f --full-path $( git root || pwd ) --hidden | fzf | xargs nvim'
 
-## alias source to x=$(fd -t f --full-path $(git root) --hidden | fzf); source $x ##
-alias src='x=$(fd -t f --full-path $(git root) --hidden | fzf); source $x'
+## alias source to x=$(fd -t f --full-path $( git root || pwd ) --hidden | fzf); source $x ##
+alias src='x=$(fd -t f --full-path $( git root || pwd ) --hidden | fzf); source $x'
 
 ##########################
 # Miscellaneous Aliases # 

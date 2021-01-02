@@ -239,24 +239,24 @@ export PATH="$LIBRARYDIR/golib/bin:$PATH"
 # Clean the Home Directory #
 ############################
 
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh" # Set the dir of zsh's configuration files
-export PYLINTHOME="$HOME/.local/share/pylint.d" # Set the dir for pylint's data storage
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # Set the dir for npm configuration files
-export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/config.py" # Tell python where the init file for it's REPL is located
-export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Set the dir for vimspector's log files
-export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Set the location for z.lua's log file
-export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Set the location of the lesshst file
-export LESSKEY="$XDG_CONFIG_HOME/less/lesskey" # Set the location of the lesskey file
-export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc"
-export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store"
-export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
-export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch"
-export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh" # Relocate zsh's home-directory
+export PYLINTHOME="$HOME/.local/share/pylint.d" # Relocate pylint's data home
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # Relocate npm configuration files
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/config.py" # Point python towards a module to initialize with
+export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Relocate vimspector's log directory
+export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Relocate z.lua's log files
+export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Relocate the lesshst file
+export LESSKEY="$XDG_CONFIG_HOME/less/lesskey" # Relocate lesskey file
+export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc" # Relocate the warp-directory config file
+export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store" # Relocate password store
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
+export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority" # Relocate the XAUTHORITY
 
-## Set the directory for cargo's local libraries to $HOME/Library/cargo if    ##
-## the system is a mac. Otherwise set the directory to $HOME/.local/lib/cargo ##
+## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
+## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/cargo ##
 export CARGO_HOME="$LIBRARYDIR/cargo"
 
-## Set the directory for rustup's local libraries to $HOME/Library/rustup if   ##
-## the system is a mac. Otherwise set the directory to $HOME/.local/lib/rustup ##
+## Relocate the directory for rustup's local libraries to $HOME/Library/rustup if   ##
+## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/rustup ##
 export RUSTUP_HOME="$LIBRARYDIR/rustup"

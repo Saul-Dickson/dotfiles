@@ -1,8 +1,0 @@
-# vim: set filetype sh
-#/usr/bin/env sh
-
-[[ $(git root 2>/dev/null) != *"not a git repository"* ]] &&
-    cd $(git root 2>/dev/null) && fd -t f . --hidden | fzf | \
-    xargs nvim; exit 0
-
-fd -t f . --hidden | fzf | xargs nvim
