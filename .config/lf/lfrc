@@ -247,22 +247,14 @@ map d
 map m
 
 #			File Operations
-map x cut
-map A rename # at the very end
-map c push A<c-u> # new rename
-map I push A<c-a> # at the very beginning
-map i push A<a-b><a-b><a-f> # before extention
-map a push A<a-b> # after extention
-map R push A<c-w> # rename completely
-map B $vidir
+map x delete
+map d cut
+map r rename # at the very end
+map c push r<c-u> # new rename
+map R push r<c-a> # at the very beginning
 map o push :mkdir<space>
-map E extract
-map <a-e> extract_sub
-map C cp
-map M mv
-map D rm
+map y cp
 map p put
-map S ln
 map - $~/.config/lf/draw_img.sh $f 
 
 #			Navigation

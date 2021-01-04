@@ -1,3 +1,54 @@
+IMAPStore acepebisboy@icloud.com-remote
+Host imap.mail.me.com
+Port 993
+User acepebisboy@icloud.com
+PassCmd "pass mw-acepebisboy@icloud.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+MaildirStore acepebisboy@icloud.com-local
+Subfolders Verbatim
+Path /Users/dickssau000/.local/share/mail/acepebisboy@icloud.com/
+Inbox /Users/dickssau000/.local/share/mail/acepebisboy@icloud.com/INBOX
+Flatten .
+
+Channel acepebisboy@icloud.com
+Expunge Both
+Master :acepebisboy@icloud.com-remote:
+Slave :acepebisboy@icloud.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore spiralmaster123@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User spiralmaster123@gmail.com
+PassCmd "pass mw-spiralmaster123@gmail.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+MaildirStore spiralmaster123@gmail.com-local
+Subfolders Verbatim
+Path /Users/dickssau000/.local/share/mail/spiralmaster123@gmail.com/
+Inbox /Users/dickssau000/.local/share/mail/spiralmaster123@gmail.com/INBOX
+Flatten .
+
+Channel spiralmaster123@gmail.com
+Expunge Both
+Master :spiralmaster123@gmail.com-remote:
+Slave :spiralmaster123@gmail.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
 
 IMAPStore sauldickson03@gmail.com-remote
 Host imap.gmail.com
@@ -18,6 +69,110 @@ Channel sauldickson03@gmail.com
 Expunge Both
 Master :sauldickson03@gmail.com-remote:
 Slave :sauldickson03@gmail.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore acepebisboy@icloud.com-remote
+Host imap.mail.me.com
+Port 993
+User acepebisboy@icloud.com
+PassCmd "pass mw-acepebisboy@icloud.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+MaildirStore acepebisboy@icloud.com-local
+Subfolders Verbatim
+Path /Users/dickssau000/.local/share/mail/acepebisboy@icloud.com/
+Inbox /Users/dickssau000/.local/share/mail/acepebisboy@icloud.com/INBOX
+Flatten .
+
+Channel acepebisboy@icloud.com
+Expunge Both
+Master :acepebisboy@icloud.com-remote:
+Slave :acepebisboy@icloud.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore spiralmaster123@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User spiralmaster123@gmail.com
+PassCmd "pass mw-spiralmaster123@gmail.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+MaildirStore spiralmaster123@gmail.com-local
+Subfolders Verbatim
+Path /Users/dickssau000/.local/share/mail/spiralmaster123@gmail.com/
+Inbox /Users/dickssau000/.local/share/mail/spiralmaster123@gmail.com/INBOX
+Flatten .
+
+Channel spiralmaster123@gmail.com
+Expunge Both
+Master :spiralmaster123@gmail.com-remote:
+Slave :spiralmaster123@gmail.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore sauldickson03@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User sauldickson03@gmail.com
+PassCmd "pass mw-sauldickson03@gmail.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+MaildirStore sauldickson03@gmail.com-local
+Subfolders Verbatim
+Path /Users/dickssau000/.local/share/mail/sauldickson03@gmail.com/
+Inbox /Users/dickssau000/.local/share/mail/sauldickson03@gmail.com/INBOX
+Flatten .
+
+Channel sauldickson03@gmail.com
+Expunge Both
+Master :sauldickson03@gmail.com-remote:
+Slave :sauldickson03@gmail.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore dickssau000@roseauschool.org-remote
+Host imap.gmail.com
+Port 993
+User dickssau000@roseauschool.org
+PassCmd "pass mw-dickssau000@roseauschool.org"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+MaildirStore dickssau000@roseauschool.org-local
+Subfolders Verbatim
+Path /Users/dickssau000/.local/share/mail/dickssau000@roseauschool.org/
+Inbox /Users/dickssau000/.local/share/mail/dickssau000@roseauschool.org/INBOX
+Flatten .
+
+Channel dickssau000@roseauschool.org
+Expunge Both
+Master :dickssau000@roseauschool.org-remote:
+Slave :dickssau000@roseauschool.org-local:
 Patterns * !"[Gmail]/All Mail"
 Create Both
 SyncState *

@@ -251,6 +251,7 @@ export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc" # Relocate the warp-directory
 export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store" # Relocate password store
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
+
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority" # Relocate the XAUTHORITY
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##

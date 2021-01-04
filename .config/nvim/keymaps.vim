@@ -50,7 +50,10 @@ let g:which_key_map['x']['x'] = 'line'
 
 nnoremap <leader>gc :Git commit -a<CR>
 nnoremap <leader>gp :Git push<CR>
-nnoremap <leader>ga :call fzf#vim#files()
+
+let g:which_key_map['g'] = {'name': '+git'}
+let g:which_key_map['g']['c'] = 'commit'
+let g:which_key_map['g']['p'] = 'push'
 
 "#################################"
 "# Visual Aesthetics Keymappings #"
@@ -59,14 +62,27 @@ nnoremap <leader>ga :call fzf#vim#files()
 let g:which_key_map['v'] = {'name': '+visual'}
 
 "## Open Startify ##"
-nnoremap <leader>vs :Startify<CR>
+nnoremap <leader>vt :Startify<CR>
 
-let g:which_key_map['v']['s'] = 'startify'
+let g:which_key_map['v']['t'] = 'startify'
 
 "## Refresh Syntax Highlighting ##"
 nnoremap <leader>vr :syntax sync fromstart<CR>
 
 let g:which_key_map['v']['r'] = 'refresh'
+
+"## Re-source init.vim ##"
+nnoremap <leader>vsi :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>vsc :source %<CR>
+
+let g:which_key_map['v']['s'] = {'name': '+source'}
+let g:which_key_map['v']['s']['i'] = 'init.vim'
+let g:which_key_map['v']['s']['c'] = 'current'
+
+"## {Max,Min}imize Window ##"
+nnoremap <leader>vm :MaximizerToggle<CR> 
+
+let g:which_key_map['v']['m'] = '{min,max}imize'
 
 "## Switch Foldmethods ##"
 nnoremap <leader>vfm :set foldmethod=manual<CR>
@@ -121,9 +137,11 @@ let g:which_key_map['T'] = 'move window new tab'
 "####################"
 
 nnoremap <leader>er :%Subvert/
+nnoremap <leader>eR :%substitute/
 
 let g:which_key_map['e'] = {'name': '+edit'}
-let g:which_key_map['e']['r'] = 'replace'
+let g:which_key_map['e']['r'] = 'subvert'
+let g:which_key_map['e']['R'] = 'substitute'
 
 "#########################"
 "# Undo/Redo keymappings #"
@@ -246,6 +264,7 @@ let g:which_key_map['c']['a']['c'] = 'current-line'
 let g:which_key_map['c']['r'] = 'rename'
 
 let g:which_key_map['c']['f'] = 'format'
+
 
 "#################################"
 "# File Explorer/Manager Keymaps #"

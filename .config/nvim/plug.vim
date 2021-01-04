@@ -19,6 +19,7 @@ Plug 'ryanoasis/vim-devicons' " Adds file type icons to Vim plugins
 Plug 'ap/vim-css-color' " Preview colours in source code while editing
 Plug 'airblade/vim-gitgutter' " A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
 Plug 'morhetz/gruvbox' " gruvbox colorscheme
+Plug 'szw/vim-maximizer' " Maximizes and restores the current window in Vim.
 
 " Syntax highlighting & Language Support
 Plug 'leafgarland/typescript-vim' " typescript integration
@@ -26,6 +27,7 @@ Plug 'vim-latex/vim-latex' " Enhanced LaTeX support for Vim
 Plug 'numirias/semshi' " Semantic Highlighting for Python in (Neo)VIM
 Plug 'neomutt/neomutt.vim' " vim syntax for neomuttrc
 Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
+Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
 
 " Motions
 Plug 'justinmk/vim-sneak' " the missing motion of vim
