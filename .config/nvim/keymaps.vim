@@ -50,16 +50,21 @@ let g:which_key_map['x']['x'] = 'line'
 
 nnoremap <leader>gc :Git commit -a<CR>
 nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gs :Git status<CR>
 
 let g:which_key_map['g'] = {'name': '+git'}
 let g:which_key_map['g']['c'] = 'commit'
 let g:which_key_map['g']['p'] = 'push'
+let g:which_key_map['g']['s'] = 'status'
 
 "#################################"
 "# Visual Aesthetics Keymappings #"
 "#################################"
 
 let g:which_key_map['v'] = {'name': '+visual'}
+
+"## Toggle highlight ##"
+nnoremap <leader>vh :noh<CR>
 
 "## Open Startify ##"
 nnoremap <leader>vt :Startify<CR>
