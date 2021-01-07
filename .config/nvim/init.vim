@@ -7,6 +7,7 @@ source ~/.config/nvim/plug-config/which-key.vim
 source ~/.config/nvim/plug-config/startify.vim
 source ~/.config/nvim/plug-config/gitgutter.vim
 source ~/.config/nvim/plug-config/lf.vim
+source ~/.config/nvim/plug-config/ale.vim
 
 "source plug.vim
 source $HOME/.config/nvim/plug.vim

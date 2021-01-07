@@ -271,19 +271,17 @@ let g:which_key_map['c']['r'] = 'rename'
 let g:which_key_map['c']['f'] = 'format'
 
 
-"#################################"
-"# File Explorer/Manager Keymaps #"
-"#################################"
+"##############################"
+"# File Management Keymapings #"
+"##############################"
 
 nnoremap <leader>ff :FloatermNew lf<CR>
-nnoremap <leader>fh :FloatermNew lf ~<CR>
 nnoremap <leader>ft :CocCommand explorer<CR>
 
 let g:which_key_map['f'] = {
             \ 'name': '+file',
             \ 'f': 'open file manager @ $(pwd)',
             \ 't': 'show file tree',
-            \ 'h': 'open file manager @ $HOME',
             \}
 
 "##############"

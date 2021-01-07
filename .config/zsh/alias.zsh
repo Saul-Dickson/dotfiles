@@ -19,10 +19,10 @@ alias ps="/bin/ps aux -c | fzf --preview=\"\""
 # alias kill="/bin/ps xc | fzf --preview=\"\" | awk \'// {print $0}\' | xargs /bin/kill"
 
 ## alias vi to "fd -t f --full-path $( git root || pwd ) --hidden | fzf | xargs nvim" ##
-alias vi='fd -t f -L --full-path $( git root || pwd ) --hidden | fzf | xargs nvim'
+alias vi='fd -t f -L --full-path $( git root || pwd ) --hidden -E ".git" -E ".cache" | fzf | xargs nvim'
 
 ## alias source to "x=$(fd -t f --full-path $( git root || pwd ) --hidden | fzf); source $x" ##
-alias src='x=$(fd -t f -L --full-path $( git root || pwd ) --hidden | fzf); source $x'
+alias src='x=$(fd -t f -L --full-path $( git root || pwd ) --hidden -E ".git" -E ".cache" | fzf); source $x'
 
 ##########################
 # Miscellaneous Aliases # 

@@ -3,7 +3,7 @@
     "coc-actions": ">=1.5.0",
     "coc-calc": ">=2.0.2",
     "coc-css": ">=1.2.6",
-    "coc-eslint": ">=1.4.1",
+    "coc-eslint": ">=1.4.3",
     "coc-explorer": ">=0.13.11",
     "coc-flutter": ">=1.7.1",
     "coc-go": ">=0.13.2",
@@ -18,7 +18,7 @@
     "coc-rls": ">=1.1.6",
     "coc-sh": ">=0.6.0",
     "coc-snippets": ">=2.3.1",
-    "coc-tsserver": ">=1.6.6",
+    "coc-tsserver": ">=1.6.7",
     "coc-vimlsp": ">=0.11.0",
     "coc-yank": ">=1.2.0"
   }
