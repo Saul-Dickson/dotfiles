@@ -37,8 +37,8 @@ alias neofetch="/bin/cat ~/.cache/neofetch"
 ## alias mbsync to "mbsync -c ~/.config/mbsync/init.mbsync" ##
 alias mbsync="mbsync -c ~/.config/mbsync/init.mbsync"
 
-## alias ls to "~/.local/bin/ls.sh" ##
-alias ls="~/.local/bin/ls.sh"
+## alias ls to "exa -alF --color always --icons" ##
+alias ls="exa -alF --color always --icons --group-directories-first"
 
 ## alias cat to "bat" ##
 alias cat="bat"

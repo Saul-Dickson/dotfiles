@@ -57,9 +57,9 @@ let g:which_key_map['g']['c'] = 'commit'
 let g:which_key_map['g']['p'] = 'push'
 let g:which_key_map['g']['s'] = 'status'
 
-"#################################"
-"# Visual Aesthetics Keymappings #"
-"#################################"
+"##########################################"
+"# Vim settings/customization Keybindings #"
+"##########################################"
 
 let g:which_key_map['v'] = {'name': '+visual'}
 
