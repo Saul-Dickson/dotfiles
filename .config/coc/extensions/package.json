@@ -3,7 +3,7 @@
     "coc-actions": ">=1.5.0",
     "coc-calc": ">=2.0.2",
     "coc-css": ">=1.2.6",
-    "coc-eslint": ">=1.4.4",
+    "coc-eslint": ">=1.4.5",
     "coc-explorer": ">=0.14.0",
     "coc-flutter": ">=1.7.1",
     "coc-go": ">=0.13.2",
