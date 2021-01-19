@@ -7,7 +7,7 @@ sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/insta
 ## Install the various packages ##
 brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
              ncurses onefetch ripgrep rust vifm tmux youtube-dl wget wren \
-             zsh hexyl pass neomutt ms-jpq/sad/sad
+             zsh hexyl pass neomutt neovim
 
 mkdir $HOME/.local/src/github.com/Saul-Dickson -p
 git clone https://github.com/Saul-Dickson/dotfiles $gitPath
@@ -26,6 +26,9 @@ done
 
 ## Create symlink to local shell scripts ##
 ln -sF $(echo $gitPath)/.local/bin ~/.local/bin
+
+## Create symlink to wallpapers directory ##
+ln -sF $(echo $gitPath)/.local/wall ~/.local/wall
 
 ## Create symlink to zshenv ##
 ln -sF $(echo $gitPath)/.zshenv ~/.zshenv

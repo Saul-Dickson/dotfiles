@@ -8,6 +8,8 @@ source ~/.config/nvim/plug-config/startify.vim
 source ~/.config/nvim/plug-config/gitgutter.vim
 source ~/.config/nvim/plug-config/lf.vim
 source ~/.config/nvim/plug-config/ale.vim
+source ~/.config/nvim/plug-config/quickscope.vim
+source ~/.config/nvim/plug-config/markdown-preview.vim
 
 "source plug.vim
 source $HOME/.config/nvim/plug.vim

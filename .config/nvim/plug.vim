@@ -24,7 +24,7 @@ Plug 'szw/vim-maximizer' " Maximizes and restores the current window in Vim.
 " Syntax highlighting & Language Support
 Plug 'leafgarland/typescript-vim' " typescript integration
 Plug 'vim-latex/vim-latex' " Enhanced LaTeX support for Vim
-Plug 'numirias/semshi' " Semantic Highlighting for Python in (Neo)VIM
+" Plug 'numirias/semshi' " Semantic Highlighting for Python in (Neo)VIM
 Plug 'neomutt/neomutt.vim' " vim syntax for neomuttrc
 Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
 Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
@@ -42,6 +42,7 @@ Plug 'markonm/traces.vim', {'branch': 'subvert'} " Range, pattern and substitute
 Plug 'puremourning/vimspector' " A multi-language debugging system for Vim
 Plug 'godlygeek/tabular' " text alignment
 Plug 'sedm0784/vim-you-autocorrect' " Why should smartphones get all the fun?
+Plug 'AndrewRadev/splitjoin.vim' " Switch between single-line and multiline forms of code
 
 " Code Linting, Fixing, and processing
 Plug 'Vimjas/vim-python-pep8-indent' " python PEP8 compliant indentation behavior
