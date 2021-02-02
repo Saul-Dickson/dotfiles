@@ -4,7 +4,7 @@
     "coc-calc": ">=2.0.2",
     "coc-css": ">=1.2.6",
     "coc-eslint": ">=1.4.5",
-    "coc-explorer": ">=0.14.1",
+    "coc-explorer": ">=0.15.0",
     "coc-flutter": ">=1.7.1",
     "coc-go": ">=0.13.3",
     "coc-highlight": ">=1.2.7",

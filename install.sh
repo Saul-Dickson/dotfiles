@@ -34,7 +34,7 @@ ln -sF $(echo $gitPath)/.local/wall ~/.local/wall
 ln -sF $(echo $gitPath)/.zshenv ~/.zshenv
 
 ## Install other, less important packages using pip ##
-sudo pip3.9 install epr ueberzug
+sudo pip3.9 install epr ueberzug wifi-password
 
 ## Install other, less important packages using go ##
 go get github.com/zquestz/s
