@@ -2,7 +2,7 @@
 gitPath="$HOME/.local/src/github.com/Saul-Dickson/dotfiles"
 
 ## install homebrew ##
-sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 ## Install the various packages ##
 brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
