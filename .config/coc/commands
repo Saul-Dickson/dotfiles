@@ -1,9 +1,0 @@
-explorer
-actions.open
-calc.calculate
-editor.action.organizeImport
-yank.clean
-split-term.Toggle
-extensions.toggleAutoUpdate
-python.execInTerminal
-python.setInterpreter
