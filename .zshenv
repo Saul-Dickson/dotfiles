@@ -1,14 +1,14 @@
 ## Launch tmux at login ##
-[[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
-    sleep 0.5 &&
-    $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
+# [[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
+#     sleep 0.5 &&
+#     $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
 
 ################################
 # User Configuration Variables #
 ################################
 
 ## The path to your local library directory ##
-LIBRARYDIR=$HOME/Library
+LIBRARYDIR=$HOME/.local/lib
 
 ## The name of your prefered editor ##
 export EDITOR="nvim"
@@ -212,15 +212,15 @@ export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 [[ $OSTYPE == *"darwin"* ]] && 
     export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 
-for i in $(/bin/ls -1 $LIBRARYDIR/Python); do
-    export PATH="$LIBRARYDIR/Python/$i/bin:$PATH"
-done
+# for i in $(/bin/ls -1 $LIBRARYDIR/Python); do
+#     export PATH="$LIBRARYDIR/Python/$i/bin:$PATH"
+# done
 
-for i in $(/bin/ls -1 /usr/local/Cellar | /usr/local/bin/rg "python"); do 
-    for d in $(/bin/ls -1 /usr/local/Cellar/$i); do 
-        export PATH="/usr/local/Cellar/$i/$d/bin:$PATH"
-    done
-done
+# for i in $(/bin/ls -1 /usr/local/Cellar | /usr/local/bin/rg "python"); do 
+#     for d in $(/bin/ls -1 /usr/local/Cellar/$i); do 
+#         export PATH="/usr/local/Cellar/$i/$d/bin:$PATH"
+#     done
+# done
 
 ## Add ~/.local/bin (location for binaries too small to be packages) ##
 ## to the PATH Environment Variable                                  ##

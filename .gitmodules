@@ -13,3 +13,6 @@
 [submodule ".config/zsh/plugins/gitstatus"]
 	path = .config/zsh/plugins/gitstatus
 	url = https://github.com/romkatv/gitstatus
+[submodule ".config/zsh/plugins/zsh-autocomplete"]
+    path = .config/zsh/plugins/zsh-autocomplete
+    url = https://github.com/marlonrichert/zsh-autocomplete
