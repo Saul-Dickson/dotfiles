@@ -42,3 +42,5 @@ alias ls="exa -alF --color always --icons --group-directories-first"
 
 ## alias cat to "bat" ##
 alias cat="bat"
+
+alias royaldl="java -jar $HOME/.local/apps/royalroad-downloader/*"

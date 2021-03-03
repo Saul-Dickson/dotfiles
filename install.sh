@@ -2,7 +2,7 @@
 gitPath="$HOME/.local/src/github.com/Saul-Dickson/dotfiles"
 
 ## install homebrew ##
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &&
 
 ## Install the various packages ##
 brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
@@ -38,6 +38,14 @@ sudo pip3.9 install epr ueberzug wifi-password
 
 ## Install other, less important packages using go ##
 go get github.com/zquestz/s
+
+## Install unpackaged applications ##
+mkdir -p ".local/apps"
+
+mkdir -p ".local/apps/royalroad-downloader"
+wget \
+    "https://github.com/Aivean/royalroad-downloader/releases/download/2.2.0/royalroad-downloader-assembly-2.2.0.jar" \
+    ~/.local/apps/royalroad-downloader
 
 ## Install other, less important packages using npm ##
 npm install --global trash-cli
