@@ -13,3 +13,80 @@ Traceback (most recent call last):
   File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
     for f in os.listdir(d):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+18/03/21 (20:52:17) | ERROR: <urlopen error [Errno -3] Temporary failure in name resolution>
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.9/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.9/http/client.py", line 950, in send
+    self.connect()
+  File "/usr/lib/python3.9/http/client.py", line 1417, in connect
+    super().connect()
+  File "/usr/lib/python3.9/http/client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.9/socket.py", line 822, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 4982, in _checker
+    with urllib.request.urlopen("https://github.com/aristocratos/bpytop/raw/master/bpytop.py", timeout=5) as source: # type: ignore
+  File "/usr/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+18/03/21 (20:52:17) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+19/03/21 (01:30:53) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+19/03/21 (01:32:03) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+19/03/21 (01:32:42) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+19/03/21 (01:36:24) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+19/03/21 (01:45:48) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+19/03/21 (02:37:59) | ERROR: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 1327, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/digit/.config/bpytop/themes'

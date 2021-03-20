@@ -207,6 +207,10 @@ export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 # Add Paths to PATH #
 #####################
 
+## Add Homebrew to PATH ##
+[[ $OSTYPE != *"darwin"* ]] &&
+    export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+
 ## Add Various Python bin Folders to Path ##
 
 [[ $OSTYPE == *"darwin"* ]] && 
@@ -251,6 +255,7 @@ export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc" # Relocate the warp-directory
 export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store" # Relocate password store
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
+export WINEPREFIX="$HOME/.config/wine"
 
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority" # Relocate the XAUTHORITY
 
