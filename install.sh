@@ -4,6 +4,10 @@ gitPath="$HOME/.local/src/github.com/Saul-Dickson/dotfiles"
 ## install homebrew ##
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &&
 
+## Add brew to PATH ##
+[[ $OSTYPE != *"darwin"* ]] &&
+    export PATH="/home/linuxbrew/.linuxbrew/bin"
+
 ## Install the various packages ##
 brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
              ncurses onefetch ripgrep rust vifm tmux youtube-dl wget wren \
