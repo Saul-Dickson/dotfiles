@@ -31,6 +31,12 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export FZF_DEFAULT_OPTS='--preview "bat --plain --color=always {}" --layout=reverse --border=rounded'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 
+##################################
+# Homebrew Environment Variables #
+##################################
+export BREWBIN=$([[ $OSTYPE != *"darwin"* ]] && echo "/home/linuxbrew/.linuxbrew/bin" || echo "/usr/local/bin")
+export BREWCELLAR=$([[ $OSTYPE != *"darwin"* ]] && echo "/home/linuxbrew/.linuxbrew/Cellar" || echo "/usr/local/Cellar")
+
 ############################
 # Lf Environment Variables #
 ############################
@@ -216,15 +222,18 @@ export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 [[ $OSTYPE == *"darwin"* ]] && 
     export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 
-# for i in $(/bin/ls -1 $LIBRARYDIR/Python); do
-#     export PATH="$LIBRARYDIR/Python/$i/bin:$PATH"
-# done
+if [ -d $LIBRARYDIR/Python ]; then
+    for i in $(/bin/ls -1 $LIBRARYDIR/Python); do
+        export PATH="$LIBRARYDIR/Python/$i/bin:$PATH"
+    done
+fi
 
-# for i in $(/bin/ls -1 /usr/local/Cellar | /usr/local/bin/rg "python"); do 
-#     for d in $(/bin/ls -1 /usr/local/Cellar/$i); do 
-#         export PATH="/usr/local/Cellar/$i/$d/bin:$PATH"
-#     done
-# done
+[ -f $BREWBIN/rg ] &&
+    for i in $(/bin/ls -1 $BREWCELLAR | $BREWBIN/rg "python"); do 
+        for d in $(/bin/ls -1 $BREWCELLAR/$i); do 
+            export PATH="$BREWCELLAR/$i/$d/bin:$PATH"
+        done
+    done
 
 ## Add ~/.local/bin (location for binaries too small to be packages) ##
 ## to the PATH Environment Variable                                  ##

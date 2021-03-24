@@ -13,7 +13,7 @@ alias pip="sudo pip3.9"
 ###############
 
 ## alias ps to "ps aux -c | fzf --preview=\"\"" ##
-alias ps="/bin/ps aux -c | fzf --preview=\"\""
+alias ps="/bin/ps auxc | fzf --preview=\"\""
 
 ## alias kill to "ps xc | fzf --preview=\"\" | awk '// {print $1} | xargs kill" ##
 # alias kill="/bin/ps xc | fzf --preview=\"\" | awk \'// {print $0}\' | xargs /bin/kill"
@@ -39,6 +39,9 @@ alias mbsync="mbsync -c ~/.config/mbsync/init.mbsync"
 
 ## alias ls to "exa -alF --color always --icons" ##
 alias ls="exa -alF --color always --icons --group-directories-first"
+
+## alias cls to "clear; ls" ##
+alias cls="clear; ls"
 
 ## alias cat to "bat" ##
 alias cat="bat"

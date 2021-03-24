@@ -14,11 +14,11 @@ source $PLUGINDIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 ### Zsh Autocomplete ###
 source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-### Zsh Abbreviations ###
-source $PLUGINDIR/zsh-abbr/zsh-abbr.zsh
+# ### Zsh Abbreviations ###
+# source $PLUGINDIR/zsh-abbr/zsh-abbr.zsh
 
-### Warp Directory ###
-source $PLUGINDIR/wd/wd.plugin.zsh
+# ### Warp Directory ###
+# source $PLUGINDIR/wd/wd.plugin.zsh
 
 # ### z.lua chdir plugin ###
 # source $PLUGINDIR/z.lua/z.lua.plugin.zsh
