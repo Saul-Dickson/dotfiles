@@ -31,6 +31,9 @@ sudo pip3.9 install epr ueberzug wifi-password
 ## Install other, less important packages using go ##
 go get github.com/zquestz/s
 
+## Install other, less important packages using npm ##
+npm install --global trash-cli
+
 ## Install unpackaged applications ##
 mkdir -p ".local/apps"
 
@@ -39,8 +42,10 @@ wget \
     "https://github.com/Aivean/royalroad-downloader/releases/download/2.2.0/royalroad-downloader-assembly-2.2.0.jar" \
     ~/.local/apps/royalroad-downloader
 
-## Install other, less important packages using npm ##
-npm install --global trash-cli
+git clone 'https://github.com/k-vernooy/tetris' \
+    $HOME/.local/src/github.com/k-vernooy/tetris &&
+cd $HOME/.local/src/github.com/k-vernooy/tetris
+make && sudo make install
 
 ####################
 # Symlink Dotfiles #
