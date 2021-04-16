@@ -1,7 +1,7 @@
 ## Launch tmux at login ##
-# [[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
-#     sleep 0.5 &&
-#     $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
+[[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
+    sleep 0.5 &&
+    $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
 
 ################################
 # User Configuration Variables #
@@ -265,7 +265,6 @@ export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store" # Relocate password st
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
 export WINEPREFIX="$HOME/.config/wine"
-
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority" # Relocate the XAUTHORITY
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
