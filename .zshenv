@@ -24,6 +24,7 @@ export BROWSER="firefox"
 ######################
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 #############################
 # FZF Environment Variables #
@@ -206,7 +207,13 @@ ex=:\
 ################################
 # Golang Environment Variables #
 ################################
-export GOROOT="/usr/lib/go/"
+
+if [[ $OSTYPE != *"darwin"* ]]; then
+    export GOROOT="/usr/local/Cellar/go/*/libexec/"
+else
+    export GOROOT="/usr/lib/go"
+fi
+
 export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 
 #####################
@@ -253,18 +260,18 @@ export PATH="$LIBRARYDIR/golib/bin:$PATH"
 ############################
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh" # Relocate zsh's home-directory
-export PYLINTHOME="$HOME/.local/share/pylint.d" # Relocate pylint's data home
+export PYLINTHOME="$XDG_DATA_HOME/pylint.d" # Relocate pylint's data home
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # Relocate npm configuration files
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/config.py" # Point python towards a module to initialize with
-export VIMSPECTOR_HOME="$HOME/.local/share/vimspector" # Relocate vimspector's log directory
-export _ZL_DATA="$HOME/.local/share/z.lua/zlua" # Relocate z.lua's log files
-export LESSHISTFILE="$HOME/.local/share/less/lesshst" # Relocate the lesshst file
+export VIMSPECTOR_HOME="$XDG_DATA_HOME/vimspector" # Relocate vimspector's log directory
+export _ZL_DATA="$XDG_DATA_HOME/z.lua/zlua" # Relocate z.lua's log files
+export LESSHISTFILE="$XDG_DATA_HOME/less/lesshst" # Relocate the lesshst file
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey" # Relocate lesskey file
-export WD_CONFIG="$XDG_CONFIG_HOME/wd/init.warprc" # Relocate the warp-directory config file
-export PASSWORD_STORE_DIR="$HOME/.local/share/pass/store" # Relocate password store
+export WD_CONFIG="$XDG_CONFIG_HOME/wd/warprc" # Relocate the warp-directory config file
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass/store" # Relocate password store
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
-export WINEPREFIX="$HOME/.config/wine"
+export WINEPREFIX="$XDG_CONFIG_HOME/wine"
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority" # Relocate the XAUTHORITY
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##

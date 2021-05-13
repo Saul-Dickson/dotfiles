@@ -85,6 +85,13 @@ function mkDirs() {
     ## Create directories for configuration, data storage and caching ##
     mkdir $HOME/.cache/zsh # Zsh Caching
     mkdir $HOME/.cache/nvim # NeoVIM UndoTrees
+    mkdir $HOME/.local/share/vim
+    mkdir $HOME/.local/share/nvim
+    mkdir $HOME/.local/share/mail
+    mkdir $HOME/.local/share/lf
+    mkdir $HOME/.local/share/Steam
+    mkdir $HOME/.local/share/pass
+    mkdir $HOME/.local/share/mail
 }
 
 for arg in $@; do
