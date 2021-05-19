@@ -34,17 +34,23 @@ function packInstall() {
 
 function unpackInstall() {
     ## Install unpackaged applications ##
+
+    # Make the "apps" directory
     mkdir -p ".local/apps"
 
+    # Download and install Aivean/royalroad-download
     mkdir -p ".local/apps/royalroad-downloader"
     wget \
         "https://github.com/Aivean/royalroad-downloader/releases/download/2.2.0/royalroad-downloader-assembly-2.2.0.jar" \
         ~/.local/apps/royalroad-downloader
 
-    git clone 'https://github.com/k-vernooy/tetris' \
-        $HOME/.local/src/github.com/k-vernooy/tetris &&
-    cd $HOME/.local/src/github.com/k-vernooy/tetris
-    make && sudo make install
+    # Clone and install k-vernooy/tetris
+    git clone 'https://github.com/k-vernooy/tetris' $HOME/.local/src/github.com/k-vernooy/tetris &&
+    cd $HOME/.local/src/github.com/k-vernooy/tetris; sudo make install
+
+    # Clone and install siduck76's version of the Suckless Simple Terminal
+    git clone https://github.com/siduck76/st $HOME/.local/src/github.com/siduck76/st &&
+    cd $HOME/.local/src/github.com/siduck76/st; sudo make install
 }
 
 function scriptInstall() {
@@ -96,14 +102,15 @@ function mkDirs() {
 
 for arg in $@; do
     case $arg in
-        -h)
-            echo "-p    Install packages with homebrew"
-            echo "-P    Install unpackaged programs"
-            echo "-s    Install scripts unincluded in dotfiles"
-            echo "-S    Symlink dotfiles to correct places"
-            echo "-c    Change user shell from bash to zsh"
-            echo "-d    Make configuration, data storage and caching directories"
-            echo "-A    Install all, symlink dotfiles, change user shell and create directories"
+        -h|-help)
+            echo "-p            Install packages with homebrew"
+            echo "-P            Install unpackaged programs"
+            echo "-s            Install scripts unincluded in dotfiles"
+            echo "-S            Symlink dotfiles to correct places"
+            echo "-c            Change user shell from bash to zsh"
+            echo "-d            Make configuration, data storage and caching directories"
+            echo "-A            Install all, symlink dotfiles, change user shell and create directories"
+            echo "-h, --help    Display this message."
             ;;
         -p) packInstall;;
         -P) upackInstall;;
