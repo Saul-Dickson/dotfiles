@@ -1,6 +1,11 @@
 ## set $gitPath ##
 gitPath="$HOME/.local/src/github.com/Saul-Dickson/dotfiles"
 
+function cloneDots() {
+    mkdir -p $HOME/.local/src/github.com/Saul-Dickson
+    git clone https://github.com/Saul-Dickson/dotfiles $gitPath
+}
+
 function packInstall() {
     ## Install Homebrew ##
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &&
@@ -18,9 +23,6 @@ function packInstall() {
     brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
                  ncurses onefetch ripgrep rust vifm tmux youtube-dl wget wren \
                  zsh hexyl pass neomutt neovim npm python
-
-    mkdir $HOME/.local/src/github.com/Saul-Dickson -p
-    git clone https://github.com/Saul-Dickson/dotfiles $gitPath
 
     ## Install other, less important packages using pip ##
     sudo pip3.9 install epr ueberzug wifi-password
@@ -80,6 +82,9 @@ function symlinkDots() {
 
     ## Create symlink to zshenv ##
     ln -sF $(echo $gitPath)/.zshenv ~/.zshenv
+    
+    ## Create symlink to Xresources ## 
+    ln -sF $(echo $gitPath)/.Xresources ~/.Xresources
 }
 
 function changeShell() {
@@ -109,6 +114,7 @@ for arg in $@; do
             echo "-S            Symlink dotfiles to correct places"
             echo "-c            Change user shell from bash to zsh"
             echo "-d            Make configuration, data storage and caching directories"
+            echo "-D            Clone and install Saul-Dickson/dotfiles"
             echo "-A            Install all, symlink dotfiles, change user shell and create directories"
             echo "-h, --help    Display this message."
             ;;
@@ -118,6 +124,9 @@ for arg in $@; do
         -S) symlinkDots;;
         -c) changeShell;;
         -d) mkDirs;;
+        -D) cloneDots
+            symlinkDots
+            ;;
         -A) 
             [[ $@ != *"-p"* ]] && packInstall;
             [[ $@ != *"-P"* ]] && upackInstall;

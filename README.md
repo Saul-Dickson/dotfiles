@@ -10,7 +10,15 @@
 ## Install
 Copy and paste this into your terminal:
 
-`curl https://github.com/Saul-Dickson/dotfiles/blob/master/install.sh | sh`
+```
+curl https://raw.githubusercontent.com/Saul-Dickson/dotfiles/master/install.sh\
+>> install.sh; chmod +x install.sh && ./install.sh
+```
+
+This will download the installation file and make it executable. After that,
+simply run this command for just the dotfiles.
+
+`./install.sh -D`
 
 ## Programs
 
