@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=st
+Comment=Suckless Simple Terminal fork by LukeSmithxyz
+Categories=Terminal;C
+Exec='/usr/local/bin/st'
+Type=Application
+StartupNotify=true

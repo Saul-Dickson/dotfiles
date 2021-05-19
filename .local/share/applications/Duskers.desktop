@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Duskers
+Comment=Horror-strategy-roguelike game for late nights.
+Categories=Game;Horror;Strategy;Roguelike
+Exec=zsh -c '/usr/bin/wine ~/.local/apps/Duskers/Duskers.exe'
+Icon=~/.local/apps/Duskers/duskers_icon.png
+Type=Application
+StartupNotify=true

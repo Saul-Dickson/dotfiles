@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=java -jar /home/digit/runescape/RuneLite/RuneLite.jar
+Name=RuneLite
+Comment=RuneLite: The Old School RuneScape Alternative Client
+Icon=/home/digit/runescape/RuneLite/runelite.png
+Categories=Game

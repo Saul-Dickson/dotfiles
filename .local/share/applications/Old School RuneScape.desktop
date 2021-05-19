@@ -1,0 +1,26 @@
+[Desktop Entry]
+Name=Old School RuneScape
+Comment=Relive the challenging levelling system and risk-it-all PvP of the biggest retro styled MMO. Play with millions of other players in this piece of online gaming heritage where the community controls the development so the game is truly what you want it to be!
+Categories=Game;Java;AdventureGame;RolePlaying
+Exec='/usr/bin/java' -Duser.home='/home/digit/runescape/oldschool' -Djava.class.path='/home/digit/runescape/oldschool/jagexappletviewer.jar' -Dcom.jagex.config='http://oldschool.runescape.com/jav_config.ws' -Dhttps.protocols='TLSv1.2' -Xms'768M' -Xmx'768M' -Djava.system.class.loader='app.systemclassloader' -Dswing.crossplatformlaf='com.sun.java.swing.plaf.gtk.GTKLookAndFeel' -Dsun.java2d.opengl='false' -Dsun.java2d.uiScale='1' 'jagexappletviewer' 'oldschool'
+Type=Application
+StartupNotify=true
+Path=/home/digit/runescape/oldschool
+Icon=/home/digit/runescape/oldschool/OSRS.icns
+StartupWMClass=jagexappletviewer
+Actions=GL;Screen;Cache;
+
+[Desktop Action GL]
+Exec='/usr/bin/java' -Duser.home='/home/digit/runescape/oldschool' -Djava.class.path='/home/digit/runescape/oldschool/jagexappletviewer.jar' -Dcom.jagex.config='http://oldschool.runescape.com/jav_config.ws' -Dhttps.protocols='TLSv1.2' -Xms'768M' -Xmx'768M' -Djava.system.class.loader='app.systemclassloader' -Dswing.crossplatformlaf='com.sun.java.swing.plaf.gtk.GTKLookAndFeel' -Dsun.java2d.opengl='true' -Dsun.java2d.uiScale='1' 'jagexappletviewer' 'oldschool'
+Name=Start with OpenGL acceleration
+
+[Desktop Action Screen]
+StartupNotify=false
+Exec='/usr/bin/wmctrl' -r 'Old School RuneScape' -b toggle,fullscreen -F
+Name=Toggle Fullscreen/Windowed
+
+[Desktop Action Cache]
+StartupNotify=false
+Exec='/bin/bash' -c "rm -Rf '/home/digit/runescape/oldschool/jagexcache' '/home/digit/runescape/oldschool/jagexappletviewer.preferences' '/home/digit/runescape/oldschool/jagex_cl_oldschool_LIVE.dat' '/home/digit/runescape/oldschool/random.dat' '/home/digit/runescape/oldschool/'*'.log' '/home/digit/runescape/oldschool/.java' '/tmp/oldschool' && sync && notify-send 'The Old School RuneScape cache has been cleaned.'"
+Name=Cache Cleanup
+
