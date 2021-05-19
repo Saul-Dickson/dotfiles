@@ -74,6 +74,17 @@ function symlinkDots() {
         ln -sF $(echo $gitPath)/.config/$(echo $confName) ~/.config/$confName
     done
 
+    ## Create symlinks to .desktop applications ##
+
+    [ -d $HOME/.local/share/applications ] || mkdir -p ~/.local/share/applications
+
+    for file in $(/bin/ls -1 $gitpath/.local/share/applications); do
+        message="symlink ~/.local/share/applications/$file      "
+        print "\r$message"
+
+        ln -sF $(echo $gitpath)/.local/share/applications/$file ~/.local/share/applications/$file
+    done
+
     ## Create symlink to local shell scripts ##
     ln -sF $(echo $gitPath)/.local/bin ~/.local/bin
 
