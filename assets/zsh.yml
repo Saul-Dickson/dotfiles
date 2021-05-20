@@ -1,0 +1,383 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/digit
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 106
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 53
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 45
+    content: "\e[?1h\e=\r\e[0m\e[27m\e[24m\e[J\e[38;5;66m~\e[39m \e[31m=>\e[39m \e[K\e[99C \e[100D\e[5 q\e[5 q\e[?2004"
+  - delay: 111
+    content: "\r\r\n\e[J\e[A\e[5C"
+  - delay: 3952
+    content: c
+  - delay: 60
+    content: "\e[33m\e[39m\r\r\n\e[J\e[J\e[33mToo long list. Press ↓ or ⇟ to open; type more to filter.\e[39m\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Cc\e[K\e[98C \e[39m\e[99D"
+  - delay: 75
+    content: "\bcd"
+  - delay: 74
+    content: "\r\r\n\e[Jcd\e[27m               \e[27m  \e[27mcdda-player\e[27m      \e[27m  \e[27mcd-fix-profile\e[27m   \e[27m  \e[27mcd-it8\e[27m           \e[27m  \e[27mcdpath\e[27m           \e[27m\r\ncd-convert\e[27m       \e[27m  \e[27mcddb_query\e[27m       \e[27m  \e[27mcd-iccdump\e[27m       \e[27m  \e[27mcd-paranoia\e[27m      \e[27m  \e[27mcdr\e[27m              \e[27m\r\n\e[Jcd-create-profile\e[27m  \e[27m\e[Jcd-drive\e[27m         \e[27m  \e[27m\e[Jcd-info\e[27m          \e[27m  \e[27m\e[Jcdparanoia\e[27m       \e[27m  \e[27m\e[Jcd-read\e[27m          \e[27m\e[J\e[3A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd\e[K\e[97C \e[39m\e[98D"
+  - delay: 46
+    content: ' '
+  - delay: 34
+    content: "\r\r\n\e[J\e[JDesktop\e[27m/\e[27m  \e[27m  \e[27m\e[JDocuments\e[27m/\e[27m  \e[27m\e[JDownloads\e[27m/\e[27m  \e[27m\e[JMusic\e[27m/\e[27m    \e[27m  \e[27m\e[JPictures\e[27m/\e[27m \e[27m  \e[27m\e[JPublic\e[27m/\e[27m   \e[27m  \e[27m\e[JVideos\e[27m/\e[27m   \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd\e[K\e[97C \e[39m\e[97D"
+  - delay: 382
+    content: '~'
+  - delay: 32
+    content: "\e[31m\e[39m\r\r\n\e[J\e[J\e[31mNo matching completions found.\e[39m\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~\e[K\e[95C \e[39m\e[96D"
+  - delay: 208
+    content: /
+  - delay: 57
+    content: "\r\r\n\e[J\e[JDesktop\e[27m/\e[27m  \e[27m  \e[27m\e[JDocuments\e[27m/\e[27m  \e[27m\e[JDownloads\e[27m/\e[27m  \e[27m\e[JMusic\e[27m/\e[27m    \e[27m  \e[27m\e[JPictures\e[27m/\e[27m \e[27m  \e[27m\e[JPublic\e[27m/\e[27m   \e[27m  \e[27m\e[JVideos\e[27m/\e[27m   \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/\e[K\e[94C \e[39m\e[95D"
+  - delay: 414
+    content: .
+  - delay: 74
+    content: "\r\r\n\e[J.cache\e[27m/\e[27m       \e[27m  \e[27m.elementary\e[27m/\e[27m  \e[27m  \e[27m.local\e[27m/\e[27m       \e[27m  \e[27m.steam\e[27m/\e[27m       \e[27m  \e[27m.themes\e[27m/\e[27m      \e[27m  \e[27m.var\e[27m/\e[27m         \e[27m\r\n\e[J.config\e[27m/\e[27m      \e[27m  \e[27m\e[J.gnome\e[27m/\e[27m       \e[27m  \e[27m\e[J.mozilla\e[27m/\e[27m     \e[27m  \e[27m\e[J.terminalizer\e[27m/\e[27m  \e[27m\e[J.trash\e[27m/\e[27m       \e[27m  \e[27m\e[J              \e[27m\e[A\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.\e[K\e[93C \e[39m\e[94D"
+  - delay: 134
+    content: l
+  - delay: 76
+    content: "\r\r\n\e[J\e[J.local\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.l\e[K\e[92C \e[39m\e[93D"
+  - delay: 109
+    content: o
+  - delay: 77
+    content: "\r\r\n\e[J\e[J.local\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.lo\e[K\e[91C \e[39m\e[92D"
+  - delay: 99
+    content: c
+  - delay: 76
+    content: "\r\r\n\e[J\e[J.local\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.loc\e[K\e[90C \e[39m\e[91D"
+  - delay: 19
+    content: a
+  - delay: 76
+    content: "\r\r\n\e[J\e[J.local\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.loca\e[K\e[89C \e[39m\e[90D"
+  - delay: 14
+    content: l
+  - delay: 75
+    content: "\r\r\n\e[J\e[J.local\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local\e[K\e[88C \e[39m\e[89D"
+  - delay: 83
+    content: /
+  - delay: 49
+    content: "\r\r\n\e[J\e[Japps\e[27m/\e[27m \e[27m  \e[27m\e[Jbin\e[27m@\e[27m  \e[27m  \e[27m\e[Jlib\e[27m/\e[27m  \e[27m  \e[27m\e[Jshare\e[27m/\e[27m  \e[27m\e[Jsrc\e[27m/\e[27m  \e[27m  \e[27m\e[Jwall\e[27m@\e[27m \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/\e[K\e[87C \e[39m\e[88D"
+  - delay: 95
+    content: s
+  - delay: 48
+    content: "\r\r\n\e[J\e[Jshare\e[27m/\e[27m  \e[27m\e[Jsrc\e[27m/\e[27m  \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/s\e[K\e[86C \e[39m\e[87D"
+  - delay: 112
+    content: r
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jsrc\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/sr\e[K\e[85C \e[39m\e[86D"
+  - delay: 191
+    content: c
+  - delay: 47
+    content: "\r\r\n\e[J\e[Jsrc\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src\e[K\e[84C \e[39m\e[85D"
+  - delay: 96
+    content: /
+  - delay: 50
+    content: "\r\r\n\e[J\e[Jaur.archlinux.org\e[27m/\e[27m  \e[27m\e[Jgithub.com\e[27m/\e[27m       \e[27m  \e[27m\e[Jgit.suckless.org\e[27m/\e[27m \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/\e[K\e[83C \e[39m\e[84D"
+  - delay: 110
+    content: g
+  - delay: 49
+    content: "\e[32m\e[34m\e[39m\e[32m\e[34m\e[39m\r\r\n\e[Jgithub.com\e[27m/\e[27m      \e[27m  \e[27mgit.suckless.org\e[27m/\e[27m\r\n\e[32mlongest common substring:  \e[34m⇤ to insert\e[39m\r\n\e[J~/.local/src/git\e[27m\e[J\e[3A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/g\e[K\e[82C \e[39m\e[83D"
+  - delay: 86
+    content: i
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m      \e[27m  \e[27m\e[Jgit.suckless.org\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/gi\e[K\e[81C \e[39m\e[82D"
+  - delay: 55
+    content: t
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m      \e[27m  \e[27m\e[Jgit.suckless.org\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/git\e[K\e[80C \e[39m\e[81D"
+  - delay: 73
+    content: h
+  - delay: 54
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/gith\e[K\e[79C \e[39m\e[80D"
+  - delay: 103
+    content: u
+  - delay: 52
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/githu\e[K\e[78C \e[39m\e[79D"
+  - delay: 140
+    content: b
+  - delay: 47
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github\e[K\e[77C \e[39m\e[78D"
+  - delay: 152
+    content: .
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.\e[K\e[76C \e[39m\e[77D"
+  - delay: 135
+    content: c
+  - delay: 50
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.c\e[K\e[75C \e[39m\e[76D"
+  - delay: 15
+    content: o
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.co\e[K\e[74C \e[39m\e[75D"
+  - delay: 102
+    content: m
+  - delay: 46
+    content: "\r\r\n\e[J\e[Jgithub.com\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com\e[K\e[73C \e[39m\e[74D"
+  - delay: 546
+    content: /
+  - delay: 49
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m  \e[27m\e[Jsiduck76\e[27m/\e[27m    \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/\e[K\e[72C \e[39m\e[73D"
+  - delay: 223
+    content: S
+  - delay: 48
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/S\e[K\e[71C \e[39m\e[72D"
+  - delay: 121
+    content: a
+  - delay: 53
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Sa\e[K\e[70C \e[39m\e[71D"
+  - delay: 42
+    content: u
+  - delay: 51
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Sau\e[K\e[69C \e[39m\e[70D"
+  - delay: 108
+    content: l
+  - delay: 48
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul\e[K\e[68C \e[39m\e[69D"
+  - delay: 180
+    content: '-'
+  - delay: 50
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-\e[K\e[67C \e[39m\e[68D"
+  - delay: 178
+    content: D
+  - delay: 49
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-D\e[K\e[66C \e[39m\e[67D"
+  - delay: 54
+    content: i
+  - delay: 50
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Di\e[K\e[65C \e[39m\e[66D"
+  - delay: 77
+    content: c
+  - delay: 49
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dic\e[K\e[64C \e[39m\e[65D"
+  - delay: 40
+    content: k
+  - delay: 51
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dick\e[K\e[63C \e[39m\e[64D"
+  - delay: 91
+    content: s
+  - delay: 24
+    content: o
+  - delay: 52
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickso\e[K\e[61C \e[39m\e[62D"
+  - delay: 51
+    content: 'n'
+  - delay: 51
+    content: "\r\r\n\e[J\e[JSaul-Dickson\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson\e[K\e[60C \e[39m\e[61D"
+  - delay: 133
+    content: /
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m        \e[27m  \e[27m\e[Jfirefox-sd-theme\e[27m/\e[27m  \e[27m\e[Jprivate-dots\e[27m/\e[27m    \e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/\e[K\e[59C \e[39m\e[60D"
+  - delay: 414
+    content: d
+  - delay: 50
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/d\e[K\e[58C \e[39m\e[59D"
+  - delay: 60
+    content: o
+  - delay: 50
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/do\e[K\e[57C \e[39m\e[58D"
+  - delay: 69
+    content: t
+  - delay: 49
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dot\e[K\e[56C \e[39m\e[57D"
+  - delay: 158
+    content: f
+  - delay: 52
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotf\e[K\e[55C \e[39m\e[56D"
+  - delay: 61
+    content: i
+  - delay: 52
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfi\e[K\e[54C \e[39m\e[55D"
+  - delay: 75
+    content: l
+  - delay: 51
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfil\e[K\e[53C \e[39m\e[54D"
+  - delay: 20
+    content: e
+  - delay: 53
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfile\e[K\e[52C \e[39m\e[53D"
+  - delay: 95
+    content: s
+  - delay: 54
+    content: "\r\r\n\e[J\e[Jdotfiles\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfiles\e[K\e[51C \e[39m\e[52D"
+  - delay: 94
+    content: /
+  - delay: 51
+    content: "\r\r\n\e[J\e[Jassets\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfiles/\e[K\e[50C \e[39m\e[51D"
+  - delay: 52
+    content: "\r\r\n\e[J\e[Jassets\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfiles/a\e[K\e[49C \e[39m\e[50D"
+  - delay: 51
+    content: "\r\r\n\e[J\e[Jassets\e[27m/\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[5Ccd ~/.local/src/github.com/Saul-Dickson/dotfiles/\e[K\e[50C \e[39m\e[51D"
+  - delay: 188
+    content: "\e[?2004l\r\r\n\e[J\e[5 q\e[?1h\e="
+  - delay: 333
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                         \r \r"
+  - delay: 51
+    content: "\e[?1h\e=\r\e[0m\e[27m\e[24m\e[J\e[38;5;66mSaul-Dickson/dotfiles\e[39m \e[32m=>\e[39m \e[K\e[67C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[80D\e[5 q\e[5 q\e[?2004h"
+  - delay: 613
+    content: o
+  - delay: 80
+    content: "\e[32m\e[34m\e[39m\e[32m\e[34m\e[39m\r\r\nobjcopy\e[27m              \e[27m  \e[27moomctl\e[27m               \e[27m  \e[27mopj_dump\e[27m             \e[27m  \e[27morte-info\e[27m            \e[27m\r\nobjdump\e[27m              \e[27m  \e[27mopal_wrapper\e[27m         \e[27m  \e[27moptions\e[27m              \e[27m  \e[27morterun\e[27m              \e[27m\r\nocsptool\e[27m             \e[27m  \e[27mopenal-info\e[27m          \e[27m  \e[27morbd\e[27m                 \e[27m  \e[27morte-server\e[27m          \e[27m\r\nod\e[27m                   \e[27m  \e[27mopenaptxdec\e[27m          \e[27m  \e[27morca\e[27m                 \e[27m  \e[27mosinfo-detect\e[27m        \e[27m\r\nompi-clean\e[27m           \e[27m  \e[27mopenaptxenc\e[27m          \e[27m  \e[27morc-bugreport\e[27m        \e[27m  \e[27mosinfo-install-script\e[27m\r\nompi_info\e[27m            \e[27m  \e[27mopenssl\e[27m              \e[27m  \e[27morcc\e[27m                 \e[27m  \e[27mosinfo-query\e[27m         \e[27m\r\nompi-server\e[27m          \e[27m  \e[27mopenvt\e[27m               \e[27m  \e[27mortecc\e[27m               \e[27m  \e[27mostra-cg\e[27m             \e[27m\r\nomxregister-bellagio\e[27m \e[27m  \e[27mopj_compress\e[27m         \e[27m  \e[27morte-clean\e[27m           \e[27m  \e[27mostree\e[27m               \e[27m\r\nonefetch\e[27m             \e[27m  \e[27mopj_decompress\e[27m       \e[27m  \e[27morted\e[27m                \e[27m  \e[27mout123\e[27m               \e[27m\r\n\e[32mhistory match:  \e[34m⇤ to insert  ↑ or ⇞ for more\e[39m\r\n\e[Jcd ~/.local/src/github.com/Saul-Dickson/dotfiles/\e[27m\e[J\e[11A\e[0m\e[27m\e[24m\e[39m\r\e[25Co\e[K\e[66C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[79D"
+  - delay: 113
+    content: "\bon"
+  - delay: 81
+    content: "\e[32m\e[34m\e[39m\e[32m\e[34m\e[39m\r\r\n\e[Jonefetch\e[27m\r\n\e[32mhistory match:  \e[34m⇤ to insert  ↑ or ⇞ for more\e[39m\r\n\e[Jcd ~/.local/src/github.com/Saul-Dickson/dotfiles/\e[27m\e[J\e[3A\e[0m\e[27m\e[24m\e[39m\r\e[25Con\e[K\e[65C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[78D"
+  - delay: 79
+    content: e
+  - delay: 78
+    content: "\e[32m\e[34m\e[39m\e[32m\e[34m\e[39m\r\r\n\e[Jonefetch\e[27m\r\n\e[32mhistory match:  \e[34m⇤ to insert  ↑ or ⇞ for more\e[39m\r\n\e[Jcd ~/.local/src/github.com/Saul-Dickson/dotfiles/\e[27m\e[J\e[3A\e[0m\e[27m\e[24m\e[39m\r\e[25Cone\e[K\e[64C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[77D"
+  - delay: 281
+    content: f
+  - delay: 86
+    content: "\r\r\n\e[J\e[Jonefetch\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Conef\e[K\e[63C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[76D\b\b\b\b\e[1m\e[31mo\e[1m\e[31mn\e[1m\e[31me\e[1m\e[31mf\e[0m\e[39m"
+  - delay: 90
+    content: "\b\e[1m\e[31mf\e[1m\e[31me\e[0m\e[39m"
+  - delay: 74
+    content: "\b\b\b\b\b\e[0m\e[39mo\e[0m\e[39mn\e[0m\e[39me\e[0m\e[39mf\e[0m\e[39me\r\r\n\e[J\e[Jonefetch\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Conefe\e[K\e[62C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[75D"
+  - delay: 86
+    content: t
+  - delay: 74
+    content: "\r\r\n\e[J\e[Jonefetch\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Conefet\e[K\e[61C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[74D"
+  - delay: 158
+    content: c
+  - delay: 73
+    content: "\r\r\n\e[J\e[Jonefetch\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Conefetc\e[K\e[60C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[73D"
+  - delay: 55
+    content: h
+  - delay: 79
+    content: "\r\r\n\e[J\e[Jonefetch\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Conefetch\e[K\e[59C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[72D\e[8D\e[32mo\e[32mn\e[32me\e[32mf\e[32me\e[32mt\e[32mc\e[32mh\e[39m"
+  - delay: 139
+    content: "\e[?2004l\r\r\n\e[J\e[5 q\e[?1h\e="
+  - delay: 368
+    content: "\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1;32mSaul-Dickson\e[0m \e[1;37m~\e[0m \e[1;32mgit version 2.31.1\e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[37m---------------------------------\e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1m\e[32mProject\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37mdotfiles\e[0m \e[37m(1 branch)\e[0m\r\n\e[1;37m\e[0m\e[1;32m###########################     ######\e[0m   \e[1m\e[32mHEAD\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m23a377d (master, origin/master)\e[0m\r\n\e[1;37m\e[0m\e[1;32m###########################     ######\e[0m   \e[1m\e[32mPending\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m3+- 2+\e[0m\r\n\e[1;37m\e[0m\e[1;32m###########################     ######\e[0m   \e[1m\e[32mCreated\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m8 months ago\e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1m\e[32mLanguage\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m\e[37mShell\e[0m\e[37m (\e[37m100.0\e[0m\e[37m %) \e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1m\e[32mAuthors\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m\e[37m98\e[0m\e[37m\e[37m%\e[0m\e[37m \e[37mSaul-Dickson\e[0m\e[37m \e[37m151\e[0m\e[37m\r\n\e[1;37m\e[0m\e[1;32m###########################     ######\e[0m            \e[37m1\e[0m\e[37m\e[37m%\e[0m\e[37m \e[37mINVALID-SYNTAX\e[0m\e[37m \e[37m3\e[0m\e[37m\r\n\e[1;37m\e[0m\e[1;32m###########################\e[0m              \e[0m\e[1m\e[32mLast change\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m2 hours ago\e[0m\r\n\e[1;37m\e[0m\e[1;32m###########################\e[0m              \e[1m\e[32mRepo\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37mhttps://github.com/Saul-Dickson/dotfiles\e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1m\e[32mCommits\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m154\e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1m\e[32mLines of code\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m98\e[0m\r\n\e[1;37m\e[0m\e[1;32m     ######     ######          ######\e[0m   \e[1m\e[32mSize\e[0m\e[1m\e[37m:\e[0m\e[1m \e[0m\e[37m110.58 MiB (343 files)\e[0m\r\n                                         \r\n                                         \e[40m   \e[0m\e[41m   \e[0m\e[42m   \e[0m\e[43m   \e[0m\e[44m   \e[0m\e[45m   \e[0m\e[46m   \e[0m\e[47m   \e[0m\r\n\r\n"
+  - delay: 5
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                         \r \r"
+  - delay: 51
+    content: "\e[?1h\e=\r\e[0m\e[27m\e[24m\e[J\e[38;5;66mSaul-Dickson/dotfiles\e[39m \e[32m=>\e[39m \e[K\e[67C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[80D\e[5 q\e[5 q\e[?2004h"
+  - delay: 110
+    content: "\r\r\n\e[J\e[A\e[25C"
+  - delay: 1363
+    content: e
+  - delay: 61
+    content: "\e[33m\e[39m\r\r\n\e[J\e[J\e[33mToo long list. Press ↓ or ⇟ to open; type more to filter.\e[39m\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Ce\e[K\e[66C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[79D"
+  - delay: 211
+    content: "\bex"
+  - delay: 74
+    content: "\r\r\n\e[Jexa\e[27m              \e[27m  \e[27mexec\e[27m             \e[27m  \e[27mexport\e[27m           \e[27m  \e[27mexrmaketiled\e[27m     \e[27m  \e[27mextract_dca\e[27m      \e[27m\r\nexactness\e[27m        \e[27m  \e[27mexempi\e[27m           \e[27m  \e[27mexpr\e[27m             \e[27m  \e[27mexrmultipart\e[27m     \e[27m  \e[27mextract_dts\e[27m      \e[27m\r\nexactness_inject\e[27m \e[27m  \e[27mexit\e[27m             \e[27m  \e[27mexr2aces\e[27m         \e[27m  \e[27mexrmultiview\e[27m     \e[27m  \e[27mextract_mpeg2\e[27m    \e[27m\r\nexactness_inspect\e[27m  \e[27mexiv2\e[27m            \e[27m  \e[27mexrenvmap\e[27m        \e[27m  \e[27mexrstdattr\e[27m       \e[27m  \e[27m                 \e[27m\r\nexactness_play\e[27m   \e[27m  \e[27mexpand\e[27m           \e[27m  \e[27mexrheader\e[27m        \e[27m  \e[27mextlinux\e[27m         \e[27m  \e[27m                 \e[27m\r\n\e[Jexactness_record\e[27m \e[27m  \e[27m\e[Jexpiry\e[27m           \e[27m  \e[27m\e[Jexrmakepreview\e[27m   \e[27m  \e[27m\e[Jextract_a52\e[27m      \e[27m  \e[27m\e[J                 \e[27m\e[6A\e[0m\e[27m\e[24m\e[39m\r\e[25Cex\e[K\e[65C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[78D"
+  - delay: 62
+    content: i
+  - delay: 75
+    content: "\r\r\n\e[J\e[Jexit\e[27m \e[27m  \e[27m\e[Jexiv2\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Cexi\e[K\e[64C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[77D"
+  - delay: 37
+    content: t
+  - delay: 75
+    content: "\r\r\n\e[J\e[Jexit\e[27m\e[J\e[A\e[0m\e[27m\e[24m\e[39m\r\e[25Cexit\e[K\e[63C \e[38;5;76mmaster \e[38;5;178m!2 \e[38;5;39m?1\e[39m\e[39m\e[76D"
+  - delay: 75
+    content: "\e[?2004l\r\r\n\e[J\e[5 q\e[?1h\e="
+  - delay: 50
+    content: ""

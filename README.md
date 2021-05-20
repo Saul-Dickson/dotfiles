@@ -37,15 +37,20 @@ simply run this command for just the dotfiles.
 
 #### Editor: [neovim](https://github.com/neovim/neovim)
 
-#### Pager: [bat](https://github.com/sharkdp/bat)
+![Screenshot of neovim session](assets/neovim.png)
+
+It's quite plugin heavy, but vim is really just a platform for plugin
+development. The colorscheme is gruvbox.
 
 #### Shell: [zsh](http://zsh.sourceforge.net)
 
 #### Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/)
 
+#### Email Client: [neomutt](https://github.com/neomutt/neomutt)
+
 #### File Manager: [lf](https://github.com/gokcehan/lf)
 
-#### Email Client: [neomutt](https://github.com/neomutt/neomutt)
+#### Pager: [bat](https://github.com/sharkdp/bat)
 
 #### Ebook Reader: [epy](https://github.com/wustho/epy)
 
