@@ -12,6 +12,7 @@ source ~/.config/nvim/plug-config/quickscope.vim
 source ~/.config/nvim/plug-config/markdown-preview.vim
 
 "source plug.vim
+source $HOME/.config/nvim/site/autoload/plug.vim
 source $HOME/.config/nvim/plug.vim
 
 "source options.vim

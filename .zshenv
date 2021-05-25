@@ -1,7 +1,7 @@
 ## Launch tmux at login ##
-[[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
-    sleep 0.5 &&
-    $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
+# [[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
+#     sleep 0.5 &&
+#     $(/usr/local/bin/tmux -2 attach || /usr/local/bin/tmux -2)
 
 ################################
 # User Configuration Variables #
@@ -208,7 +208,7 @@ ex=:\
 # Golang Environment Variables #
 ################################
 
-if [[ $OSTYPE != *"darwin"* ]]; then
+if [[ $OSTYPE == *"darwin"* ]]; then
     export GOROOT="/usr/local/Cellar/go/*/libexec/"
 else
     export GOROOT="/usr/lib/go"
@@ -222,7 +222,7 @@ export GOPATH="$LIBRARYDIR/golib:$HOME/.local"
 
 ## Add Homebrew to PATH ##
 [[ $OSTYPE != *"darwin"* ]] &&
-    export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+    export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
 
 ## Add Various Python bin Folders to Path ##
 
@@ -272,7 +272,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass/store" # Relocate password store
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
 export WINEPREFIX="$XDG_CONFIG_HOME/wine"
-export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority" # Relocate the XAUTHORITY
+export XAUTHORITY="$HOME/.Xauthority" # Relocate the XAUTHORITY
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/cargo ##
