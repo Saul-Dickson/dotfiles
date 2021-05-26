@@ -16,3 +16,7 @@
 [submodule ".config/zsh/plugins/zsh-autocomplete"]
     path = .config/zsh/plugins/zsh-autocomplete
     url = https://github.com/marlonrichert/zsh-autocomplete
+[submodule "lain"]
+	path = .config/awesome/lain
+	url = https://github.com/lcpz/lain
+	branch = master

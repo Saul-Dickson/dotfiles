@@ -2,7 +2,7 @@
 st.alpha: 1
 
 !! Set a default font and font size as below:
-st.font: FiraCode-11;pixelwidth-13
+st.font: scientifica-13;pixelwidth-13
 
 ! st.termname: st-256color
 ! st.borderpx: 2
