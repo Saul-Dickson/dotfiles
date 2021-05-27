@@ -20,3 +20,6 @@
 	path = .config/awesome/lain
 	url = https://github.com/lcpz/lain
 	branch = master
+[submodule "gruvbox-rofi"]
+    path = .config/rofi/themes/gruvbox-rofi
+    url = https://github.com/bardisty/gruvbox-rofi

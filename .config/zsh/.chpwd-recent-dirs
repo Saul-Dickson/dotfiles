@@ -1,6 +1,8 @@
 $'/home/saul/.local/src/github.com/Saul-Dickson/dotfiles'
 $'/home/saul/.config/rofi'
 $'/home/saul'
+$'/home/saul/.local/src/github.com/Saul-Dickson/dotfiles/.config/rofi/themes'
+$'/home/saul/.local/src/github.com/Saul-Dickson/dotfiles/.config/rofi'
 $'/home/saul/.config/rofi/themes'
 $'/run/systemd'
 $'/run'
