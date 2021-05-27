@@ -271,8 +271,9 @@ export WD_CONFIG="$XDG_CONFIG_HOME/wd/warprc" # Relocate the warp-directory conf
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass/store" # Relocate password store
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg" # Relocate the gnupg home
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the notmuch config
-export WINEPREFIX="$XDG_CONFIG_HOME/wine"
+export WINEPREFIX="$XDG_CONFIG_HOME/wine" # Relocate the wine configs
 export XAUTHORITY="$HOME/.Xauthority" # Relocate the XAUTHORITY
+export ERRFILE="$HOME/.cache/xsession/xsession-errors" # Relocate the xsession-errors files
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/cargo ##

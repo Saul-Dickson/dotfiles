@@ -110,3 +110,15 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 1335, in refresh
     for f in os.listdir(d):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+26/05/21 (23:36:44) | ERROR: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1335, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+26/05/21 (23:58:52) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 983, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 776, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')

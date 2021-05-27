@@ -18,6 +18,8 @@ local naughty = require("naughty")
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+-- Lain: AwesomeWM Complements
+local lain = require("lain")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -72,9 +74,6 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
--- mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
---                                      menu = mymainmenu })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
@@ -102,9 +101,6 @@ end)
 -- }}}
 
 -- {{{ Wibar
-
--- Keyboard map indicator and switcher
--- mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
@@ -159,8 +155,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
                                                 client.focus:toggle_tag(t)
                                             end
                                         end),
-            -- awful.button({ }, 4, function(t) awful.tag.viewprev(t.screen) end),
-            -- awful.button({ }, 5, function(t) awful.tag.viewnext(t.screen) end),
+            awful.button({ }, 4, function(t) awful.tag.viewprev(t.screen) end),
+            awful.button({ }, 5, function(t) awful.tag.viewnext(t.screen) end),
         }
     }
 
@@ -175,8 +171,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     --         end),
     --         awful.button({ }, 3, function() awful.menu.client_list { theme = { width = 250 } } end),
     --         awful.button({ }, 4, function() awful.client.focus.byidx(-1) end),
-    --         awful.button({ }, 5, function() awful.client.focus.byidx( 1) end),
-    --     }
+    --         awful.button({ }, 5, function() awful.client.focus.byidx( 1) end), }
     -- }
 
     -- @DOC_WIBAR@
@@ -189,14 +184,12 @@ screen.connect_signal("request::desktop_decoration", function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
@@ -209,8 +202,8 @@ end)
 -- @DOC_ROOT_BUTTONS@
 awful.mouse.append_global_mousebindings({
     awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewprev),
-    awful.button({ }, 5, awful.tag.viewnext),
+    -- awful.button({ }, 4, awful.tag.viewprev),
+    -- awful.button({ }, 5, awful.tag.viewnext),
 })
 -- }}}
 
@@ -296,11 +289,11 @@ awful.keyboard.append_global_keybindings({
 
 -- Layout related keybindings
 awful.keyboard.append_global_keybindings({
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
+    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)            end,
               {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)            end,
               {description = "swap with previous client by index", group = "client"}),
-    awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
+    awful.key({ modkey,           }, "u", function () awful.client.urgent.jumpto()            end,
               {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
