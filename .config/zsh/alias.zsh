@@ -46,4 +46,7 @@ alias cls="clear; ls"
 ## alias cat to "bat" ##
 alias cat="bat"
 
+## alias setwall to "xwallpaper --maximize \"$(sxiv -ao ~/.local/wall)\"" ##
+alias setwall="xwallpaper --maximize \"\$(sxiv -ao ~/.local/wall)\""
+
 alias royaldl="java -jar $HOME/.local/apps/royalroad-downloader/*"
