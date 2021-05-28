@@ -1,3 +1,6 @@
+!! xscreensaver settings
+xscreensaver.newLoginCommand: dm-tool switch-to-greeter
+
 !! Transparency (0-1):
 st.alpha: 1
 
