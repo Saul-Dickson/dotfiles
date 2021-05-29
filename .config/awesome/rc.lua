@@ -45,7 +45,7 @@ beautiful.init("/home/saul/.config/awesome/theme.lua")
 -- @DOC_DEFAULT_APPLICATIONS@
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
-browser = "firefox"
+browser = "qutebrowser"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 

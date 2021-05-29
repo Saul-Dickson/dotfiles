@@ -23,6 +23,3 @@
 [submodule "gruvbox-rofi"]
     path = .config/rofi/themes/gruvbox-rofi
     url = https://github.com/bardisty/gruvbox-rofi
-[submodule "base16-qutebrowser"]
-    path = .config/qutebrowser/themes/base16-qutebrowser
-    url = https://github.com/theova/base16-qutebrowser

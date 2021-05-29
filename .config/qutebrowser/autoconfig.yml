@@ -7,8 +7,10 @@
 config_version: 2
 settings:
   content.notifications.enabled:
-    https://www.youtube.com: true
-  tabs.position:
-    global: top
+    https://www.reddit.com: true
+  scrolling.smooth:
+    global: true
   tabs.show:
     global: multiple
+  url.default_page:
+    global: https://saul-dickson.github.io/Bento
