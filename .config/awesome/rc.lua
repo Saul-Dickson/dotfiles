@@ -46,8 +46,10 @@ beautiful.init("/home/saul/.config/awesome/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
 browser = "qutebrowser"
+mail_client = "neomutt"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
+mail_command = terminal .. " -e " .. mail_client
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -71,6 +73,7 @@ myawesomemenu = {
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "open terminal", terminal },
                                     { "open browser", browser },
+                                    { "open email client", mail_command },
                                   }
                         })
 
@@ -234,8 +237,10 @@ awful.keyboard.append_global_keybindings({
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "b", function () awful.spawn(browser) end,
               {description = "open a browser", group = "launcher"}),
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    awful.key({ modkey, },           "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey,            }, "m", function () awful.spawn(mail_command) end,
+              {description = "open mail client", group = "launcher"}),
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
 })
@@ -425,7 +430,7 @@ client.connect_signal("request::default_keybindings", function()
                 c.minimized = true
             end ,
             {description = "minimize", group = "client"}),
-        awful.key({ modkey,           }, "m",
+        awful.key({ modkey, "Shift"  }, "m",
             function (c)
                 c.maximized = not c.maximized
                 c:raise()

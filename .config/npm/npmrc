@@ -1,1 +1,1 @@
-cache=$HOME/.cache/npm
+cache=/home/saul/.cache/npm
