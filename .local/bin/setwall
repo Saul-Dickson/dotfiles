@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+# vim:filetype=sh
+
+fsOBJ="$1"
+
+if [ -f $fsOBJ ]; then
+    xwallpaper --maximize $fsOBJ
+    [ -n $WALLPAPER ] && sed -i 's/^export WALLPAPER=.*$/export WALLPAPER=$fsOBJ/g' $HOME/.zshenv
+    exit 0
+elif [ -d $fsOBJ ]; then
+    newWall="$(sxiv -ao $fsOBJ)"
+    xwallpaper --maximize $newWall
+    [ -n $WALLPAPER ] && sed -i 's/^export WALLPAPER=.*$/export WALLPAPER=$newWall/g' $HOME/.zshenv
+elif [ -z $1 ] || [[ $1 == "-h" ]]; then
+    echo "setwall | version 1.0"
+    echo "Usage: setwall -h [ <path to image or directory of images> ]"
+fi

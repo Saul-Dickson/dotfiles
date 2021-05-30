@@ -6,3 +6,6 @@
 [alias]
 	project-summary = !which onefetch && onefetch
 	root = rev-parse --show-toplevel
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
