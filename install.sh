@@ -44,7 +44,7 @@ function unpackInstall() {
     mkdir -p ".local/apps/royalroad-downloader"
     wget \
         "https://github.com/Aivean/royalroad-downloader/releases/download/2.2.0/royalroad-downloader-assembly-2.2.0.jar" \
-        ~/.local/apps/royalroad-downloader
+        $HOME/.local/apps/royalroad-downloader
 
     # Clone and install k-vernooy/tetris
     git clone 'https://github.com/k-vernooy/tetris' $HOME/.local/src/github.com/k-vernooy/tetris &&
@@ -68,10 +68,11 @@ function scriptInstall() {
 function symlinkDots() {
     ## Create symlinks to config files ##
     for confName in $(/bin/ls -1 $gitPath/.config); do
-        message="symlinking ~/.config/$confName       "
+        message="symlinking $HOME/.config/$confName       "
         printf "\r$message"
 
-        ln -sF $(echo $gitPath)/.config/$(echo $confName) ~/.config/$confName
+        [ -h $HOME/.local/$confName ] ||
+            ln -sF $(echo $gitPath)/.config/$(echo $confName) $HOME/.config/$confName
     done
 
     ## Create symlinks to .desktop applications ##
@@ -79,23 +80,25 @@ function symlinkDots() {
     [ -d $HOME/.local/share/applications ] || mkdir -p $HOME/.local/share/applications
 
     for file in $(/bin/ls -1 $gitPath/.local/share/applications); do
-        message="symlink ~/.local/share/applications/$file      "
+        message="symlinking $HOME/.local/share/applications/$file      "
         print "\r$message"
 
-        ln -sF $(echo $gitpath)/.local/share/applications/$file $HOME/.local/share/applications/$file
+        [ -h $HOME/.local/share/applications/$file ] ||
+            ln -sF $(echo $gitpath)/.local/share/applications/$file \
+                    $HOME/.local/share/applications/$file
     done
 
     ## Create symlink to local shell scripts ##
-    ln -sF $(echo $gitPath)/.local/bin ~/.local/bin
+    [ -h $HOME/.local/bin ] || ln -sF $(echo $gitPath)/.local/bin $HOME/.local/bin
 
     ## Create symlink to wallpapers directory ##
-    ln -sF $(echo $gitPath)/.local/wall ~/.local/wall
+    [ -h $HOME/.local/wall ] || ln -sF $(echo $gitPath)/.local/wall $HOME/.local/wall
 
     ## Create symlink to zshenv ##
-    ln -sF $(echo $gitPath)/.zshenv ~/.zshenv
+    [ -h $HOME/.zshenv ] || ln -sF $(echo $gitPath)/.zshenv $HOME/.zshenv
     
     ## Create symlink to Xresources ## 
-    ln -sF $(echo $gitPath)/.Xresources ~/.Xresources
+    [ -h $HOME/.Xresources ] || ln -sF $(echo $gitPath)/.Xresources $HOME/.Xresources
 }
 
 function changeShell() {

@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+# vim:filetype=sh
+
+killall -q lemonbar 
+killall -q lemonconfig
+
+lemonconfig | lemonbar -p -g 1920x32+0+0 -B "#282828" -F "#ebdbb2" -U "#282828" \
+    -n "lemonbar" -u 3 -f scientifica-13 -f siji-13 | $SHELL
