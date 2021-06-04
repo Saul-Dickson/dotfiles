@@ -67,29 +67,38 @@ function scriptInstall() {
 
 function symlinkDots() {
     ## Create symlinks to config files ##
-    for confName in $(/bin/ls -1 $gitPath/.config); do
-        message="symlinking $HOME/.config/$confName       "
+    for confDir in $(/bin/ls -1 $gitPath/.config); do
+        message="symlinking $HOME/.config/$confDir       "
         printf "\r$message"
 
-        [ -h $HOME/.local/$confName ] ||
-            ln -sF $(echo $gitPath)/.config/$(echo $confName) $HOME/.config/$confName
+        [ -h $HOME/.local/$confDir ] ||
+            ln -sF $(echo $gitPath)/.config/$(echo $confDir) $HOME/.config/$confDir
     done
 
     ## Create symlinks to .desktop applications ##
 
     [ -d $HOME/.local/share/applications ] || mkdir -p $HOME/.local/share/applications
 
-    for file in $(/bin/ls -1 $gitPath/.local/share/applications); do
-        message="symlinking $HOME/.local/share/applications/$file      "
+    for app in $(/bin/ls -1 $gitPath/.local/share/applications); do
+        message="symlinking $HOME/.local/share/applications/$app      "
         print "\r$message"
 
-        [ -h $HOME/.local/share/applications/$file ] ||
-            ln -sF $(echo $gitpath)/.local/share/applications/$file \
-                    $HOME/.local/share/applications/$file
+        [ -h $HOME/.local/share/applications/$app ] ||
+            ln -sF $(echo $gitpath)/.local/share/applications/$app \
+                    $HOME/.local/share/applications/$app
     done
 
-    ## Create symlink to local shell scripts ##
-    [ -h $HOME/.local/bin ] || ln -sF $(echo $gitPath)/.local/bin $HOME/.local/bin
+    ## Create symlinks to local shell scripts ##
+
+    [ -d $HOME/.local/bin ] || mkdir $HOME/.local/bin
+
+    for script in $(/bin/ls -1 $gitPath/.local/bin); do
+        message="symlinking $HOME/.local/bin/$script"
+        printf="\r$message"
+
+        [ -h $HOME/.local/bin/$script ] ||
+            ln -sF $gitPath/.local/bin/$script $HOME/.local/bin/$script
+    done
 
     ## Create symlink to wallpapers directory ##
     [ -h $HOME/.local/wall ] || ln -sF $(echo $gitPath)/.local/wall $HOME/.local/wall

@@ -4,5 +4,5 @@
 killall -q lemonbar 
 killall -q lemonconfig
 
-lemonconfig | lemonbar -p -g 1920x32+0+0 -B "#282828" -F "#ebdbb2" -U "#282828" \
-    -n "lemonbar" -u 3 -f scientifica-13 -f siji-13 | $SHELL
+lemonconfig | lemonbar -p -g 1920x28+0+0 -B "#282828" -F "#ebdbb2" -U "#282828" \
+    -n "lemonbar" -u 3 -o -4 -f scientifica-13 -o -2 -f siji-13 | $SHELL

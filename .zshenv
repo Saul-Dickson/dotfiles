@@ -275,6 +275,7 @@ export WINEPREFIX="$XDG_CONFIG_HOME/wine" # Relocate the wine configs
 export XAUTHORITY="$HOME/.Xauthority" # Relocate the XAUTHORITY
 export ERRFILE="$HOME/.cache/xsession/xsession-errors" # Relocate the xsession-errors files
 export mbsyncrc="$XDG_CONFIG_HOME/mbsync/init.mbsync"
+export TZ='America/Menominee'
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/cargo ##
