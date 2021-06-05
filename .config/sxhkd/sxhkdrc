@@ -1,0 +1,111 @@
+### Window Manager Independant Hotkeys ### 
+
+## Miscelanious Keybindings ##
+
+# Terminal Emulator # 
+super + Return
+	st
+
+# Dmenu Scripts # 
+super + @space ; {p}
+	{dmenu_run}
+
+# Open Applications #
+super + o ; {e,m,b}
+    {st -e nvim,st -e neomutt,qutebrowser}
+
+# Reload SXHKD # 
+super + ctrl + r
+	pkill -USR1 -x sxhkd
+
+## Audio Control ##
+
+# Mute Volume #
+XF86AudioMute
+    amixer set Master mute
+
+# Increase Volume by 10% #
+XF86AudioRaiseVolume
+    amixer set Master 10+
+
+# Decrease Volume by 10% #
+XF86AudioLowerVolume
+    amixer set Master 10-
+
+# XF86AudioPlay
+
+# XF86AudioNext
+
+# XF86AudioPrev
+
+### BSPWM Hotkeys ###
+
+# Restart BSPWM # 
+super + ctrl + shift + r
+	bspc wm -r
+ 
+# Close or Kill Node # 
+super + {d,x} 
+	bspc node -{c,k}
+
+## Window States & Flags ##
+
+# Change Window Mode
+super + w ; {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Set Window Flags #
+super + w ; {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+## Window Focus and Swapping ##
+
+# Focus or Swap with Nodes in Given Direction #
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Focus the Next/Previous Desktop in the Current Monitor #
+super + {_,shift + }n
+	bspc desktop -f {next,prev}.local
+
+# Focus the Older/Newer Window in the Current Desktop #
+super + alt + {_,shift + }n
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# Focus On-- or Send Current Node to-- Desktop Number #
+super + {_,shift + }{1-4,8-9,0}
+	bspc {desktop -f,node -d} '^{1-4,5-6,7}'
+
+## Location Presection ##
+
+# Preselect the Direction #
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# Preselect the Ratio #
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Cancel the Preselection for the Focused Node #
+super + u
+	bspc node -p cancel
+
+# Cancel the Preselection for the Focused Desktop #
+super + alt + u
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+## Move/Resize ##
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}

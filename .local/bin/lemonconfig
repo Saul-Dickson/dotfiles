@@ -5,12 +5,12 @@
 DateTime() {
     while true; do
         raw=$(date -u +"%A %b %d, %I:%M")
-        export lemonTime="%{R}%{+u}$output%{R}%{-u}"
+        export lemonTime="%{R}%{+u}$raw%{R}%{-u}"
     done
 }
 
 Update() {
-    echo -e "%{r} $lemonTime Hello, world!"
+    echo -e '%{r} "$lemonTime" Hello, world!'
 }
 
 DateTime &
