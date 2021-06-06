@@ -51,3 +51,4 @@ bspc rule -a freetube desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a feh state=floating focus=on
