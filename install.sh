@@ -53,6 +53,10 @@ function unpackInstall() {
     # Clone and install siduck76's version of the Suckless Simple Terminal
     git clone https://github.com/siduck76/st $HOME/.local/src/github.com/siduck76/st &&
     cd $HOME/.local/src/github.com/siduck76/st; sudo make install
+
+    # Clone and install my (Saul-Dickson)'s version of dmenu
+    git clone https://github.com/Saul-Dickson/dmenu $HOME/.local/src/github.com/Saul-Dickson/dmenu &&
+    cd $HOME/.local/src/github.com/Saul-Dickson/dmenu; sudo make install
 }
 
 function scriptInstall() {
