@@ -2,7 +2,10 @@
 
 ### Autostart Applications ###
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x wired > /dev/null || wired &
+pgrep -x dunst > /dev/null || dunst &
+
+### Set Wallpaper ###
+xwallpaper --maximize $HOME/.local/wall/pixel-art-wallpaper.jpg
 
 ### Monitor Settings ###
 
