@@ -1020,6 +1020,7 @@ _comps=(
 'pack' '_pack'
 'packf' '_mh'
 'pacman' '_pacman'
+'pacman-conf' '_pacman'
 'pacman-key' '_pacman'
 'pacman.static' '_pacman'
 'pacmd' '_pulseaudio'

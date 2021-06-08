@@ -1,6 +1,4 @@
-### Window Manager Independant Hotkeys ### 
-
-## Miscelanious Keybindings ##
+### Window Manager Independant Keybindings ###
 
 # Terminal Emulator # 
 super + Return
@@ -17,6 +15,12 @@ super + o ; {e,m,b}
 # Reload SXHKD # 
 super + ctrl + r
 	pkill -USR1 -x sxhkd
+
+## Notification Control Keybindings ##
+
+# Clear Notifications #
+super + {_,shift + }c
+    dunstctl {close,close-all}
 
 ## Audio Control ##
 
