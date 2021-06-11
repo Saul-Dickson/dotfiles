@@ -157,3 +157,15 @@ Traceback (most recent call last):
   File "/usr/lib/python3.9/site-packages/bpytop.py", line 1337, in refresh
     for f in os.listdir(d):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+11/06/21 (11:24:05) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 985, in _get_key
+    input_key = ""
+  File "/usr/lib/python3.9/site-packages/bpytop.py", line 778, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+11/06/21 (13:43:49) | ERROR: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'

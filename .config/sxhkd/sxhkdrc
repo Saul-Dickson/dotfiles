@@ -5,12 +5,12 @@ super + Return
 	st
 
 # Dmenu Scripts # 
-super + @space ; {p}
+super + space ; {p}
 	{dmenu_run}
 
 # Open Applications #
-super + o ; {e,m,b}
-    {st -e nvim,st -e neomutt,qutebrowser}
+super + o ; {e,m,b,w}
+    {st -e nvim,st -e neomutt,qutebrowser,ferdi}
 
 # Reload SXHKD # 
 super + ctrl + r
