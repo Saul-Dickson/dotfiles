@@ -7,6 +7,17 @@ function cloneDots() {
 }
 
 function packInstall() {
+    ## Install packages using pip ##
+    sudo pip3.9 install epr ueberzug wifi-password
+
+    ## Install packages using go ##
+    go get github.com/zquestz/s
+
+    ## Install packages using npm ##
+    npm install --global trash-cli
+}
+
+function brewInstall() {
     ## Install Homebrew ##
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &&
 
@@ -23,15 +34,6 @@ function packInstall() {
     brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
                  ncurses onefetch ripgrep rust vifm tmux youtube-dl wget wren \
                  zsh hexyl pass neomutt neovim npm python
-
-    ## Install other, less important packages using pip ##
-    sudo pip3.9 install epr ueberzug wifi-password
-
-    ## Install other, less important packages using go ##
-    go get github.com/zquestz/s
-
-    ## Install other, less important packages using npm ##
-    npm install --global trash-cli
 }
 
 function unpackInstall() {
@@ -85,7 +87,7 @@ function symlinkDots() {
 
     for app in $(/bin/ls -1 $gitPath/.local/share/applications); do
         message="symlinking $HOME/.local/share/applications/$app      "
-        print "\r$message"
+        printf "\r$message"
 
         [ -h $HOME/.local/share/applications/$app ] ||
             ln -sF $(echo $gitpath)/.local/share/applications/$app \
@@ -103,6 +105,9 @@ function symlinkDots() {
         [ -h $HOME/.local/bin/$script ] ||
             ln -sF $gitPath/.local/bin/$script $HOME/.local/bin/$script
     done
+
+    ## Create symlink to install.sh in .local/bin ##
+    [ -h $HOME/.local/bin/install.sh ] || ln -sF $(echo $gitPath)/install.sh $HOME/.local/bin/install.sh
 
     ## Create symlink to wallpapers directory ##
     [ -h $HOME/.local/wall ] || ln -sF $(echo $gitPath)/.local/wall $HOME/.local/wall
@@ -135,7 +140,8 @@ function mkDirs() {
 for arg in $@; do
     case $arg in
         -h|-help)
-            echo "-p            Install packages with homebrew"
+            echo "-b            Install packages with homebrew"
+            echo "-p            Install packages with various package managers"
             echo "-P            Install unpackaged programs"
             echo "-s            Install scripts unincluded in dotfiles"
             echo "-S            Symlink dotfiles to correct places"
@@ -145,6 +151,7 @@ for arg in $@; do
             echo "-A            Install all, symlink dotfiles, change user shell and create directories"
             echo "-h, --help    Display this message."
             ;;
+        -b) brewInstall;;
         -p) packInstall;;
         -P) upackInstall;;
         -s) scriptInstall;;
@@ -155,6 +162,7 @@ for arg in $@; do
             symlinkDots
             ;;
         -A) 
+            [[ $@ != *"-b"* ]] && brewInstall;
             [[ $@ != *"-p"* ]] && packInstall;
             [[ $@ != *"-P"* ]] && upackInstall;
             [[ $@ != *"-s"* ]] && scriptInstall;
