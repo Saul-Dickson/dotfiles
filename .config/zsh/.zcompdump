@@ -1747,6 +1747,7 @@ _compautos=(
 '_call_program' '+X'
 )
 
+zle -C _autocomplete.explain list-choices _autocomplete.explain
 zle -C _bash_complete-word .complete-word _bash_completions
 zle -C _bash_list-choices .list-choices _bash_completions
 zle -C _complete_debug .complete-word _complete_debug
@@ -1758,10 +1759,13 @@ zle -C _expand_alias .complete-word _expand_alias
 zle -C _expand_word .complete-word _expand_word
 zle -C _history-complete-newer .complete-word _history_complete_word
 zle -C _history-complete-older .complete-word _history_complete_word
+zle -C _history_search menu-select _autocomplete.history-search
 zle -C _list_expansions .list-choices _expand_word
+zle -C _menu_complete complete-word _autocomplete.menu-complete
 zle -C _most_recent_file .complete-word _most_recent_file
 zle -C _next_tags .list-choices _next_tags
 zle -C _read_comp .complete-word _read_comp
+zle -C _reverse_menu_complete complete-word _autocomplete.menu-complete
 bindkey '^X^R' _read_comp
 bindkey '^X?' _complete_debug
 bindkey '^XC' _correct_filename
