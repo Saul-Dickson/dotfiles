@@ -6,7 +6,7 @@ super + Return
 
 # Dmenu Scripts # 
 super + space ; {p}
-	{dmenu_run}
+	{dmenu_run -c -l 15}
 
 # Open Applications #
 super + o ; {e,m,b,w}

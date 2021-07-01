@@ -18,7 +18,7 @@ source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # source $PLUGINDIR/zsh-abbr/zsh-abbr.zsh
 
 # ### Warp Directory ###
-# source $PLUGINDIR/wd/wd.plugin.zsh
+source $PLUGINDIR/wd/wd.plugin.zsh
 
 # ### z.lua chdir plugin ###
 # source $PLUGINDIR/z.lua/z.lua.plugin.zsh
