@@ -5,8 +5,8 @@ super + Return
 	st
 
 # Dmenu Scripts # 
-super + space ; {p}
-	{dmenu_run -c -l 15}
+super + space ; {p,a,shift + p}
+	{dmenu_run -c -l 15, dmenu_launch.py --apps, passmenu2}
 
 # Open Applications #
 super + o ; {e,m,b,w}

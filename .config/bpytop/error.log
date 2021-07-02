@@ -174,3 +174,8 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 1337, in refresh
     for f in os.listdir(d):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+02/07/21 (17:29:01) | ERROR: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/saul/.config/bpytop/themes'
