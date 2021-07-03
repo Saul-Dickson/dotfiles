@@ -12,6 +12,8 @@ source $PLUGINDIR/zsh-completions/zsh-completions.plugin.zsh
 source $PLUGINDIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 ### Zsh Autocomplete ###
+zstyle ':autocomplete:tab:*' widget-style menu-select
+
 source $PLUGINDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # ### Zsh Abbreviations ###
