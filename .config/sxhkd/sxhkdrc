@@ -84,7 +84,7 @@ super + {_,shift + }{1-4,8-9,0}
 	bspc {desktop -f,node -d} '^{1-4,5-6,7}'; \
     notify-send "Desktop $(bspc query -D --names --desktop focused.local) selected."
 
-## Location Presection ##
+## Location Preselection ##
 
 # Preselect the Direction #
 super + ctrl + {h,j,k,l}
