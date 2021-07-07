@@ -14,7 +14,7 @@ xwallpaper --maximize $HOME/.local/wall/pixel-art-wallpaper.jpg
 ### Monitor Settings ###
 
 ## Define Desktop Names ##
-bspc monitor -d " DEV " " WWW " " SYS " " DOC " " CHAT " " MUS " " GFX "
+bspc monitor -d " DEV " " WWW " " SYS " " DOC " " CHAT " " FUN " " GFX "
 
 ## Monitor Management Settings ##
 bspc config remove_disabled_monitors        true
