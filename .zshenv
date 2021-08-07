@@ -274,6 +274,7 @@ export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/config.notmuch" # Relocate the n
 export WINEPREFIX="$XDG_CONFIG_HOME/wine" # Relocate the wine configs
 export XAUTHORITY="$HOME/.Xauthority" # Relocate the XAUTHORITY
 export ERRFILE="$HOME/.cache/xsession/xsession-errors" # Relocate the xsession-errors files
+export RENPY_PLATFORM="linux-x86_64"
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/cargo ##

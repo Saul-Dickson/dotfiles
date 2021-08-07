@@ -29,6 +29,8 @@ settings:
     global: libnotify
   content.notifications.show_origin:
     global: false
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: true
   scrolling.smooth:
     global: true
   tabs.show:

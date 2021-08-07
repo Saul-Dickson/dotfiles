@@ -26,3 +26,6 @@
 [submodule "gruvbox-rofi"]
     path = .config/rofi/themes/gruvbox-rofi
     url = https://github.com/bardisty/gruvbox-rofi
+[submodule ".config/sxhkd/sxhkd-bindings"]
+	path = .config/sxhkd/sxhkd-bindings
+	url = https://github.com/Phate6660/sxhkd-bindings.git
