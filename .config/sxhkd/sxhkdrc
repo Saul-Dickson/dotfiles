@@ -1,117 +1,131 @@
 ### Window Manager Independant Keybindings ###
 
-# description: Terminal Emulator # 
+# Terminal Emulator # 
 super + Return
 	alacritty
 
-# description: Dmenu Scripts # 
+# Dmenu Scripts # 
 super + space ; {p,a,shift + p}
 	{dmenu_run -c -l 15, dmenu_launch.py --apps, passmenu2}
 
-# description: Open Applications
+# Open Applications
 super + o ; {e,m,b,w}
-    {st -e nvim,st -e neomutt,qutebrowser,ferdi}
+    {alacritty -e nvim,alacritty -e neomutt,qutebrowser,ferdi}
 
-# description: Reload SXHKD # 
+# Reload SXHKD # 
 super + ctrl + r
 	pkill -USR1 -x sxhkd
 
 ## Notification Control Keybindings ##
 
-# description: Clear Notifications
+# Clear Notifications
 super + {_,shift + }c
     dunstctl {close,close-all}
 
-## Audio Control ##
+## XF86 Keybindings ##
 
-# description: Mute Volume
+# Mute Volume
 XF86AudioMute
     pamixer --toggle-mute
 
-# description: Increase Volume by 10%
+# Increase Volume by 10%
 XF86AudioRaiseVolume
     pamixer -i 10
 
-# description: Decrease Volume by 10%
+# Decrease Volume by 10%
 XF86AudioLowerVolume
     pamixer -d 10
 
-## XF86AudioPlay
+# Play/Pause Media
+XF86AudioPlay
+    playerctl play-pause
 
-## XF86AudioNext
+# Media Next
+XF86AudioNext
+    playerctl next
 
-## XF86AudioPrev
+# Media Previous
+XF86AudioPrev
+    playerctl previous
+
+# Increase Brightness by 10%
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+# Decrease Brightness by 10%
+XF86MonBrightnessDown
+    brightnessctl set 10%-
 
 ### BSPWM Hotkeys ###
 
-# description: Restart BSPWM # 
+# Restart BSPWM # 
 super + ctrl + shift + r
 	bspc wm -r
  
-# description: Close or Kill Node # 
-super + {d,x} 
+# Close or Kill Node # 
+super + {d,D} 
 	bspc node -{c,k}
 
 ## Window States & Flags ##
 
-# description: Change Window Mode
-super + w ; {t,shift + t,s,f}
+# Change Window Mode
+super + w ; {t,shift + t,f,shift + f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# description: Set Window Flags
+# Set Window Flags
 super + w ; {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 ## Window Focus and Swapping ##
 
-# description: Focus or Swap with Nodes in Given Direction
+# Focus or Swap with Nodes in Given Direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# description: Focus the Next/Previous Desktop in the Current Monitor
+# Focus the Next/Previous Desktop in the Current Monitor
 super + {_,shift + }n
 	bspc desktop -f {next,prev}.local
     notify-send "Desktop $(bspc query -D --names --desktop focused.local) selected."
 
-# description: Focus the Older/Newer Window in the Current Desktop
+# Focus the Older/Newer Window in the Current Desktop
 super + alt + {_,shift + }n
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# description: Focus On-- or Send Current Node to-- Desktop Number
+# Focus On-- or Send Current Node to-- Desktop Number
 super + {_,shift + }{1-4,8-9,0}
 	bspc {desktop -f,node -d} '^{1-4,5-6,7}'; \
     notify-send "Desktop $(bspc query -D --names --desktop focused.local) selected."
 
 ## Location Preselection ##
 
-# description: Preselect the Direction
+# Preselect the Direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
-# description: Preselect the Ratio
+# Preselect the Ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
-# description: Cancel the Preselection for the Focused Node
+# Cancel the Preselection for the Focused Node
 super + u
 	bspc node -p cancel
 
-# description: Cancel the Preselection for the Focused Desktop
+# Cancel the Preselection for the Focused Desktop
 super + alt + u
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 ## Move/Resize ##
 
-# description: expand a window by moving one of its side outward
+# expand a window by moving one of its sides outward
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# description: contract a window by moving one of its side inward
+# contract a window by moving one of its sides inward
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# description: move a floating window
+# move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
