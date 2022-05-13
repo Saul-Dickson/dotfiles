@@ -1,8 +1,8 @@
 {
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
-    "typescript",
-    "json",
+    // "typescript",
+    // "json",
     "python",
     "rls",
     "go",

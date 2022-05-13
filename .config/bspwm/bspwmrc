@@ -9,7 +9,7 @@ pgrep -x dunst     > /dev/null || dunst &
 pgrep -x clipmenud > /dev/null || clipmenud &
 
 ### Set Wallpaper ###
-xwallpaper --maximize $HOME/.local/wall/pixel-art-wallpaper.jpg
+xwallpaper --zoom $HOME/.local/wall/fantasy-whale-2560×1440.jpg
 
 ### Monitor Settings ###
 

@@ -2,7 +2,7 @@
 
 # description: Terminal Emulator # 
 super + Return
-	st
+	alacritty
 
 # description: Dmenu Scripts # 
 super + space ; {p,a,shift + p}
@@ -26,15 +26,15 @@ super + {_,shift + }c
 
 # description: Mute Volume
 XF86AudioMute
-    amixer set Master mute
+    pamixer --toggle-mute
 
 # description: Increase Volume by 10%
 XF86AudioRaiseVolume
-    amixer set Master 10+
+    pamixer -i 10
 
 # description: Decrease Volume by 10%
 XF86AudioLowerVolume
-    amixer set Master 10-
+    pamixer -d 10
 
 ## XF86AudioPlay
 
