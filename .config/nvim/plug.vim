@@ -28,6 +28,7 @@ Plug 'vim-latex/vim-latex' " Enhanced LaTeX support for Vim
 Plug 'neomutt/neomutt.vim' " vim syntax for neomuttrc
 Plug 'dart-lang/dart-vim-plugin' " dart support in vim 
 Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
+Plug 'elkowar/yuck.vim' " Support for the yuck configuration language.
 
 " Motions
 Plug 'justinmk/vim-sneak' " the missing motion of vim

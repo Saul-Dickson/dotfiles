@@ -1,3 +1,6 @@
+## Remap Caps Lock to Escape ##
+setxkbmap -option caps:escape
+
 ## Launch tmux at login ##
 # [[ $(/usr/local/bin/tmux ls) == *"attached"* ]] || 
 #     sleep 0.5 &&
