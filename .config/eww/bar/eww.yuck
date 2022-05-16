@@ -1,1 +1,84 @@
+;; Workspaces Widget
+(defwidget Workspaces []
+  (box
+    :class "workspaces"
+    :orientation "h"
+    :space-evenly true
+    :halign "start"
+    :spacing 2
+    
+    (button :onclick "wmctrl -s 0" 1)
+    (button :onclick "wmctrl -s 1" 2)
+    (button :onclick "wmctrl -s 2" 3)
+    (button :onclick "wmctrl -s 3" 4)
+    (button :onclick "wmctrl -s 4" 5)
+    (button :onclick "wmctrl -s 5" 6)
+    (button :onclick "wmctrl -s 6" 7)
+    (button :onclick "wmctrl -s 7" 8)
+    (button :onclick "wmctrl -s 8" 9)
+    )
+  )
 
+;; Volume Widget
+(defvar volume-visible false)
+
+(defpoll volume-current 
+  :interval "1s" 
+  "pamixer --get-volume"
+  )
+
+(defwidget Volume [current-volume]
+  (eventbox
+    :class "volume-box"
+    :halign "end"
+    :onhover "/usr/bin/eww update volume-visible=true"
+    :onhoverlost "/usr/bin/eww update volume-visible=false"
+
+    (box
+      :orientation "h"
+      :space-evenly "false"
+      :spaceing "2"
+
+      (revealer
+        :transition "slideright"
+        :reveal volume-visible
+        :duration "550ms"
+
+        (scale
+          :volume "volume-bar"
+          :value current-volume
+          :orientation "h"
+          :flipped true
+          :tooltip "Volume: $(current-volume)"
+          :max 101
+          :min 0
+          :onchange "pamixer set Master $(current-volume)%"
+        )
+      )
+    )
+  )
+)
+
+;; Render bar
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+              :x "0%"
+              :y "40px"
+              :width "98%"
+              :height "30px"
+              :anchor "top center"
+              )
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
+  (bar-content)
+  )
+
+(defwidget bar-content []
+  (box
+    (Workspaces)
+    (Volume :current-volume volume-current)
+    )
+  )
