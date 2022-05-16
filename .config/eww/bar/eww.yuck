@@ -1,3 +1,5 @@
+;; Eww Launch Variable
+(defvar EWW "/usr/bin/eww --config '$HOME/.config/eww/bar/'")
 ;; Workspaces Widget
 (defwidget Workspaces []
   (box
@@ -24,15 +26,17 @@
 
 (defpoll volume-current 
   :interval "1s" 
+  :initial "initial-value"
   "pamixer --get-volume"
   )
 
 (defwidget Volume [current-volume]
   (eventbox
-    :class "volume-box"
-    :halign "end"
-    :onhover "/usr/bin/eww update volume-visible=true"
-    :onhoverlost "/usr/bin/eww update volume-visible=false"
+    :class "volume-box" 
+    ; :onhover "$(EWW) update volume-visible=true"
+    ; :onhoverlost "$(EWW) update volume-visible=false"
+    :onhover "echo Tada"
+    :onhoverlost "Echo Todo"
 
     (box
       :orientation "h"
@@ -40,7 +44,7 @@
       :spaceing "2"
 
       (revealer
-        :transition "slideright"
+        :transition "slideleft"
         :reveal volume-visible
         :duration "550ms"
 
@@ -80,5 +84,5 @@
   (box
     (Workspaces)
     (Volume :current-volume volume-current)
-    )
   )
+)

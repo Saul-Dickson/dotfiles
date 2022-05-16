@@ -24,6 +24,16 @@ alias vi='fd -t f -L --full-path $( git root || pwd ) --hidden -E ".git" -E ".ca
 ## alias source to "x=$(fd -t f --full-path $( git root || pwd ) --hidden | fzf); source $x" ##
 alias src='x=$(fd -t f -L --full-path $( git root || pwd ) --hidden -E ".git" -E ".cache" | fzf); source $x'
 
+###############
+# EWW Aliases #
+###############
+
+## alias ebaropen to "eww --config '$HOME/.config/eww/bar' open bar" ##
+alias ebaropen='eww --config "$HOME/.config/eww/bar" open bar'
+
+## alias ebarkill to "eww --config '$HOME/.config/eww/bar' kill" ##
+alias ebarkill='eww --config "$HOME/.config/eww/bar" kill'
+
 ##########################
 # Miscellaneous Aliases # 
 ##########################
