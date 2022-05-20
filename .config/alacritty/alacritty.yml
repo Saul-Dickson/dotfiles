@@ -120,7 +120,7 @@
     family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   bold:
@@ -131,7 +131,7 @@
     family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   italic:
@@ -142,7 +142,7 @@
     family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -153,7 +153,7 @@
     family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
+    style: Bold Italic
 
   # Point size
   size: 9.0
