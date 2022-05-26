@@ -1,0 +1,58 @@
+// Global
+$background: #1A1B26;
+$foreground: #A9B1D6;
+
+$black: #24283B;
+$gray: #565F89;
+$red: #F7768E;
+$green: #73DACA;
+$yellow: #E0AF68;
+$blue: #7AA2F7;
+$magenta: #BB9AF7;
+$cyan: #7DCFFF;
+$white: $foreground;
+
+.bar {
+    background-color: $background;
+    padding: .3rem;
+    border-radius: 6;
+    border-color: rgba(0,0,0,0);
+}
+
+.workspace-button {
+    margin: .2rem 0 .2rem 0;
+    color: $foreground;
+    background-color: $background;
+    padding-left: 4;
+    padding-right: 4;
+    background-image: unset;
+    border-width: 0;
+}
+.workspace-button:hover {
+    background-color: $foreground;
+    color: $background;
+}
+
+scale trough {
+  all: unset;
+  background-color: $background;
+  border-radius: 5px;
+  min-height: 3px;
+  min-width: 50px;
+  margin: .3rem 0 .3rem 0;
+}
+
+.volume-icon{
+  margin: .2rem 0 .2rem 0;
+  color: $foreground;
+}
+.volume-bar trough highlight {
+  background-color: $red;
+  color: $foreground;
+  border-radius: 5px;
+}
+
+.close-bar {
+    margin: .2rem 0 .2rem 0;
+    color: $foreground;
+}

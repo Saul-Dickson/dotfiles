@@ -31,6 +31,8 @@ settings:
     global: false
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: true
+  fonts.default_family:
+    global: FiraCode Nerd Font
   scrolling.smooth:
     global: true
   tabs.show:

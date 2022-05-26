@@ -1,6 +1,7 @@
-;; Eww Launch Variable
-(defvar EWW "/usr/bin/eww --config '$HOME/.config/eww/bar/'")
-;; Workspaces Widget
+;; Eww Launch Prefix
+(defvar EWW "/usr/bin/eww --config $HOME/.config/eww/bar/")
+
+;; workspaces widget
 (defwidget Workspaces []
   (box
     :class "workspaces"
@@ -9,17 +10,17 @@
     :halign "start"
     :spacing 2
     
-    (button :onclick "wmctrl -s 0" 1)
-    (button :onclick "wmctrl -s 1" 2)
-    (button :onclick "wmctrl -s 2" 3)
-    (button :onclick "wmctrl -s 3" 4)
-    (button :onclick "wmctrl -s 4" 5)
-    (button :onclick "wmctrl -s 5" 6)
-    (button :onclick "wmctrl -s 6" 7)
-    (button :onclick "wmctrl -s 7" 8)
-    (button :onclick "wmctrl -s 8" 9)
-    )
+    (button :class "workspace-button" :onclick "wmctrl -s 0" 1)
+    (button :class "workspace-button" :onclick "wmctrl -s 1" 2)
+    (button :class "workspace-button" :onclick "wmctrl -s 2" 3)
+    (button :class "workspace-button" :onclick "wmctrl -s 3" 4)
+    (button :class "workspace-button" :onclick "wmctrl -s 4" 5)
+    (button :class "workspace-button" :onclick "wmctrl -s 5" 6)
+    (button :class "workspace-button" :onclick "wmctrl -s 6" 7)
+    (button :class "workspace-button" :onclick "wmctrl -s 7" 8)
+    (button :class "workspace-button" :onclick "wmctrl -s 8" 9)
   )
+)
 
 ;; Volume Widget
 (defvar volume-visible false)
@@ -28,20 +29,29 @@
   :interval "1s" 
   :initial "initial-value"
   "pamixer --get-volume"
-  )
+)
+
+(defpoll volume-mute
+  :interval "1s"
+  :initial "false"
+  "pamixer --get-mute"
+)
 
 (defwidget Volume [current-volume]
   (eventbox
     :class "volume-box" 
-    ; :onhover "$(EWW) update volume-visible=true"
-    ; :onhoverlost "$(EWW) update volume-visible=false"
-    :onhover "echo Tada"
-    :onhoverlost "Echo Todo"
+    :onhover "${EWW} update volume-visible=true"
+    :onhoverlost "${EWW} update volume-visible=false"
 
     (box
       :orientation "h"
       :space-evenly "false"
       :spaceing "2"
+
+      (button
+        :onclick "pamixer --toggle-mute && ${EWW} update volume-mute=true"  
+        :class "volume-icon" {volume-mute ? "󰝟" : "󰕾"}
+      )
 
       (revealer
         :transition "slideleft"
@@ -49,14 +59,14 @@
         :duration "550ms"
 
         (scale
-          :volume "volume-bar"
+          :volume "volume-bar" 
           :value current-volume
           :orientation "h"
-          :flipped true
-          :tooltip "Volume: $(current-volume)"
+          :flipped false
+          :tooltip "Volume: ${current-volume}"
           :max 101
           :min 0
-          :onchange "pamixer set Master $(current-volume)%"
+          :onchange "printf '%.0f' {} | xargs pamixer --set-volume"
         )
       )
     )
@@ -78,11 +88,33 @@
   :windowtype "dock"
   :wm-ignore false
   (bar-content)
+)
+
+(defwidget close-bar []
+  (box
+    :class "close-bar"
+
+    (button
+      :onclick "${EWW} kill"
+      :class "bar-close" "󰅖"
+    )
   )
+)
 
 (defwidget bar-content []
   (box
-    (Workspaces)
-    (Volume :current-volume volume-current)
+    (box
+      :halign "start"
+
+      (Workspaces)
+    )
+    (box
+      :halign "end"
+      :spacing 2
+      :space-evenly false
+
+      (Volume :current-volume volume-current)
+      (close-bar)
+    )
   )
 )
