@@ -14,12 +14,15 @@ $white: $foreground;
 
 .bar {
     background-color: $background;
-    padding: .3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
     border-radius: 6;
     border-color: rgba(0,0,0,0);
 }
 
-.workspace-button {
+.button-generic {
     margin: .2rem 0 .2rem 0;
     color: $foreground;
     background-color: $background;
@@ -28,9 +31,14 @@ $white: $foreground;
     background-image: unset;
     border-width: 0;
 }
-.workspace-button:hover {
+.button-generic:hover {
     background-color: $foreground;
     color: $background;
+}
+
+.workspace-focused {
+    border-width: 2.5;
+    border-color: $magenta;
 }
 
 scale trough {
@@ -50,9 +58,4 @@ scale trough {
   background-color: $red;
   color: $foreground;
   border-radius: 5px;
-}
-
-.close-bar {
-    margin: .2rem 0 .2rem 0;
-    color: $foreground;
 }

@@ -14,7 +14,7 @@ xwallpaper --zoom $HOME/.local/wall/fantasy-whale-2560×1440.jpg
 ### Monitor Settings ###
 
 ## Define Desktop Names ##
-bspc monitor -d " DEV " " WWW " " SYS " " DOC " " CHAT " " MUS " " GFX "
+bspc monitor -d 1 2 3 4 5 6 7 8 9 
 
 ## Monitor Management Settings ##
 bspc config remove_disabled_monitors        true

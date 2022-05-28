@@ -2,7 +2,13 @@
 (defvar EWW "/usr/bin/eww --config $HOME/.config/eww/bar/")
 
 ;; workspaces widget
-(defwidget Workspaces []
+(defpoll desktop-focused-bspwm
+  :interval "0.5s"
+  :initial "initial-value"
+  "DISPLAY=:1 bspc query -D -d focused --names"
+)
+
+(defwidget Workspaces [desktop-focused]
   (box
     :class "workspaces"
     :orientation "h"
@@ -10,15 +16,51 @@
     :halign "start"
     :spacing 2
     
-    (button :class "workspace-button" :onclick "wmctrl -s 0" 1)
-    (button :class "workspace-button" :onclick "wmctrl -s 1" 2)
-    (button :class "workspace-button" :onclick "wmctrl -s 2" 3)
-    (button :class "workspace-button" :onclick "wmctrl -s 3" 4)
-    (button :class "workspace-button" :onclick "wmctrl -s 4" 5)
-    (button :class "workspace-button" :onclick "wmctrl -s 5" 6)
-    (button :class "workspace-button" :onclick "wmctrl -s 6" 7)
-    (button :class "workspace-button" :onclick "wmctrl -s 7" 8)
-    (button :class "workspace-button" :onclick "wmctrl -s 8" 9)
+    (button 
+      :class "${desktop-focused == '1' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 0" 
+      1
+    )
+    (button 
+      :class "${desktop-focused == '2' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 1" 
+      2
+    )
+    (button 
+      :class "${desktop-focused == '3' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 2" 
+      3
+    )
+    (button
+      :class "${desktop-focused == '4' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 3" 
+      4
+    )
+    (button 
+      :class "${desktop-focused == '5' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 4" 
+      5
+    )
+    (button 
+      :class "${desktop-focused == '6' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 5" 
+      6
+    )
+    (button 
+      :class "${desktop-focused == '7' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 6" 
+      7
+    )
+    (button 
+      :class "${desktop-focused == '8' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 7" 
+      8
+    )
+    (button 
+      :class "${desktop-focused == '9' ? 'workspace-focused' : ''} button-generic" 
+      :onclick "wmctrl -s 8" 
+      9
+    )
   )
 )
 
@@ -50,7 +92,8 @@
 
       (button
         :onclick "pamixer --toggle-mute && ${EWW} update volume-mute=true"  
-        :class "volume-icon" {volume-mute ? "󰝟" : "󰕾"}
+        :class "button-generic volume-button"
+        {volume-mute ? "󰝟" : "󰕾"}
       )
 
       (revealer
@@ -96,7 +139,7 @@
 
     (button
       :onclick "${EWW} kill"
-      :class "bar-close" "󰅖"
+      :class "button-generic bar-close" "󰅖"
     )
   )
 )
@@ -106,7 +149,9 @@
     (box
       :halign "start"
 
-      (Workspaces)
+      (Workspaces
+        :desktop-focused desktop-focused-bspwm
+      )
     )
     (box
       :halign "end"
