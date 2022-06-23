@@ -1,4 +1,4 @@
-#files: 969	version: 5.9
+#files: 964	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -362,7 +362,6 @@ _comps=(
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
-'fd' '_fd'
 'feh' '_feh'
 'fetchmail' '_fetchmail'
 'ffind' '_ffind'
@@ -470,8 +469,6 @@ _comps=(
 'ggetopt' '_getopt'
 'ggrep' '_grep'
 'ggv' '_gnome-gv'
-'_gh' '_gh'
-'gh' '_gh'
 'ghc' '_ghc'
 'ghci' '_ghc'
 'ghc-pkg' '_ghc'
@@ -936,7 +933,6 @@ _comps=(
 'node' '_node'
 'noglob' '_precommand'
 'nohup' '_precommand'
-'notmuch' '_notmuch'
 'nova' '_openstack'
 'npm' '_npm'
 'ns' '_hosts'
@@ -954,6 +950,7 @@ _comps=(
 'ogginfo' '_vorbis'
 'oksh' '_sh'
 'okular' '_okular'
+'oomctl' '_oomctl'
 'openssl' '_openssl'
 'openstack' '_openstack'
 'opera' '_webbrowser'
@@ -981,7 +978,6 @@ _comps=(
 'parec' '_pulseaudio'
 'parecord' '_pulseaudio'
 'paru' '_paru'
-'pass' '_pass'
 'passwd' '_users'
 'paste' '_paste'
 'pasuspender' '_pulseaudio'
@@ -1040,7 +1036,6 @@ _comps=(
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
 'play' '_play'
-'playerctl' '_playerctl'
 'pldd' '_pids'
 'pm2' '_pm2'
 'pmake' '_make'
@@ -1746,7 +1741,6 @@ _services=(
 
 _patcomps=(
 '*/(init|rc[0-9S]#).d/*' '_init_d'
-'notmuch-*' '_notmuch'
 )
 
 _postpatcomps=(
@@ -1819,11 +1813,10 @@ autoload -Uz _autocomplete.explain _autocomplete.explanation _autocomplete.list-
             _autocomplete.history_lines _autocomplete.history_words _autocomplete.is_glob _autocomplete.old_list _autocomplete.requoted \
             _autocomplete.sort-by-length _autocomplete.unambiguous _alacritty _bat _bluetoothctl \
             _bootctl _bspc _busctl _bwrap _cargo \
-            _coredumpctl _curl _email-notmuch _exa _fd \
-            _flatpak _gh _hostnamectl _journalctl _kernel-install \
-            _lf _libinput _localectl _loginctl _machinectl \
-            _mkinitcpio _networkctl _notmuch _pacman _paru \
-            _pass _playerctl _pulseaudio _resolvectl _rustup \
+            _coredumpctl _curl _exa _flatpak _hostnamectl \
+            _journalctl _kernel-install _lf _libinput _localectl \
+            _loginctl _machinectl _mkinitcpio _networkctl _oomctl \
+            _pacman _paru _pulseaudio _resolvectl _rustup \
             _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _systemctl \
             _systemd _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn \
             _systemd-path _systemd-run _systemd-tmpfiles _timedatectl _udevadm \
