@@ -1,0 +1,23 @@
+name = "Saul Dickson"
+downloads-dir = "$HOME/.local/share/mail"
+signature = "-- \nSaul Dickson"
+default-page-size = 50
+watch-cmds = ["mbsync -a"]
+
+[gmail]
+default = true
+email = "sauldickson03@gmail.com"
+
+smtp-host = "smtp.gmail.com"
+smtp-port = 465
+smtp-login = "sauldickson03@gmail.com"
+smtp-passwd-cmd = "echo ojlhfqqkvyykphsj"
+
+imap-host = "imap.gmail.com"
+imap-port = 993
+imap-login = "sauldickson03@gmail.com"
+imap-passwd-cmd = "echo ojlhfqqkvyykphsj"
+
+[gmail.mailboxes]
+sent = "[Gmail]/Sent Mail"
+draft = "[Gmail]/Drafts"
