@@ -60,5 +60,6 @@ Plug 'liuchengxu/vista.vim' " tags viewer and symbol navigator
 Plug 'vimwiki/vimwiki' " personal information wiki extention for vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " preview markdown files in browser
 Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
+Plug 'soywod/himalaya', {'rtp': 'vim'} " Himalaya UI in neovim
 
 call plug#end()

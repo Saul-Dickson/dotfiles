@@ -264,7 +264,7 @@ export PATH="$LIBRARYDIR/golib/bin:$PATH"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh" # Relocate zsh's home-directory
 export PYLINTHOME="$XDG_DATA_HOME/pylint.d" # Relocate pylint's data home
-# export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # Relocate npm configuration files
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # Relocate npm configuration files
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/config.py" # Point python towards a module to initialize with
 export VIMSPECTOR_HOME="$XDG_DATA_HOME/vimspector" # Relocate vimspector's log directory
 export _ZL_DATA="$XDG_DATA_HOME/z.lua/zlua" # Relocate z.lua's log files

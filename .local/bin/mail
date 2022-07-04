@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 # An fzf script for using the himalaya email client. Current features:
 #
 # - List emails
