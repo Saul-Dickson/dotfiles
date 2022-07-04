@@ -14,3 +14,6 @@ bit.json
 .config/zsh/plugins/spaceship-prompt/**
 .config/zsh/plugins/fast-syntax-highlighting/**
 .config/gh/hosts.yml
+.config/zsh/.chpwd-receent-dirs
+.config/zsh/.zsh_history
+.config/zsh/.zcompdump
