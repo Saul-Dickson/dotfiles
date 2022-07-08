@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Star Sector
+Comment=Play this game on Steam
+Exec=sh -c "$HOME/Downloads/github.com/Saul-Dickson/starsector/starsector.sh"
+Icon=/home/dothuman/Downloads/github.com/Saul-Dickson/starsector/graphics/ui/s_icon64.png
+Terminal=false
+Type=Application
+Categories=Game;
