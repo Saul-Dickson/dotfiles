@@ -116,6 +116,27 @@
   )
 )
 
+;; Battery Widget
+(defpoll battery-charging
+  :interval "1s"
+  :initial "initial-value"
+  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/Discharging/g' | awk '{print $3}'"
+)
+
+(defpoll battery-percent
+  :interval "1s"
+  :initial "initial-value"
+  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/Discharging/g' | awk '{print $4}'"
+)
+
+(defpoll battery-estimate
+  :interval "1s"
+  :initial "initial-value"
+  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/Discharging/g' | awk '{print $5}'"
+)
+
+; (defwidget Battery)
+
 ;; Render bar
 (defwindow bar
   :monitor 0
