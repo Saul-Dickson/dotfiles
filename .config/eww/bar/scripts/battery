@@ -1,0 +1,41 @@
+#!/usr/bin/zsh
+
+icons="\
+10 󰁺 󰢜\n\
+20 󰁻 󰂆\n\
+30 󰁼 󰂇\n\
+40 󰁽 󰂈\n\
+50 󰁾 󰢝\n\
+60 󰁿 󰂉\n\
+70 󰂀 󰢞\n\
+80 󰂁 󰂊\n\
+90 󰂂 󰂋\n\
+100 󰁹 󰂅"
+
+status() {
+    acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not charging/NotCharging/g'\
+        -e 's/%//g' -e '/rate/D'
+}
+
+charging() {
+    status | awk '{print $3}'
+}
+
+percent() {
+    status | awk '{print $4}' | awk '{print$0+(n-$0%n)%n}' n=10 | {read -r var;\
+    echo $icons | sed '/'"$var"'/!D'}
+}
+
+main() {
+    state=$(charging)
+    charge=$(percent)
+
+    case "$state" in
+        Charging) percent | awk '{print $3}';;
+        Discharging) percent | awk '{print $2}';;
+        NotCharging) percent | awk '{print $2}';;
+    esac
+}
+
+main
+# charging

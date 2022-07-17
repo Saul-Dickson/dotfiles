@@ -102,7 +102,6 @@
         :duration "550ms"
 
         (scale
-          :volume "volume-bar" 
           :value current-volume
           :orientation "h"
           :flipped false
@@ -117,25 +116,65 @@
 )
 
 ;; Battery Widget
+(defpoll battery-icon
+  :interval "1s"
+  :initial "initial-value"
+  "scripts/battery"
+)
+
 (defpoll battery-charging
   :interval "1s"
   :initial "initial-value"
-  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/Discharging/g' | awk '{print $3}'"
+  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/NotCharging/g' -e 's/%//g' | awk '{print $3}'"
 )
 
 (defpoll battery-percent
   :interval "1s"
   :initial "initial-value"
-  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/Discharging/g' | awk '{print $4}'"
+  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/NotCharging/g' -e 's/%//g' | awk '{print $4}'"
 )
 
 (defpoll battery-estimate
   :interval "1s"
   :initial "initial-value"
-  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/Discharging/g' | awk '{print $5}'"
+  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/NotCharging/g' -e 's/%//g' | awk '{print $5}'"
 )
 
-; (defwidget Battery)
+(defwidget Battery []
+  (box
+    :class "battery-box button-generic"
+    :orientation "h"
+    :space-evenly "false"
+    :spaceing "2"
+    :tooltip "${battery-percent}% ${battery-estimate}"
+    
+    battery-icon
+  )
+)
+
+;; Internet Widget
+; (defpoll internet-icon)
+
+(defpoll internet-connected
+  :interval "1s"
+  :initial "initial-value"
+  "nmcli -t device | rg 'connected' > /dev/null && echo 'true' || echo 'false'"
+)
+
+(defpoll internet-ethernet
+  :interval "1s"
+  :initial "initial-value"
+  "nmcli -t device | rg 'ethernet' > /dev/null && echo 'true' || echo 'false'"
+)
+
+(defpoll internet-ssid
+  :interval "1s"
+  :initial "initial-value"
+  "nmcli -t device | sed '/\(wifi:\|ethernet:\)/!D' | read -r var ; echo $var |\
+   rg 'connected' > /dev/null && echo $var | cut -d ':' -f 4- || echo 'Not Connected'"
+)
+
+; (defwidget Internet)
 
 ;; Render bar
 (defwindow bar
@@ -146,7 +185,7 @@
               :width "98%"
               :height "30px"
               :anchor "top center"
-              )
+            )
   :stacking "fg"
   :reserve (struts :distance "40px" :side "top")
   :windowtype "dock"
@@ -167,6 +206,7 @@
 
 (defwidget bar-content []
   (box
+
     (box
       :halign "start"
 
@@ -180,6 +220,7 @@
       :space-evenly false
 
       (Volume :current-volume volume-current)
+      (Battery)
       (close-bar)
     )
   )
