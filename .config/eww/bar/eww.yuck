@@ -90,12 +90,6 @@
       :space-evenly "false"
       :spaceing "2"
 
-      (button
-        :onclick "pamixer --toggle-mute && ${EWW} update volume-mute=true"  
-        :class "button-generic volume-button"
-        {volume-mute ? "󰝟" : "󰕾"}
-      )
-
       (revealer
         :transition "slideleft"
         :reveal volume-visible
@@ -111,6 +105,12 @@
           :onchange "printf '%.0f' {} | xargs pamixer --set-volume"
         )
       )
+
+      (button
+        :onclick "pamixer --toggle-mute && ${EWW} update volume-mute=true"  
+        :class "button-generic volume-button"
+        {volume-mute ? "󰝟" : "󰕾"}
+      )
     )
   )
 )
@@ -120,12 +120,6 @@
   :interval "1s"
   :initial "initial-value"
   "scripts/battery"
-)
-
-(defpoll battery-charging
-  :interval "1s"
-  :initial "initial-value"
-  "acpi | sed -e '/Unknown/D' -e 's/,//g' -e 's/Not Charging/NotCharging/g' -e 's/%//g' | awk '{print $3}'"
 )
 
 (defpoll battery-percent
@@ -153,7 +147,13 @@
 )
 
 ;; Internet Widget
-; (defpoll internet-icon)
+(defvar internet-status-visible false)
+
+(defpoll internet-icon
+  :interval "1s"
+  :initial "initial-value"
+  "scripts/internet"
+)
 
 (defpoll internet-connected
   :interval "1s"
@@ -164,17 +164,38 @@
 (defpoll internet-ethernet
   :interval "1s"
   :initial "initial-value"
-  "nmcli -t device | rg 'ethernet' > /dev/null && echo 'true' || echo 'false'"
+  "nmcli -t device | rg 'ethernet:connected' > /dev/null && echo 'true' || echo 'false'"
 )
 
 (defpoll internet-ssid
   :interval "1s"
   :initial "initial-value"
-  "nmcli -t device | sed '/\(wifi:\|ethernet:\)/!D' | read -r var ; echo $var |\
-   rg 'connected' > /dev/null && echo $var | cut -d ':' -f 4- || echo 'Not Connected'"
+  "nmcli -t -f IN-USE,SSID device wifi | sed '/^\*/!D' | cut -d ':' -f 2-"
 )
 
-; (defwidget Internet)
+(defwidget Internet []
+  (eventbox
+    :onhover     "${EWW} update internet-status-visible=true"
+    :onhoverlost "${EWW} update internet-status-visible=false"
+
+    (box
+      :class "internet-box button-generic"
+      :orientation "h"
+      :space-evenly "false"
+      :spaceing "2"
+
+      (revealer
+        :transition "slideleft"
+        :reveal internet-status-visible
+        :duration "550ms"
+
+        "${internet-ssid}  " 
+      )
+      
+      {internet-status-visible ? "${internet-icon}" : internet-ethernet ? "󰌗" : "󰖩" }
+    )
+  )
+)
 
 ;; Render bar
 (defwindow bar
@@ -219,9 +240,10 @@
       :spacing 2
       :space-evenly false
 
+      (Internet)
       (Volume :current-volume volume-current)
       (Battery)
-      (close-bar)
+      ; (close-bar)
     )
   )
 )
