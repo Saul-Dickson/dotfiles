@@ -122,7 +122,7 @@ let g:which_key_map['k'] = 'window up'
 let g:which_key_map['l'] = 'window left'
 
 "###################"
-"# Window windowment #"
+"# Window movement #"
 "###################"
 
 nnoremap <leader>H <C-W>H
@@ -141,8 +141,8 @@ let g:which_key_map['T'] = 'move window new tab'
 "# Editing Commands #"
 "####################"
 
-nnoremap <leader>er :%Subvert/
-nnoremap <leader>eR :%substitute/
+nnoremap <leader>er :%substitute/
+nnoremap <leader>eR :%Subvert/
 
 let g:which_key_map['e'] = {'name': '+edit'}
 let g:which_key_map['e']['r'] = 'subvert'
@@ -322,7 +322,7 @@ vnoremap <S-Tab> <
 "# Terminal-mode mappings #"
 "##########################"
 
-tnoremap <silent> <leader>tt <C-\><C-n>
+tnoremap <silent> <leader>tt <C-\><C-n>:FloatermToggle<CR>
 
 "###########################"
 "# Resize panes vertically #"
