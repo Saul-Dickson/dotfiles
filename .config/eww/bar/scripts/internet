@@ -1,0 +1,39 @@
+#!/usr/bin/zsh
+
+icons="\
+00 󰖪\n\
+30 󰤟\n\
+60 󰤢\n\
+90 󰤨\n\
+"
+
+status() {
+    if [ $(nmcli radio wifi) = "enabled" ]; then
+        nmcli -t -f IN-USE,SIGNAL,SSID device wifi | read -r stat
+        echo $stat | rg "^\*"
+    else 
+        echo "*:00:WifiOff"
+    fi
+}
+
+strength() {
+    status | sed 's/:/ /g' | awk '{print $2}' |read -r str
+    if [ $str -ne 00 ]; then
+        echo $str | awk '{print$0+(n-$0%n)%n}' n=30
+    else
+        echo "00"
+    fi
+}
+
+main() {
+    signal=$(strength)
+
+    case $signal in
+        00) echo $icons | awk '/^00/{print $2}';;
+        30) echo $icons | awk '/^30/{print $2}';;
+        60) echo $icons | awk '/^60/{print $2}';;
+        90) echo $icons | awk '/^90/{print $2}';;
+    esac
+}
+
+main
