@@ -13,7 +13,7 @@ alias pip="sudo pip3.9"
 ###############
 
 ## alias ps to "ps aux -c | fzf --preview=\"\"" ##
-alias ps="/bin/ps auxc | fzf --preview=\"\""
+alias psv="/bin/ps auxc | fzf --preview=\"\""
 
 ## alias kill to "ps xc | fzf --preview=\"\" | awk '// {print $1} | xargs kill" ##
 # alias kill="/bin/ps xc | fzf --preview=\"\" | awk \'// {print $0}\' | xargs /bin/kill"
