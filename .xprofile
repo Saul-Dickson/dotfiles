@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+setxkbmap -option caps:escape &
+light-locker --lock-on-suspend --no-lock-on-lid &
+udiskie &
