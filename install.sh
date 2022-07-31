@@ -1,64 +1,35 @@
 ## set $gitPath ##
 gitPath="$HOME/.local/src/github.com/Saul-Dickson/dotfiles"
 
-function cloneDots() {
-    mkdir -p $HOME/.local/src/github.com/Saul-Dickson
-    git clone https://github.com/Saul-Dickson/dotfiles $gitPath
-}
-
 function packInstall() {
-    ## Install packages using pip ##
-    sudo pip3.9 install epr ueberzug wifi-password
 
-    ## Install packages using go ##
-    go get github.com/zquestz/s
+    if [ $(cat /etc/issue | grep "Arch Linux" > /dev/null && echo "true") = "true" ]; then
 
-    ## Install packages using npm ##
-    npm install --global trash-cli
-}
+        # Install packages from the official Arch mirrors.
+        sudo pacman -S - < $gitPath/arch_packages.txt
 
-function brewInstall() {
-    ## Install Homebrew ##
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &&
+        # Install the paru AUR helper
+        git clone https://aur.archlinux.org/paru.git $HOME/Downloads/aur.archlinux.org/paru-bin
+        cd $HOME/Downloads/aur.archlinux.org/paru-bin
+        makepkg -sir
 
-    ################
-    ## Alias Brew ##
-    ################
-    if [[ $OSTYPE != *"darwin"* ]]; then
-        alias brew="/home/linuxbrew/.linuxbrew/bin/brew"
-    else
-        alias brew="/usr/local/bin/brew"
+        cd $gitPath
+
+        # Install unofficial packages from the AUR
+        paru -S - < $gitpath/arch_packages-unofficial.txt
+
     fi
-
-    ## Install the various packages ##
-    brew install bat cmake ctags exa fd fzf gh git go imagemagick lua make mpv \
-                 ncurses onefetch ripgrep rust vifm tmux youtube-dl wget wren \
-                 zsh hexyl pass neomutt neovim npm python
 }
 
 function unpackInstall() {
     ## Install unpackaged applications ##
 
-    # Make the "apps" directory
-    mkdir -p ".local/apps"
+    # Install lightdm theme and config
+    git clone https://github.com/Saul-Dickson/modern $HOME/.local/src/github.com/Saul-Dickson/modern
+    sudo git clone -l $HOME/.local/src/github.com/Saul-Dickson/modern /usr/share/lightdm-webkit/themes/modern 
 
-    # Download and install Aivean/royalroad-download
-    mkdir -p ".local/apps/royalroad-downloader"
-    wget \
-        "https://github.com/Aivean/royalroad-downloader/releases/download/2.2.0/royalroad-downloader-assembly-2.2.0.jar" \
-        $HOME/.local/apps/royalroad-downloader
+    sudo cp $gitPath/etc/lightdm/* /etc/lightdm/
 
-    # Clone and install k-vernooy/tetris
-    git clone 'https://github.com/k-vernooy/tetris' $HOME/.local/src/github.com/k-vernooy/tetris &&
-    cd $HOME/.local/src/github.com/k-vernooy/tetris; sudo make install
-
-    # Clone and install siduck76's version of the Suckless Simple Terminal
-    git clone https://github.com/siduck76/st $HOME/.local/src/github.com/siduck76/st &&
-    cd $HOME/.local/src/github.com/siduck76/st; sudo make install
-
-    # Clone and install my (Saul-Dickson)'s version of dmenu
-    git clone https://github.com/Saul-Dickson/dmenu $HOME/.local/src/github.com/Saul-Dickson/dmenu &&
-    cd $HOME/.local/src/github.com/Saul-Dickson/dmenu; sudo make install
 }
 
 function scriptInstall() {
@@ -67,7 +38,7 @@ function scriptInstall() {
 
     ## Make all scripts executable ##
     for file in $(/bin/ls -1 $gitPath/.local/bin); do
-        chmod +x $file
+        chmod +x $gitpath/.local/bin/$file
     done
 }
 
@@ -80,6 +51,8 @@ function symlinkDots() {
         [ -h $HOME/.local/$confDir ] ||
             ln -sF $(echo $gitPath)/.config/$(echo $confDir) $HOME/.config/$confDir
     done
+
+    sudo cp $gitPath/etc/pacman.conf /etc/pacman.conf
 
     ## Create symlinks to .desktop applications ##
 
@@ -140,31 +113,24 @@ function mkDirs() {
 for arg in $@; do
     case $arg in
         -h|-help)
-            echo "-b            Install packages with homebrew"
-            echo "-p            Install packages with various package managers"
-            echo "-P            Install unpackaged programs"
-            echo "-s            Install scripts unincluded in dotfiles"
-            echo "-S            Symlink dotfiles to correct places"
-            echo "-c            Change user shell from bash to zsh"
-            echo "-d            Make configuration, data storage and caching directories"
-            echo "-D            Clone and install Saul-Dickson/dotfiles"
-            echo "-A            Install all, symlink dotfiles, change user shell and create directories"
-            echo "-h, --help    Display this message."
+            echo "-p          Install packages with various package managers"
+            echo "-P          Install unpackaged programs"
+            echo "-s          Install scripts"
+            echo "-S          Symlink dotfiles"
+            echo "-c          Change user shell from bash to zsh"
+            echo "-d          Make configuration, data storage and caching directories"
+            echo "--install   Install all, symlink dotfiles, change user shell and create directories"
+            echo "-h, --help  Display this message."
             ;;
-        -b) brewInstall;;
         -p) packInstall;;
         -P) upackInstall;;
         -s) scriptInstall;;
         -S) symlinkDots;;
         -c) changeShell;;
         -d) mkDirs;;
-        -D) cloneDots
-            symlinkDots
-            ;;
-        -A) 
-            [[ $@ != *"-b"* ]] && brewInstall;
+        --install) 
             [[ $@ != *"-p"* ]] && packInstall;
-            [[ $@ != *"-P"* ]] && upackInstall;
+            [[ $@ != *"-P"* ]] && unpackInstall;
             [[ $@ != *"-s"* ]] && scriptInstall;
             [[ $@ != *"-S"* ]] && symlinkDots;
             [[ $@ != *"-c"* ]] && changeShell;
