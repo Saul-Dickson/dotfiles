@@ -1,0 +1,14 @@
+auto-cpufreq
+betterdiscord-git
+brave-bin
+eww-git
+exiftool-rs-git
+exodus
+lf
+minecraft-launcher
+nerd-fonts-fira-code
+swhkd-bin
+ttf-material-design-icons-desktop-git
+ttf-mplus-git
+wd-git
+yuzu
