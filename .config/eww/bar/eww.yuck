@@ -5,7 +5,7 @@
 (defpoll desktop-focused-bspwm
   :interval "0.5s"
   :initial "initial-value"
-  "DISPLAY=:1 bspc query -D -d focused --names"
+  "bspc query -D -d focused --names"
 )
 
 (defwidget Workspaces [desktop-focused]
@@ -30,9 +30,7 @@
       :class "${desktop-focused == '3' ? 'workspace-focused' : ''} button-generic" 
       :onclick "wmctrl -s 2" 
       3
-    )
-    (button
-      :class "${desktop-focused == '4' ? 'workspace-focused' : ''} button-generic" 
+    ) (button :class "${desktop-focused == '4' ? 'workspace-focused' : ''} button-generic" 
       :onclick "wmctrl -s 3" 
       4
     )
@@ -136,13 +134,18 @@
 
 (defwidget Battery []
   (box
-    :class "battery-box button-generic"
+    :class "battery-box"
     :orientation "h"
     :space-evenly "false"
     :spaceing "2"
     :tooltip "${battery-percent}% ${battery-estimate}"
     
-    battery-icon
+    
+    (button
+      :onclick "alacritty -e btop &"  
+      :class "battery-button button-generic"
+      "${battery-icon}"
+    )
   )
 )
 
@@ -179,7 +182,7 @@
     :onhoverlost "${EWW} update internet-status-visible=false"
 
     (box
-      :class "internet-box button-generic"
+      :class "internet-box"
       :orientation "h"
       :space-evenly "false"
       :spaceing "2"
@@ -192,7 +195,11 @@
         "${internet-ssid}  " 
       )
       
-      {internet-status-visible ? "${internet-icon}" : internet-ethernet ? "󰌗" : "󰖩" }
+      (button
+        :class "internet-button button-generic"
+        :onclick "echo fuck"
+        {internet-status-visible ? "${internet-icon}" : internet-ethernet ? "󰌗" : "󰖩" }
+      )
     )
   )
 )
@@ -203,8 +210,8 @@
   :geometry (geometry
               :x "0%"
               :y "40px"
-              :width "98%"
-              :height "30px"
+              :width "99%"
+              :height "15px"
               :anchor "top center"
             )
   :stacking "fg"
