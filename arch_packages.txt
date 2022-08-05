@@ -75,3 +75,4 @@ xwallpaper
 yarn
 zram-generator
 zsh
+redshift
