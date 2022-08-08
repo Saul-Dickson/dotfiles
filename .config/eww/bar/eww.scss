@@ -12,30 +12,38 @@ $magenta: #BB9AF7;
 $cyan: #7DCFFF;
 $white: $foreground;
 
+* {
+    all: unset;
+    font-size: 14;
+}
+
 .bar {
     background-color: $background;
     padding-left: .5rem;
-    padding-right: .5rem;
+    padding-right: 5rem;
     padding-top: .2rem;
     padding-bottom: .2rem;
-    border-radius: 6;
+    // border-radius: 4;
     border-color: rgba(0,0,0,0);
 }
 
 .button-generic {
     margin: .2rem 0 .2rem 0;
     color: $foreground;
-    background-color: $background;
     padding-left: 4;
     padding-right: 4;
     background-image: unset;
     border-width: 0;
+    border-radius: 4;
 }
 .button-generic:hover {
     background-color: $foreground;
     color: $background;
 }
 
+.workspaces {
+    padding-left: 8;
+}
 .workspace-focused {
     border-width: 2.5;
     border-color: $magenta;
@@ -45,21 +53,20 @@ scale trough {
   all: unset;
   background-color: $background;
   border-radius: 5px;
-  min-height: 3px;
+  min-height: 4px;
   min-width: 50px;
   margin: .3rem 0 .3rem 0;
 }
 
-.volume-icon{
-  margin: .2rem 0 .2rem 0;
-  color: $foreground;
-}
 .volume-box trough highlight {
   background-color: $red;
   color: $foreground;
   border-radius: 5px;
 }
 
+.battery-box {
+    padding-right: 8;
+}
 .battery-button {
     padding-left: 4;
     padding-right: 4;
@@ -68,4 +75,5 @@ scale trough {
 .internet-box {
     margin: .2rem 0 .2rem 0;
     border-radius: 5px;
+    color: $foreground;
 }
