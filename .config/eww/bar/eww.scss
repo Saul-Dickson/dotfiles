@@ -14,7 +14,7 @@ $white: $foreground;
 
 * {
     all: unset;
-    font-size: 14;
+    font-size: 25;
 }
 
 .bar {
@@ -46,7 +46,11 @@ $white: $foreground;
 }
 .workspace-focused {
     border-width: 2.5;
-    border-color: $magenta;
+    border-color: $foreground;
+}
+.workspace-button {
+    padding-left: 5;
+    padding-right: 5;
 }
 
 scale trough {
