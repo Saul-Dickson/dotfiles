@@ -23,7 +23,7 @@ charging() {
 
 percent() {
     status | awk '{print $4}' | awk '{print$0+(n-$0%n)%n}' n=10 | {read -r var;\
-    echo $icons | sed '/'"$var"'/!D'}
+    echo $icons | sed '/'"$var "'/!D'}
 }
 
 main() {
