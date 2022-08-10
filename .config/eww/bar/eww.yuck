@@ -29,10 +29,12 @@
 )
 
 ;; Clock Widget
+(defvar date-visible false)
+
 (defpoll time
   :interval "500ms"
   :initial "0"
-  "date +%I:%M\ %p"
+  "date +%I:%M\\ %p"
 )
 
 (defpoll weekday
@@ -44,7 +46,44 @@
 (defpoll month-day
   :interval "1m"
   :initial "January 1st"
-  "echo fuck"
+  "scripts/time"
+)
+
+(defwidget Clock []
+  (box
+    :orientation "h"
+    :space-evenly true
+    :spacing "6"
+
+    (revealer
+      :transition "crossfade"
+      :reveal date-visible
+      :duration "300ms"
+
+      weekday
+    )
+
+    (eventbox
+      :class "clock-box"
+      :onhover "${EWW} update date-visible=true"
+      :onhoverlost "${EWW} update date-visible=false"
+
+      (button
+        :class "clock-button button-generic"
+        :onclick "echo fuck"
+
+        time
+      )
+    )
+
+    (revealer
+      :transition "crossfade"
+      :reveal date-visible
+      :duration "300ms"
+
+      month-day
+    )
+  )
 )
 
 ;; Volume Widget
@@ -137,7 +176,7 @@
 ;; Internet Widget
 (defvar internet-status-visible false)
 
-(defpoll internet-icon
+(deflisten internet-icon
   :interval "1s"
   :initial "initial-value"
   "scripts/internet"
@@ -190,6 +229,8 @@
 )
 
 ;; Render bar
+(defvar fullscreen true)
+
 (defwindow bar
   :monitor 0
   :geometry (geometry
@@ -199,8 +240,8 @@
               :height "65px"
               :anchor "top center"
             )
-  :stacking "fg"
-  :reserve (struts :distance "70px" :side "top")
+  :stacking "bg"
+  :reserve (struts :distance "69px" :side "top")
   :windowtype "dock"
   :wm-ignore false
   (bar-content)
@@ -225,15 +266,23 @@
 
     (box
       :halign "start"
+      :visible fullscreen
 
       (Workspaces
         :desktop-focused desktop-focused-bspwm
       )
     )
     (box
+      :halign "center"
+      :visible fullscreen
+
+      (Clock)
+    )
+    (box
       :halign "end"
       :spacing 2
       :space-evenly false
+      :visible fullscreen
 
       (Internet)
       (Volume :current-volume volume-current)
