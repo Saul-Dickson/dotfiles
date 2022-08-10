@@ -7,9 +7,10 @@ systemctl --user import-environment DISPLAY
 pgrep -x sxhkd     > /dev/null || sxhkd &
 pgrep -x dunst     > /dev/null || dunst &
 pgrep -x clipmenud > /dev/null || clipmenud &
+pgrep -x eww       > /dev/null || eww -c $HOME/.config/eww/bar open bar &
 
 ### Set Wallpaper ###
-xwallpaper --zoom $HOME/.local/wall/
+xwallpaper --zoom $HOME/.local/wall/eye-catching-citys-forest.png
 
 ### Monitor Settings ###
 
