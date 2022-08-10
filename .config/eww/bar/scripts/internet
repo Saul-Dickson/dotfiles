@@ -17,7 +17,7 @@ status() {
 }
 
 strength() {
-    status | sed 's/:/ /g' | awk '{print $2}' |read -r str
+    status | sed 's/:/ /g' | awk '{print $2}' | read -r str
     if [ $str -ne 00 ]; then
         echo $str | awk '{print$0+(n-$0%n)%n}' n=30
     else
