@@ -4,4 +4,4 @@ udiskie &
 redshit &
 setxkbmap -option caps:escape &
 setxkbmap -option escape:capslock &
-light-locker --lock-on-suspend --no-lock-on-lid &
+# light-locker --lock-on-suspend --no-lock-on-lid &
