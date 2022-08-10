@@ -1,0 +1,137 @@
+### Window Manager Independant Keybindings ###
+
+# Terminal Emulator # 
+super + Return
+	alacritty
+
+# Dmenu Scripts # 
+super + space ; {p,a,shift + p}
+	{dmenu_run -c -l 15, dmenu_launch.py --apps, passmenu2}
+
+# Open Applications
+super + o ; {e,m,b,w}
+    {alacritty -e nvim,alacritty -e neomutt,gtk-launch brave-browser,ferdi}
+
+# Restart SXHKD # 
+super + ctrl + r
+	pkill -USR1 -x sxhkd
+
+# Toggle Eww Bar #
+super + alt + r
+    pgrep eww | xargs kill || eww -c $HOME/.config/eww/bar open bar
+
+# Launch Eww Bar #
+
+## Notification Control Keybindings ##
+
+# Clear Notifications
+super + {_,shift + }c
+    dunstctl {close,close-all}
+
+## XF86 Keybindings ##
+
+# Mute Volume
+XF86AudioMute
+    pamixer --toggle-mute
+
+# Increase Volume by 10%
+XF86AudioRaiseVolume
+    pamixer -i 10
+
+# Decrease Volume by 10%
+XF86AudioLowerVolume
+    pamixer -d 10
+
+# Play/Pause Media
+XF86AudioPlay
+    playerctl play-pause
+
+# Media Next
+XF86AudioNext
+    playerctl next
+
+# Media Previous
+XF86AudioPrev
+    playerctl previous
+
+# Increase Brightness by 10%
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+# Decrease Brightness by 10%
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+
+### BSPWM Hotkeys ###
+
+# Restart BSPWM # 
+super + ctrl + shift + r
+	bspc wm -r
+ 
+# Close or Kill Node # 
+super + {d,D} 
+	bspc node -{c,k}
+
+## Window States & Flags ##
+
+# Change Window Mode
+super + w ; {t,shift + t,f,shift + f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Set Window Flags
+super + w ; {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+## Window Focus and Swapping ##
+
+# Focus or Swap with Nodes in Given Direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Focus the Next/Previous Desktop in the Current Monitor
+super + {_,shift + }n
+	bspc desktop -f {next,prev}.local
+    notify-send "Desktop $(bspc query -D --names --desktop focused.local) selected."
+
+# Focus the Older/Newer Window in the Current Desktop
+super + alt + {_,shift + }n
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# Focus On-- or Send Current Node to-- Desktop Number
+super + {_,shift + }{1-4,8-9,0}
+	bspc {desktop -f,node -d} '^{1-4,5-6,7}'; \
+    notify-send "Desktop $(bspc query -D --names --desktop focused.local) selected."
+
+## Location Preselection ##
+
+# Preselect the Direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# Preselect the Ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Cancel the Preselection for the Focused Node
+super + u
+	bspc node -p cancel
+
+# Cancel the Preselection for the Focused Desktop
+super + alt + u
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+## Move/Resize ##
+
+# expand a window by moving one of its sides outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its sides inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
