@@ -1,0 +1,39 @@
+#!/usr/bin/zsh
+
+names="\
+1   1st First\n
+2   2nd Second\n
+3   3rd Third\n
+4   4th Fourth\n
+5   5th Fifth\n
+6   6th Sixth\n
+7   7th Seventh\n
+8   8th Eighth\n
+9   9th Nineth\n
+10 10th Tenth\n
+11 11th Eleventh\n
+12 12th Twelfth\n
+13 13th Thirteenth\n
+14 14th Fourteenth\n
+15 15th Fifteenth\n
+16 16th Sixteenth\n
+17 17th Seventeenth\n
+18 18th Eighteenth\n
+19 19th Nineteenth\n
+20 20th Twentieth\n
+21 21st Twenty-First\n
+22 22nd Twenty-Second\n
+23 23rd Twenty-Third\n
+24 24th Twenty-Fourth\n
+25 25th Twenty-Fifth\n
+26 26th Twenty-Sixth\n
+27 27th Twenty-Seventh\n
+28 28th Twenty-Eighth\n
+29 29th Twenty-Nineth\n
+30 30th Thirtieth\n
+31 31st Thirty-First\n"
+
+date +%B | read -r month
+date +%d | read -r var; echo $names | awk '/^'"$var"' /{print $2}' | read -r day
+
+echo $month $day
