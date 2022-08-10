@@ -75,4 +75,6 @@ xwallpaper
 yarn
 zram-generator
 zsh
+dunst
+brightnessctl
 redshift
