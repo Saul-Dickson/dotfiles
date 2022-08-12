@@ -1,15 +1,16 @@
 // Global
-$background: #1A1B26;
-$foreground: #A9B1D6;
+$background: #1d2021;
+$foreground: #fbf1c7;
 
 $black: #24283B;
-$gray: #565F89;
-$red: #F7768E;
-$green: #73DACA;
-$yellow: #E0AF68;
-$blue: #7AA2F7;
-$magenta: #BB9AF7;
-$cyan: #7DCFFF;
+$gray: #928374;
+$red: #fb4934;
+$green: #b8bb26;
+$yellow: #fabd2f;
+$blue: #83a598;
+$magenta: #d3869b;
+$cyan: #689d6a;
+$orange: #fe8019;
 $white: $foreground;
 
 * {
@@ -37,7 +38,18 @@ $white: $foreground;
     border-radius: 4;
 }
 .button-generic:hover {
-    background-color: $foreground;
+    background-color: $orange;
+    color: $background;
+}
+
+.clock-day {
+    background: $orange;
+    color: $background;
+}
+.clock-date {
+    padding-left: 25;
+    padding-right: 25;
+    background: $orange;
     color: $background;
 }
 
@@ -49,8 +61,8 @@ $white: $foreground;
     border-color: $foreground;
 }
 .workspace-button {
-    padding-left: 5;
-    padding-right: 5;
+    padding-left: 6;
+    padding-right: 6;
 }
 
 scale trough {

@@ -51,16 +51,22 @@
 
 (defwidget Clock []
   (box
+    :class "clock-box"
     :orientation "h"
     :space-evenly true
-    :spacing "6"
+    :spacing "2"
 
     (revealer
       :transition "crossfade"
       :reveal date-visible
-      :duration "300ms"
+      :duration "250ms"
 
-      weekday
+      (button
+        :class "clock-day button-generic"
+        :onclick "echo fuck"
+
+        weekday
+      )
     )
 
     (eventbox
@@ -81,7 +87,12 @@
       :reveal date-visible
       :duration "300ms"
 
-      month-day
+      (button
+        :class "clock-date button-generic"
+        :onclick "echo fuck"
+
+        month-day
+      )
     )
   )
 )
