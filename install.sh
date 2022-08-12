@@ -32,6 +32,10 @@ function unpackInstall() {
 
 }
 
+# function systemdEnable() {
+#     sudo systemctl enable
+# }
+
 function scriptInstall() {
     ## Install Scripts ##
     curl "https://raw.githubusercontent.com/tremby/imgur.sh/main/imgur.sh" >> $gitPath/.local/bin/,imgur
@@ -66,6 +70,17 @@ function symlinkDots() {
             ln -sF $(echo $gitpath)/.local/share/applications/$app \
                     $HOME/.local/share/applications/$app
     done
+
+    ## Create symlinks to icons ##
+
+    [ -d $HOME/.local/share/icons ] || mkdir -p $HOME/.local/share/icons
+    [ -d $HOME/.icons ]             || mkdir -p $HOME/.icons
+
+    fd -Hd 1 -a '' $gitPath/.local/share/icons --exec ln -sF \
+        $gitPath/.local/share/icons/{} $HOME/.local/share/icons/{}
+
+    fd -Hd 1 -a '' $gitPath/.local/share/icons --exec ln -sF \
+        $gitPath/.local/share/icons/{} $HOME/.icons/{}
 
     ## Create symlinks to local shell scripts ##
 
