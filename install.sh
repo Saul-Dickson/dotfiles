@@ -121,7 +121,6 @@ function mkDirs() {
     mkdir $HOME/.local/share/mail
     mkdir $HOME/.local/share/lf
     mkdir $HOME/.local/share/Steam
-    mkdir $HOME/.local/share/pass
     mkdir $HOME/.local/share/mail
 }
 
