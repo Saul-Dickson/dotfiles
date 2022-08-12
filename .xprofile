@@ -1,7 +1,8 @@
 #!/usr/bin/sh
 
-udiskie &
-redshit &
 setxkbmap -option caps:escape &
 setxkbmap -option escape:capslock &
+xrdb $HOME/.Xresources &
+udiskie &
+redshit &
 # light-locker --lock-on-suspend --no-lock-on-lid &
