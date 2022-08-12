@@ -2,7 +2,7 @@
 xscreensaver.newLoginCommand: dm-tool switch-to-greeter
 
 !! cursor settings
-Xcursor.theme: V11
+Xcursor.theme: VS11
 Xcursor.size:  26
 
 !! Transparency (0-1):
