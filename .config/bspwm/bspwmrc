@@ -2,7 +2,6 @@
 
 ### Misc ###
 systemctl --user import-environment DISPLAY
-
 ### Autostart Applications ###
 pgrep -x sxhkd     > /dev/null || sxhkd &
 pgrep -x dunst     > /dev/null || dunst &
@@ -62,3 +61,5 @@ bspc rule -a Screenkey      manage=off
 bspc rule -a feh            state=floating focus=on
 bspc rule -a sxiv           state=floating focus=on
 bspc rule -a Event\ Tester  state=floating focus=off
+bspc rule -a eww-bar        state=floating focus=off
+bspc rule -a lisa.x86_64    state=floating
