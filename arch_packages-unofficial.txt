@@ -12,3 +12,4 @@ ttf-material-design-icons-desktop-git
 ttf-mplus-git
 wd-git
 yuzu
+bluetooth-autoconnect
