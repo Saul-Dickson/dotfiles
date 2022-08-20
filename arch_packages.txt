@@ -2,6 +2,8 @@ acpi
 alacritty
 base
 bat
+bluez
+bluez-tools
 bluez-utils
 bridge-utils
 bspwm
