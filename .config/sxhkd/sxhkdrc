@@ -20,6 +20,11 @@ super + ctrl + r
 super + alt + r
     pgrep eww | xargs kill || eww -c $HOME/.config/eww/bar open bar
 
+# Open Hotkeys Help #
+super + space ; h
+    alacritty -e bat --wrap never --style numbers,snip --language Elixir $HOME/.config/sxhkd/sxhkdrc &\
+    sleep .2; bspc node newest.local -t floating -z bottom_left -200 800 --move 100 -370
+
 # Launch Eww Bar #
 
 ## Notification Control Keybindings ##
