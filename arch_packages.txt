@@ -30,6 +30,7 @@ libpulse
 libva-intel-driver
 light-locker
 lightdm
+ntp
 lightdm-webkit2-greeter
 neovim
 network-manager-applet
