@@ -4,5 +4,5 @@ setxkbmap -option caps:escape &
 setxkbmap -option escape:capslock &
 xrdb $HOME/.Xresources &
 udiskie &
-redshit &
+redshift &
 # light-locker --lock-on-suspend --no-lock-on-lid &
