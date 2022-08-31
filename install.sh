@@ -9,7 +9,7 @@ function packInstall() {
         sudo pacman -S - < $gitPath/arch_packages.txt
 
         # Install the paru AUR helper
-        git clone https://aur.archlinux.org/paru.git $HOME/Downloads/aur.archlinux.org/paru-bin
+        git clone https://aur.archlinux.org/paru-bin.git $HOME/Downloads/aur.archlinux.org/paru-bin
         cd $HOME/Downloads/aur.archlinux.org/paru-bin
         makepkg -sir
 

@@ -81,5 +81,4 @@ zsh
 dunst
 brightnessctl
 redshift
-udisksctl
 udiskie
