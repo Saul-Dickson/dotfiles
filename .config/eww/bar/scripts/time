@@ -1,15 +1,15 @@
 #!/usr/bin/zsh
 
 names="\
-1   1st First\n
-2   2nd Second\n
-3   3rd Third\n
-4   4th Fourth\n
-5   5th Fifth\n
-6   6th Sixth\n
-7   7th Seventh\n
-8   8th Eighth\n
-9   9th Nineth\n
+01  1st  First\n
+02  2nd  Second\n
+03  3rd  Third\n
+04  4th  Fourth\n
+05  5th  Fifth\n
+06  6th  Sixth\n
+07  7th  Seventh\n
+08  8th  Eighth\n
+09  9th  Nineth\n
 10 10th Tenth\n
 11 11th Eleventh\n
 12 12th Twelfth\n
