@@ -20,7 +20,7 @@
 
     (for entry in workspace-names
       (button
-        :class "${desktop-focused == entry ? 'workspace-focused' : ''} workspace-button button-generic" 
+        :class "${desktop-focused == entry ? 'workspace-focused' : ''} workspace-${entry} workspace-button button-generic" 
         :onclick "wmctrl -s ${entry - 1}" 
         entry 
       )
@@ -154,6 +154,8 @@
 )
 
 ;; Battery Widget
+(defvar battery-visible false)
+
 (defpoll battery-icon
   :interval "1s"
   :initial "initial-value"
@@ -173,18 +175,31 @@
 )
 
 (defwidget Battery []
-  (box
-    :class "battery-box"
-    :orientation "h"
-    :space-evenly "false"
-    :spaceing "2"
-    :tooltip "${battery-percent}% ${battery-estimate}"
-    
-    
-    (button
-      :onclick "alacritty -e btop &"  
-      :class "battery-button button-generic"
-      "${battery-icon}"
+  (eventbox
+    :onhover "${EWW} update battery-visible=true"
+    :onhoverlost "${EWW} update battery-visible=false"
+
+    (box
+      :class "battery-box"
+      :orientation "h"
+      :space-evenly "false"
+      :spaceing "2"
+      :tooltip "${battery-percent}% ${battery-estimate}"
+      
+      (revealer
+        :class "battery-percent"
+        :transition "slideleft"
+        :reveal battery-visible
+        :duration "550ms"
+
+        " ${battery-percent} "
+      )
+      
+      (button
+        :onclick "alacritty -e btop &"  
+        :class "battery-button button-generic"
+        "${battery-icon}"
+      )
     )
   )
 )
@@ -247,6 +262,28 @@
 ;; Power Widget
 (defvar power-visible false)
 
+(defwidget power-buttons []
+  (box
+    (button
+      :class "sleep-button button-generic"
+      :onclick "systemctl ?suspend"
+      "󰤄"
+    )
+
+    (button
+      :class "hibernate-button button-generic"
+      :onclick "systemctl hibernate"
+      "󰤂"
+    )
+
+    (button
+      :class "restart-button button-generic"
+      :onclick "reboot"
+      "󰜉"
+    )
+  )
+)
+
 (defwidget Power []
   (eventbox
     :onhover "${EWW} update power-visible=true"
@@ -263,23 +300,7 @@
         :reveal power-visible
         :duration "550ms"
 
-        (button
-          :class "restart-button button-generic"
-          :onclick "reboot"
-          "󰜉"
-        )
-
-        (button
-          :class "hibernate-button button-generic"
-          :onclick "systemctl hibernate"
-          "󰤂"
-        )
-
-        (button
-          :class "sleep-button button-generic"
-          :onclick "systemctl suspend"
-          "󰤄"
-        )
+        (power-buttons)
       )
 
       (button
@@ -292,6 +313,7 @@
 )
 
 ;; Render bar
+
 (defwindow bar
   :monitor 0
   :geometry (geometry
@@ -318,11 +340,13 @@
         :desktop-focused desktop-focused-bspwm
       )
     )
+
     (box
       :halign "center"
       
       (Clock)
     )
+
     (box
       :halign "end"
       :spacing 2
@@ -331,7 +355,7 @@
       (Internet)
       (Volume :current-volume volume-current)
       (Battery)
-      ; (Power)
+      (Power)
     )
   )
 )

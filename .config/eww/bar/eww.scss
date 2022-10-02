@@ -94,6 +94,28 @@ scale trough {
     color: $background;
 }
 
+// .workspace-1 {
+//     color: $bright-red;
+// }
+// .workspace-2 {
+//     color: $bright-blue;
+// }
+// .workspace-3 {
+//     color: $bright-yellow;
+// }
+// .workspace-4 {
+//     color: $bright-green;
+// }
+// .workspace-5 {
+//     color: $bright-magenta;
+// }
+// .workspace-6 {
+//     color: $bright-aqua;
+// }
+// .workspace-7 {
+//     color: $bright-orange;
+// }
+
 .clock-day {
     background: $orange;
     color: $background;
@@ -126,16 +148,20 @@ scale trough {
     margin-right: 6;
 }
 
-.battery-box {
-    padding-right: 8;
-}
-.battery-button {
-    padding-left: 4;
-    padding-right: 4;
-}
-
 .internet-box {
     margin: .2rem 0 .2rem 0;
     border-radius: 5px;
     color: $foreground;
+}
+
+.battery-box {
+    padding-right: 0;
+}
+.battery-percent {
+    color: $foreground;
+}
+
+.power-box {
+    font-weight: bold;
+    padding-right: 8;
 }
