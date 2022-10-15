@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 
 icons="\
+0 󰁺 󰢜\n\
 10 󰁺 󰢜\n\
 20 󰁻 󰂆\n\
 30 󰁼 󰂇\n\
@@ -23,12 +24,14 @@ charging() {
 
 percent() {
     status | awk '{print $4}' | awk '{print$0+(n-$0%n)%n}' n=10 | {read -r var;\
-    echo $icons | sed '/'"$var "'/!D'}
+    echo $icons | sed '/^'"$var "'/!D'}
 }
 
 main() {
     state=$(charging)
     charge=$(percent)
+
+    [[ $charge == 10 ]] && notify-send 'Battery Low'
 
     case "$state" in
         Charging) percent | awk '{print $3}';;

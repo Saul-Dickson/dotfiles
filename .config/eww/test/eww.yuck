@@ -1,43 +1,76 @@
-;; Workspaces Widget
-(defwidget workspaces
-  (box
-    :class "workspaces"
-    :orientation "h"
-    :space-evenly true
-    :halign "start"
-    :spacing 10
-    
-    (button :onclick "wmctrl -s 0" 1)
-    (button :onclick "wmctrl -s 1" 2)
-    (button :onclick "wmctrl -s 2" 3)
-    (button :onclick "wmctrl -s 3" 4)
-    (button :onclick "wmctrl -s 4" 5)
-    (button :onclick "wmctrl -s 5" 6)
-    (button :onclick "wmctrl -s 6" 7)
-    (button :onclick "wmctrl -s 7" 8)
-    (button :onclick "wmctrl -s 8" 9)
+;; Power Widget
+(defvar test-visible false)
+
+(defwidget test []
+  (eventbox
+    :onhover "eww update test-visible=true"
+    :onhoverlost "eww update test-visible=false"
+
+    (box
+      :class "test-box"
+      :orientation "h"
+      :space-evenly "false"
+      :spaceing "2"
+
+      (revealer
+        :transition "slideleft"
+        :reveal test-visible
+        :duration "550ms"
+
+        (button
+          :class "first-button"
+          :onclick "echo test"
+          "󰜉"
+        )
+
+        (button
+          :class "second-button"
+          :onclick "echo test"
+          "󰤂"
+        )
+
+        (button
+          :class "third-button"
+          :onclick "echo test"
+          "󰤄"
+        )
+      )
+
+      (button
+        :class "visible-button"
+        :onclick "echo test"
+        "󰐥"
+      )
     )
   )
+)
 
 ;; Render bar
 (defwindow bar
   :monitor 0
   :geometry (geometry
               :x "0%"
-              :y "20px"
-              :width "98%"
-              :height "30px"
+              :y "5px"
+              :width "2250px"
+              :height "65px"
               :anchor "top center"
-              )
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
+            )
+  :stacking "bg"
+  :reserve (struts :distance "69px" :side "top")
   :windowtype "dock"
   :wm-ignore false
-  "example content"
-  )
+  (bar-content)
+)
 
-(defwidget bar-content
-  (box
-    (workspaces)
+(defwidget bar-content []
+  (box 
+
+    (box
+      :halign "end"
+      :spacing 2
+      :space-evenly false
+      
+      (Power)
     )
   )
+)
