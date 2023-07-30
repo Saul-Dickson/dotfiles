@@ -258,6 +258,9 @@ export PATH="$LIBRARYDIR/cargo/bin:$PATH"
 # Add the directory for golang's bin dir to PATH ##
 export PATH="$LIBRARYDIR/golib/bin:$PATH"
 
+## Add /var/lib/flatpak/exports/bin to PATH ##
+export PATH="/var/lib/flatpak/exports/bin:$PATH"
+
 ############################
 # Clean the Home Directory #
 ############################
