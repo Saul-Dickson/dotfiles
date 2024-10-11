@@ -55,7 +55,6 @@ solaar
 steam
 sxhkd
 sysbench
-thunderbird
 ttf-fira-code
 vi
 vim

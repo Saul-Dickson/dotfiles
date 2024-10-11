@@ -1,6 +1,5 @@
 auto-cpufreq
 betterdiscord-git
-brave-bin
 eww-git
 exiftool-rs-git
 exodus
@@ -13,3 +12,6 @@ ttf-mplus-git
 wd-git
 yuzu
 bluetooth-autoconnect
+zen-browser-bin
+mailspring
+lz4json
