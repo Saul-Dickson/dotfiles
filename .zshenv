@@ -20,7 +20,7 @@ export EDITOR="nvim"
 export PAGER="less -R"
 
 ## The name of your prefered browser ##
-export BROWSER="brave"
+export BROWSER="zen-browser"
 
 ######################
 # XDG_HOME Variables #
