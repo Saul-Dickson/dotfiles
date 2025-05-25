@@ -11,14 +11,17 @@
 Copy and paste this into your terminal:
 
 ```
-curl https://raw.githubusercontent.com/Saul-Dickson/dotfiles/master/install.sh\
->> install.sh; chmod +x install.sh && ./install.sh
+git clone https://github.com/Saul-Dickson/dotfiles \
+    $HOME/.local/src/github.com/Saul-Dickson/dotfiles \
+    && chmod +x $HOME/.local/src/github.com/Saul-Dickson/dotfiles/install.sh
 ```
 
-This will download the installation file and make it executable. After that,
-simply run this command for just the dotfiles.
+This will clone the install script into it's hardcoded, required directory.
+After that's done, you can install everything with the following command:
 
-`./install.sh -D`
+`$HOME/.local/src/github.com/Saul-Dickson/dotfiles/install.sh --install`
+
+For more options on the install script, simply replace `--install` with `-h`.
 
 ## Programs
 
@@ -27,9 +30,9 @@ simply run this command for just the dotfiles.
 <a href="#editor-neovim">Editor</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#pager-bat">Pager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#shell-zsh">Shell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#file-manager-lf">File Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#browser-firefox">Browser</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#email-client-neomutt">Email Client</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#file-manager-nnn">File Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#browser-zen">Browser</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#email-client-mailspring">Email Client</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#ebook-reader-epy">Ebook Reader</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </h4>
 </div>
@@ -52,7 +55,7 @@ firefox at some point though.
 
 I'm not quite used to this atm, I like it so far, but it's still early days.
 
-#### File Manager: [lf](https://github.com/gokcehan/lf)
+#### File Manager: [nnn](https://github.com/jarun/nnn)
 
 Don't use it all that often, so my config is a bit barebones.
 
