@@ -23,11 +23,16 @@ export PAGER="less -R"
 export BROWSER="zen-browser"
 
 ######################
-# XDG_HOME Variables #
+# XDG_BASE Variables #
 ######################
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+
+export XDG_SESSION_TYPE="wayland"
+
+export XDG_DATA_DIRS="/usr/share:$HOME/.local/share"
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.var/app/com.valvesoftware.Steam/.local/share"
 
 #############################
 # FZF Environment Variables #
@@ -281,6 +286,7 @@ export WINEPREFIX="$XDG_CONFIG_HOME/wine" # Relocate the wine configs
 export XAUTHORITY="$HOME/.Xauthority" # Relocate the XAUTHORITY
 export ERRFILE="$HOME/.cache/xsession/xsession-errors" # Relocate the xsession-errors files
 export RENPY_PLATFORM="linux-x86_64" # Globally define the Renpy Game Engine platform type
+export HINTS_EXPECTED_BIN_DIR="$HOME/.local/bin"
 
 ## Relocate the directory for cargo's local libraries to $HOME/Library/cargo if    ##
 ## the system is a mac. Otherwise relocate the directory to $HOME/.local/lib/cargo ##

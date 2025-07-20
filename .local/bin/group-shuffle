@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+import random
+import re
+from collections import defaultdict
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="Group files by pattern, shuffle groups, output file list."
+)
+
+parser.add_argument(
+    "-w", "--shuffle-within-groups",
+    action="store_true",
+    help="Shuffle files inside each group (default is sorted)."
+)
+
+parser.add_argument(
+    "-d", "--paths",
+    nargs="+",
+    metavar="PATH",
+    help="Files or directories to process (recursively). If omitted, reads from stdin or PWD."
+)
+
+parser.add_argument(
+    "-p", "--pattern",
+    metavar="REGEX",
+    help="Regex pattern to extract group key from filename."
+)
+
+parser.add_argument(
+    "-g", "--group-index",
+    type=int,
+    default=0,
+    help="Capture group index from regex pattern to use as key (default 0 = whole match)."
+)
+
+parser.add_argument(
+    "-s", "--separator",
+    metavar="SEP",
+    help="Separator character/string to split filename for grouping."
+)
+
+parser.add_argument(
+    "-f", "--field-index",
+    type=int,
+    default=0,
+    help="Field index after splitting by separator to use as key (default 0)."
+)
+
+args = parser.parse_args()
+
+def collect_files(paths):
+    collected = []
+    for path in paths:
+        if os.path.isfile(path):
+            collected.append(path)
+        elif os.path.isdir(path):
+            for root, _, files in os.walk(path):
+                for f in files:
+                    collected.append(os.path.join(root, f))
+    return collected
+
+# Get file list from args, stdin, or PWD
+if args.paths:
+    all_files = collect_files(args.paths)
+elif not sys.stdin.isatty():
+    all_files = [line.strip() for line in sys.stdin if line.strip()]
+else:
+    all_files = [f for f in os.listdir(".") if os.path.isfile(f)]
+
+groups = defaultdict(list)
+
+for filename in all_files:
+    base = os.path.basename(filename)
+    key = None
+
+    # Priority: regex pattern > separator > default 6-char prefix
+    if args.pattern:
+        m = re.search(args.pattern, base)
+        if m:
+            try:
+                key = m.group(args.group_index)
+            except IndexError:
+                # fallback if group index invalid
+                key = base[:6]
+        else:
+            key = base[:6]
+    elif args.separator:
+        parts = base.split(args.separator)
+        if 0 <= args.field_index < len(parts):
+            key = parts[args.field_index]
+        else:
+            key = base[:6]
+    else:
+        key = base[:6]
+
+    groups[key].append(filename)
+
+group_keys = list(groups.keys())
+random.shuffle(group_keys)
+
+ordered_files = []
+for key in group_keys:
+    files = groups[key]
+    if args.shuffle_within_groups:
+        random.shuffle(files)
+    else:
+        files.sort()
+    ordered_files.extend(files)
+
+for f in ordered_files:
+    print(f)
+
