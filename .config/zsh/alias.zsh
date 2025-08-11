@@ -3,7 +3,7 @@
 ##################
 
 ## alias python to "python3.8" ##
-alias python="python3.9"
+# alias python="python3.9"
 
 ## alias pip to "sudo pip3.9" ##
 alias pip="sudo pip3.9"

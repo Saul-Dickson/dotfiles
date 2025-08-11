@@ -1,0 +1,318 @@
+#!/usr/bin/env python3
+"""
+Scrape liked tweet links from Twitter/X without API.
+
+Usage:
+    python scrape_likes.py --cookie-file cookies.sqlite [--username USER] [--password PASS] [--scroll-until-end] [--scrolls N] [--handle HANDLE]
+
+Cookie formats supported:
+    - JSON export (Playwright/Chrome/Firefox)
+    - Netscape/Mozilla cookie.txt
+    - SQLite3 browser cookie DB (Chrome's "Cookies" or Firefox's "cookies.sqlite")
+
+Notes:
+    - Cookie file is mandatory. If invalid and creds are given, will log in and update it (JSON format).
+    - Works with both twitter.com and x.com cookies.
+    - Twitter/X handle is auto-detected from the loaded session if possible or overridden with --handle.
+    - Default scrolls: 20
+    - --scroll-until-end overrides --scrolls
+"""
+
+import argparse
+import json
+import sqlite3
+import sys
+import time
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+
+
+def save_cookies(page, path):
+    cookies = page.context.cookies()
+    with open(path, "w") as f:
+        json.dump(cookies, f)
+
+
+def load_cookies(context, path):
+    """Try to load cookies from JSON, Netscape text, or SQLite3 DB for both twitter.com and x.com."""
+    p = Path(path)
+    if not p.exists():
+        return False
+
+    # Try JSON
+    try:
+        with open(p, "r") as f:
+            cookies = json.load(f)
+        if isinstance(cookies, dict) and "cookies" in cookies:
+            cookies = cookies["cookies"]
+        context.add_cookies(cookies)
+        return True
+    except Exception:
+        pass
+
+    # Try Netscape/Mozilla cookie.txt
+    try:
+        cookies = []
+        with open(p, "r") as f:
+            for line in f:
+                if line.strip().startswith("#") or not line.strip():
+                    continue
+                parts = line.strip().split("\t")
+                if len(parts) >= 7:
+                    domain = parts[0]
+                    if "twitter.com" in domain or "x.com" in domain:
+                        cookies.append({
+                            "name": parts[5],
+                            "value": parts[6],
+                            "domain": domain,
+                            "path": parts[2],
+                            "secure": parts[3].lower() == "true",
+                            "httpOnly": False,
+                        })
+        if cookies:
+            context.add_cookies(cookies)
+            return True
+    except Exception:
+        pass
+
+    # Try SQLite3 DB (Chrome/Firefox)
+    try:
+        cookies = []
+        conn = sqlite3.connect(p)
+        cur = conn.cursor()
+
+        # Chrome schema
+        try:
+            cur.execute("""
+                SELECT host_key, name, value, path, is_secure, is_httponly
+                FROM cookies
+                WHERE host_key LIKE '%twitter.com%' OR host_key LIKE '%x.com%'
+            """)
+            for host_key, name, value, path_, is_secure, is_httponly in cur.fetchall():
+                cookies.append({
+                    "name": name,
+                    "value": value,
+                    "domain": host_key,
+                    "path": path_,
+                    "secure": bool(is_secure),
+                    "httpOnly": bool(is_httponly),
+                })
+        except sqlite3.OperationalError:
+            pass
+
+        # Firefox schema
+        try:
+            cur.execute("""
+                SELECT host, name, value, path, isSecure, isHttpOnly
+                FROM moz_cookies
+                WHERE host LIKE '%twitter.com%' OR host LIKE '%x.com%'
+            """)
+            for host, name, value, path_, is_secure, is_httponly in cur.fetchall():
+                cookies.append({
+                    "name": name,
+                    "value": value,
+                    "domain": host,
+                    "path": path_,
+                    "secure": bool(is_secure),
+                    "httpOnly": bool(is_httponly),
+                })
+        except sqlite3.OperationalError:
+            pass
+
+        conn.close()
+
+        if cookies:
+            context.add_cookies(cookies)
+            return True
+    except Exception:
+        pass
+
+    return False
+
+
+def login_with_credentials(page, username, password):
+    page.goto("https://x.com/login")
+    if "login" not in page.url:
+        page.goto("https://twitter.com/login")
+    page.fill("input[name='text']", username)
+    page.keyboard.press("Enter")
+    time.sleep(2)
+
+    page.fill("input[name='password']", password)
+    page.keyboard.press("Enter")
+    time.sleep(5)
+
+
+def detect_handle(page):
+    for domain in ("x.com", "twitter.com"):
+        page.goto(f"https://{domain}/home")
+        time.sleep(3)
+
+        try:
+            profile_link = page.locator("a[aria-label='Profile']").first
+            href = profile_link.get_attribute("href")
+            if href and href.startswith("/") and "/status/" not in href:
+                handle = href.strip("/")
+                if handle:
+                    return handle
+        except Exception:
+            pass
+
+        try:
+            meta = page.locator("head > meta[name='session-user-screen_name']")
+            if meta.count() > 0:
+                handle = meta.nth(0).get_attribute("content")
+                if handle:
+                    return handle
+        except Exception:
+            pass
+
+    return None
+
+
+def smooth_scroll_collect_links(page, max_wait=86400, grace_period=10):
+    last_height = page.evaluate("document.body.scrollHeight")
+    last_count = page.locator("article").count()
+    stable_height_count = 0
+    stable_count_count = 0
+    start_time = time.time()
+    grace_start = None
+
+    collected_links = set()
+
+    try:
+        while True:
+            page.evaluate("window.scrollBy(0, 500)")
+            time.sleep(0.3)
+
+            new_height = page.evaluate("document.body.scrollHeight")
+            new_count = page.locator("article").count()
+
+            hrefs = page.eval_on_selector_all(
+                "article a[href*='/status/']", "elements => elements.map(el => el.getAttribute('href'))"
+            )
+
+            for href in hrefs:
+                if href and "/status/" in href:
+                    parts = href.strip("/").split("/")
+                    if len(parts) == 3 and parts[1] == "status":
+                        collected_links.add("https://x.com" + href)
+
+            if new_height > last_height:
+                stable_height_count = 0
+                last_height = new_height
+                grace_start = None
+            else:
+                stable_height_count += 1
+
+            if new_count > last_count:
+                stable_count_count = 0
+                last_count = new_count
+                grace_start = None
+            else:
+                stable_count_count += 1
+
+            if stable_height_count > 5 and stable_count_count > 5:
+                if grace_start is None:
+                    grace_start = time.time()
+                elif time.time() - grace_start > grace_period:
+                    break
+
+            if time.time() - start_time > max_wait:
+                break
+    except KeyboardInterrupt:
+        print("\nInterrupted! Returning collected links so far...\n", file=sys.stderr)
+    return collected_links
+
+
+def scroll_likes(page, scrolls, max_time=15):
+    start = time.time()
+    collected_links = set()
+
+    try:
+        while time.time() - start < max_time:
+            page.evaluate("window.scrollBy(0, 500)")
+            time.sleep(0.3)
+
+            hrefs = page.eval_on_selector_all(
+                "article a[href*='/status/']", "elements => elements.map(el => el.getAttribute('href'))"
+            )
+
+            for href in hrefs:
+                if href and "/status/" in href:
+                    parts = href.strip("/").split("/")
+                    if len(parts) == 3 and parts[1] == "status":
+                        collected_links.add("https://x.com" + href)
+    except KeyboardInterrupt:
+        print("\nInterrupted! Returning collected links so far...\n", file=sys.stderr)
+
+    return collected_links
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--cookie-file", required=True, help="Path to cookies file (json, txt, or sqlite)")
+    parser.add_argument("--username", help="Username (only if cookies fail)")
+    parser.add_argument("--password", help="Password (only if cookies fail)")
+    parser.add_argument("--scrolls", type=int, default=20, help="Number of scrolls (default 20)")
+    parser.add_argument("--scroll-until-end", action="store_true", help="Scroll until all likes are loaded")
+    parser.add_argument("--headful", action="store_true", help="Show browser window")
+    parser.add_argument("--handle", help="Override Twitter/X handle to use")
+    args = parser.parse_args()
+
+    with sync_playwright() as p:
+        browser = p.firefox.launch(headless=not args.headful)
+        context = browser.new_context()
+        page = context.new_page()
+
+        cookies_loaded = load_cookies(context, args.cookie_file)
+        handle = None
+
+        if args.handle:
+            handle = args.handle
+        else:
+            if cookies_loaded:
+                handle = detect_handle(page)
+                if not handle and args.username and args.password:
+                    login_with_credentials(page, args.username, args.password)
+                    save_cookies(page, args.cookie_file)
+                    handle = detect_handle(page)
+            else:
+                if not args.username or not args.password:
+                    print("No valid cookies found and no username/password provided.", file=sys.stderr)
+                    sys.exit(1)
+                login_with_credentials(page, args.username, args.password)
+                save_cookies(page, args.cookie_file)
+                handle = detect_handle(page)
+
+        if not handle:
+            print("Could not detect account handle.", file=sys.stderr)
+            sys.exit(1)
+
+        for domain in ("x.com", "twitter.com"):
+            page.goto(f"https://{domain}/{handle}/likes")
+            try:
+                page.wait_for_selector("article", timeout=15000)
+                break
+            except:
+                pass
+
+        try:
+            if args.scroll_until_end:
+                links = smooth_scroll_collect_links(page, max_wait=86400, grace_period=10)
+            else:
+                max_time = min(args.scrolls * 0.7, 30)
+                links = scroll_likes(page, args.scrolls, max_time=max_time)
+        except KeyboardInterrupt:
+            print("\nInterrupted during scrolling!\n", file=sys.stderr)
+            links = set()  # fallback if exception happens outside scrolling funcs
+
+        for link in sorted(links):
+            print(link)
+
+        browser.close()
+
+
+if __name__ == "__main__":
+    main()
+

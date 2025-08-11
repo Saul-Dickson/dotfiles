@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+import praw
+import sys
+from urllib.parse import urlparse, parse_qs
+
+# ===== CONFIGURATION =====
+CLIENT_ID = 'w5eLVe_Z4OiJhtNonv8Fsg'      # Replace with your Reddit app's client ID
+CLIENT_SECRET = ''                # Installed app: leave blank
+REDIRECT_URI = 'http://localhost:8080'  # Just for Reddit, doesn't need to run
+USER_AGENT = 'cli:url_extractor:1.0 (by /u/WhereasLivid)'
+SCOPES = ['identity', 'history', 'read']
+REFRESH_TOKEN = '582180436734-LKBfjCGSu09EKSh04r1opeUEYlUOpA'  # <-- Paste your token here after first run
+# =========================
+
+def manual_auth_flow():
+    reddit = praw.Reddit(
+        client_id=CLIENT_ID,
+        client_secret=CLIENT_SECRET,
+        redirect_uri=REDIRECT_URI,
+        user_agent=USER_AGENT
+    )
+
+    auth_url = reddit.auth.url(SCOPES, 'auth_state_token', 'permanent')
+    print("1. Visit this URL in your browser:\n", auth_url, "\n", file=sys.stderr)
+    print("2. After approving, copy the FULL redirect URL.", file=sys.stderr)
+    redirect_url = input("3. Paste redirect URL here: ").strip()
+
+    query = urlparse(redirect_url).query
+    code = parse_qs(query).get('code', [None])[0]
+
+    if not code:
+        print("Error: Authorization code not found.", file=sys.stderr)
+        sys.exit(1)
+
+    refresh_token = reddit.auth.authorize(code)
+    print(f"Success. Paste this token into your script:\n\nREFRESH_TOKEN = '{refresh_token}'\n", file=sys.stderr)
+    return reddit
+
+def authenticate_reddit():
+    if REFRESH_TOKEN:
+        reddit = praw.Reddit(
+            client_id=CLIENT_ID,
+            client_secret=CLIENT_SECRET,
+            refresh_token=REFRESH_TOKEN,
+            user_agent=USER_AGENT
+        )
+        try:
+            if reddit.user.me() is None:
+                raise Exception("Token invalid")
+            return reddit
+        except:
+            print("Stored refresh token is invalid. Falling back to manual auth.", file=sys.stderr)
+
+    return manual_auth_flow()
+
+def stream_saved_urls(reddit):
+    try:
+        user = reddit.user.me()
+        print(f"Fetching saved items for /u/{user}...", file=sys.stderr)
+
+        for item in user.saved(limit=None):
+            try:
+                print(f"https://reddit.com{item.permalink}")
+            except AttributeError:
+                pass
+    except Exception as e:
+        print(f"Error fetching saved items: {e}", file=sys.stderr)
+        sys.exit(1)
+
+def main():
+    try:
+        reddit = authenticate_reddit()
+        stream_saved_urls(reddit)
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user.", file=sys.stderr)
+        sys.exit(0)
+
+if __name__ == '__main__':
+    main()
+
