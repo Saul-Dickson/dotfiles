@@ -6,7 +6,7 @@
 # alias python="python3.9"
 
 ## alias pip to "sudo pip3.9" ##
-alias pip="sudo pip3.9"
+# alias pip="sudo pip3.9"
 
 ###############
 # FZF Aliases #

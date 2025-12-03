@@ -1,42 +1,55 @@
 #!/usr/bin/env python3
 """
-Scrape liked tweet links from Twitter/X without API.
+Scrape liked post links from Twitter/X without API.
 
 Usage:
-    python scrape_likes.py --cookie-file cookies.sqlite [--username USER] [--password PASS] [--scroll-until-end] [--scrolls N] [--handle HANDLE]
+    python twitter_likes.py --cookie-file <path> [--username USER] [--password PASS]
+                            [--scrolls SECONDS] [--scroll-until-end]
+                            [--handle HANDLE] [--headful]
 
-Cookie formats supported:
-    - JSON export (Playwright/Chrome/Firefox)
-    - Netscape/Mozilla cookie.txt
-    - SQLite3 browser cookie DB (Chrome's "Cookies" or Firefox's "cookies.sqlite")
-
-Notes:
-    - Cookie file is mandatory. If invalid and creds are given, will log in and update it (JSON format).
-    - Works with both twitter.com and x.com cookies.
-    - Twitter/X handle is auto-detected from the loaded session if possible or overridden with --handle.
-    - Default scrolls: 20
-    - --scroll-until-end overrides --scrolls
+Key behavior:
+- --cookie-file is REQUIRED. Supports JSON, Netscape cookie.txt, and SQLite (Chrome/Firefox) cookies.
+- Will try both x.com and twitter.com cookies.
+- If cookies fail and username/password are provided, will log in and save cookies (JSON).
+- Auto-detects your handle from the session, unless overridden by --handle.
+- Default behavior: smooth-scroll for 5 minutes (300s) and collect base /status/ links only (no /photo, /analytics, etc).
+- --scrolls N  => smooth-scroll for N seconds (uses throttling mitigation).
+- --scroll-until-end => smooth-scroll up to 24 hours with a grace period. Intended to get “everything”.
+- All status/log messages go to STDERR; only collected links are printed to STDOUT (sorted, unique).
 """
 
 import argparse
 import json
+import random
 import sqlite3
 import sys
 import time
 from pathlib import Path
+from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright
 
 
+# ----------------------- Cookie helpers -----------------------
+
 def save_cookies(page, path):
+    """Save current context cookies (JSON)."""
     cookies = page.context.cookies()
-    with open(path, "w") as f:
-        json.dump(cookies, f)
+    try:
+        with open(path, "w") as f:
+            json.dump(cookies, f)
+        print(f"[INFO] Saved cookies to {path}", file=sys.stderr)
+    except Exception as e:
+        print(f"[WARN] Failed to save cookies to {path}: {e}", file=sys.stderr)
 
 
 def load_cookies(context, path):
-    """Try to load cookies from JSON, Netscape text, or SQLite3 DB for both twitter.com and x.com."""
+    """
+    Load cookies into the context from JSON, Netscape text, or SQLite3 DB
+    (Chrome: 'Cookies', Firefox: 'cookies.sqlite'). Returns True if any loaded.
+    """
     p = Path(path)
     if not p.exists():
+        print(f"[WARN] Cookie file not found: {path}", file=sys.stderr)
         return False
 
     # Try JSON
@@ -46,6 +59,7 @@ def load_cookies(context, path):
         if isinstance(cookies, dict) and "cookies" in cookies:
             cookies = cookies["cookies"]
         context.add_cookies(cookies)
+        print(f"[INFO] Loaded cookies from JSON: {path}", file=sys.stderr)
         return True
     except Exception:
         pass
@@ -55,9 +69,10 @@ def load_cookies(context, path):
         cookies = []
         with open(p, "r") as f:
             for line in f:
-                if line.strip().startswith("#") or not line.strip():
+                s = line.strip()
+                if not s or s.startswith("#"):
                     continue
-                parts = line.strip().split("\t")
+                parts = s.split("\t")
                 if len(parts) >= 7:
                     domain = parts[0]
                     if "twitter.com" in domain or "x.com" in domain:
@@ -71,11 +86,12 @@ def load_cookies(context, path):
                         })
         if cookies:
             context.add_cookies(cookies)
+            print(f"[INFO] Loaded cookies from Netscape TXT: {path}", file=sys.stderr)
             return True
     except Exception:
         pass
 
-    # Try SQLite3 DB (Chrome/Firefox)
+    # Try SQLite3 (Chrome/Firefox)
     try:
         cookies = []
         conn = sqlite3.connect(p)
@@ -123,17 +139,23 @@ def load_cookies(context, path):
 
         if cookies:
             context.add_cookies(cookies)
+            print(f"[INFO] Loaded cookies from SQLite: {path}", file=sys.stderr)
             return True
     except Exception:
         pass
 
+    print(f"[WARN] Could not load cookies from {path} (unsupported/invalid).", file=sys.stderr)
     return False
 
 
+# ----------------------- Auth & handle -----------------------
+
 def login_with_credentials(page, username, password):
+    print("[INFO] Attempting credential login...", file=sys.stderr)
     page.goto("https://x.com/login")
     if "login" not in page.url:
         page.goto("https://twitter.com/login")
+
     page.fill("input[name='text']", username)
     page.keyboard.press("Enter")
     time.sleep(2)
@@ -144,20 +166,37 @@ def login_with_credentials(page, username, password):
 
 
 def detect_handle(page):
+    """
+    Try a few strategies to detect the logged-in handle.
+    """
     for domain in ("x.com", "twitter.com"):
         page.goto(f"https://{domain}/home")
         time.sleep(3)
 
+        # 1) data-testid often present on the tab bar
+        try:
+            handle_link = page.locator("a[data-testid='AppTabBar_Profile_Link']").first
+            if handle_link:
+                href = handle_link.get_attribute("href")
+                if href and href.startswith("/") and "/status/" not in href:
+                    handle = href.strip("/")
+                    if handle and handle != "home":
+                        return handle
+        except Exception:
+            pass
+
+        # 2) aria-label backup
         try:
             profile_link = page.locator("a[aria-label='Profile']").first
             href = profile_link.get_attribute("href")
             if href and href.startswith("/") and "/status/" not in href:
                 handle = href.strip("/")
-                if handle:
+                if handle and handle != "home":
                     return handle
         except Exception:
             pass
 
+        # 3) meta tag
         try:
             meta = page.locator("head > meta[name='session-user-screen_name']")
             if meta.count() > 0:
@@ -170,33 +209,100 @@ def detect_handle(page):
     return None
 
 
-def smooth_scroll_collect_links(page, max_wait=86400, grace_period=10):
+# ----------------------- URL normalization -----------------------
+
+def normalize_status_link(href):
+    """
+    Convert any tweet link variant to canonical:
+        https://x.com/<user>/status/<id>
+    Strips query strings and extra path segments like /photo/1, /analytics, etc.
+    """
+    if not href:
+        return None
+
+    try:
+        if href.startswith("http://") or href.startswith("https://"):
+            u = urlparse(href)
+            path = u.path
+        else:
+            path = href
+
+        segs = [s for s in path.split("/") if s]
+        if "status" not in segs:
+            return None
+        i = segs.index("status")
+        if i < 1 or i + 1 >= len(segs):
+            return None
+        user = segs[i - 1]
+        tid = segs[i + 1]
+        if not user or not tid:
+            return None
+        return f"https://x.com/{user}/status/{tid}"
+    except Exception:
+        return None
+
+
+# ----------------------- Scrolling collectors -----------------------
+
+def smooth_scroll_collect_links(page, *, max_wait=300, grace_period=10,
+                                throttle_trigger_count=5, backoff_seconds=60):
+    """
+    Smoothly scrolls the Likes timeline for up to `max_wait` seconds,
+    collecting base /status/ links. Mitigates throttling with random delays
+    and backoff when no new links are seen repeatedly.
+
+    Returns: set of canonical tweet links.
+    """
+    collected = set()
+
+    # Track page progress & throttling indicators
     last_height = page.evaluate("document.body.scrollHeight")
     last_count = page.locator("article").count()
     stable_height_count = 0
     stable_count_count = 0
+
+    no_new_tweets_counter = 0
     start_time = time.time()
     grace_start = None
 
-    collected_links = set()
-
     try:
         while True:
+            # Stop if time limit reached
+            if time.time() - start_time > max_wait:
+                print(f"[INFO] Max wait {max_wait}s reached; stopping.", file=sys.stderr)
+                break
+
+            # Scroll a bit, then random delay to look human and avoid throttling
             page.evaluate("window.scrollBy(0, 500)")
-            time.sleep(0.3)
+            # time.sleep(random.uniform(0.5, 1.5))
+            time.sleep(0.2)
 
-            new_height = page.evaluate("document.body.scrollHeight")
-            new_count = page.locator("article").count()
-
+            # Pull all hrefs in one go to avoid per-element timeouts/races
             hrefs = page.eval_on_selector_all(
-                "article a[href*='/status/']", "elements => elements.map(el => el.getAttribute('href'))"
+                "article a[href*='/status/']",
+                "els => els.map(el => el.getAttribute('href'))"
             )
 
+            before = len(collected)
             for href in hrefs:
-                if href and "/status/" in href:
-                    parts = href.strip("/").split("/")
-                    if len(parts) == 3 and parts[1] == "status":
-                        collected_links.add("https://x.com" + href)
+                link = normalize_status_link(href)
+                if link:
+                    collected.add(link)
+            newly_added = len(collected) - before
+
+            # Throttling heuristic: if we keep getting nothing new, back off
+            if newly_added == 0:
+                no_new_tweets_counter += 1
+                if no_new_tweets_counter >= throttle_trigger_count:
+                    print(f"[WARN] Possible throttling. Backing off {backoff_seconds}s...", file=sys.stderr)
+                    time.sleep(backoff_seconds)
+                    no_new_tweets_counter = 0
+            else:
+                no_new_tweets_counter = 0
+
+            # Detect page growth to decide if we're near the "loaded bottom"
+            new_height = page.evaluate("document.body.scrollHeight")
+            new_count = page.locator("article").count()
 
             if new_height > last_height:
                 stable_height_count = 0
@@ -212,62 +318,50 @@ def smooth_scroll_collect_links(page, max_wait=86400, grace_period=10):
             else:
                 stable_count_count += 1
 
+            # If both height and article counts are stable for a while, start a grace timer
             if stable_height_count > 5 and stable_count_count > 5:
                 if grace_start is None:
                     grace_start = time.time()
                 elif time.time() - grace_start > grace_period:
+                    print("[INFO] No growth after grace; stopping.", file=sys.stderr)
                     break
 
-            if time.time() - start_time > max_wait:
-                break
-    except KeyboardInterrupt:
-        print("\nInterrupted! Returning collected links so far...\n", file=sys.stderr)
-    return collected_links
-
-
-def scroll_likes(page, scrolls, max_time=15):
-    start = time.time()
-    collected_links = set()
-
-    try:
-        while time.time() - start < max_time:
-            page.evaluate("window.scrollBy(0, 500)")
-            time.sleep(0.3)
-
-            hrefs = page.eval_on_selector_all(
-                "article a[href*='/status/']", "elements => elements.map(el => el.getAttribute('href'))"
-            )
-
-            for href in hrefs:
-                if href and "/status/" in href:
-                    parts = href.strip("/").split("/")
-                    if len(parts) == 3 and parts[1] == "status":
-                        collected_links.add("https://x.com" + href)
     except KeyboardInterrupt:
         print("\nInterrupted! Returning collected links so far...\n", file=sys.stderr)
 
-    return collected_links
+    return collected
 
+
+# ----------------------- Main -----------------------
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--cookie-file", required=True, help="Path to cookies file (json, txt, or sqlite)")
-    parser.add_argument("--username", help="Username (only if cookies fail)")
-    parser.add_argument("--password", help="Password (only if cookies fail)")
-    parser.add_argument("--scrolls", type=int, default=20, help="Number of scrolls (default 20)")
-    parser.add_argument("--scroll-until-end", action="store_true", help="Scroll until all likes are loaded")
-    parser.add_argument("--headful", action="store_true", help="Show browser window")
-    parser.add_argument("--handle", help="Override Twitter/X handle to use")
+    parser = argparse.ArgumentParser(description="Scrape liked tweet links from Twitter/X.")
+    parser.add_argument("--cookie-file", required=True,
+                        help="Path to cookies (JSON, Netscape cookie.txt, or SQLite).")
+    parser.add_argument("--username", help="Username (used only if cookies fail).")
+    parser.add_argument("--password", help="Password (used only if cookies fail).")
+    parser.add_argument("--scrolls", type=int,
+                        help="Smooth-scroll for N seconds (default 300s if omitted).")
+    parser.add_argument("--scroll-until-end", action="store_true",
+                        help="Smooth-scroll until no more content (up to 24h).")
+    parser.add_argument("--headful", action="store_true",
+                        help="Show browser window (headless off).")
+    parser.add_argument("--handle", help="Override your X handle explicitly.")
     args = parser.parse_args()
+
+    # Default smooth-scroll duration is 5 minutes if neither flag given
+    default_duration = 300
 
     with sync_playwright() as p:
         browser = p.firefox.launch(headless=not args.headful)
         context = browser.new_context()
         page = context.new_page()
 
+        # Cookies first
         cookies_loaded = load_cookies(context, args.cookie_file)
-        handle = None
 
+        # Determine handle (or login if needed)
+        handle = None
         if args.handle:
             handle = args.handle
         else:
@@ -278,8 +372,8 @@ def main():
                     save_cookies(page, args.cookie_file)
                     handle = detect_handle(page)
             else:
-                if not args.username or not args.password:
-                    print("No valid cookies found and no username/password provided.", file=sys.stderr)
+                if not (args.username and args.password):
+                    print("No valid cookies and no username/password provided.", file=sys.stderr)
                     sys.exit(1)
                 login_with_credentials(page, args.username, args.password)
                 save_cookies(page, args.cookie_file)
@@ -289,24 +383,49 @@ def main():
             print("Could not detect account handle.", file=sys.stderr)
             sys.exit(1)
 
+        # Visit Likes using x.com then fallback to twitter.com
+        loaded = False
         for domain in ("x.com", "twitter.com"):
-            page.goto(f"https://{domain}/{handle}/likes")
+            url = f"https://{domain}/{handle}/likes"
+            print(f"[INFO] Opening {url}", file=sys.stderr)
+            page.goto(url)
             try:
                 page.wait_for_selector("article", timeout=15000)
+                loaded = True
                 break
-            except:
-                pass
+            except Exception:
+                continue
 
+        if not loaded:
+            print("Failed to load Likes timeline (no 'article' detected).", file=sys.stderr)
+            sys.exit(1)
+
+        # Choose mode:
+        links = set()
         try:
             if args.scroll_until_end:
-                links = smooth_scroll_collect_links(page, max_wait=86400, grace_period=10)
+                # Up to 24 hours, slightly longer grace period
+                links = smooth_scroll_collect_links(
+                    page,
+                    max_wait=24 * 3600,
+                    grace_period=20,
+                    throttle_trigger_count=5,
+                    backoff_seconds=15
+                )
             else:
-                max_time = min(args.scrolls * 0.7, 30)
-                links = scroll_likes(page, args.scrolls, max_time=max_time)
+                duration = args.scrolls if args.scrolls is not None else default_duration
+                links = smooth_scroll_collect_links(
+                    page,
+                    max_wait=duration,
+                    grace_period=10,
+                    throttle_trigger_count=5,
+                    backoff_seconds=5
+                )
         except KeyboardInterrupt:
             print("\nInterrupted during scrolling!\n", file=sys.stderr)
-            links = set()  # fallback if exception happens outside scrolling funcs
+            # links already returned/partial if interruption occurred inside the function
 
+        # Output only links to STDOUT
         for link in sorted(links):
             print(link)
 

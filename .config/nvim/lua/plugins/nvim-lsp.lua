@@ -22,13 +22,13 @@ return {
 	{
 		'neovim/nvim-lspconfig',
 		config = function()
-			local lspconfig = require('lspconfig')
+			local lspconfig = vim.lsp
 
-			lspconfig.lua_ls.setup({})
-			lspconfig.jedi_language_server.setup({})
-			lspconfig.bashls.setup({})
-			lspconfig.vimls.setup({})
-			lspconfig.rust_analyzer.setup({})
+			lspconfig.enable('lua_ls')
+			lspconfig.enable('jedi_language_server')
+			lspconfig.enable('bashls')
+			lspconfig.enable('vimls')
+			lspconfig.enable('rust_analyzer')
 		end
 	},
 }
