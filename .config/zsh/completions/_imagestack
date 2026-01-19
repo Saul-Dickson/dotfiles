@@ -1,0 +1,22 @@
+#compdef ,imagestack
+
+_imagestack() {
+  local context state line
+  typeset -A opt_args
+
+  _arguments -C \
+    '-V[Enable verbose output]' \
+    '-h[Show help and exit]' \
+    '-c[Clear cache and exit]' \
+    '-D[Dry run (no file writes)]' \
+    '-i+[UID string]:uid string:' \
+    '-I+[Extract UID from filename]:file:_files' \
+    '-o[Output file path]:output file:_files' \
+    '-d[Search directory]:directory:_directories' \
+    '-F[Field separator for -I]:separator:' \
+    '-A[Argument index for -I]:field index:' \
+    '*:filename:_files'
+}
+
+compdef _imagestack ,imagestack
+

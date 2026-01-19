@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # source <(sheldon source)
 
 # source all aliases made in alias.zsh
@@ -15,5 +16,6 @@ source ~/.config/zsh/prompt.zsh
 # source install plugins
 source ~/.config/zsh/plugins.zsh
 
-test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-
+# source completions
+fpath=($HOME/.config/zsh/completions $fpath)
+autoload -Uz commpinit
