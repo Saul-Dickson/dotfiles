@@ -1,0 +1,23 @@
+dynamic_title = true
+size = 9.0
+title = "Alacritty"
+
+[bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[bold_italic]
+family = "FiraCode Nerd Font"
+style = "Bold Italic"
+
+[dimensions]
+columns = 250
+lines = 200
+
+[italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[normal]
+family = "FiraCode Nerd Font"
+style = "Regular"

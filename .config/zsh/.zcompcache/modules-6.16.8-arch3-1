@@ -1,0 +1,8 @@
+modules=( ${(Q)"${(z)$(<<\EO:modules
+
+EO:modules
+)}"} )
+modaliases=( ${(Q)"${(z)$(<<\EO:modaliases
+
+EO:modaliases
+)}"} )

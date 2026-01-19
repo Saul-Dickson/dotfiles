@@ -1,0 +1,315 @@
+#!/usr/bin/env bash
+
+which magick 1> /dev/null 2>&1 || { echo "missing imagemagick" >&2 ; exit 1; }
+which fd     1> /dev/null 2>&1 || { echo "missing fd"          >&2 ; exit 1; }
+
+function printHelp() {
+	{
+		echo ',imagestack:        get a group of images and append them to one another.'
+		echo
+		echo 'Usage      :        ,imagestack [OPTION(s) <arg>] [-i "<string>"] [-I "<path>"]'
+		echo '-V         :        Display verbose output.'
+		echo '-h         :        Print this message and exit.'
+		echo '-c         :        Clear cache and exit.'
+		echo '-i <string>:        The unique identifying string of group(s) of files. Can be passed multiple times.'
+		echo '-I <path>  :        Alternative to -i; use an "argument" of a filename as the UID. Can be passed multiple times.'
+		echo '-o <path>  :        Path and filename to output stacked image. Defaults to first filename or UID parent directory, and parent image filename appended with "-stack" at the end of the filename.'
+		echo '-d <path>  :        Base directory for fd to search through. Defaults to $HOME'
+		echo '-F <string>:        Field seperator for -I. Defaults to "_".'
+		echo '-A <int>   :        Argument to use in -I. Defaults to 1.'
+		echo
+	} >&2
+}
+
+function verifyCacheDir() {
+	# $1 = BOOLEAN
+	
+	if $1; then
+		echo "validating ,imagestack cache" >&2
+	fi
+
+	if [ -d $HOME/.cache/,imagestack ]; then
+		echo "$HOME/.cache/,imagestack"
+		return
+	elif [ -d $HOME/.cache/ ]; then
+		if $1; then
+			echo "$HOME/.cache/,imagestack does not exist" >&2
+			echo "mkdir $HOME/.cache/,imagestack" >&2
+		fi
+
+		mkdir $HOME/.cache/,imagestack
+		echo "$HOME/.cache/,imagestack"
+		return
+	else
+		if $1; then
+			echo "$HOME/.cache/,imagestack does not exist" >&2
+			echo "$HOME/.cache does not exist" >&2
+			echo "mkdir $HOME/.cache" >&2
+			echo "mkdir $HOME/.cache/,imagestack" >&2
+		fi
+
+		mkdir -p "$HOME/.cache/,imagestack"
+	fi
+
+	echo "$HOME/.cache/,imagestack"
+	return
+}
+
+function resizeImage() {
+	# $1 = BOOLEAN
+	# $2 = PATH TO FILE
+	# $3 = STRING
+	# $4 = PATH TO FILE
+	
+	$1 && echo "resizing $2 to match parent" >&2
+
+	magick "$2" -resize "${3}x" "$4"
+}
+
+function fileListAppend() {
+	# $1 = BOOLEAN
+	# $2 = PATH
+	# $3 = PATH
+	
+	
+	if ! [ -f "$3" ]; then
+		$1 && echo "creating file list at $3" >&2
+		$1 && echo "appending file $2 to list at $3" >&2
+
+		echo "$2" > "$3"
+		return
+	else
+		$1 && echo "appending file $2 to list at $3" >&2
+
+		echo "$2" >> "$3"
+		return
+	fi
+}
+
+function getParent() {
+	# $1 = BOOLEAN
+	# $2 = LIST OF PATHS TO FILE
+	# $3 = STRING
+	# $4 = INTEGER
+	
+	# NOTE: $2 should ONLY include the first list of images.
+	# Every time this function is called its output should
+	# only include one filename. If it includes multiple,
+	# it can and most likely will break something.
+	
+	$1 && echo "determining parent image" >&2
+
+	output=$(
+		sort <<< "$2" |           \
+		awk -F "$3"               \
+		-v field="$4"             \
+		'!seen[$field]++ { print; exit }'
+	)
+
+	$1 && echo "parent image $output located" >&2
+
+	echo "$output"
+	return
+}
+
+function getSize() {
+	# $1 = BOOLEAN
+	# $2 = PATH TO FILE
+	
+	output="$(magick identify -format "%w %h" "$2")"
+
+	$1 && echo "parent file $2 resolution is '$output'" >&2
+
+	echo "$output"
+	return
+}
+
+function appendImages() {
+	# $1 = PATH TO FILE
+	# $2 = PATH TO FILE
+	
+	echo "generating imagestack $2" >&2
+
+	magick @"$1" -append "$2"
+}
+
+function enumerateIDFiles() {
+	# $1 = BOOLEAN
+	# $2 = STRING
+	# $3 = PATH TO FOLDER
+	
+	$1 && echo "enumerating files with UID '$2'" >&2
+
+	fd --full-path "$2" "$3"
+}
+
+function genOutputName() {
+	# $1 = BOOLEAN
+	# $2 = STRING
+	
+	$1 && echo "generating output filename from $2" >&2
+	
+	output="$(awk -F '.' \
+			  'BEGIN { OFS="" } { name=$1; $1=""; print name"-stack."$0 }' \
+			  <<< $2
+	)"
+
+	$1 && echo "output filename is $output" >&2
+
+	echo $output
+	return
+}
+
+function extractUID() {
+	# $1 = BOOLEAN
+	# $2 = STRING
+	# $3 = STRING
+	# $4 = INTEGER
+	
+	$1 && echo "extracting UID from $2, argument $4, with field seperator $3" >&2
+
+	output=$(
+		awk -v field="$4" \
+			-F "$3" \
+			'{ print $field }' \
+			<<< "$2"
+	)
+
+	$1 && echo "UID of $2 is $output" >&2
+
+	echo $output
+	return
+}
+
+unset file_UID
+unset output_path
+
+declare -a file_UID
+
+verbose=false
+field_separator="_"
+filename_argument=1
+search_directory="$HOME"
+output_path=""
+dry_run=false
+
+while getopts ":VhctDi:I:o:d:F:A:" option; do
+	case $option in
+		V) # enable verbose mode
+			if [ "${#file_UID[@]}" -ge 1 ]; then
+				echo "Syntax Error: Must pass -V before -i or -I" >&2
+				exit 1
+			else
+				verbose=true
+			fi
+			;;
+		h) # print the help message
+			printHelp
+			exit 0
+			;;
+		c) # clear cache and exit
+			rm "$(verifyCacheDir $verbose)/*" 2> /dev/null
+			exit 0
+			;;
+		t) # test option for debugging. Should be passed last.
+			{
+				echo "verbosity (boolean)     = $verbose"
+				echo "field seperator (string = $field_separator"
+				echo "argument (integer)      = $filename_argument"
+				echo "search directory (path) = $search_directory"
+			} >&2
+			;;
+		D) # dry-run
+			dry_run=true
+			;;
+		i) # append to list of file id(s)
+			file_UID+=("$OPTARG")
+			;;
+		I) # file to extract UID from
+			unset uid
+			uid=$(extractUID "$verbose" "$OPTARG" "$field_separator" "$filename_argument")
+			file_UID+=("$uid")
+			;;
+		o) # output path
+			output_path="$OPTARG"
+			;;
+		d) # directory to search through
+			search_directory="$OPTARG"
+			;;
+		F) # field seperator for -I
+			if [ "${#file_UID[@]}" -ge 1 ]; then
+				echo "Syntax Error: Must pass -F before -i or -I" >&2
+				exit 1
+			else
+				field_separator="$OPTARG"
+			fi
+			;;
+		A) # argument for -I
+			if [ "${#file_UID[@]}" -ge 1 ]; then
+				echo "Syntax Error: Must pass -A before -i or -I" >&2
+				exit 1
+			else
+				filename_argument=$OPTARG
+			fi
+			;;
+		?) # unsupported argument
+			echo "Illegal option" >&2
+			echo >&2
+			printHelp
+			exit 1
+			;;
+	esac
+done
+
+if ! [[ $verbose == true || $verbose == false ]]; then
+	echo "Internal error: verbose flag corrupted" >&2
+	exit 99
+fi
+
+if [ "${#file_UID[@]}" -eq 0 ]; then
+	echo "Missing argument(s): Please enter one or more UIDs or PATHs with -i or -I respectively." >&2
+	exit 1
+fi
+
+cache_dir="$(verifyCacheDir $verbose)"
+
+unset file_list
+unset parent_width
+unset output_basename
+unset output_dirname
+unset output_filename
+
+declare -a file_list
+declare -a parent_list
+
+mapfile -t parent_list < <(enumerateIDFiles $verbose "${file_UID[0]}" "$search_directory")
+parent_width="$(getSize $verbose "${parent_list[0]}" | awk '{ print $1 }')"
+
+for id in "${file_UID[@]}"; do
+	while IFS= read -r path; do
+		file_list+=("$path")
+	done < <(enumerateIDFiles $verbose "$id" "$search_directory")
+done
+
+for file in "${file_list[@]}"; do
+	if $dry_run; then
+		break
+	fi
+
+	resized_path="$cache_dir/resized-$(basename $file)"
+
+	resizeImage $verbose "$file" "$parent_width" "$resized_path"
+	fileListAppend $verbose "$resized_path" "$cache_dir/${file_UID[0]}_list.txt"
+done
+
+output_basename="$(basename "${parent_list[0]}")"
+output_dirname="$(dirname "${parent_list[0]}")"
+
+if [ -z "$output_path" ]; then
+	output_filename="$(genOutputName $verbose "$output_basename")"
+	output_path="$output_dirname/$output_filename"
+
+	$verbose && echo "output path is $output_path" >&2
+fi
+
+$dry_run || appendImages "$cache_dir/${file_UID[0]}_list.txt" "$output_path"
