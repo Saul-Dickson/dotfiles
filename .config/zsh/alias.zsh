@@ -48,7 +48,7 @@ alias neofetch="/bin/cat ~/.cache/neofetch"
 alias mbsync="mbsync -c ~/.config/mbsync/init.mbsync"
 
 ## alias ls to "exa -alF --color always --icons" ##
-alias ls="exa -alF --color always --icons --group-directories-first"
+alias ls="exa_wrapper"
 
 ## alias cls to "clear; ls" ##
 alias cls="clear; ls"
